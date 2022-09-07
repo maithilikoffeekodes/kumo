@@ -1,0 +1,1560 @@
+CRITICAL - 2022-07-23 00:07:10 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:07:14 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:07:18 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('16')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('16')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:07:24 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('19')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('19')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:07:35 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:10 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:23 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:27 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:32 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:35 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:40 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:32:46 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:36:17 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:36:53 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:37:01 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:37:07 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:40:18 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:40:34 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:40:46 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:41:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:44:41 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:49:46 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:51:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:51:48 --> Undefined array key "image"
+#0 D:\Ecommerce\app\Views\productlist.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(74): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 00:52:47 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:53:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:53:17 --> Undefined array key "image"
+#0 D:\Ecommerce\app\Views\productlist.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(74): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 00:54:28 --> Undefined array key "image"
+#0 D:\Ecommerce\app\Views\productlist.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(74): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 00:54:34 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:54:37 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:54:41 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:54:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:55:03 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:55:13 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:55:42 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:55:51 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:14 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:29 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:33 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:54 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:56:59 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 00:58:01 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('1')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:00:43 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:01:34 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:01:38 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('13')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('13')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:01:42 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('15')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:01:48 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('16')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('16')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:02:17 --> Undefined array key "rating"
+#0 D:\Ecommerce\app\Views\productdetail.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 56)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 01:07:32 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(339): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 339)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:15:34 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:15:39 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:15:55 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 222)
+#1 D:\Ecommerce\app\Views\productdetail.php(222): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('16')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:16:07 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:18:33 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:18:36 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:20:51 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 222)
+#1 D:\Ecommerce\app\Views\productdetail.php(222): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:21:41 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 222)
+#1 D:\Ecommerce\app\Views\productdetail.php(222): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:21:43 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 222)
+#1 D:\Ecommerce\app\Views\productdetail.php(222): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:21:46 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 222)
+#1 D:\Ecommerce\app\Views\productdetail.php(222): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:22:00 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:24:28 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:24:30 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:25:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:25:21 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:31:09 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:34:37 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:35:01 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:35:42 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Views\productdetail.php(225): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:37:17 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:37:33 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:37:48 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Views\productdetail.php(225): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:37:51 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Views\productdetail.php(225): DateTime->__construct(NULL)
+#2 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#3 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#5 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-23 01:38:53 --> Call to a member function Format() on null
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-23 01:39:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:39:24 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:39:43 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:40:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:42:03 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:42:22 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:42:53 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:43:11 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 01:54:57 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:20:44 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:27:01 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:27:18 --> Undefined variable $row
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:27:28 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:28:28 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:28:59 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:29:01 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:31:57 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 63)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:32:12 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 62)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:34:24 --> Undefined array key "rateavg"
+#0 D:\Ecommerce\app\Views\productdetail.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 62)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:34:57 --> Undefined constant "rateavg"
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-23 02:36:55 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 64)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:37:54 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 64)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:37:56 --> Array to string conversion
+#0 D:\Ecommerce\app\Views\productdetail.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Ecommerce\\ap...', 64)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:41:47 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:42:45 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:43:27 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:48:36 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:48:50 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:49:34 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:49:51 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:50:38 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:54:06 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:54:38 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:55:22 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:56:08 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:57:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:58:00 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Views\productdetail.php(306): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 306)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(132): view('productdetail', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('15')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 02:58:10 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:58:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 02:59:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 03:00:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 03:56:58 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 03:59:13 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:01:09 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:02:42 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:02:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:03:02 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:04:57 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:06:39 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:06:45 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:06:52 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:07:47 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:14:25 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:15:41 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 04:41:11 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(338): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 338)
+#1 D:\Ecommerce\app\Controllers\Home.php(127): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-23 05:13:36 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:14:08 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:14:10 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:14:11 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:14:12 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:16:51 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\Home.php(69): CodeIgniter\Model->__call('get_categorylis...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-23 05:24:58 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(70): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 05:31:13 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 76)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:31:36 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 76)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:31:39 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 76)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:46:55 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 76)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:46:55 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 76)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:47:40 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:47:42 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:48:33 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:48:43 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:48:58 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 05:48:59 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 77)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-23 06:12:46 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:13:57 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:15:33 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:17:02 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:26:02 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:27:46 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:29:20 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:29:21 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:29:26 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:32:03 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:48:13 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 36)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 06:48:55 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\productlist.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(77): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-23 07:21:55 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 231)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Getdata('getbrand')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}

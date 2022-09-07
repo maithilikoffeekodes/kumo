@@ -1,0 +1,61 @@
+ERROR - 2022-06-26 22:58:39 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-06-26 22:58:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Ecommerce\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#2 C:\Ecommerce\app\Models\UserModel.php(38): CodeIgniter\Database\BaseBuilder->insert(Array)
+#3 C:\Ecommerce\app\Controllers\Home.php(43): App\Models\UserModel->insert_data(Array)
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-26 23:39:18 --> Undefined variable $data
+#0 C:\Ecommerce\app\Controllers\Home.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Ecommerce\\ap...', 49)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register('10')
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-26 23:55:01 --> Trying to access array offset on value of type null
+#0 C:\Ecommerce\app\Controllers\Home.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Ecommerce\\ap...', 30)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-26 23:55:54 --> Trying to access array offset on value of type null
+#0 C:\Ecommerce\app\Controllers\Home.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Ecommerce\\ap...', 31)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-26 23:57:35 --> Undefined variable $data
+#0 C:\Ecommerce\app\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Ecommerce\\ap...', 29)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-26 23:57:41 --> Undefined variable $data
+#0 C:\Ecommerce\app\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Ecommerce\\ap...', 29)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-26 23:59:48 --> Trying to access array offset on value of type null
+#0 C:\Ecommerce\app\Controllers\Home.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\Ecommerce\\ap...', 31)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}

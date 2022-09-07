@@ -1,0 +1,90 @@
+ERROR - 2022-09-02 02:49:05 --> Column 'user_id' cannot be null
+CRITICAL - 2022-09-02 02:49:05 --> Column 'user_id' cannot be null
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\Ecommerce\app\Models\HomeModel.php(642): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Ecommerce\app\Controllers\Home.php(142): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-09-02 02:49:06 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 585)
+#1 D:\Ecommerce\app\Controllers\Home.php(128): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+ERROR - 2022-09-02 02:49:09 --> Column 'user_id' cannot be null
+CRITICAL - 2022-09-02 02:49:09 --> Column 'user_id' cannot be null
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\Ecommerce\app\Models\HomeModel.php(642): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Ecommerce\app\Controllers\Home.php(142): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-09-02 02:50:00 --> Invalid file: ordersuccess.php
+#0 D:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ordersuccess.ph...')
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('ordersuccess', Array, true)
+#2 D:\Ecommerce\app\Models\HomeModel.php(909): view('ordersuccess')
+#3 D:\Ecommerce\app\Controllers\Home.php(96): App\Models\HomeModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-09-02 03:00:03 --> Invalid file: ordersuccess.php
+#0 D:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ordersuccess.ph...')
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('ordersuccess', Array, true)
+#2 D:\Ecommerce\app\Models\HomeModel.php(909): view('ordersuccess')
+#3 D:\Ecommerce\app\Controllers\Home.php(96): App\Models\HomeModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-09-02 03:00:44 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 585)
+#1 D:\Ecommerce\app\Controllers\Home.php(128): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-09-02 03:00:52 --> Invalid file: ordersuccess.php
+#0 D:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ordersuccess.ph...')
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('ordersuccess', Array, true)
+#2 D:\Ecommerce\app\Models\HomeModel.php(909): view('ordersuccess')
+#3 D:\Ecommerce\app\Controllers\Home.php(96): App\Models\HomeModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-09-02 03:00:59 --> Invalid file: ordersuccess.php
+#0 D:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ordersuccess.ph...')
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('ordersuccess', Array, true)
+#2 D:\Ecommerce\app\Models\HomeModel.php(909): view('ordersuccess')
+#3 D:\Ecommerce\app\Controllers\Home.php(96): App\Models\HomeModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}

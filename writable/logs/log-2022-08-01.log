@@ -1,0 +1,45 @@
+CRITICAL - 2022-08-01 01:07:17 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 585)
+#1 D:\Ecommerce\app\Controllers\Home.php(128): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-08-01 01:07:21 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 585)
+#1 D:\Ecommerce\app\Controllers\Home.php(128): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-08-01 01:07:33 --> Uncaught TypeError: abs(): Argument #1 ($num) must be of type int|float, string given in D:\Ecommerce\system\Debug\Exceptions.php:298
+Stack trace:
+#0 D:\Ecommerce\system\Debug\Exceptions.php(298): abs('BAD_REQUEST_ERR...')
+#1 D:\Ecommerce\system\Debug\Exceptions.php(102): CodeIgniter\Debug\Exceptions->determineCodes(Object(Razorpay\Api\Errors\BadRequestError))
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Razorpay\Api\Errors\BadRequestError))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-01 01:07:39 --> Uncaught TypeError: abs(): Argument #1 ($num) must be of type int|float, string given in D:\Ecommerce\system\Debug\Exceptions.php:298
+Stack trace:
+#0 D:\Ecommerce\system\Debug\Exceptions.php(298): abs('BAD_REQUEST_ERR...')
+#1 D:\Ecommerce\system\Debug\Exceptions.php(102): CodeIgniter\Debug\Exceptions->determineCodes(Object(Razorpay\Api\Errors\BadRequestError))
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Razorpay\Api\Errors\BadRequestError))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-08-01 02:57:37 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 585)
+#1 D:\Ecommerce\app\Controllers\Home.php(128): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}

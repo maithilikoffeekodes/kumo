@@ -1,0 +1,567 @@
+CRITICAL - 2022-07-09 00:03:49 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:04:32 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:04:33 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:04:33 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:04:33 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:04:33 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:26 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:26 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:05:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:06:53 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 43)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 00:34:24 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(421): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 421)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 00:35:43 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(421): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 421)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 00:36:59 --> Undefined array key "mobileno"
+#0 D:\Ecommerce\app\Models\UserModel.php(424): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 424)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 00:38:41 --> Undefined array key "mobileno"
+#0 D:\Ecommerce\app\Models\UserModel.php(424): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 424)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 00:39:04 --> Undefined array key "mobileno"
+#0 D:\Ecommerce\app\Models\UserModel.php(424): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 424)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 00:39:47 --> Undefined array key "type"
+#0 D:\Ecommerce\app\Models\UserModel.php(429): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 429)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 01:01:39 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\cart2.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 99)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(44): view('cart2', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 01:24:19 --> Undefined array key "type"
+#0 D:\Ecommerce\app\Views\cart2.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 47)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(44): view('cart2', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 01:24:50 --> Undefined array key "type"
+#0 D:\Ecommerce\app\Views\cart2.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 86)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(44): view('cart2', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-09 01:33:04 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 177)
+#1 D:\Ecommerce\app\Controllers\Home.php(49): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 01:33:04 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 177)
+#1 D:\Ecommerce\app\Controllers\Home.php(49): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 01:33:11 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 177)
+#1 D:\Ecommerce\app\Controllers\Home.php(49): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 01:33:11 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 177)
+#1 D:\Ecommerce\app\Controllers\Home.php(49): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:12 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:13 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:14 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:14 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:15 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:15 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:35:54 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(422): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 422)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:36:36 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 427)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:37:18 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 427)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:37:54 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(427): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 427)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:40:20 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:41:14 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:43:44 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:45:15 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:45:46 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:46:22 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 428)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:47:02 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\UserModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 426)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:47:23 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\UserModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 426)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 04:47:45 --> Undefined array key "user_id"
+#0 D:\Ecommerce\app\Models\UserModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 426)
+#1 D:\Ecommerce\app\Controllers\Home.php(38): App\Models\UserModel->insert_edit_address(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 05:50:00 --> Undefined variable $result
+#0 D:\Ecommerce\app\Controllers\Home.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 180)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Delete('adddelete')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-09 05:50:55 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\Home.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 180)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Delete('adddelete')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-09 05:51:23 --> Undefined variable $result
+#0 D:\Ecommerce\app\Controllers\Home.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 181)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Delete('adddelete')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-09 06:41:27 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 06:41:27 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 07:10:44 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 07:10:45 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 07:31:18 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-09 07:31:18 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 192)
+#1 D:\Ecommerce\app\Controllers\Home.php(63): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}

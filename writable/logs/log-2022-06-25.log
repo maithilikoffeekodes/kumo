@@ -1,0 +1,427 @@
+CRITICAL - 2022-06-25 00:06:57 --> Class "App\Controllers\UserModel" not found
+#0 C:\Ecommerce\system\CodeIgniter.php(810): App\Controllers\Home->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\Ecommerce\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-06-25 00:07:30 --> Too few arguments to function App\Controllers\Home::register(), 0 passed in C:\Ecommerce\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#1 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-06-25 00:07:33 --> Too few arguments to function App\Controllers\Home::register(), 0 passed in C:\Ecommerce\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#1 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-06-25 00:16:55 --> Undefined property: App\Controllers\Home::$model
+#0 C:\Ecommerce\app\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Ecommerce\\ap...', 26)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-25 00:17:42 --> Class "App\Controllers\UserModel" not found
+#0 C:\Ecommerce\system\CodeIgniter.php(810): App\Controllers\Home->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\Ecommerce\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-06-25 01:10:29 --> Invalid file: admin/brand.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/brand.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/brand', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Home.php(20): view('admin/brand')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->brand()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 02:02:14 --> View themes, no current section.
+#0 C:\Ecommerce\app\Views\admin\createbrand.php(100): CodeIgniter\View\View->endSection()
+#1 C:\Ecommerce\system\View\View.php(210): include('C:\\Ecommerce\\ap...')
+#2 C:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#4 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#5 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#6 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#7 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-06-25 02:02:20 --> View themes, no current section.
+#0 C:\Ecommerce\app\Views\admin\createbrand.php(100): CodeIgniter\View\View->endSection()
+#1 C:\Ecommerce\system\View\View.php(210): include('C:\\Ecommerce\\ap...')
+#2 C:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#4 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#5 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#6 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#7 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-06-25 02:06:53 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-25 02:07:50 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-25 02:08:47 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/brand', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(16): view('admin/brand')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->brand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-25 02:09:02 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-25 02:09:34 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-06-25 02:10:15 --> Invalid file: /admin/admin/template.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/admin/admin/te...')
+#1 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/admin/te...', Array, true)
+#2 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#3 C:\Ecommerce\app\Controllers\admin\Master.php(29): view('admin/createbra...')
+#4 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand()
+#5 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#6 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#9 {main}
+ERROR - 2022-06-25 02:29:49 --> Unknown column 'image' in 'field list'
+CRITICAL - 2022-06-25 02:29:49 --> Unknown column 'image' in 'field list'
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `id`, `n...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `n...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `n...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `n...', Array, false)
+#4 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(219): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\Ecommerce\app\Models\admin\MasterModel.php(63): Hermawan\DataTables\DataTable->toJson()
+#8 C:\Ecommerce\app\Controllers\admin\Master.php(36): App\Models\admin\MasterModel->get_brand()
+#9 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('detail')
+#10 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#11 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#14 {main}
+ERROR - 2022-06-25 02:31:13 --> Unknown column 'brand' in 'field list'
+CRITICAL - 2022-06-25 02:31:13 --> Unknown column 'brand' in 'field list'
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `id`, `b...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `b...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `b...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `b...', Array, false)
+#4 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(219): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\Ecommerce\app\Models\admin\MasterModel.php(63): Hermawan\DataTables\DataTable->toJson()
+#8 C:\Ecommerce\app\Controllers\admin\Master.php(36): App\Models\admin\MasterModel->get_brand()
+#9 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('detail')
+#10 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#11 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#14 {main}
+ERROR - 2022-06-25 02:31:57 --> Unknown column 'is_delete' in 'where clause'
+CRITICAL - 2022-06-25 02:31:57 --> Unknown column 'is_delete' in 'where clause'
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\Ecommerce\app\Models\admin\MasterModel.php(63): Hermawan\DataTables\DataTable->toJson()
+#7 C:\Ecommerce\app\Controllers\admin\Master.php(36): App\Models\admin\MasterModel->get_brand()
+#8 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('detail')
+#9 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#10 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#13 {main}
+CRITICAL - 2022-06-25 02:32:33 --> Undefined property: stdClass::$name
+#0 C:\Ecommerce\app\Models\admin\MasterModel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Ecommerce\\ap...', 58)
+#1 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(91): App\Models\admin\MasterModel->App\Models\admin\{closure}(Object(stdClass))
+#2 C:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 C:\Ecommerce\app\Models\admin\MasterModel.php(63): Hermawan\DataTables\DataTable->toJson()
+#4 C:\Ecommerce\app\Controllers\admin\Master.php(36): App\Models\admin\MasterModel->get_brand()
+#5 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('detail')
+#6 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#7 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-06-25 04:07:59 --> Undefined array key "brand_name"
+#0 C:\Ecommerce\app\Views\admin\createbrand.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 8)
+#1 C:\Ecommerce\system\View\View.php(210): include('C:\\Ecommerce\\ap...')
+#2 C:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createbra...', Array, true)
+#4 C:\Ecommerce\app\Controllers\admin\Master.php(35): view('admin/createbra...', Array)
+#5 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createbrand('3')
+#6 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#7 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-06-25 04:57:14 --> syntax error, unexpected end of file, expecting variable or "${" or "{$"
+#0 C:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Ecommerce\system\View\View.php(424): CodeIgniter\View\View->render('/admin/block/si...', NULL, true)
+#2 C:\Ecommerce\app\Views\admin\template.php(93): CodeIgniter\View\View->include('/admin/block/si...')
+#3 C:\Ecommerce\system\View\View.php(210): include('C:\\Ecommerce\\ap...')
+#4 C:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\Ecommerce\system\View\View.php(226): CodeIgniter\View\View->render('/admin/template', Array, true)
+#6 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/index', Array, true)
+#7 C:\Ecommerce\app\Controllers\admin\Home.php(16): view('admin/index')
+#8 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->index()
+#9 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#10 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#13 {main}
+CRITICAL - 2022-06-25 04:59:25 --> Invalid file: admin/item.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/item.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/item', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(16): view('admin/item')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->item()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:00:11 --> Invalid file: admin/item.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/item.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/item', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(16): view('admin/item')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->item()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:04:01 --> Invalid file: admin/item.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/item.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/item', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(16): view('admin/item')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->item()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:04:29 --> Invalid file: admin/item.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/item.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/item', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(17): view('admin/item')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->item()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:04:34 --> Invalid file: admin/item.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/item.php')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/item', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(17): view('admin/item')
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->item()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:06:43 --> Invalid file: admin/createitem.php
+#0 C:\Ecommerce\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/createite...')
+#1 C:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('admin/createite...', Array, true)
+#2 C:\Ecommerce\app\Controllers\admin\Item.php(36): view('admin/createite...', Array)
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->createitem()
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 05:08:30 --> Undefined array key "name"
+#0 C:\Ecommerce\app\Models\admin\ItemModel.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 54)
+#1 C:\Ecommerce\app\Controllers\admin\Item.php(25): App\Models\admin\ItemModel->insert_item(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->createitem()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 05:14:17 --> Undefined array key "name"
+#0 C:\Ecommerce\app\Models\admin\ItemModel.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 54)
+#1 C:\Ecommerce\app\Controllers\admin\Item.php(25): App\Models\admin\ItemModel->insert_item(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->createitem()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 05:15:45 --> Undefined array key "name"
+#0 C:\Ecommerce\app\Models\admin\ItemModel.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 54)
+#1 C:\Ecommerce\app\Controllers\admin\Item.php(25): App\Models\admin\ItemModel->insert_item(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->createitem()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+ERROR - 2022-06-25 05:20:39 --> Unknown column 'disprice' in 'field list'
+CRITICAL - 2022-06-25 05:20:39 --> Unknown column 'disprice' in 'field list'
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `it...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `it...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `it...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `it...', Array, false)
+#4 C:\Ecommerce\app\Models\admin\ItemModel.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Ecommerce\app\Controllers\admin\Item.php(25): App\Models\admin\ItemModel->insert_item(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#6 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Item->createitem()
+#7 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Item))
+#8 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-06-25 06:39:41 --> You must set the database table to be used with your query.
+#0 C:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\Ecommerce\app\Controllers\Home.php(61): CodeIgniter\Model->__call('get_brand', Array)
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Getdata('detail')
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 06:41:58 --> You must set the database table to be used with your query.
+#0 C:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\Ecommerce\app\Controllers\Home.php(61): CodeIgniter\Model->__call('get_brand', Array)
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Getdata('detail')
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 06:44:51 --> You must set the database table to be used with your query.
+#0 C:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\Ecommerce\app\Controllers\Home.php(61): CodeIgniter\Model->__call('get_brand', Array)
+#3 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Getdata('detail')
+#4 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-06-25 06:58:25 --> syntax error, unexpected token "public"
+#0 C:\Ecommerce\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Home/register')
+#1 C:\Ecommerce\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Home/register')
+#2 C:\Ecommerce\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-25 07:00:50 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(43): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:01:08 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(43): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:01:28 --> Undefined array key "name"
+#0 C:\Ecommerce\app\Models\UserModel.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 19)
+#1 C:\Ecommerce\app\Controllers\Home.php(43): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:09:37 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(42): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:10:47 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(42): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:12:25 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(42): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-06-25 07:30:38 --> Undefined array key "id"
+#0 C:\Ecommerce\app\Models\UserModel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Ecommerce\\ap...', 15)
+#1 C:\Ecommerce\app\Controllers\Home.php(43): App\Models\UserModel->insert_data(Array)
+#2 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#3 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#7 {main}

@@ -1,0 +1,97 @@
+ERROR - 2022-07-17 23:07:00 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-17 23:07:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\HomeModel.php(259): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\HomeModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-17 23:11:09 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(112): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('28')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-17 23:11:19 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(112): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('28')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-17 23:18:31 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-17 23:18:44 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-17 23:29:21 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(111): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('27')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-17 23:31:23 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(111): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('27')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-17 23:31:51 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(111): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('27')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-17 23:32:08 --> Undefined variable $data
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 115)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-17 23:33:01 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(111): CodeIgniter\Model->__call('get_data_slider', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider('27')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}

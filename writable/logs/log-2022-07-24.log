@@ -1,0 +1,9 @@
+CRITICAL - 2022-07-24 23:45:31 --> Undefined array key "brand_id"
+#0 D:\Ecommerce\app\Models\HomeModel.php(370): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 370)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}

@@ -1,0 +1,44 @@
+CRITICAL - 2022-06-24 23:22:09 --> Undefined property: App\Controllers\admin\Home::$model
+#0 C:\Ecommerce\app\Controllers\admin\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Ecommerce\\ap...', 21)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->admlogin()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-06-24 23:27:35 --> Undefined property: App\Controllers\admin\Home::$model
+#0 C:\Ecommerce\app\Controllers\admin\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Ecommerce\\ap...', 21)
+#1 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->admlogin()
+#2 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#6 {main}
+ERROR - 2022-06-24 23:44:20 --> No database selected
+CRITICAL - 2022-06-24 23:44:20 --> No database selected
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Ecommerce\app\Models\admin\admModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Ecommerce\app\Controllers\admin\Home.php(26): App\Models\admin\AdmModel->login(Array)
+#6 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->admlogin()
+#7 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-06-24 23:45:35 --> No database selected
+CRITICAL - 2022-06-24 23:45:35 --> No database selected
+#0 C:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Ecommerce\app\Models\admin\admModel.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Ecommerce\app\Controllers\admin\Home.php(26): App\Models\admin\AdmModel->login(Array)
+#6 C:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Home->admlogin()
+#7 C:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 C:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('C:\\Ecommerce\\pu...')
+#11 {main}

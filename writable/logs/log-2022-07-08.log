@@ -1,0 +1,851 @@
+CRITICAL - 2022-07-08 00:03:24 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(91): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(45): generate_order_id_razor('25000', '0bc4cf16c5399ec...')
+#9 D:\Ecommerce\app\Models\UserModel.php(405): SendRazor('25000', '0bc4cf16c5399ec...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(61): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 00:04:30 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(91): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(45): generate_order_id_razor('25000', 'b31795d30db96f2...')
+#9 D:\Ecommerce\app\Models\UserModel.php(405): SendRazor('25000', 'b31795d30db96f2...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(61): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 00:09:12 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(91): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(45): generate_order_id_razor('25000', '2fd89283c28c340...')
+#9 D:\Ecommerce\app\Models\UserModel.php(405): SendRazor('25000', '2fd89283c28c340...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(61): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 00:15:12 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(91): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(45): generate_order_id_razor('25000', '3a69d218749d867...')
+#9 D:\Ecommerce\app\Models\UserModel.php(405): SendRazor('25000', '3a69d218749d867...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(61): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 01:04:18 --> Undefined array key "payment"
+#0 D:\Ecommerce\app\Models\UserModel.php(340): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 340)
+#1 D:\Ecommerce\app\Controllers\Home.php(66): App\Models\UserModel->payment_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:05:54 --> Undefined array key "payment"
+#0 D:\Ecommerce\app\Models\UserModel.php(340): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 340)
+#1 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:07:54 --> view(): Argument #2 ($data) must be of type array, null given, called in D:\Ecommerce\app\Controllers\Home.php on line 68
+#0 D:\Ecommerce\app\Controllers\Home.php(68): view('cart2', NULL)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 01:13:43 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 182)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:13:43 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 182)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:36:49 --> Undefined array key "payment_type"
+#0 D:\Ecommerce\app\Models\UserModel.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 360)
+#1 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:37:45 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('333000', '3d97a8f72da6749...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('333000', '3d97a8f72da6749...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 01:37:56 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('333000', '3793a2778627812...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('333000', '3793a2778627812...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 01:38:24 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('333000', '0fa530445e53277...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('333000', '0fa530445e53277...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 01:51:32 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173, Array)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:51:33 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173, Array)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:52:24 --> Undefined variable: json
+#0 D:\Ecommerce\app\Libraries\Rozorpay\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 9, Array)
+#1 D:\Ecommerce\app\Helpers\rozorpay_helper.php(42): require_once('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('10000', 'f5577b042676a94...', Array)
+#3 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-08 01:53:37 --> Undefined variable: json
+#0 D:\Ecommerce\app\Libraries\Rozorpay\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 9, Array)
+#1 D:\Ecommerce\app\Helpers\rozorpay_helper.php(42): require_once('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('10000', '20b6f57e6dab112...', Array)
+#3 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-08 01:53:59 --> Undefined variable: json
+#0 D:\Ecommerce\app\Libraries\Rozorpay\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 9, Array)
+#1 D:\Ecommerce\app\Helpers\rozorpay_helper.php(42): require_once('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('10000', '512adf93aad7395...', Array)
+#3 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-08 01:54:38 --> Undefined variable: json
+#0 D:\Ecommerce\app\Libraries\Rozorpay\index.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 9, Array)
+#1 D:\Ecommerce\app\Helpers\rozorpay_helper.php(42): require_once('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('10000', '5a7d5e966316882...', Array)
+#3 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-08 01:56:55 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173, Array)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:56:55 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173, Array)
+#1 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 01:58:33 --> Call to undefined function fronturl()
+#0 D:\Ecommerce\app\Helpers\rozorpay_helper.php(42): require_once()
+#1 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('10000', '2a11a8b780e355e...', Array)
+#2 D:\Ecommerce\app\Controllers\Home.php(67): App\Models\UserModel->payment_data(Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-08 02:01:11 --> Undefined property: App\Controllers\Home::$gmodel
+#0 D:\Ecommerce\app\Controllers\Home.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Ecommerce\\ap...', 164, Array)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Payment('Fail')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 02:01:58 --> Undefined property: App\Controllers\Home::$gmodel
+#0 D:\Ecommerce\app\Controllers\Home.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Ecommerce\\ap...', 164, Array)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->Payment('Success')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+ERROR - 2022-07-08 02:06:55 --> Table 'ecommerce.orders' doesn't exist
+CRITICAL - 2022-07-08 02:06:55 --> Table 'ecommerce.orders' doesn't exist
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 D:\Ecommerce\app\Helpers\rozorpay_helper.php(170): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Ecommerce\app\Controllers\Home.php(187): PaymentExecute('f3bfd1cdffbcc79...')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('f3bfd1cdffbcc79...')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-08 02:16:29 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('12000', '39c84fc4d0bb0d0...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('12000', '39c84fc4d0bb0d0...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(71): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 02:19:54 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('19000', '7f52d066a7dce38...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('19000', '7f52d066a7dce38...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(71): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 02:22:04 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('19000', 'cd4d2fefc6ced60...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('19000', 'cd4d2fefc6ced60...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(71): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 02:23:21 --> During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Razorpay\Api\Resource::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php:18
+Stack trace:
+#0 D:\Ecommerce\app\Libraries\Rozorpay\src\Resource.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Return type of ...', 'D:\\Ecommerce\\ap...', 18)
+#1 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\app\Libraries\Rozorpay\src\Entity.php(7): {closure}('Razorpay\\Api\\Re...')
+#3 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#4 D:\Ecommerce\app\Libraries\Rozorpay\src\Order.php(5): {closure}('Razorpay\\Api\\En...')
+#5 D:\Ecommerce\app\Libraries\Rozorpay\Razorpay.php(53): require('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\app\Libraries\Rozorpay\src\Api.php(67): {closure}('Razorpay\\Api\\Or...')
+#7 D:\Ecommerce\app\Helpers\rozorpay_helper.php(60): Razorpay\Api\Api->__get('order')
+#8 D:\Ecommerce\app\Helpers\rozorpay_helper.php(30): generate_order_id_razor('19000', '25606857394e96d...')
+#9 D:\Ecommerce\app\Models\UserModel.php(395): SendRazor('19000', '25606857394e96d...', Array)
+#10 D:\Ecommerce\app\Controllers\Home.php(71): App\Models\UserModel->payment_data(Array)
+#11 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->checkout1()
+#12 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#13 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#16 {main}
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-07-08 04:08:31 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 04:08:31 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 04:08:53 --> Undefined property: stdClass::$user_id
+#0 D:\Ecommerce\app\Helpers\rozorpay_helper.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Ecommerce\\ap...', 151)
+#1 D:\Ecommerce\app\Controllers\Home.php(187): PaymentExecute('76ca5cb19b6dc25...')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('76ca5cb19b6dc25...')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+ERROR - 2022-07-08 04:10:00 --> Table 'ecommerce.orders' doesn't exist
+CRITICAL - 2022-07-08 04:10:00 --> Table 'ecommerce.orders' doesn't exist
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `orders`...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `orders`...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `orders`...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `orders`...', Array, false)
+#4 D:\Ecommerce\app\Helpers\rozorpay_helper.php(166): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Ecommerce\app\Controllers\Home.php(187): PaymentExecute('76ca5cb19b6dc25...')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('76ca5cb19b6dc25...')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-08 04:28:48 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 04:28:48 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 04:28:59 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 04:28:59 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 173)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:53:33 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 87)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 06:53:45 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 87)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 06:53:59 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 87)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 06:54:13 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 87)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-08 06:55:07 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:07 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:16 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:16 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:22 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:22 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:28 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 06:55:28 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:02:46 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:02:47 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:02:53 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:02:53 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:03:00 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:03:00 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 174)
+#1 D:\Ecommerce\app\Controllers\Home.php(40): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-08 07:19:58 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 47)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 07:22:13 --> Undefined variable $add
+#0 D:\Ecommerce\app\Views\cart2.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 54)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 07:22:15 --> Undefined variable $add
+#0 D:\Ecommerce\app\Views\cart2.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 54)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 07:28:27 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 46)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+ERROR - 2022-07-08 23:11:53 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-08 23:11:53 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\UserModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\UserModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+ERROR - 2022-07-08 23:11:58 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-08 23:11:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\UserModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\UserModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+ERROR - 2022-07-08 23:12:02 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-08 23:12:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\UserModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\UserModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+ERROR - 2022-07-08 23:12:20 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-08 23:12:20 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\UserModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\UserModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+ERROR - 2022-07-08 23:26:22 --> Unknown column 'user_id' in 'where clause'
+CRITICAL - 2022-07-08 23:26:22 --> Unknown column 'user_id' in 'where clause'
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `address...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `address...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `address...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `address...', Array, false)
+#4 D:\Ecommerce\app\Views\cart2.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#6 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#8 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#9 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#10 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#14 {main}
+CRITICAL - 2022-07-08 23:26:40 --> Cannot use object of type stdClass as array
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(35): view('cart2')
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-08 23:42:10 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 53)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(36): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:54:02 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:54:28 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:54:45 --> Undefined variable $data
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:55:17 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:55:26 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-08 23:59:11 --> Undefined variable $address
+#0 D:\Ecommerce\app\Views\cart2.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 60)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('cart2', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(37): view('cart2')
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->final_cart()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}

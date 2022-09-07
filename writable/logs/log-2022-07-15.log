@@ -1,0 +1,415 @@
+CRITICAL - 2022-07-15 01:56:00 --> Undefined variable $msg
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 55)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('category')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+ERROR - 2022-07-15 02:02:48 --> Unknown column 'brand' in 'field list'
+CRITICAL - 2022-07-15 02:02:48 --> Unknown column 'brand' in 'field list'
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `id`, `b...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `b...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `b...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `b...', Array, false)
+#4 D:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(219): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 D:\Ecommerce\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 D:\Ecommerce\app\Models\admin\MasterModel.php(180): Hermawan\DataTables\DataTable->toJson()
+#8 D:\Ecommerce\app\Controllers\admin\Master.php(47): App\Models\admin\MasterModel->get_category()
+#9 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('category')
+#10 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#11 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#14 {main}
+CRITICAL - 2022-07-15 02:05:16 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(47): CodeIgniter\Model->__call('get_category', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('category')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 02:05:19 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(47): CodeIgniter\Model->__call('get_category', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('category')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 02:21:09 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\admin\MasterModel.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(81): App\Models\admin\MasterModel->insert_edit_category(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createcategory()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 02:21:32 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\admin\MasterModel.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(81): App\Models\admin\MasterModel->insert_edit_category(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createcategory()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 02:24:08 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\admin\MasterModel.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(81): App\Models\admin\MasterModel->insert_edit_category(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createcategory()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 02:25:53 --> Undefined array key "id"
+#0 D:\Ecommerce\app\Models\admin\MasterModel.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 116)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(81): App\Models\admin\MasterModel->insert_edit_category(Array, Object(CodeIgniter\HTTP\Files\UploadedFile))
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createcategory()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 04:31:23 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:31:28 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:31:30 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:32:21 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:32:49 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:33:35 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(61): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:37:06 --> You must set the database table to be used with your query.
+#0 D:\Ecommerce\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\Ecommerce\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\Ecommerce\app\Controllers\admin\Master.php(62): CodeIgniter\Model->__call('get_category_da...', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-15 04:41:30 --> Undefined variable $msg
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 59)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-15 04:42:07 --> Undefined variable $msg
+#0 D:\Ecommerce\app\Controllers\admin\Master.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 58)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->Getdata('getcategory')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-15 04:50:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(316): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 316)
+#1 D:\Ecommerce\app\Controllers\Home.php(93): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 04:50:49 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(316): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 316)
+#1 D:\Ecommerce\app\Controllers\Home.php(93): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 04:51:16 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(316): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 316)
+#1 D:\Ecommerce\app\Controllers\Home.php(93): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 04:51:16 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(316): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 316)
+#1 D:\Ecommerce\app\Controllers\Home.php(93): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 04:52:29 --> Cannot access offset of type string on string
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-15 04:53:33 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 143)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 04:54:37 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 143)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 04:55:33 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 143)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 04:56:06 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 143)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 04:59:34 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 141)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+ERROR - 2022-07-15 05:17:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2'
+WHERE `c`.`id` = '2'
+AND `is_delete` = '0'
+ORDER BY RAND()
+ LIMIT 8' at line 3
+CRITICAL - 2022-07-15 05:17:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2'
+WHERE `c`.`id` = '2'
+AND `is_delete` = '0'
+ORDER BY RAND()
+ LIMIT 8' at line 3
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `i`.*...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `i`.*...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `i`.*...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `i`.*...', Array, false)
+#4 D:\Ecommerce\app\Models\HomeModel.php(278): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(44): App\Models\HomeModel->get_categoryitem_data('2')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist('2')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-15 05:17:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''4'
+WHERE `c`.`id` = '4'
+AND `is_delete` = '0'
+ORDER BY RAND()
+ LIMIT 8' at line 3
+CRITICAL - 2022-07-15 05:17:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''4'
+WHERE `c`.`id` = '4'
+AND `is_delete` = '0'
+ORDER BY RAND()
+ LIMIT 8' at line 3
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `i`.*...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `i`.*...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `i`.*...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `i`.*...', Array, false)
+#4 D:\Ecommerce\app\Models\HomeModel.php(278): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(44): App\Models\HomeModel->get_categoryitem_data('4')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist('4')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-15 05:18:26 --> Column 'is_delete' in where clause is ambiguous
+CRITICAL - 2022-07-15 05:18:26 --> Column 'is_delete' in where clause is ambiguous
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `i`.*...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `i`.*...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `i`.*...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, `i`.*...', Array, false)
+#4 D:\Ecommerce\app\Models\HomeModel.php(278): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(44): App\Models\HomeModel->get_categoryitem_data('4')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist('4')
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-15 05:19:38 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 141)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(47): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 05:19:48 --> Cannot access offset of type string on string
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(47): view('productlist', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-15 05:31:45 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(323): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 323)
+#1 D:\Ecommerce\app\Controllers\Home.php(90): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 05:31:45 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(323): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 323)
+#1 D:\Ecommerce\app\Controllers\Home.php(90): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 05:34:50 --> Undefined variable $category_item
+#0 D:\Ecommerce\app\Views\productlist.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 05:37:03 --> Undefined variable $post
+#0 D:\Ecommerce\app\Views\productlist.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(46): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist('3')
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+CRITICAL - 2022-07-15 06:12:10 --> print_r(): Passing null to parameter #2 ($return) of type bool is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'print_r(): Pass...', 'D:\\Ecommerce\\ap...', 104)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(104): print_r(Array, NULL)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-15 07:07:47 --> Undefined array key "name"
+#0 D:\Ecommerce\app\Models\admin\MasterModel.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 212)
+#1 D:\Ecommerce\app\Controllers\admin\Master.php(105): App\Models\admin\MasterModel->insert_slider(Array, NULL)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\admin\Master->createslider()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Master))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}

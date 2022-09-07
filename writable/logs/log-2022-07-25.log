@@ -1,0 +1,606 @@
+CRITICAL - 2022-07-25 02:41:21 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:41:26 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:41:31 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:41:55 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:42:10 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:42:14 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:42:19 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:42:26 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:43:00 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:44:42 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 02:44:49 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:28:08 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:28:25 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:28:33 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:28:36 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:28:59 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:29:02 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:29:39 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:29:50 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:43:17 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:48:02 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:48:10 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 04:48:18 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 375)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 05:15:58 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\HomeModel.php(453): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 453)
+#1 D:\Ecommerce\app\Controllers\Home.php(131): App\Models\HomeModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 05:34:27 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:34:42 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:35:06 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:38:16 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:38:21 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:40:16 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:40:20 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:41:08 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:41:12 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:41:38 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:41:41 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:42:07 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:42:10 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:42:57 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:42:59 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:43:36 --> Call to undefined function App\Models\int()
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:43:38 --> Call to undefined function App\Models\int()
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:46:14 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:46:14 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:58:54 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:58:58 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:59:13 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 05:59:14 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 06:32:27 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 06:32:40 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 06:59:58 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:00:17 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:00:29 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:00:43 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:01:03 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:01:24 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:02:06 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:02:25 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:02:53 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:03:37 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:04:03 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:05:57 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:06:17 --> Unsupported operand types: array - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 07:18:50 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+ERROR - 2022-07-25 23:07:07 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-25 23:07:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#2 D:\Ecommerce\app\Models\HomeModel.php(256): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\HomeModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-25 23:50:57 --> Undefined array key "sort"
+#0 D:\Ecommerce\app\Models\HomeModel.php(379): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 379)
+#1 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 1)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-25 23:53:23 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:53:35 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:54:00 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(77): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:58:18 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(78): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:58:21 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(78): App\Models\HomeModel->fetch_data(Array, 'lowtohigh')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('lowtohigh')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:58:51 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(78): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-25 23:58:54 --> Unsupported operand types: string - int
+#0 D:\Ecommerce\app\Controllers\Home.php(78): App\Models\HomeModel->fetch_data(Array, 'undefined')
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('undefined')
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}

@@ -1,0 +1,372 @@
+CRITICAL - 2022-07-14 00:52:34 --> Undefined array key "lowtohigh"
+#0 D:\Ecommerce\app\Models\UserModel.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 164)
+#1 D:\Ecommerce\app\Controllers\Home.php(39): App\Models\UserModel->get_randomcategory_data(Array, '')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 01:51:21 --> Too few arguments to function App\Models\UserModel::get_randomcategory_data(), 1 passed in D:\Ecommerce\app\Controllers\Home.php on line 36 and exactly 2 expected
+#0 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_randomcategory_data(Array)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 01:52:15 --> Too few arguments to function App\Models\UserModel::get_randomcategory_data(), 1 passed in D:\Ecommerce\app\Controllers\Home.php on line 36 and exactly 2 expected
+#0 D:\Ecommerce\app\Controllers\Home.php(36): App\Models\UserModel->get_randomcategory_data(Array)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 01:52:41 --> Undefined array key "lowtohigh"
+#0 D:\Ecommerce\app\Controllers\Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 38)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 02:06:10 --> Cannot access offset of type string on string
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(41): view('productlist', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-14 02:06:35 --> Cannot access offset of type string on string
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(41): view('productlist', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-14 02:22:41 --> Undefined array key "lowtohigh"
+#0 D:\Ecommerce\app\Models\UserModel.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 164)
+#1 D:\Ecommerce\app\Controllers\Home.php(33): App\Models\UserModel->get_randomcategory_data(Array, '')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 02:23:30 --> Undefined array key "hightolow"
+#0 D:\Ecommerce\app\Models\UserModel.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 169)
+#1 D:\Ecommerce\app\Controllers\Home.php(33): App\Models\UserModel->get_randomcategory_data(Array, '')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 02:24:33 --> Undefined array key "lowtohigh"
+#0 D:\Ecommerce\app\Models\UserModel.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 164)
+#1 D:\Ecommerce\app\Controllers\Home.php(33): App\Models\UserModel->get_randomcategory_data(Array, '')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 02:32:36 --> Cannot access offset of type string on string
+#0 D:\Ecommerce\system\View\View.php(210): include()
+#1 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#3 D:\Ecommerce\app\Controllers\Home.php(35): view('productlist', Array)
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-14 02:35:02 --> foreach() argument must be of type array|object, null given
+#0 D:\Ecommerce\app\Views\productlist.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Ecommerce\\ap...', 142)
+#1 D:\Ecommerce\system\View\View.php(210): include('D:\\Ecommerce\\ap...')
+#2 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#4 D:\Ecommerce\app\Controllers\Home.php(35): view('productlist', Array)
+#5 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#6 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#10 {main}
+ERROR - 2022-07-14 02:35:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `is_delete` = '0'
+ LIMIT 8' at line 3
+CRITICAL - 2022-07-14 02:35:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `is_delete` = '0'
+ LIMIT 8' at line 3
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(179): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(33): App\Models\UserModel->get_randomcategory_data('c_item', Array, '')
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+CRITICAL - 2022-07-14 02:39:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 234)
+#1 D:\Ecommerce\app\Controllers\Home.php(82): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'user.jpg')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 02:39:19 --> Trying to access array offset on value of type null
+#0 D:\Ecommerce\app\Models\UserModel.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\Ecommerce\\ap...', 234)
+#1 D:\Ecommerce\app\Controllers\Home.php(82): App\Models\UserModel->get_product_data('img')
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('img', 'payments.png')
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 02:56:53 --> Undefined variable $getCategoryitem
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 03:00:08 --> Undefined constant "App\Controllers\data"
+#0 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#1 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-07-14 03:02:20 --> syntax error, unexpected token "<"
+#0 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#2 D:\Ecommerce\app\Controllers\Home.php(36): view('productlist', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-14 03:02:21 --> syntax error, unexpected token "<"
+#0 D:\Ecommerce\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\Ecommerce\system\Common.php(1089): CodeIgniter\View\View->render('productlist', Array, true)
+#2 D:\Ecommerce\app\Controllers\Home.php(36): view('productlist', Array)
+#3 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#4 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#8 {main}
+CRITICAL - 2022-07-14 05:19:11 --> Undefined variable $output
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 05:21:14 --> Undefined variable $output
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 05:21:18 --> Undefined variable $output
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 05:22:59 --> Undefined variable $output
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 05:23:02 --> Undefined variable $output
+#0 D:\Ecommerce\app\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Ecommerce\\ap...', 34)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 05:38:05 --> Too few arguments to function App\Controllers\Home::productlist(), 0 passed in D:\Ecommerce\system\CodeIgniter.php on line 832 and at least 1 expected
+#0 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#1 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-07-14 05:39:09 --> Too few arguments to function App\Controllers\Home::productlist(), 0 passed in D:\Ecommerce\system\CodeIgniter.php on line 832 and at least 1 expected
+#0 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#1 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-07-14 05:39:12 --> Too few arguments to function App\Controllers\Home::productlist(), 0 passed in D:\Ecommerce\system\CodeIgniter.php on line 832 and at least 1 expected
+#0 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->productlist()
+#1 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#5 {main}
+CRITICAL - 2022-07-14 06:21:23 --> Undefined array key "item_name"
+#0 D:\Ecommerce\app\Models\UserModel.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 06:21:37 --> Undefined array key "item_name"
+#0 D:\Ecommerce\app\Models\UserModel.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 06:21:38 --> Undefined array key "item_name"
+#0 D:\Ecommerce\app\Models\UserModel.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 225)
+#1 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+CRITICAL - 2022-07-14 06:22:07 --> Undefined array key "item_name"
+#0 D:\Ecommerce\app\Models\UserModel.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 226)
+#1 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#2 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#3 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#7 {main}
+ERROR - 2022-07-14 06:29:51 --> Column 'brand' in where clause is ambiguous
+CRITICAL - 2022-07-14 06:29:51 --> Column 'brand' in where clause is ambiguous
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-14 06:30:25 --> Unknown column 'brand_name' in 'where clause'
+CRITICAL - 2022-07-14 06:30:25 --> Unknown column 'brand_name' in 'where clause'
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-14 06:31:10 --> Unknown column 'brand_name' in 'where clause'
+CRITICAL - 2022-07-14 06:31:10 --> Unknown column 'brand_name' in 'where clause'
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-14 06:34:45 --> Unknown column 'brand_name' in 'where clause'
+CRITICAL - 2022-07-14 06:34:45 --> Unknown column 'brand_name' in 'where clause'
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-14 06:35:10 --> Column 'brand' in where clause is ambiguous
+CRITICAL - 2022-07-14 06:35:10 --> Column 'brand' in where clause is ambiguous
+#0 D:\Ecommerce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\Ecommerce\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\Ecommerce\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\Ecommerce\app\Models\UserModel.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Ecommerce\app\Controllers\Home.php(29): App\Models\UserModel->get_items(Array)
+#6 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->get_item()
+#7 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#11 {main}
+ERROR - 2022-07-14 23:00:18 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-14 23:00:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\Ecommerce\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\Ecommerce\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\Ecommerce\app\Models\UserModel.php(261): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\Ecommerce\app\Controllers\Home.php(20): App\Models\UserModel->get_randomitem_data()
+#4 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#5 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#9 {main}
+CRITICAL - 2022-07-14 23:04:16 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
+CRITICAL - 2022-07-14 23:17:24 --> Undefined array key "st"
+#0 D:\Ecommerce\app\Controllers\Home.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\Ecommerce\\ap...', 140)
+#1 D:\Ecommerce\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\Ecommerce\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\Ecommerce\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ecommerce\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\Ecommerce\system\Commands\Server\rewrite.php(43): require_once('D:\\Ecommerce\\pu...')
+#6 {main}
