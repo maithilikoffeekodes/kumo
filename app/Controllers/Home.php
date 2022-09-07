@@ -14,8 +14,8 @@ class Home extends BaseController
     }
     public function index()
     {
-        // $data['rand_item'] = $this->model->get_randomitem_data();
+        $data['rand_item'] = $this->model->get_randomitem_data();
         // echo"<pre>";print_r($data);exit;    
-        return view('index');
+        return view('index',$data);
     }
 }

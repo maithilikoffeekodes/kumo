@@ -2,8 +2,7 @@
 
 <?= $this->section('content') ?>
   
-<?php //echo"<pre>";print_r($rand_item);exit; ?>
-
+<?php // echo"<pre>";print_r($rand_item);exit; ?>
 <!-- ======================= Category & Slider ======================== -->
 <section class="p-0">
     <div class="container">
@@ -128,7 +127,7 @@
 
         <div class="row align-items-center rows-products">
             <!-- Single -->
-           <?php foreach(@$rand_item as $row) { ?>
+           <?//php foreach(@$rand_item as $row) { ?>
             <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="product_grid card b-0">
                     <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
@@ -147,8 +146,8 @@
                     <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
                         <div class="text-left">
                             <div class="text-left">
-                                <div class="elso_titl"><span class="small"><?= $row['category_name']?></span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?= $row['name']?></a></h5>
+                                <div class="elso_titl"><span class="small"><?//= $row['category_name']?></span></div>
+                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?//= $row['name']?></a></h5>
                                 <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                     <i class="fas fa-star filled"></i>
                                     <i class="fas fa-star filled"></i>
@@ -156,13 +155,13 @@
                                     <i class="fas fa-star filled"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm"><?= $row['listedprice']?><del><?= $row['price']?></del><?= $row['discount']?>%</span></div>
+                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm"><?//= $row['listedprice']?><del><?//= $row['price']?></del><?//= $row['discount']?>%</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php } ?>
+            <?//php } ?>
         </div>
 
         <div class="row justify-content-center">
