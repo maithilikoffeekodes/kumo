@@ -1,6 +1,19 @@
 <?= $this->extend(THEME . 'form') ?>
 
 <?= $this->section('content') ?>
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
 <form action="<?= url('admin/Home/createitem') ?>" class="ajax-form-submit" method="post" enctype="multipart/form-data">
 
     <div class="row">
@@ -51,21 +64,33 @@
 
             <div class="form-group">
                 <label>MRP Price<span class="tx-danger">*</span></label>
-                <input type="text" name="mrpprice" id="mrpprice" class="form-control" value="<?= @$item['price']; ?>" placeholder="Enter MRP Price" required>
+                <input type="number" name="mrpprice" id="mrpprice" class="form-control" value="<?= @$item['price']; ?>" maxlength="7" placeholder="Enter MRP Price" required>
             </div>
             <div class="form-group">
                 <label class="form-label"> Listed Price :<span class="tx-danger">*</span></label>
                 <div class="text-danger form_proccessing1"></div>
-                <input class="form-control" onblur="countdiscount()" id="listed_price" name="price" value="<?= @$item['listedprice'] ?>" placeholder="Enter Listed Price" required="" type="text">
+                <input class="form-control" onblur="countdiscount()" id="listed_price" name="price" value="<?= @$item['listedprice'] ?>" maxlength="7" placeholder="Enter Listed Price" required="" type="number">
             </div>
 
             <div class="form-group">
                 <label class="form-label">Discount :</span></label>
-                <input class="form-control" onkeyup="count_discount()" id="discount" name="discount" value="<?= @$item['discount'] ?>" placeholder="Enter Discount in %" type="text">
+                <input class="form-control" onkeyup="count_discount()" id="discount" name="discount" value="<?= @$item['discount'] ?>" maxlength="3" placeholder="Enter Discount in %" type="number">
             </div>
             <div class="form-group">
-                <label>Stock<span class="tx-danger">*</span></label>
-                <input type="text" name="stock" class="form-control" value="<?= @$item['stock']; ?>" placeholder ="Enter stock" required>
+                <label class="form-label">Igst<span class="tx-danger">*</span></label>
+                <input class="form-control"  type="number" maxlength="2" name="igst" value="<?= @$item['igst'] ?>" placeholder="Enter GST in %" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Cgst<span class="tx-danger">*</span></label>
+                <input class="form-control"  type="number" name="cgst" maxlength="1" value="<?= @$item['cgst'] ?>" placeholder=" %" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Sgst<span class="tx-danger">*</span></label>
+                <input class="form-control"  type="number" name="sgst" maxlength="1" value="<?= @$item['sgst'] ?>" placeholder=" %" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Stock<span class="tx-danger">*</span></label>
+                <input type="text" name="stock" class="form-control" value="<?= @$item['stock']; ?>" placeholder="Enter stock" required>
             </div>
         </div>
     </div>
@@ -390,6 +415,10 @@
         }
 
     }
+    $(document).on('keyup', 'input[name="igst"]', function() {
+        var igst = $('input[name="igst"]').val();
+        $('input[name="cgst"],input[name="sgst"]').val(igst / 2);
+    });
 
     $('#summernote1').summernote({
 

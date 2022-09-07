@@ -376,6 +376,9 @@ class HomeModel extends Model
             'price' => $post['mrpprice'],
             'listedprice' => $post['price'],
             'discount' => $post['discount'],
+            'igst' => $post['igst'],
+            'cgst' => $post['cgst'],
+            'sgst' => $post['sgst'],
             'stock' => $post['stock']
         );
         if (isset($file)) {
@@ -402,13 +405,14 @@ class HomeModel extends Model
                 $builder1->whereIn("id", $pIid);
                 $result1 = $builder1->Update($pdata2);
                 if ($result && $result1) {
-                    $msg = array('st' => 'success', 'msg' => "Data Updated", 'location' => url('admin/Item/item'));
+                    $msg = array('st' => 'success', 'msg' => "Data Updated", 'location' => url('admin/Home/item'));
                 } else {
                     $msg = array('st' => 'fail', 'msg' => "Data Updated fail");
                 }
             }
         } else {
-
+            $pdata['created_at'] = date('Y-m-d H:i:s');
+            $pdata['created_by'] = session('id');
             $res = $builder->insert($pdata);
             $id = $db->insertID();
             $pdata2['pid'] = $id;

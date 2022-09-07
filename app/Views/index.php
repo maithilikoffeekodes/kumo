@@ -1,7 +1,8 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
-
+  
+<?php //echo"<pre>";print_r($rand_item);exit; ?>
 
 <!-- ======================= Category & Slider ======================== -->
 <section class="p-0">
@@ -127,6 +128,7 @@
 
         <div class="row align-items-center rows-products">
             <!-- Single -->
+           <?php foreach(@$rand_item as $row) { ?>
             <div class="col-xl-3 col-lg-4 col-md-6 col-6">
                 <div class="product_grid card b-0">
                     <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
@@ -145,8 +147,8 @@
                     <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
                         <div class="text-left">
                             <div class="text-left">
-                                <div class="elso_titl"><span class="small">Mobiles</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Killore iPhone 12</a></h5>
+                                <div class="elso_titl"><span class="small"><?= $row['category_name']?></span></div>
+                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?= $row['name']?></a></h5>
                                 <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                     <i class="fas fa-star filled"></i>
                                     <i class="fas fa-star filled"></i>
@@ -154,262 +156,13 @@
                                     <i class="fas fa-star filled"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$99 - $129</span></div>
+                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm"><?= $row['listedprice']?><del><?= $row['price']?></del><?= $row['discount']?>%</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                    <div class="badge bg-danger text-white position-absolute ft-regular ab-right text-upper">-40%</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/10.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Headphones</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Killore Headphone</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$129</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/11.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Mobiles</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Ziome iPhone 11</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$99 - $129</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">New</div>
-                    <div class="badge bg-danger text-white position-absolute ft-regular ab-right text-upper">-55%</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/4.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Mobiles</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Pillos Android Phone</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$50 - $149</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                    <div class="badge bg-danger text-white position-absolute ft-regular ab-right text-upper">-30%</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/5.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Camera</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Phot Video Camera</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$199</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">New</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/6.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Headphone</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">New Croft Headphone</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$110 - $600</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/7.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">TV/LCD</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">32 Inch Sony TV</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$99 - $110</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single -->
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">New</div>
-                    <div class="badge bg-danger text-white position-absolute ft-regular ab-right text-upper">-60%</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/8.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
-                            <div class="text-left">
-                                <div class="elso_titl"><span class="small">Headphone</span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Xiomi 13 Headphone</a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">$119</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <?php } ?>
         </div>
 
         <div class="row justify-content-center">

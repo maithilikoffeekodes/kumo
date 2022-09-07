@@ -11,9 +11,11 @@ class Home extends BaseController
     {
         parent::initController($request, $response, $logger);
         $this->model = new HomeModel();
-
     }
-    public function index(){
+    public function index()
+    {
+        // $data['rand_item'] = $this->model->get_randomitem_data();
+        // echo"<pre>";print_r($data);exit;    
         return view('index');
     }
 }

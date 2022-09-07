@@ -96,7 +96,7 @@ class Home extends BaseController
         {
             $data=$this->model->get_master_data('item',$id);
         }
-        return view('admin/item/createitem');
+        return view('admin/item/createitem',$data);
     }
     public function Getdata($method = '')
     {
