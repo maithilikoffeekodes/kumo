@@ -80,6 +80,7 @@ class Home extends BaseController
     }
     public function Getdata($method = '')
     {
+        // print_r($method);exit;
         if ($method == 'getstate') {
             $get = $this->request->getGet();
             $data = $this->model->get_states($get);

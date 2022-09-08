@@ -1,8 +1,12 @@
-
 <script>
-        var PATH = '<?= base_url('') ?>';
+	var PATH = '<?= base_url('') ?>';
 </script>
+<!-- Select2 js-->
+<script src="<?= ASSETS; ?>plugins/select2/js/select2.min.js"></script>
 
+<!--MutipleSelect js-->
+<script src="<?= ASSETS; ?>plugins/multipleselect/multiple-select.js"></script>
+<script src="<?= ASSETS; ?>plugins/multipleselect/multi-select.js"></script>
 <script src="<?= ASSETS; ?>js/jquery.min.js"></script>
 <script src="<?= ASSETS; ?>js/popper.min.js"></script>
 <script src="<?= ASSETS; ?>js/bootstrap.min.js"></script>
@@ -16,8 +20,7 @@
 <script src="<?= ASSETS; ?>js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-<!-- Select2 js-->
-<script src="<?= ASSETS; ?>plugins/select2/js/select2.min.js"></script>
+
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->

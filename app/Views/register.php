@@ -53,7 +53,7 @@
                                 <label>States<span class="text-danger">*</span></label>
                                 <select name="state" id="state" class="form-control" required>
                                     <?//php if (isset($data['state'])) { ?>
-                                        <option value="<?= @$data['state'] ?>" selected><?= @$data['state_name'] ?></option>
+                                        <option value="" selected></option>
                                     <?//php } ?>
                                 </select>
                             </div>
@@ -61,7 +61,7 @@
                                 <label>City<span class="text-danger">*</span></label>
                                 <select name="city" id="city" class="form-control" required>
                                     <?//php if (isset($data['city'])) { ?>
-                                        <option value="<?= @$data['city'] ?>" selected><?= @$data['city_name'] ?></option>
+                                        <option value="" selected></option>
                                     <?//php } ?>
                                 </select>
                             </div>
@@ -107,51 +107,7 @@
 <?= $this->endSection() ?>
 <?= $this->section('scripts') ?>
 <script>
-    $('.ajax-form-submit').on('submit', function(e) {
-        alert('rdgbdfb');
-        $('.error-msg').html('');
-        $('.form_proccessing').html('Please wait...');
-        e.preventDefault();
-        var aurl = $(this).attr('action');
-        var form = $(this);
-        var formdata = false;
-        $('#save_data').prop('disabled', true);
-        if (window.FormData) {
-            //  alert("form");return;
-            formdata = new FormData(form[0]);
-        }
-        $.ajax({
-            type: "POST",
-            url: aurl,
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: formdata ? formdata : form.serialize(),
-            success: function(response) {
-                // console.log(response);
-                //  alert(response);return;
-                if (response.st == 'success') {
-
-                    //  alert("sweetaert");return;
-                    swal("Success!", response.msg, "success");
-                    window.location.href = "<?= url('Home/login') ?>";
-                    datatable_load('');
-                    //  alert("succes");return;
-                    $('#save_data').prop('disabled', false);
-                } else {
-                    $('.form_proccessing').html('');
-                    $('#save_data').prop('disabled', false);
-                    $('.error-msg').html(response.msg);
-                }
-            },
-            error: function() {
-                $('#save_data').prop('disabled', false);
-                alert('Error');
-            }
-        });
-        return false;
-    });
-    $("#state").select2({
+      $("#state").select2({
         width: '100%',
         placeholder: 'Select...',
         ajax: {
@@ -197,5 +153,50 @@
             cache: true
         }
     });
+    $('.ajax-form-submit').on('submit', function(e) {
+        alert('rdgbdfb');
+        $('.error-msg').html('');
+        $('.form_proccessing').html('Please wait...');
+        e.preventDefault();
+        var aurl = $(this).attr('action');
+        var form = $(this);
+        var formdata = false;
+        $('#save_data').prop('disabled', true);
+        if (window.FormData) {
+            //  alert("form");return;
+            formdata = new FormData(form[0]);
+        }
+        $.ajax({
+            type: "POST",
+            url: aurl,
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formdata ? formdata : form.serialize(),
+            success: function(response) {
+                // console.log(response);
+                //  alert(response);return;
+                if (response.st == 'success') {
+
+                    //  alert("sweetaert");return;
+                    swal("Success!", response.msg, "success");
+                    window.location.href = "<?= url('Home/login') ?>";
+                    datatable_load('');
+                    //  alert("succes");return;
+                    $('#save_data').prop('disabled', false);
+                } else {
+                    $('.form_proccessing').html('');
+                    $('#save_data').prop('disabled', false);
+                    $('.error-msg').html(response.msg);
+                }
+            },
+            error: function() {
+                $('#save_data').prop('disabled', false);
+                alert('Error');
+            }
+        });
+        return false;
+    });
+  
 </script>
 <?= $this->endSection() ?>

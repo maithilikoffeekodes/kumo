@@ -175,7 +175,7 @@ class HomeModel extends Model
     }
     public function get_states($post)
     {
-        echo"<pre>";print_r($post);exit;
+        // echo"<pre>";print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('states');
         $builder->select('id,sname');
@@ -191,7 +191,6 @@ class HomeModel extends Model
                 "id" => $row['id'],
             );
         }
-
         return $result;
     }
     public function get_city($post)
