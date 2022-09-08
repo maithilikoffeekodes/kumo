@@ -11,7 +11,10 @@
 		 
         <!-- Custom CSS -->
         <link href="<?=ASSETS;?>css/styles.css" rel="stylesheet">
-		
+		<link href="<?=ASSETS;?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+		    <!---Select2 css-->
+			<link href="<?= ASSETS ?>plugins/select2/css/select2.min.css" rel="stylesheet">
     </head>
 	
     <body>
@@ -406,10 +409,10 @@
 						
 						<div class="cart_action px-3 py-3">
 							<div class="form-group">
-								<button type="button" class="btn d-block full-width btn-dark">Move To Cart</button>
+								<a href="<?= url('Home/cart')?>"><button type="button" class="btn d-block full-width btn-dark">Move To Cart</button></a>
 							</div>
 							<div class="form-group">
-								<button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button>
+								<a href="<?= url('Home/wishlist')?>"><button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button></a>
 							</div>
 						</div>
 						
@@ -481,10 +484,10 @@
 						
 						<div class="cart_action px-3 py-3">
 							<div class="form-group">
-								<button type="button" class="btn d-block full-width btn-dark">Checkout Now</button>
+								<a href="<?= url('Home/checkout')?>"><button type="button" class="btn d-block full-width btn-dark">Checkout Now</button></a>
 							</div>
 							<div class="form-group">
-								<button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button>
+								<a href="<?= url('Home/cart')?>"><button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button></a>
 							</div>
 						</div>
 						

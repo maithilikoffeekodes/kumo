@@ -14,6 +14,10 @@
 <script src="<?= ASSETS; ?>js/snackbar.min.js"></script>
 <script src="<?= ASSETS; ?>js/jQuery.style.switcher.js"></script>
 <script src="<?= ASSETS; ?>js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<!-- Select2 js-->
+<script src="<?= ASSETS; ?>plugins/select2/js/select2.min.js"></script>
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->

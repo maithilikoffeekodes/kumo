@@ -23,12 +23,12 @@
 								<div class="headd-sty-last">
 									<ul class="nav-menu nav-menu-social align-to-right align-items-center d-flex">
 										<li>
-											<div class="call d-flex align-items-center text-left">
+											<div class="call d-flex align-items-center text-left" style="margin-right: 47px;">
 												<i class="lni lni-phone fs-xl"></i>
 												<span class="text-muted small ml-3">Call Us Now:<strong class="d-block text-dark fs-md">0(800) 123-456</strong></span>
 											</div>
 										</li>
-										<li>
+										<!-- <li>
 											<a href="#" onclick="openWishlist()">
 												<i class="far fa-heart fs-lg"></i><span class="dn-counter bg-success">2</span>
 											</a>
@@ -43,7 +43,7 @@
 													</div>
 												</div>
 											</a>
-										</li>
+										</li> -->
 									</ul>	
 								</div>
 								<div class="mobile_nav">

@@ -11,7 +11,7 @@ class Home extends BaseController
     {
         parent::initController($request, $response, $logger);
         $this->model = new HomeModel();
-           $this->gmodel = new GeneralModel();
+        $this->gmodel = new GeneralModel();
     }
     public function index()
     {

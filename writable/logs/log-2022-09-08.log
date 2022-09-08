@@ -1,0 +1,1491 @@
+CRITICAL - 2022-09-08 00:04:11 --> Unclosed '{' on line 134
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(19): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 00:04:22 --> Unclosed '{' on line 134
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(19): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 00:04:26 --> Unclosed '{' on line 134
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(19): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 00:04:27 --> Unclosed '{' on line 134
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(19): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 00:04:28 --> Unclosed '{' on line 134
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(19): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '7-a.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:46 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:41:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:44:16 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#3 D:\kumo\app\Controllers\Home.php(23): view('productdetail')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-08 01:44:19 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#3 D:\kumo\app\Controllers\Home.php(23): view('productdetail')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-08 01:44:40 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#3 D:\kumo\app\Controllers\Home.php(23): view('productdetail')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-08 01:44:59 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:44:59 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:44:59 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:00 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:45:01 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:00 --> Undefined variable $row
+#0 D:\kumo\app\Views\productdetail.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 38)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(23): view('productdetail', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 01:49:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:49:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 01:50:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(22): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:45:02 --> Undefined array key "image"
+#0 D:\kumo\app\Views\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Vie...', 12)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(21): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 02:45:04 --> Undefined array key "image"
+#0 D:\kumo\app\Views\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Vie...', 12)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(21): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 02:45:05 --> Undefined array key "image"
+#0 D:\kumo\app\Views\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Vie...', 12)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(21): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 02:54:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:31 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:54:32 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:55:58 --> Undefined variable $row
+#0 D:\kumo\app\Views\productdetail.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 43)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(25): view('productdetail', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('3')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 02:56:00 --> Undefined variable $row
+#0 D:\kumo\app\Views\productdetail.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 43)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(25): view('productdetail', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('3')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 02:56:20 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:22 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:22 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:22 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:22 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:56:22 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:03 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:03 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:03 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:03 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 02:59:04 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:38 --> Undefined array key "additional_description"
+#0 D:\kumo\app\Views\productdetail.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Vie...', 129)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('productdetail', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(25): view('productdetail', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('3')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-08 03:00:54 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:54 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:54 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:54 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:55 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 03:00:56 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 35)
+#1 D:\kumo\app\Controllers\Home.php(24): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+ERROR - 2022-09-08 04:25:20 --> Column 'user_id' cannot be null
+CRITICAL - 2022-09-08 04:25:20 --> Column 'user_id' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(95): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(34): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:31:18 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:31:18 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:33:43 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:33:43 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:33:49 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:33:49 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:33:51 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:33:51 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:34:01 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:34:01 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:34:11 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:34:11 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:34:12 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:34:12 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:34:17 --> Table 'kumo.payment_log' doesn't exist
+CRITICAL - 2022-09-08 04:34:17 --> Table 'kumo.payment_log' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Helpers\base_helper.php(178): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(18): generateTransactionId()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:35:54 --> Column 'created_by' cannot be null
+CRITICAL - 2022-09-08 04:35:54 --> Column 'created_by' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(95): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(39): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:35:59 --> Column 'created_by' cannot be null
+CRITICAL - 2022-09-08 04:35:59 --> Column 'created_by' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(95): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(39): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-08 04:36:46 --> Column 'created_by' cannot be null
+CRITICAL - 2022-09-08 04:36:46 --> Column 'created_by' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(95): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(39): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-08 04:59:19 --> You must set the database table to be used with your query.
+#0 D:\kumo\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\kumo\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\kumo\app\Controllers\Home.php(49): CodeIgniter\Model->__call('get_register_da...', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-08 04:59:23 --> You must set the database table to be used with your query.
+#0 D:\kumo\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\kumo\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\kumo\app\Controllers\Home.php(49): CodeIgniter\Model->__call('get_register_da...', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+ERROR - 2022-09-08 06:01:17 --> Column 'created_by' cannot be null
+CRITICAL - 2022-09-08 06:01:17 --> Column 'created_by' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ca...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(166): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(68): App\Models\HomeModel->insert_cart_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->cart()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-08 06:04:14 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:14 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:14 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:15 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:16 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:40 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:40 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:40 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:40 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:41 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-1.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-2.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-3.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'team-4.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:47 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '8.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '9.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '12.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '14.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '13.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '11.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\HomeModel.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 106)
+#1 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('assets')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('assets', 'img', 'product', '10.jpg')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-08 06:36:54 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 99)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-08 06:36:59 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 99)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-08 06:37:22 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 99)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}

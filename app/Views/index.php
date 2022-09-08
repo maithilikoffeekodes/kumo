@@ -1,116 +1,134 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
-  
-<?php // echo"<pre>";print_r($rand_item);exit; ?>
-<!-- ======================= Category & Slider ======================== -->
-<section class="p-0">
-    <div class="container">
-        <div class="row">
 
-            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                <div class="killore-new-block-link border mb-3 mt-3">
-                    <div class="px-3 py-3 ft-medium fs-md text-dark gray">Top Categories</div>
+<?php //echo"<pre>";print_r($rand_item);exit; 
+?>
 
-                    <div class="killore--block-link-content">
-                        <ul>
-                            <li><a href="javascript:void(0);"><i class="fas fa-tshirt"></i>Fashion</a></li>
-                            <li><a href="javascript:void(0);"><i class="fas fa-tv"></i>Electronics</a></li>
-                            <li><a href="javascript:void(0);"><i class="fas fa-gift"></i>Gifts & Cards</a></li>
-                            <li><a href="javascript:void(0);"><i class="fas fa-leaf"></i>Home Decoration</a></li>
-                            <li><a href="javascript:void(0);"><i class="fas fa-headphones-alt"></i>Headphones</a></li>
-                            <li><a href="javascript:void(0);"><i class="fas fa-football-ball"></i>Sports Items</a></li>
-                            <li class="px-2 my-2"><a href="javascript:void(0);" class="btn theme-bg rounded text-light">Get -60% Off</a></li>
-                        </ul>
+<!-- ============================ Hero Banner  Start================================== -->
+<div class="container-fluid mb-3">
+    <div class="row px-xl-5">
+        <div class="col-lg-12">
+            <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#header-carousel" data-slide-to="1"></li>
+                    <li data-target="#header-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <?php foreach (@$rand_slider as $row) ?>
+                    <div class="carousel-item position-relative active" style="height: 430px;">
+                        <img class="position-absolute w-100 h-100" src="<?= @$row['image']; ?>" style="object-fit: cover;">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$row['name']; ?></h1>
+                                <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
+                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                            </div>
+                        </div>
                     </div>
+                    <?php foreach (@$rand_slider as $row) { ?>
+                        <div class="carousel-item position-relative" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="<?= @$row['image']; ?>" style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$rs['name']; ?></h1>
+                                    <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
-
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
-                <div class="home-slider auto-slider mb-3 mt-3">
-
-                    <!-- Slide -->
-                    <div data-background-image="<?= ASSETS; ?>img/light-banner-1.png" class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="home-slider-container">
-
-                                        <!-- Slide Title -->
-                                        <div class="home-slider-desc">
-                                            <div class="home-slider-title mb-4">
-                                                <h5 class="fs-sm ft-ragular mb-2">New Collection</h5>
-                                                <h1 class="mb-2 ft-bold">The Standard<br>With <span class="theme-cl">Smartness</span></h1>
-                                                <span class="trending">Apple 10 comes with 6.5 inches full HD + High Valume</span>
-                                            </div>
-
-                                            <a href="#" class="btn btn-white stretched-link hover-black">Buy Now<i class="lni lni-arrow-right ml-2"></i></a>
-                                        </div>
-                                        <!-- Slide Title / End -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide -->
-                    <div data-background-image="<?= ASSETS; ?>img/light-banner-2.png" class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="home-slider-container">
-
-                                        <!-- Slide Title -->
-                                        <div class="home-slider-desc">
-                                            <div class="home-slider-title mb-4">
-                                                <h5 class="fs-sm ft-ragular mb-2">Super Sale</h5>
-                                                <h1 class="mb-2 ft-bold">The Standard<br>With <span class="text-success">Smartness</span></h1>
-                                                <span class="trending">Xiomi Redmi 10 comes with 6.5 inches full HD + LCD Screen</span>
-                                            </div>
-
-                                            <a href="#" class="btn btn-white stretched-link hover-black">Shop Now<i class="lni lni-arrow-right ml-2"></i></a>
-                                        </div>
-                                        <!-- Slide Title / End -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide -->
-                    <div data-background-image="<?= ASSETS; ?>img/light-banner-3.png" class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="home-slider-container">
-
-                                        <!-- Slide Title -->
-                                        <div class="home-slider-desc">
-                                            <div class="home-slider-title mb-4">
-                                                <h5 class="fs-sm ft-ragular mb-2">Super Sale</h5>
-                                                <h1 class="mb-2 ft-bold">The Standard<br>With Smartness</h1>
-                                                <span class="trending">Xiomi Redmi 10 comes with 6.5 inches full HD + LCD Screen</span>
-                                            </div>
-
-                                            <a href="#" class="btn theme-bg text-light">Shop Now<i class="lni lni-arrow-right ml-2"></i></a>
-                                        </div>
-                                        <!-- Slide Title / End -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
     </div>
+</div>
+<!-- ============================ Hero Banner End ================================== -->
+<!-- ======================= All Category ======================== -->
+<section class="middle">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="sec_title position-relative text-center">
+                    <h2 class="off_title">Popular Categories</h2>
+                    <h3 class="ft-bold pt-3">Trending Categories</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/fashion.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Wear</a></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/tshirt.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Kid's Wear</a></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/accessories.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Accessories</a></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/sneakers.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Shoes</a></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/television.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Television</a></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                <div class="cats_side_wrap text-center mx-auto mb-3">
+                    <div class="sl_cat_01">
+                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/pant.png" class="img-fluid" width="40" alt=""></a></div>
+                    </div>
+                    <div class="sl_cat_02">
+                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Pants</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
-<!-- ======================= Category & Slider ======================== -->
+<!-- ======================= All Category ======================== -->
 
 <!-- ======================= Product List ======================== -->
 <section class="middle">
@@ -127,41 +145,41 @@
 
         <div class="row align-items-center rows-products">
             <!-- Single -->
-           <?//php foreach(@$rand_item as $row) { ?>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product_grid card b-0">
-                    <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                    <div class="card-body p-0">
-                        <div class="shop_thumb position-relative">
-                            <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/shop/9.png" alt="..."></a>
-                            <div class="product-left-hover-overlay">
-                                <ul class="left-over-buttons">
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                    <li><a href="javascript:void(0);" class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
-                                </ul>
+            <?php foreach (@$rand_item as $row) { ?>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+                    <div class="product_grid card b-0">
+                        <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
+                        <div class="card-body p-0">
+                            <div class="shop_thumb position-relative">
+                                <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..."></a>
+                                <div class="product-left-hover-overlay">
+                                    <ul class="left-over-buttons">
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
-                        <div class="text-left">
+                        <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
                             <div class="text-left">
-                                <div class="elso_titl"><span class="small"><?//= $row['category_name']?></span></div>
-                                <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?//= $row['name']?></a></h5>
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star"></i>
+                                <div class="text-left">
+                                    <div class="elso_titl"><span class="small"><?= $row['category'] ?></span></div>
+                                    <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?= $row['name'] ?></a></h5>
+                                    <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹<?= $row['listedprice'] ?></span><span class="text-secondary p-2 p-2"><del>₹<?= $row['price'] ?></del></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $row['discount'] ?> % off</span></div>
                                 </div>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm"><?//= $row['listedprice']?><del><?//= $row['price']?></del><?//= $row['discount']?>%</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <?//php } ?>
+            <?php } ?>
         </div>
 
         <div class="row justify-content-center">
@@ -732,60 +750,88 @@
 </section>
 <!-- ======================= Top Seller Start ============================ -->
 
-<!-- ======================= Customer Features ======================== -->
-<section class="px-0 py-3 br-top">
-    <div class="container">
-        <div class="row">
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="d-flex align-items-center justify-content-start py-2">
-                    <div class="d_ico">
-                        <i class="fas fa-shopping-basket"></i>
-                    </div>
-                    <div class="d_capt">
-                        <h5 class="mb-0">Free Shipping</h5>
-                        <span class="text-muted">Capped at $10 per order</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="d-flex align-items-center justify-content-start py-2">
-                    <div class="d_ico">
-                        <i class="far fa-credit-card"></i>
-                    </div>
-                    <div class="d_capt">
-                        <h5 class="mb-0">Secure Payments</h5>
-                        <span class="text-muted">Up to 6 months installments</span>
-                    </div>
-                </div>
-            </div>
+<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="d-flex align-items-center justify-content-start py-2">
-                    <div class="d_ico">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="d_capt">
-                        <h5 class="mb-0">15-Days Returns</h5>
-                        <span class="text-muted">Shop with fully confidence</span>
-                    </div>
-                </div>
-            </div>
+<?= $this->endSection() ?>
+<?= $this->section('scripts') ?>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="d-flex align-items-center justify-content-start py-2">
-                    <div class="d_ico">
-                        <i class="fas fa-headphones-alt"></i>
-                    </div>
-                    <div class="d_capt">
-                        <h5 class="mb-0">24x7 Fully Support</h5>
-                        <span class="text-muted">Get friendly support</span>
-                    </div>
-                </div>
-            </div>
+<script>
+    $(document).ready(function() {
 
-        </div>
-    </div>
-</section>
+        $('.cartbtn').click(function(event) {
+
+            var product_id = $(this).data("product_id");
+            var quantity = $(this).data("quantity");
+            var price = $(this).data("price");
+            // alert(quantity);
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": true,
+                "positionClass": "toast-top-right"
+            };
+
+            $.ajax({
+                url: "<?php echo url('Home/cart'); ?>",
+                method: "POST",
+                data: {
+                    product_id: product_id,
+                    quantity: quantity,
+                    price: price
+                },
+                success: function(response) {
+                    if (response.st == 'success') {
+
+                        toastr.success(response.msg);
+                        var cart_count = parseInt($(".cart_count").text());
+                        $(".cart_count").text(cart_count + 1);
+                    }
+                    if (response.st == 'added') {
+                        toastr.info(response.msg);
+                    } else {
+                        $('.form_processing').html('');
+                        $('#cartbtn').prop('disabled', false);
+                        $('.error-msg').html(response.msg);
+                    }
+                }
+
+            });
+
+        });
+
+    });
+    /*
+     *Add to Wish
+     */
+
+    $(document).on('click', '.wish', function() {
+        var product_id = $(this).data("product_id");
+        let wish = $(this);
+        toastr.options = {
+            "closeButton": true,
+            "newestOnTop": true,
+            "positionClass": "toast-top-right"
+        };
+        $.ajax({
+            url: "<?php echo url('Home/wishlist'); ?>",
+            method: "POST",
+            data: {
+                productid: product_id
+            },
+            success: function(response) {
+                if (response.st == 'success') {
+                    toastr.success(response.msg);
+                    wish.removeClass("wish");
+                    wish.addClass("removeWish")
+                    $('#cartbtn').prop('disabled', false);
+                } else {
+                    $('.form_processing').html('');
+                    $('#cartbtn').prop('disabled', false);
+                    $('.error-msg').html(response.msg);
+                }
+            }
+        });
+    });
+</script>
 <?= $this->endSection() ?>

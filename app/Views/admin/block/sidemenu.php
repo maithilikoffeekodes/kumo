@@ -17,7 +17,7 @@
 			<li class="nav-label">Applications</li>
 
 			<li class="nav-item">
-				<a class="nav-link with-sub" href=""><i class="fe fe-box"></i><span class="sidemenu-label">Apps</span><i class="angle fe fe-chevron-right"></i></a>
+				<a class="nav-link with-sub" href=""><i class="fe fe-box"></i><span class="sidemenu-label">Master</span><i class="angle fe fe-chevron-right"></i></a>
 				<ul class="nav-sub">
 					<li class="nav-item">
 						<a class="nav-sub-link" href="<?= url('admin/Home/brand') ?>"><span class="sidemenu-label">Brand</span></a>
