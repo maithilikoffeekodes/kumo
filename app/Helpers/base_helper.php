@@ -169,7 +169,6 @@ function generateTransactionId()
 {
 
     $txnid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
-    //  print_r($txnid);exit;
 
     $db = \Config\Database::connect();
 
@@ -183,6 +182,7 @@ function generateTransactionId()
 
         $txnid = generateTransactionId();
     }
+    // print_r($txnid);exit;
 
     return $txnid;
 }
@@ -357,29 +357,30 @@ function mail_template($ord_id)
      */
 
     $db      = \Config\Database::connect();
-    $builder = $db->table('order o');
+    $builder = $db->table('orders o');
     $builder->select('o.*,sum(o.total_payment) as grandtotal');
     // $builder->select('sum(o.total) as grandtotal');
     $builder->where('o.id', $ord_id);
     $query  = $builder->get();
     $order = $query->getRow();
-    if ($order->default_add != 0)  //check session isset login user if not then call guest user 
-    {
-        $builder = $db->table('signup');
-        $builder->select('*');
-        $builder->where('id', $order->default_add);
-        $query    = $builder->get();
-        $order_details = $query->getRow();
-    } else {
-        $builder = $db->table('address');
-        $builder->select('*');
-        $builder->where('id', $order->ship_id);
-        $query  = $builder->get();
-        $order_details = $query->getRow();
-    }
+    echo"";print_r($order);exit;
+    // if ($order->default_add != 0)  //check session isset login user if not then call guest user 
+    // {
+    //     $builder = $db->table('signup');
+    //     $builder->select('*');
+    //     $builder->where('id', $order->default_add);
+    //     $query    = $builder->get();
+    //     $order_details = $query->getRow();
+    // } else {
+    //     $builder = $db->table('address');
+    //     $builder->select('*');
+    //     $builder->where('id', $order->ship_id);
+    //     $query  = $builder->get();
+    //     $order_details = $query->getRow();
+    // }
 
     $builder = $db->table('order_item o');
-    $builder->select('o.*,i.item');
+    $builder->select('o.*,i.name');
     $builder->join('item  i', 'i.id = o.product_id');
     $builder->where('o.order_id', $ord_id);
     $query  = $builder->get();
@@ -458,7 +459,7 @@ function mail_template($ord_id)
 											<td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;" >
 												<img  src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
 												<h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
-                                                Thanks ' . @$order_details->name .  ' For Your Order!
+                                                Thanks ' . @$order->name .  ' For Your Order!
                                                 </h2>
 											</td>
 										</tr>
@@ -526,7 +527,7 @@ function mail_template($ord_id)
 															<td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
 																<p style="font-weight: 800;">Delivery Address</p>
 															
-                                                                <p>' . @$order_details->address . '<br>INDIA, ' . @$order_details->pincode . '</p>
+                                                                <p>' . @$order->address . '<br>INDIA, ' . @$order->pincode . '</p>
 
 
 															</td>

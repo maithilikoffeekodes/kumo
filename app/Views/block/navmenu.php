@@ -69,8 +69,17 @@
 							</a>
 						</li>
 						<li style="margin-left: 1089px;margin-top: -53px;">
-							<a  onclick="openCart()">
-								<i class="lni lni-shopping-basket"></i><span class="dn-counter bg-success">3</span>
+							<a  href="<?= url('Home/cart') ?>" onclick="openCart()">
+								<i class="lni lni-shopping-basket"></i>
+								<?php
+                            $db = \config\Database::Connect();
+                            $builder = $db->table('cart');
+                            $builder->select('count(id)as count_n');
+                            $builder->where(array('user_id' => session('id') ? session('id') : session('guestid'), 'is_delete' => 0));
+                            $query = $builder->get();
+                            $count = $query->getRow();
+                            ?>
+								<span class="dn-counter bg-success"><?= $count->count_n ?></span>
 							</a>
 						</li>
 					</ul>

@@ -15,14 +15,13 @@ class Home extends BaseController
     }
     public function index()
     {
-        // if (!session('guestid') && !session('uid')) {
-        //     $guestid = generateTransactionId();
-        //     $session = session();
-        //     $session->set('guestid', $guestid);
-        // }
         $data['rand_item'] = $this->model->get_randomitem_data();
         $data['rand_slider'] = $this->model->get_randomslider_data();
-
+        if (!session('guestid') && !session('uid')) {
+            $guestid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);  
+            $session = session();
+            $session->set('guestid', $guestid);
+        }
         // echo"<pre>";print_r($data);exit;    
         return view('index', $data);
     }
@@ -64,23 +63,46 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
-            // echo"<pre>";print_r($post);exit;
             $msg = $this->model->insert_cart_data($post);
             return $this->response->setJSON($msg);
         }
-        return view('cart');
+        $data['cart'] = $this->model->get_cart_data(); 
+
+        return view('cart',$data);
+    }
+    public function shipping_address()
+    {
+        $post = $this->request->getPost();
+        echo"<pre>";print_r($post);exit;
+        if (!empty($post)) {
+            $msg = $this->model->insert_edit_address($post);
+            return $this->response->setJSON($msg);
+        }
     }
     public function wishlist(){
         
         return view('wishlist');
     }
     public function checkout(){
+        $post = $this->request->getPost();
+        if (!empty( $post) ) {
+            $data = $this->model->payment_data($post);
+            return $this->response->setJSON($data);  
+        }
+        $data['cart'] = $this->model->get_cart_data(); 
 
-        return view('checkout');
+        return view('checkout',$data);
     }
     public function Getdata($method = '')
     {
-        // print_r($method);exit;
+        if ($method == 'cart') {
+            $data = $this->model->get_cartupdate_data();
+            return $data;
+        }
+        if ($method == 'final_cart') {
+            $data = $this->model->get_finalcart_data();
+            return $data;
+        }
         if ($method == 'getstate') {
             $get = $this->request->getGet();
             $data = $this->model->get_states($get);
@@ -91,5 +113,52 @@ class Home extends BaseController
             $data = $this->model->get_city($post);
             return $this->response->setJSON($data);
         }
+    }
+    public function Payment($type = "") 
+    {
+		$get = $this->request->getGet();
+        
+		$txn = $get['txn'];
+		
+		$response = "Redirecting to System ... Please wait !!! Don't press Back or Refresh";
+		helper('rozorpay');
+		SendReceiveRazor($txn);
+		$gnmodel = $this->gmodel;
+		$getdata = $gnmodel->get_data_table('payment_log', array('TxnId'=>$txn));
+		if ($type == 'Fail') 
+        {
+			return redirect()->to(url('Home/payment_failed/0'));
+		}
+		if (!empty($getdata)) {
+			return redirect()->to(url('Home/PaymentExcuate/'.$txn));
+		} else {
+			$msg = array("st" => "failed", "msg" => "ops, try again");
+			$session = session();
+			$session->setFlashdata('msg',$msg);
+			
+		}
+	}
+	public function PaymentExcuate($txn = "") {
+		echo "Redirecting to System ... Please wait !!! Don't press Back or Refresh";
+		if ($txn != "") {
+			helper('rozorpay');
+			PaymentExecute($txn);
+			$msg = array("st" => "success", "msg" => "Payment Success");
+			$session = session();
+			$session->setFlashdata('msg',$msg);
+		 	return redirect()->to(url('Home/payment_success/'.$txn));
+		}
+	} 
+    
+    public function payment_success($txn = '')
+    {
+        $data['txn'] = $txn;
+       return view('payment_success', $data);
+    }
+
+    public function payment_failed($txn = '')
+    {
+       $data['msg'] = "Payment Cancelled";
+       return view('payment_failed', $data);
     }
 }

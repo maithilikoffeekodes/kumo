@@ -14,8 +14,16 @@
 	<link href="<?= ASSETS; ?>css/styles.css" rel="stylesheet">
 	<link href="<?= ASSETS; ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/sweet-alert/sweetalert2.min.css">
+    <link href="<?= ASSETS; ?>plugins/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/datatable/responsivebootstrap4.min.css"/>
+    <link rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/datatable/fileexport/buttons.bootstrap4.min.css"/>
 	<!---Select2 css-->
-	<link href="<?= ASSETS ?>plugins/select2/css/select2.min.css" rel="stylesheet">
+	<!-- <link href="<?= ASSETS ?>plugins/select2/css/select2.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -446,7 +454,7 @@
 		</div>
 
 		<!-- Cart -->
-		<div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Cart">
+		<!-- <div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Cart">
 			<div class="rightMenu-scroll">
 				<div class="d-flex align-items-center justify-content-between slide-head py-3 px-3">
 					<h4 class="cart_heading fs-md ft-medium mb-0">Products List</h4>
@@ -455,7 +463,7 @@
 				<div class="right-ch-sideBar">
 
 					<div class="cart_select_items py-2">
-						<!-- Single Item -->
+						<!-- Single Item 
 						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
 							<div class="cart_single d-flex align-items-center">
 								<div class="cart_selected_single_thumb">
@@ -470,7 +478,7 @@
 							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
 						</div>
 
-						<!-- Single Item -->
+						<!-- Single Item 
 						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
 							<div class="cart_single d-flex align-items-center">
 								<div class="cart_selected_single_thumb">
@@ -485,7 +493,7 @@
 							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
 						</div>
 
-						<!-- Single Item -->
+						<!-- Single Item
 						<div class="d-flex align-items-center justify-content-between px-3 py-3">
 							<div class="cart_single d-flex align-items-center">
 								<div class="cart_selected_single_thumb">
@@ -518,7 +526,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 

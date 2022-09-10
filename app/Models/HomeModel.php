@@ -77,7 +77,7 @@ class HomeModel extends Model
         }
         return $msg;
     }
-  
+
     public function get_randomitem_data()
     {
         $db = $this->db;
@@ -91,7 +91,7 @@ class HomeModel extends Model
         // echo "<pre>";print_r($getRanditem);exit;
         return $getRanditem;
     }
-     public function get_product_data($id)
+    public function get_product_data($id)
     {
         $db = $this->db;
         $builder = $db->table('item i');
@@ -135,42 +135,197 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table("cart");
         $builder->select('*');
-        $builder->where(array('product_id' => $post['product_id'], 'is_delete' => 0));
+        $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'product_id' => $post['product_id'], 'is_delete' => 0));
         $query =  $builder->get();
         $result = $query->getRowArray();
         // echo "<pre>";print_r($result);exit;
         $pdata = array(
-            'user_id' =>  '',
+            'user_id' =>  session('uid') ? session('uid') : session('guestid'),
             'product_id' => $post['product_id'],
             'quantity' => $post['quantity'],
             'date' => date('y-m-d'),
             'price' => $post['price']
         );
 
-        if(!empty($result)){
-            $pdata['updated_at'] = date('Y-m-d H:i:s');
-            $pdata['updated_by'] = '';
-    
-            $builder->where(array( 'product_id' => $post['product_id']));
+        if (!empty($result)) {
+            // $pdata['updated_at'] = date('Y-m-d H:i:s');
+            // $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
+
+            $builder->where(array('product_id' => $post['product_id']));
             $res = $builder->update($pdata);
             if ($res) {
                 $msg = array('st' => 'added', 'msg' => 'Item Update to Cart');
             } else {
                 $msg = array('st' => 'failed', 'msg' => 'Failed Update to Cart');
             }
-        }
-       else{
-        $pdata['created_at'] = date('Y-m-d H:i:s');
-        $pdata['created_by'] = '';
-
-        $res = $builder->insert($pdata);
-        if ($res) {
-            $msg = array('st' => 'success', "msg" => "Item Added to Cart");
         } else {
-            $msg = array('st' => 'failed', "msg" => "Failed to Cart");
+            $pdata['created_at'] = date('Y-m-d H:i:s');
+            $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+
+            $res = $builder->insert($pdata);
+            if ($res) {
+                $msg = array('st' => 'success', "msg" => "Item Added to Cart");
+            } else {
+                $msg = array('st' => 'failed', "msg" => "Failed to Cart");
+            }
         }
-       }
-        
+
+        return $msg;
+    }
+    public function get_cart_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('cart c');
+        $builder->select('c.id,image,i.name,c.price,c.quantity');
+        $builder->join('item i', 'i.id = c.product_id');
+        $builder->where('c.is_delete', 0);
+        $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
+        $query =  $builder->get();
+        $result = $query->getResultArray();
+        return $result;
+    }
+
+    public function update_cart_data($post)
+    {
+        // echo"<pre>";print_r($post);exit;
+        $db = $this->db;
+        $builder = $db->table('cart');
+        $qty = $post['qty'];
+        // $id = $post['id'];
+
+        for ($i = 0; $i < count($qty); $i++) {
+            $pdata = array(
+                'quantity' => $qty[$i]
+            );
+
+            $builder->where('user_id', session('uid') ? session('uid') : session('guestid'));
+            $pdata['update_at'] = date('Y-m-d H:i:s');
+            $pdata['update_by'] = session('uid') ? session('uid') : session('guestid');
+            $builder->update($pdata);
+        }
+        $msg = array('st' => 'success');
+        return $msg;
+    }
+    public function get_cartupdate_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('cart c');
+        $builder->select('c.id,image,i.name,i.price,c.quantity,c.product_id');
+        $builder->join('item i', 'i.id=c.product_id');
+        $builder->where('c.is_delete', 0);
+        $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
+        $data_table = DataTable::of($builder);
+        $data_table->edit('image', function ($row) {
+            $img = '<img height="100" width ="130" src = "' . $row->image . '">';
+            return $img;
+        });
+        $data_table->add('action', function ($row) {
+
+            $btnquantity = '
+            <div class="qty_class" style="width:110px;">
+            <button class="btn btn-sm btn-secondary btn-minus decrement" type="button" onclick="decrement(this)">
+            <i class="fa fa-minus" style="margin-right:1px;"></i></button>
+            <span class="count" style="margin-left:5px;margin-right:5px;">' . $row->quantity . '</span>
+            <input type="hidden" class="form-control qty" name="qty[]" value="' . $row->quantity . '">
+            <input type="hidden" class="form-control qty" name="cart_id[]" value="' . $row->id . '">
+            <input type="text" class="form-control price_hidden d-none" name="price[]" value="' . $row->price . '">
+            <button class="btn btn-sm btn-secondary btn-plus increment" type="button" onclick="increment(this)">
+            <i class="fa fa-plus"></i></button>
+            </div>';
+
+            return $btnquantity;
+        });
+
+        $data_table->add('action', function () {
+            $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
+            return $btntotal;
+        })
+
+            ->hide('product_id')
+            ->hide('id')
+            ->hide('quantity');
+
+
+        return $data_table->toJSON();
+    }
+    public function get_finalcart_data(){
+        $db = $this->db;
+        $builder = $db->table('cart c');
+        $builder->select('c.id,image,i.name,i.price,c.quantity,c.product_id');
+        $builder->join('item i', 'i.id=c.product_id');
+        $builder->where('c.is_delete', 0);
+        $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
+        $data_table = DataTable::of($builder);
+        $data_table->edit('image', function ($row) {
+            $img = '<img height="100" width ="130" src = "' . $row->image . '">';
+            return $img;
+        });
+        $data_table->add('action', function ($row) {
+
+            $btnquantity = '
+      <div class="qty_class" style="width:110px;">
+      <span class="count" style="margin-left:5px;margin-right:5px;">' . $row->quantity . '</span>
+      <input type="hidden" class="form-control qty" name="qty[]" value="' . $row->quantity . '">
+      <input type="hidden" class="form-control qty" name="cart_id[]" value="' . $row->product_id . '">
+      <input type="text" class="form-control price_hidden d-none" name="price[]" value="' . $row->price . '">
+      </div>';
+
+            return $btnquantity;
+        });
+
+        $data_table->add('action', function () {
+            $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
+            return $btntotal;
+        })
+
+            ->hide('product_id')
+            ->hide('id')
+            ->hide('quantity');
+
+
+        return $data_table->toJSON();
+    }
+
+    public function insert_edit_address($post)
+    {
+        //  print_r($post);exit; 
+        $db = $this->db;
+        $builder = $db->table('shipping_address');
+        $builder->select('*');
+        $builder->where('id', $post['id']);
+        $builder->where('is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getResultArray();
+        // print_r($post);exit;
+        $adata = array(
+            'fname' => $post['fname'],
+            'lname' => $post['lname'],
+            'user_id' => session('id') ? session('id') : session('guestid'),
+            'email' => $post['email'],
+            'mobileno' => $post['mobileno'],
+            'address' => $post['address'],
+            'state' => $post['state'],
+            'city' => $post['city'],
+            'pincode' => $post['pincode'],
+            // 'type' => $post['address_type']
+        );
+        if (!empty($result)) {
+            // print_r($result);exit;
+            $builder->where('id', $post['id']);
+            $res = $builder->update($adata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Update successfully');
+            } else {
+                $msg = array('st' => 'failed', 'msg' => 'Update failed');
+            }
+        } else {
+            $res = $builder->insert($adata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            } else {
+                $msg = array('st' => 'failed');
+            }
+        }
         return $msg;
     }
     public function get_states($post)
@@ -214,4 +369,96 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function payment_data($post)
+    {
+        // echo "<pre>";
+        // print_r($post);
+        // exit;
+        // if (!empty($post['add2'])) {
+        //     $ship_id = $post['id'];
+        //     $default_add = 0;
+        // } else {
+
+        //     $ship_id = 0;
+        //     $default_add = session('id');
+        // }
+        $db = $this->db;
+        $builder = $db->table('orders');
+        $order_data = array(
+            'user_id' => session('id') ? session('id') : session('guestid'),
+            'total_payment' => $post['grand_total'],
+            // 'ship_id' => $ship_id,
+            // 'default_add' => $default_add,
+            // 'payment_type' => $post['payment'],
+            'is_login' => session('id') ? 0 : 1
+        );
+        $order_data['created_at'] = date('Y-m-d H:i:s');
+        $order_data['created_by'] = session('id') ? session('id') : session('guestid');
+        $result = $builder->insert($order_data);
+        $orderid = $db->insertID();
+        $db = $this->db;
+        $builder = $db->table('order_item');
+        $qty = $post['qty'];
+        for ($i = 0; $i < count($qty); $i++) {
+            $order_item = array(
+                'order_id' => @$orderid,
+                'user_id' => session('id') ? session('id') : session('guestid'),
+                'quantity' => $post['qty'][$i],
+                'product_id' => $post['cart_id'][$i],
+                'price' => $post['price'][$i],
+                'total' => $post['sub'][$i]
+            );
+            $result = $builder->insert($order_item);
+            $order_itemid = $db->insertID();
+        }
+        /**
+         * payment processing
+         */
+        // if ($post['payment'] == 'Razorpay') {
+
+        $builder = $db->table('payment_log');
+        $TransactionAmount =  $post['grand_total'];
+        // $type = $post['payment'];
+        $txnid = generateTransactionId();
+        $data = array(
+            "UserId" => session('id') ? session('id') : session('guestid'),
+            "ord_id" => $orderid,
+            "TxnId" => $txnid,
+            "TransactionAmount" => $TransactionAmount,
+            "PaymentType" => 'Razorpay',
+            "PaymentDetail" => '',
+            "PayIn" => 1,
+            "PayOut" => 0,
+            "PaymentInProccesing" => 1,
+            "PaymentSuccess" => 0,
+            "PaymentFailed" => 0,
+            "PatmentExecute" => 0,
+            "PaymentRefrenceId" => '',
+            "PaymentDescription" => '',
+            "CreateTime" => date("Y-m-d H:i:s"),
+            "CreateBy" => session('id') ? session('id') : session('guestid'),
+        );
+        $builder->insert($data);
+        $response = "Redirecting to Payment Gateway ... Please wait !!! Don't press Back or Refresh";
+        $shipingDetails = array(
+            'email' => $post['email'],
+            'contact' => $post['mobileno'],
+            'username' => $post['fname']
+        );
+        helper('rozorpay');
+        $payment = SendRazor($TransactionAmount, $txnid, $shipingDetails);
+        return $payment;
+        // } else {
+        //     $db = $this->db;
+        //     $builder = $db->table('order');
+        //     $builder->where('user_id', session('id'));
+        //     $Userbuilder = $db->table('cart');
+        //     $Userbuilder->where('user_id', session('id'));
+        //     $res = $Userbuilder->update(array('is_delete' => '1'));
+        //     if ($res) {
+        //         echo  view('ordersuccess');
+        //     }
+    }
+    // return $data;
+    // echo "<pre>";print_r($data);exit;
 }

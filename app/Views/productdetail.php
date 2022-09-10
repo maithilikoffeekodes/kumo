@@ -1,7 +1,7 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
-
+<?php //echo"<pre>";print_r($product);exit;?>
 <!-- ======================= Product Detail ======================== -->
 <section class="middle">
     <div class="container">
@@ -23,9 +23,9 @@
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="prd_details">
 
-                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['category']?></span></div>
+                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['category'] ?></span></div>
                     <div class="prt_02 mb-3">
-                        <h2 class="ft-bold mb-1"><?= $product['name']?></h2>
+                        <h2 class="ft-bold mb-1"><?= $product['name'] ?></h2>
                         <div class="text-left">
                             <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
                                 <i class="fas fa-star filled"></i>
@@ -35,38 +35,46 @@
                                 <i class="fas fa-star"></i>
                                 <span class="small">(412 Reviews)</span>
                             </div>
-                            <div class="elis_rty"><span class="ft-bold theme-cl fs-lg p-2"><?=$product['listedprice']?></span><span class="ft-medium text-muted line-through fs-md mr-2 p-2">$<?= $product['price']?></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['discount']?>% Off</span></div>
+                            <div class="elis_rty"><span class="ft-bold theme-cl fs-lg p-2"><?= $product['listedprice'] ?></span><span class="ft-medium text-muted line-through fs-md mr-2 p-2">$<?= $product['price'] ?></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['discount'] ?>% Off</span></div>
                         </div>
                     </div>
 
                     <div class="prt_03 mb-4">
-                        <p><?= $product['description']?></p>
+                        <p><?= $product['description'] ?></p>
                     </div>
 
                     <div class="prt_04 mb-4">
-                        <p class="d-flex align-items-center mb-1">Category:<strong class="fs-sm text-dark ft-medium ml-1"><?= $product['category']?></strong></p>
+                        <p class="d-flex align-items-center mb-1">Category:<strong class="fs-sm text-dark ft-medium ml-1"><?= $product['category'] ?></strong></p>
                         <!-- <p class="d-flex align-items-center mb-0">SKU:<strong class="fs-sm text-dark ft-medium ml-1">KUMO42568</strong></p> -->
                     </div>
 
                     <div class="prt_05 mb-4">
-                        <div class="form-row mb-7">
-                            <div class="col-12 col-lg-auto">
-                                <!-- Quantity -->
-                                <select class="mb-2 custom-select">
-                                    <option value="1" selected="">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
+                        <div class="row mb-7">
+                            <div class="col">
+                            <div class="input-group quantity mr-3" style="width: 130px;">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary btn-minus" onclick="decrement(this)">
+                                        <span class="fa fa-minus"></span>
+                                    </button>
+                                </span>
+                                <input type="text" name="qty" class="form-control text-center quantity" value="1" min="1" max="10" style="width: 130px;" readonly>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary btn-plus" onclick="increment(this)">
+                                        <span class="fa fa-plus"></span>
+                                    </button>
+                                </span>
                             </div>
-                            <div class="col-12 col-lg">
-                                <!-- Submit -->
-                                <button type="submit" class="btn btn-block custom-height bg-dark mb-2">
-                                    <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
-                                </button>
                             </div>
-                            <div class="col-12 col-lg-auto">
+                            <div class="col">
+                            <button type="submit" class="btn btn-block custom-height bg-dark mb-2 cartbtn" id="cartbtn" data-product_id="<?php echo @$product['id'] ?> " data-price="<?= @$product['listedprice'] ?>" data-quantity="1">
+                                <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
+                            </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <!-- Submit -->
+                            
+                            <div class="col-4">
                                 <!-- Wishlist -->
                                 <button class="btn custom-height btn-default btn-block mb-2 text-dark" data-toggle="button">
                                     <i class="lni lni-heart mr-2"></i>Wishlist
@@ -119,14 +127,14 @@
                     <!-- Description Content -->
                     <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                         <div class="description_info">
-                            <p class="p-0 mb-2"><?= $product['description']?></p>
+                            <p class="p-0 mb-2"><?= $product['description'] ?></p>
                         </div>
                     </div>
 
                     <!-- Additional Content -->
                     <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">
                         <div class="additionals">
-                        <?= $product['additional_information']?>
+                            <?= $product['additional_information'] ?>
                         </div>
                     </div>
 
@@ -489,6 +497,83 @@
     </div>
 </section>
 <!-- ======================= Similar Products Start ============================ -->
+<?= $this->endsection() ?>
+<?= $this->section('scripts') ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('.cartbtn').click(function(event) {
+
+            var product_id = $(this).data("product_id");
+            var quantity = $('.quantity').val();
+            var price = $(this).data("price");
+            // alert(quantity);
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": true,
+                "positionClass": "toast-top-right"
+            };
+
+            $.ajax({
+                url: "<?php echo url('Home/cart'); ?>",
+                method: "POST",
+                data: {
+                    product_id: product_id,
+                    quantity: quantity,
+                    price: price
+                },
+                success: function(response) {
+                    if (response.st == 'success') {
+
+                        toastr.success(response.msg);
+                        var cart_count = parseInt($(".cart_count").text());
+                        $(".cart_count").text(cart_count + 1);
+                    }
+                    if (response.st == 'added') {
+                        toastr.info(response.msg);
+                    } else {
+                        $('.form_processing').html('');
+                        $('#cartbtn').prop('disabled', false);
+                        $('.error-msg').html(response.msg);
+                    }
+                }
+
+            });
+
+        });
+
+    });
+    function increment(val) {
+        var qty = $(val).closest('.quantity').find('input[name="qty"]').val();
+        qty++;
+        console.log(qty);
+
+        parseFloat($('.quantity').val(qty))
+        $(val).closest('.quantity').find('.count').text(qty);
 
 
+        calcu();
+    }
+
+    function decrement(val) {
+        var qty = $(val).closest('.quantity').find('input[name="qty"]').val();
+
+        if (qty != 1) {
+            qty--;
+        }
+        parseFloat($('.quantity').val(qty));
+        $(val).closest('.quantity').find('.count').text(qty);
+
+
+        calcu();
+    }
+
+    function calcu() {
+        console.log("qty");
+
+        var qty = $('.quantity').map(function() {
+            return parseFloat(this.value);
+        }).get();
+    }
+</script>
 <?= $this->endSection() ?>
