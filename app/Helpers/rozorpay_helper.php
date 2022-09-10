@@ -182,8 +182,10 @@ if (!function_exists('PaymentExecute')) {
                 ));
 
                 $subject = "Your Order Details #OrderID - " . $result->ord_id . "- Kumo";
-                helper('mail_template');
-                $message = mail_template($result->ord_id);
+                // helper('mail_template');
+                // $message = mail_template($result->ord_id);
+                helper('send_mail');
+                send_mail('maithili.koffeekodes@gmail.com');
 
                 $db      = \Config\Database::connect();
                 $builder = $db->table('orders');
@@ -211,7 +213,7 @@ if (!function_exists('PaymentExecute')) {
                 //     $email = $data->email;
                 // }
                 // print_r("hrllo");exit;
-                order_mail('maithili.koffeekodes@gmail.com', $subject,$message);
+                // order_mail('maithili.koffeekodes@gmail.com', $subject,$message);
                 // order_mail('ravi.codesmith@gmail.com', $subject, $message);
 
                 // $builder = $db->table('order_item');

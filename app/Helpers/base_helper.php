@@ -283,7 +283,7 @@ function get_product_count($id)
 function send_mail($post)
 
 {
-    //  print_r($email);exit;
+    //  print_r($post);exit;
     $mail = new PHPMailer();
     try {
         $mail->isSMTP();
@@ -298,7 +298,7 @@ function send_mail($post)
         $mail->Body         =  "hello how are you?";
         // $mail->AddAttachment(getcwd().$attachment);
         $mail->setfrom('maithilijejani12@gmail.com');
-        $mail->addAddress($post['email']);
+        $mail->addAddress($post);
         $mail->isHTML(true);
         $mail->send();
 
@@ -363,7 +363,7 @@ function mail_template($ord_id)
     $builder->where('o.id', $ord_id);
     $query  = $builder->get();
     $order = $query->getRow();
-    echo"";print_r($order);exit;
+    // echo"";print_r($order);exit;
     // if ($order->default_add != 0)  //check session isset login user if not then call guest user 
     // {
     //     $builder = $db->table('signup');
@@ -385,6 +385,7 @@ function mail_template($ord_id)
     $builder->where('o.order_id', $ord_id);
     $query  = $builder->get();
     $order_items = $query->getResult();
+    // echo"";print_r($order_items);exit;
 
     $message = '<!DOCTYPE html>
 					<html>
