@@ -52,7 +52,7 @@
 							
 						</i>
 							<ul class="nav-dropdown nav-submenu">
-								<?php if (empty(session('uid'))) { ?>
+								<?php if (!empty(session('uid'))) { ?>
 									<li><a href="<?= url('Home/login') ?>">SignIn</a></li>
 									<li><a href="<?= url('Home/register') ?>">SignUp</a></li>
 								<?php } else { ?>
@@ -64,8 +64,17 @@
 
 						</li>
 						<li style="margin-left: 1039px;margin-top: -53px;">
-							<a href="#" onclick="openWishlist()">
-								<i class="lni lni-heart"></i><span class="dn-counter bg-danger">2</span>
+							<a href="<?= url('Home/wishlist') ?>" onclick="openWishlist()">
+								<i class="lni lni-heart"></i>
+								<?php
+                            $db = \config\Database::Connect();
+                            $builder = $db->table('wishlist');
+                            $builder->select('count(id)as count_n');
+                            $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'is_delete' => 0));
+                            $query = $builder->get();
+                            $count = $query->getRow();
+                            ?>
+								<span class="dn-counter bg-danger"><?= $count->count_n ?></span>
 							</a>
 						</li>
 						<li style="margin-left: 1089px;margin-top: -53px;">

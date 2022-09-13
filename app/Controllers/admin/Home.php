@@ -1,13 +1,15 @@
 <?php
 
 namespace App\Controllers\admin;
+
 use App\Controllers\admin\BaseController;
 use App\Models\admin\HomeModel;
 use App\Models\admin\GeneralModel;
+use Dompdf\Dompdf;
 
 class Home extends BaseController
 {
-    public function initController(\CodeIgniter\HTTP\RequestInterface$request, \CodeIgniter\HTTP\ResponseInterface$response, \Psr\Log\LoggerInterface$logger)
+    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
     {
         parent::initController($request, $response, $logger);
         $this->model = new HomeModel();
@@ -17,60 +19,64 @@ class Home extends BaseController
     {
         return view('admin/index');
     }
-    public function brand(){
+    public function brand()
+    {
         if (!session('id')) {
             return redirect()->to(url('admin/Auth/login'));
         }
         return view('admin/brand/brand');
     }
-    public function category(){
+    public function category()
+    {
         if (!session('id')) {
             return redirect()->to(url('admin/Auth/login'));
         }
         return view('admin/category/category');
     }
-    public function slider(){
+    public function slider()
+    {
         if (!session('id')) {
             return redirect()->to(url('admin/Auth/login'));
         }
         return view('admin/slider/slider');
     }
-    public function item(){
+    public function item()
+    {
         if (!session('id')) {
             return redirect()->to(url('admin/Auth/login'));
         }
         return view('admin/item/item');
     }
-    public function createbrand($id=''){
+    public function createbrand($id = '')
+    {
         $post = $this->request->getPost();
         $file = $this->request->getFile('image');
+        // echo"<pre>";print_r($file);exit;
         if (!empty($post)) {
-            $msg = $this->model->insert_edit_brand($post,$file);
+            $msg = $this->model->insert_edit_brand($post, $file);
             return $this->response->setJSON($msg);
         }
-        if($id!='')
-        {
-            $data=$this->model->get_master_data('brand',$id);
+        if ($id != '') {
+            $data = $this->model->get_master_data('brand', $id);
         }
         $data['id'] = $id;
-        return view('admin/brand/createbrand',$data);
+        return view('admin/brand/createbrand', $data);
     }
-    public function createcategory($id='')
+    public function createcategory($id = '')
     {
         $post = $this->request->getPost();
         $file = $this->request->getFile('image');
         if (!empty($post)) {
-            $msg = $this->model->insert_edit_category($post,$file);
+            $msg = $this->model->insert_edit_category($post, $file);
             return $this->response->setJSON($msg);
         }
-        if($id!='')
-        {
-            $data=$this->model->get_master_data('category',$id);
+        if ($id != '') {
+            $data = $this->model->get_master_data('category', $id);
         }
         $data['id'] = $id;
-        return view('admin/category/createcategory',$data);
+        return view('admin/category/createcategory', $data);
     }
-    public function createslider($id='')
+    public function createslider($id = '')
     {
         $post = $this->request->getPost();
         $file = $this->request->getFile('image');
@@ -78,25 +84,41 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_slider($post,$file);
             return $this->response->setJSON($msg);
         }
-        if($id!='')
-        {
-            $data=$this->model->get_master_data('slider',$id);
+        if ($id != '') {
+            $data = $this->model->get_master_data('slider', $id);
         }
-        return view('admin/slider/createslider',$data);
+        return view('admin/slider/createslider', $data);
     }
-    public function createitem($id='')
+    public function createitem($id = '')
     {
         $post = $this->request->getPost();
         $file = $this->request->getFile('image');
+        // echo"<pre>";print_r($post);exit;
         if (!empty($post)) {
             $msg = $this->model->insert_edit_item($post,$file);
             return $this->response->setJSON($msg);
         }
-        if($id!='')
-        {
-            $data=$this->model->get_master_data('item',$id);
+        if ($id != '') {
+            $data = $this->model->get_master_data('item', $id);
         }
         return view('admin/item/createitem',$data);
+    }
+    public function order()
+    {
+        return view('admin/order/order');
+    }
+    public function orderview($id = '')
+    {
+        $data['order'] = $this->model->get_data($id);
+
+        return view('admin/order/orderview', $data);
+    }
+    public function invoice(){
+        $dompdf = new Dompdf();
+        $html =  view('Hello');
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A3', 'portrait');
+        $dompdf->render();  
     }
     public function Getdata($method = '')
     {
@@ -116,14 +138,21 @@ class Home extends BaseController
             $data = $this->model->get_item_data();
             return $data;
         }
-        if($method =='getbrand')
-        {
+        if ($method == 'order') {
+            $data = $this->model->get_order_data();
+            return $data;
+        }
+        if ($method == 'orderview') {
+            $get = $this->request->getGet();
+            $msg = $this->model->get_orderviewdata($get);
+            return $msg;
+        }
+        if ($method == 'getbrand') {
             $post = $this->request->getPost();
             $data = $this->model->getbrand($post);
             return $this->response->setJSON($data);
         }
-        if($method =='getcategory')
-        {
+        if ($method == 'getcategory') {
             $post = $this->request->getPost();
             // print_r($post);
             $data = $this->model->getCategory($post);
@@ -150,8 +179,7 @@ class Home extends BaseController
         $data = $this->request->getFiles();
         $result = array();
         // print_r($post);exit;
-        $result = $this->model->multipleupload($data,$post);
+        $result = $this->model->multipleupload($data, $post);
         return $this->response->setJSON($result);
     }
-
 }

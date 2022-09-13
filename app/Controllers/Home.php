@@ -53,6 +53,8 @@ class Home extends BaseController
     public function productdetail($id = '')
     {
         $data['product'] = $this->model->get_product_data($id);
+        $data['review'] = $this->model->get_review($id);
+            // echo "<pre>";print_r($data);exit;
         return view('productdetail', $data);
     }
     public function shoplist()
@@ -66,32 +68,56 @@ class Home extends BaseController
             $msg = $this->model->insert_cart_data($post);
             return $this->response->setJSON($msg);
         }
-        $data['cart'] = $this->model->get_cart_data(); 
-
-        return view('cart',$data);
+        return view('cart');
     }
-    public function shipping_address()
-    {
+    public function final_cart(){
         $post = $this->request->getPost();
-        echo"<pre>";print_r($post);exit;
         if (!empty($post)) {
-            $msg = $this->model->insert_edit_address($post);
-            return $this->response->setJSON($msg);
+            // echo "<pre>";print_r($post);exit;
+            $data = $this->model->update_cart_data($post);
+            if ($data) {
+                echo '1';
+            }
         }
+        return view('checkout');
     }
     public function wishlist(){
-        
-        return view('wishlist');
+        $post = $this->request->getPost();
+        if ($post) {
+            $msg = $this->model->insert_wishlist($post);
+            return $this->response->setJSON($msg);
+        }
+        $data['wishlist'] = $this->model->get_wishlist();
+        return view('wishlist',$data);
     }
     public function checkout(){
+
         $post = $this->request->getPost();
-        if (!empty( $post) ) {
+        if (!empty($post) ) {
             $data = $this->model->payment_data($post);
             return $this->response->setJSON($data);  
         }
-        $data['cart'] = $this->model->get_cart_data(); 
+        // return view('checkout');
+    }
+    public function review()
+    {
+        $post = $this->request->getPost();
+        if(!empty($post)){
+            // echo"<pre>";print_r($post);exit;
+            $msg = $this->model->insert_review($post);
+            return $this->response->setJSON($msg);
+        }
+       
+    }
+    public function order()
+    {
+        return view('order/order');
+    }
+    public function orderview($id = '')
+    {
+        $data['order'] = $this->model->get_data($id);
 
-        return view('checkout',$data);
+        return view('order/orderview', $data);
     }
     public function Getdata($method = '')
     {
@@ -99,11 +125,21 @@ class Home extends BaseController
             $data = $this->model->get_cartupdate_data();
             return $data;
         }
-        if ($method == 'final_cart') {
+        if ($method == 'cart1') {
             $data = $this->model->get_finalcart_data();
             return $data;
         }
+        if ($method == 'order') {
+            $data = $this->model->get_order_data();
+            return $data;
+        }
+        if ($method == 'orderview') {
+            $get = $this->request->getGet();
+            $msg = $this->model->get_orderviewdata($get);
+            return $msg;
+        }
         if ($method == 'getstate') {
+            print_r($method);exit;
             $get = $this->request->getGet();
             $data = $this->model->get_states($get);
             return $this->response->setJSON($data);

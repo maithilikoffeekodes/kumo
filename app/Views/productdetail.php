@@ -1,7 +1,8 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
-<?php //echo"<pre>";print_r($product);exit;?>
+<?php //echo"<pre>";print_r($product);exit;
+?>
 <!-- ======================= Product Detail ======================== -->
 <section class="middle">
     <div class="container">
@@ -14,7 +15,7 @@
                     for ($i = 1; $i < count($image); $i++) {
                     ?>
                         <div class="single_view_slide">
-                            <a href="<?= $product['image'][$i]; ?>" data-lightbox="roadtrip" class="d-block mb-4"><img src="<?= $product['image'][$i]; ?>" class="img-fluid rounded" alt="" /></a>
+                            <a href="<?= $product['image'][$i]; ?>" data-lightbox="roadtrip" class="d-block mb-4"><img src="<?= $product['image'][$i]; ?>" class="img-fluid rounded" alt="" style="height: 500px;width:500px;"/></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -51,32 +52,32 @@
                     <div class="prt_05 mb-4">
                         <div class="row mb-7">
                             <div class="col">
-                            <div class="input-group quantity mr-3" style="width: 130px;">
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-secondary btn-minus" onclick="decrement(this)">
-                                        <span class="fa fa-minus"></span>
-                                    </button>
-                                </span>
-                                <input type="text" name="qty" class="form-control text-center quantity" value="1" min="1" max="10" style="width: 130px;" readonly>
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-secondary btn-plus" onclick="increment(this)">
-                                        <span class="fa fa-plus"></span>
-                                    </button>
-                                </span>
-                            </div>
+                                <div class="input-group quantity mr-3" style="width: 130px;">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-minus" onclick="decrement(this)">
+                                            <span class="fa fa-minus"></span>
+                                        </button>
+                                    </span>
+                                    <input type="text" name="qty" class="form-control text-center quantity" value="1" min="1" max="10" style="width: 130px;" readonly>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary btn-plus" onclick="increment(this)">
+                                            <span class="fa fa-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
                             <div class="col">
-                            <button type="submit" class="btn btn-block custom-height bg-dark mb-2 cartbtn" id="cartbtn" data-product_id="<?php echo @$product['id'] ?> " data-price="<?= @$product['listedprice'] ?>" data-quantity="1">
-                                <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
-                            </button>
+                                <button type="submit" class="btn btn-block custom-height bg-dark mb-2 cartbtn" id="cartbtn" data-product_id="<?php echo @$product['id'] ?> " data-price="<?= @$product['listedprice'] ?>" data-quantity="1">
+                                    <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
+                                </button>
                             </div>
                         </div>
                         <div class="col-12 col-lg">
                             <!-- Submit -->
-                            
+
                             <div class="col-4">
                                 <!-- Wishlist -->
-                                <button class="btn custom-height btn-default btn-block mb-2 text-dark" data-toggle="button">
+                                <button type="submit" class="btn custom-height btn-default btn-block mb-2 text-dark wish" id="wish" data-product_id="<?php echo @$product['id'] ?> " data-price="<?= @$row['price'] ?>" data-quantity="1" data-toggle="button">
                                     <i class="lni lni-heart mr-2"></i>Wishlist
                                 </button>
                             </div>
@@ -139,99 +140,37 @@
                     </div>
 
                     <!-- Reviews Content -->
+                    <?php //echo"<pre>";print_r($review);exit;?>
                     <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                         <div class="reviews_info">
-                            <div class="single_rev d-flex align-items-start br-bottom py-3">
-                                <div class="single_rev_thumb"><img src="assets/img/team-1.jpg" class="img-fluid circle" width="90" alt="" /></div>
-                                <div class="single_rev_caption d-flex align-items-start pl-3">
-                                    <div class="single_capt_left">
-                                        <h5 class="mb-0 fs-md ft-medium lh-1">Daniel Rajdesh</h5>
-                                        <span class="small">30 jul 2021</span>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                                            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
-                                    </div>
-                                    <div class="single_capt_right">
-                                        <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
+                            <?php foreach ($review as $row) { ?>
+                                <!-- Single Review -->
+                                <div class="single_rev d-flex align-items-start br-bottom py-3">
+                                <?php $date = new DateTime(@$row['created_at']); ?>
+                                    <div class="single_rev_thumb"><img src="<?= ASSETS; ?>img/team-2.jpg" class="img-fluid circle" width="90" alt="" /></div>
+                                    <div class="single_rev_caption d-flex align-items-start pl-3">
+                                        <div class="single_capt_left">
+                                            <h5 class="mb-0 fs-md ft-medium lh-1"><?= $row['name'] ?></h5>
+                                            <span class="small"><?php echo @$date->Format('d M Y') ?></span>
+                                            <p><?= $row['review'] ?></p>
+                                        </div>
+                                        <div class="single_capt_right">
+                                            <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
+                                                <?php for ($i = 1; $i <= @$row['rating']; $i++) { ?>
+                                                    <i class="fas fa-star filled" value="1"></i>
+                                                <?php } ?>
+                                                <?php for ($i = 1; $i <= 5 - (int)@$row['rating']; $i++) { ?>
+                                                    <i class="fas fa-star filled" value="1"></i>
+                                                <?php } ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Single Review -->
-                            <div class="single_rev d-flex align-items-start br-bottom py-3">
-                                <div class="single_rev_thumb"><img src="assets/img/team-2.jpg" class="img-fluid circle" width="90" alt="" /></div>
-                                <div class="single_rev_caption d-flex align-items-start pl-3">
-                                    <div class="single_capt_left">
-                                        <h5 class="mb-0 fs-md ft-medium lh-1">Seema Gupta</h5>
-                                        <span class="small">30 Aug 2021</span>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                                            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
-                                    </div>
-                                    <div class="single_capt_right">
-                                        <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Review -->
-                            <div class="single_rev d-flex align-items-start br-bottom py-3">
-                                <div class="single_rev_thumb"><img src="assets/img/team-3.jpg" class="img-fluid circle" width="90" alt="" /></div>
-                                <div class="single_rev_caption d-flex align-items-start pl-3">
-                                    <div class="single_capt_left">
-                                        <h5 class="mb-0 fs-md ft-medium lh-1">Mark Jugermi</h5>
-                                        <span class="small">10 Oct 2021</span>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                                            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
-                                    </div>
-                                    <div class="single_capt_right">
-                                        <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Review -->
-                            <div class="single_rev d-flex align-items-start py-3">
-                                <div class="single_rev_thumb"><img src="assets/img/team-4.jpg" class="img-fluid circle" width="90" alt="" /></div>
-                                <div class="single_rev_caption d-flex align-items-start pl-3">
-                                    <div class="single_capt_left">
-                                        <h5 class="mb-0 fs-md ft-medium lh-1">Meena Rajpoot</h5>
-                                        <span class="small">17 Dec 2021</span>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                                            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum</p>
-                                    </div>
-                                    <div class="single_capt_right">
-                                        <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php } ?>
                         </div>
 
                         <div class="reviews_rate">
-                            <form class="row">
+                            <form class="row" action="<?= url('Home/review') ?>" method="post" class="ajax-form-submit">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <h4>Submit Rating</h4>
                                 </div>
@@ -239,26 +178,28 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="revie_stars d-flex align-items-center justify-content-between px-2 py-2 gray rounded mb-2 mt-1">
                                         <div class="srt_013">
-                                            <div class="submit-rating">
-                                                <input id="star-5" type="radio" name="rating" value="star-5" />
+                                            <input type="hidden" name="rating" id="rating"></input>
+                                            <input type="hidden" name="product_id" id="product_id" value="<?= $product['id'] ?>"></input>
+                                            <div class="submit-rating rating">
+                                                <input id="star-5" type="radio" name="rating" value="5" />
                                                 <label for="star-5" title="5 stars">
-                                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    <i class="active fa fa-star btn_rating button1" onclick="get_rate(1)" aria-hidden="true"></i>
                                                 </label>
-                                                <input id="star-4" type="radio" name="rating" value="star-4" />
+                                                <input id="star-4" type="radio" name="rating" value="4" />
                                                 <label for="star-4" title="4 stars">
-                                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    <i class="active fa fa-star btn_rating button2" onclick="get_rate(2)" aria-hidden="true"></i>
                                                 </label>
-                                                <input id="star-3" type="radio" name="rating" value="star-3" />
+                                                <input id="star-3" type="radio" name="rating" value="3" />
                                                 <label for="star-3" title="3 stars">
-                                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    <i class="active fa fa-star btn_rating button3" onclick="get_rate(3)" aria-hidden="true"></i>
                                                 </label>
-                                                <input id="star-2" type="radio" name="rating" value="star-2" />
+                                                <input id="star-2" type="radio" name="rating" value="2" />
                                                 <label for="star-2" title="2 stars">
-                                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    <i class="active fa fa-star btn_rating button4" onclick="get_rate(4)" aria-hidden="true"></i>
                                                 </label>
-                                                <input id="star-1" type="radio" name="rating" value="star-1" />
+                                                <input id="star-1" type="radio" name="rating" value="1" />
                                                 <label for="star-1" title="1 star">
-                                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                                    <i class="active fa fa-star btn_rating button5" onclick="get_rate(5)" aria-hidden="true"></i>
                                                 </label>
                                             </div>
                                         </div>
@@ -272,27 +213,30 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Full Name</label>
-                                        <input type="text" class="form-control" />
+                                        <input type="text" class="form-control" id="name" name="name" />
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Email Address</label>
-                                        <input type="email" class="form-control" />
+                                        <input type="email" class="form-control" id="email" name="email" />
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Description</label>
-                                        <textarea class="form-control"></textarea>
+                                        <textarea class="form-control" name="review" cols="30" rows="5"></textarea>
                                     </div>
                                 </div>
-
+                                <div class="form-group">
+                                    <div class="tx-danger error-msg"></div>
+                                    <div class="tx-success form_proccessing"></div>
+                                </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group m-0">
-                                        <a class="btn btn-white stretched-link hover-black">Submit Review <i class="lni lni-arrow-right"></i></a>
+                                        <button id="save_data" name="submit" type="submit" class="btn btn-white stretched-link hover-black save_data">Review<i class="lni lni-arrow-right"></i></button>
                                     </div>
                                 </div>
 
@@ -331,7 +275,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/8.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/8.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -355,7 +299,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/9.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/9.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -378,7 +322,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/10.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/10.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -402,7 +346,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/11.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/11.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -425,7 +369,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/12.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/12.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -449,7 +393,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/13.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/13.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -473,7 +417,7 @@
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="assets/img/product/14.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/14.jpg" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -542,7 +486,38 @@
 
         });
 
+
+        $(document).on('click', '.wish', function() {
+            var product_id = $(this).data("product_id");
+            let wish = $(this);
+            toastr.options = {
+                "closeButton": true,
+                "newestOnTop": true,
+                "positionClass": "toast-top-right"
+            };
+            $.ajax({
+                url: "<?php echo url('Home/wishlist'); ?>",
+                method: "POST",
+                data: {
+                    productid: product_id
+                },
+                success: function(response) {
+                    if (response.st == 'success') {
+                        toastr.success(response.msg);
+                        wish.removeClass("wish");
+                        wish.addClass("removeWish")
+                        $('#cartbtn').prop('disabled', false);
+                    } else {
+                        $('.form_processing').html('');
+                        $('#cartbtn').prop('disabled', false);
+                        $('.error-msg').html(response.msg);
+                    }
+                }
+            });
+        });
+
     });
+
     function increment(val) {
         var qty = $(val).closest('.quantity').find('input[name="qty"]').val();
         qty++;
@@ -575,5 +550,51 @@
             return parseFloat(this.value);
         }).get();
     }
+
+    function get_rate(val) {
+        $(".btn_rating").removeClass("fas fa-star");
+        $(".btn_rating").addClass("far fa-star");
+        $('#rating').val(val); // set rating value in hidden input
+
+        / =========== loop for count the start and changing the color and class =========== /
+        for (let i = 1; i <= parseInt(val); i++) {
+            var button = ".button" + i;
+            $(button).removeClass("far fa-star");
+            $(button).addClass("fas fa-star");
+        }
+    }
+    $('.ajax-form-submit').on('submit', function(e) {
+        // console.log("abc");
+        $('#save_data').prop('disabled', true);
+        $('.save_data').attr("disabled", true);
+        $('.error-msg').html('');
+        $('.form_proccessing').html('Please wait...');
+        e.preventDefault();
+        var aurl = $(this).attr('action');
+        var form = $(this);
+        var formdata = false;
+        $.ajax({
+            type: "POST",
+            url: aurl,
+            data: formdata ? formdata : form.serialize(),
+            success: function(response) {
+                if (response.st == "success") {
+                    $('.form_proccessing').html('');
+                    location.reload();
+                } else {
+                    location.reload();
+                    $('.form_proccessing').html('');
+                    $('#save_data').prop('disabled', false);
+                    $('.error-msg').html(response.msg);
+                }
+            },
+            error: function() {
+                $('#save_data').prop('disabled', false);
+                alert('Error');
+            }
+        });
+
+        return false;
+    });
 </script>
 <?= $this->endSection() ?>

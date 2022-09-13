@@ -18,6 +18,12 @@ class HomeModel extends Model
         $pdata = array(
             'brand' => $post['brand'],
         );
+        // echo"<pre>";print_r($file);exit;
+
+        if($_FILES['image']['error'] == 4){
+            $msg = array('st' => 'error', 'msg' => 'Please select a image');
+            return $msg;
+        }
         if (isset($file)) {
             //  print_r($file);exit;
             if ($file->isValid() && !$file->hasMoved()) {
@@ -31,6 +37,7 @@ class HomeModel extends Model
             }
         }
         if (!empty($result)) {
+        // echo"<pre>";print_r($file);exit;
             $pdata['updated_at'] = date('Y-m-d H:i:s');
             $pdata['updated_by'] = session('id');
             $builder->where('id', $post['id']);
@@ -277,6 +284,76 @@ class HomeModel extends Model
         }
         return $result;
     }
+    public function get_order_data(){
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
+        $builder->where('user_id', session('id'));
+        // $builder->where('o.is_delete', '0');
+        $data_table = DataTable::of($builder);
+        $data_table->setSearchableColumns(['id']);
+        $data_table->add('action', function ($row) {
+            $btnview = '<a href="' . url('admin/Home/orderview/') . $row->id . '"  class="btn btn-link pd-10"><i class="far fa-eye"></i></a> ';
+            return $btnview;
+        });
+        return $data_table->toJSON();
+    }
+    public function get_data($id)
+    {
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*');
+        $builder->where('o.id', $id);
+        // $builder->where('o.is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getRowArray();
+        // if ($result2['default_add'] != 0) {
+        //     $db = $this->db;
+        //     $builder = $db->table('signup u');
+        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=u.city');
+        //     $builder->join('states s', 's.id=u.state');
+        //     $builder->where('u.id', $result2['default_add']);
+        //     $builder->where('u.is_delete', 0);
+        //     $query = $builder->get();
+        //     $result1 = $query->getRowArray();
+        // } else {
+        //     $db = $this->db;
+        //     $builder = $db->table('address a');
+        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=a.city');
+        //     $builder->join('states s', 's.id=a.state');
+        //     $builder->where('a.id', $result2['ship_id']);
+        //     $builder->where('a.is_delete', 0);
+        //     $query = $builder->get();
+        //     $result1 = $query->getRowArray();
+        // }
+        // $result = array_merge($result1, $result2);
+        // // echo"<pre>";print_r($result);exit;
+
+        return $result;
+    }
+
+    public function get_orderviewdata($get)
+    {
+
+        //  print_r('dsvsdvf');exit;
+        $db = $this->db;
+        $builder = $db->table('order_item oi');
+        $builder->select('i.image,i.name,oi.price,oi.quantity,oi.total');
+        $builder->join('item i', 'i.id=oi.product_id');
+
+        $builder->where('oi.order_id', $get);
+        $builder->where('oi.is_delete', '0');
+        $data_table = DataTable::of($builder);
+        //  print_r('rfvrvrgv');exit;
+        $data_table->setSearchableColumns(['id']);
+        $data_table->edit('image', function ($row) {
+            $img = '<img height="100" width ="100" src = "' . $row->image . '">';
+            return $img;
+        });
+        return $data_table->toJSON();
+    }
     public function get_master_data($method, $id)
     {
         $db = $this->db;
@@ -321,7 +398,7 @@ class HomeModel extends Model
         }
         return $result;
     }
-    public function insert_edit_item($post, $file)
+    public function insert_edit_item($post,$file)
     {
         //   echo "<pre>";  print_r($post);exit;print_r($file);exit;
         $db = $this->db;

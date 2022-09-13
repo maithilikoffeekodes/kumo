@@ -34,6 +34,16 @@
 					
 				</ul>
 			</li>
+			<li class="nav-label">Order</li>
+
+			<li class="nav-item">
+				<a class="nav-link with-sub" href=""><i class="fas fa-luggage-cart"></i><span class="sidemenu-label">Orders</span><i class="angle fe fe-chevron-right"></i></a>
+				<ul class="nav-sub">
+					<li class="nav-item">
+						<a class="nav-sub-link" href="<?= url('admin/Home/order') ?>"><span class="sidemenu-label">OrderList</span></a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>

@@ -15,7 +15,7 @@
 
             <div class="form-group">
                 <label class="form-label">Image : <span class="tx-danger">*</span></label>
-                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty(@$slider)) ? @$slider['image'] : '' ?>" required>
+                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty(@$slider)) ? @$slider['image'] : '' ?>">
             </div>
 
             <div class="form-group">
@@ -64,7 +64,6 @@
                 if (response.st == 'success') {
                     $('#fm_model').modal('toggle');
                     swal("success!", response.msg, "success");
-                    location.reload();
                     datatable_load('');
                     $('#save_data').prop('disabled', false);
                 } else {

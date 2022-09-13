@@ -155,8 +155,8 @@
                                 <div class="product-left-hover-overlay">
                                     <ul class="left-over-buttons">
                                         <li><a class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                        <li><a class="d-inline-flex circle align-items-center justify-content-center snackbar-wishlist"><i class="far fa-heart position-absolute"></i></a></li>
-                                        <li><a class="d-inline-flex circle align-items-center justify-content-center snackbar-addcart cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center wish" id="wishlist" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1" ><i class="far fa-heart position-absolute"></i></a></li>
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center  cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

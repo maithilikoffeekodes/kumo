@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 <label class="form-label">Image : <span class="tx-danger">*</span></label>
-                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty(@$brand)) ? @$brand['image'] : '' ?>" required>
+                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty(@$brand)) ? @$brand['image'] : '' ?>">
             </div>
 
             <div class="form-group">
@@ -34,7 +34,6 @@
 </div>
 
 <script>
-    
     $('.ajax-form-submit').on('submit', function(e) {
 
         $('#save_data').prop('disabled', true);
@@ -55,9 +54,14 @@
             processData: false,
             data: formdata ? formdata : form.serialize(),
             success: function(response) {
+                console.log(response);
+                if (response.st == 'error') {
+                    $('.error-msg').html(response.msg);
+                    $('#save_data').prop('disabled', false);
+                }
                 if (response.st == 'success') {
-                    swal("success!",response.msg, "success");
-                    window.location.href="<?=url('admin/Home/brand')?>";
+                    swal("success!", response.msg, "success");
+                    window.location.href = "<?= url('admin/Home/brand') ?>";
                     $('#save_data').prop('disabled', false);
                 } else {
                     $('.form_proccessing').html('');

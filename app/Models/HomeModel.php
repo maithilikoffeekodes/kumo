@@ -248,7 +248,8 @@ class HomeModel extends Model
 
         return $data_table->toJSON();
     }
-    public function get_finalcart_data(){
+    public function get_finalcart_data()
+    {
         $db = $this->db;
         $builder = $db->table('cart c');
         $builder->select('c.id,image,i.name,i.price,c.quantity,c.product_id');
@@ -276,8 +277,12 @@ class HomeModel extends Model
         $data_table->add('action', function () {
             $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
             return $btntotal;
-        })
+        });
 
+        $data_table->add('action', function ($row) {
+            $btndelete = '<a  title="Category name: ' . $row->name . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="fa fa-trash-o"></i></a> ';
+            return $btndelete;
+        },'last')
             ->hide('product_id')
             ->hide('id')
             ->hide('quantity');
@@ -286,47 +291,76 @@ class HomeModel extends Model
         return $data_table->toJSON();
     }
 
-    public function insert_edit_address($post)
+    public function get_order_data()
     {
-        //  print_r($post);exit; 
         $db = $this->db;
-        $builder = $db->table('shipping_address');
-        $builder->select('*');
-        $builder->where('id', $post['id']);
-        $builder->where('is_delete', 0);
+        $builder = $db->table('orders o');
+        $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
+        $builder->where('user_id', session('id'));
+        // $builder->where('o.is_delete', '0');
+        $data_table = DataTable::of($builder);
+        $data_table->setSearchableColumns(['id']);
+        $data_table->add('action', function ($row) {
+            $btnview = '<a href="' . url('Home/orderview/') . $row->id . '"  class="btn btn-link pd-10"><i class="far fa-eye"></i></a> ';
+            return $btnview;
+        });
+        return $data_table->toJSON();
+    }
+    public function get_data($id)
+    {
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*');
+        $builder->where('o.id', $id);
+        // $builder->where('o.is_delete', 0);
         $query = $builder->get();
-        $result = $query->getResultArray();
-        // print_r($post);exit;
-        $adata = array(
-            'fname' => $post['fname'],
-            'lname' => $post['lname'],
-            'user_id' => session('id') ? session('id') : session('guestid'),
-            'email' => $post['email'],
-            'mobileno' => $post['mobileno'],
-            'address' => $post['address'],
-            'state' => $post['state'],
-            'city' => $post['city'],
-            'pincode' => $post['pincode'],
-            // 'type' => $post['address_type']
-        );
-        if (!empty($result)) {
-            // print_r($result);exit;
-            $builder->where('id', $post['id']);
-            $res = $builder->update($adata);
-            if ($res) {
-                $msg = array('st' => 'success', 'msg' => 'Update successfully');
-            } else {
-                $msg = array('st' => 'failed', 'msg' => 'Update failed');
-            }
-        } else {
-            $res = $builder->insert($adata);
-            if ($res) {
-                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
-            } else {
-                $msg = array('st' => 'failed');
-            }
-        }
-        return $msg;
+        $result = $query->getRowArray();
+        // if ($result['ship_id'] != 0) {
+        //     $db = $this->db;
+        //     $builder = $db->table('signup u');
+        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=u.city');
+        //     $builder->join('states s', 's.id=u.state');
+        //     $builder->where('u.id', $result2['default_add']);
+        //     $builder->where('u.is_delete', 0);
+        //     $query = $builder->get();
+        //     $result1 = $query->getRowArray();
+        // // } else {
+        //     $db = $this->db;
+        //     $builder = $db->table('address a');
+        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=a.city');
+        //     $builder->join('states s', 's.id=a.state');
+        //     $builder->where('a.id', $result['ship_id']);
+        //     $builder->where('a.is_delete', 0);
+        //     $query = $builder->get();
+        //     $result = $query->getRowArray();
+        // }
+        // $result = array_merge($result1, $result2);
+        // // echo"<pre>";print_r($result);exit;
+
+        return $result;
+    }
+
+    public function get_orderviewdata($get)
+    {
+
+        //  print_r('dsvsdvf');exit;
+        $db = $this->db;
+        $builder = $db->table('order_item oi');
+        $builder->select('i.image,i.name,oi.price,oi.quantity,oi.total');
+        $builder->join('item i', 'i.id=oi.product_id');
+
+        $builder->where('oi.order_id', $get);
+        $builder->where('oi.is_delete', '0');
+        $data_table = DataTable::of($builder);
+        //  print_r('rfvrvrgv');exit;
+        $data_table->setSearchableColumns(['id']);
+        $data_table->edit('image', function ($row) {
+            $img = '<img height="100" width ="100" src = "' . $row->image . '">';
+            return $img;
+        });
+        return $data_table->toJSON();
     }
     public function get_states($post)
     {
@@ -369,6 +403,76 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function insert_wishlist($post)
+    {
+        // print_r($post);exit;
+        $db = $this->db;
+        $builder = $db->table("wishlist");
+        $pdata = array(
+            'user_id' => session('uid') ? session('uid') : session('guestid'),
+            'product_id' => $post['productid'],
+        );
+        $pdata['created_at'] = date('Y-m-d H:i:s');
+        $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+
+        $res = $builder->insert($pdata);
+        if ($res) {
+            $msg = array('st' => 'success', "msg" => "Item Added to wish");
+        } else {
+            $msg = array('st' => 'failed', "msg" => "Failed to wish");
+        }
+        return $msg;
+    }
+    public function get_wishlist()
+    {
+        $db = $this->db;
+        $builder = $db->table('wishlist w');
+        $builder->select('w.id,i.image,i.name,i.price,w.product_id');
+        $builder->join('item i', 'i.id=w.product_id');
+        $builder->where('w.user_id',session('uid') ? session('uid') : session('guestid'));
+        $builder->where('w.is_delete', 0);
+        $query =  $builder->get();
+        $result = $query->getResultArray();
+        return $result;
+    }
+    public function insert_review($post)
+    {
+        // print_r($post);exit;
+        $db = $this->db;
+        $builder = $db->table("review");
+        $pdata = array(
+            'user_id' => session('uid') ? session('uid') : session('guestid'),
+            'product_id' => $post['product_id'],
+            'rating' => $post['rating'],
+            'review' => $post['review'],
+            'name' => $post['name'],
+            'email' => $post['email'],
+        );
+        $pdata['created_at'] = date('Y-m-d H:i:s');
+        $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+
+        $res = $builder->insert($pdata);
+        if ($res) {
+            $msg = array('st' => 'success', "msg" => "Review Added Successfully");
+        } else {
+            $msg = array('st' => 'failed', "msg" => "Failed to Review");
+        }
+        return $msg;
+    }
+    public function get_review($id)
+    {
+        // print_r($id);exit;
+        $db = $this->db;
+        $builder = $db->table('review');
+        $builder->select('*');
+        $builder->where('product_id', $id);
+        $builder->where('is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getResultArray();
+        // echo "<pre>"; print_r($result);exit;
+
+        return $result;
+    }
     public function payment_data($post)
     {
         // echo "<pre>";
@@ -383,17 +487,34 @@ class HomeModel extends Model
         //     $default_add = session('id');
         // }
         $db = $this->db;
+        $builder = $db->table('shipping_address');
+        $adata = array(
+            'fname' => $post['fname'],
+            'lname' => $post['lname'],
+            'user_id' => session('uid') ? session('uid') : session('guestid'),
+            'email' => $post['email'],
+            'mobileno' => $post['mobileno'],
+            'address1' => $post['address'],
+            'state' => $post['state'],
+            'city' => $post['city'],
+            'pincode' => $post['pincode'],
+            // 'type' => $post['address_type']
+        );
+        $result = $builder->insert($adata);
+        $ship_id = $db->insertID();
+
+        $db = $this->db;
         $builder = $db->table('orders');
         $order_data = array(
-            'user_id' => session('id') ? session('id') : session('guestid'),
+            'user_id' => session('uid') ? session('uid') : session('guestid'),
             'total_payment' => $post['grand_total'],
-            // 'ship_id' => $ship_id,
+            'ship_id' => $ship_id,
             // 'default_add' => $default_add,
-            // 'payment_type' => $post['payment'],
+            'payment_type' => 'Razorpay',
             'is_login' => session('id') ? 0 : 1
         );
         $order_data['created_at'] = date('Y-m-d H:i:s');
-        $order_data['created_by'] = session('id') ? session('id') : session('guestid');
+        $order_data['created_by'] = session('uid') ? session('uid') : session('guestid');
         $result = $builder->insert($order_data);
         $orderid = $db->insertID();
         $db = $this->db;
@@ -402,7 +523,7 @@ class HomeModel extends Model
         for ($i = 0; $i < count($qty); $i++) {
             $order_item = array(
                 'order_id' => @$orderid,
-                'user_id' => session('id') ? session('id') : session('guestid'),
+                'user_id' => session('uid') ? session('uid') : session('guestid'),
                 'quantity' => $post['qty'][$i],
                 'product_id' => $post['cart_id'][$i],
                 'price' => $post['price'][$i],
@@ -421,7 +542,7 @@ class HomeModel extends Model
         // $type = $post['payment'];
         $txnid = generateTransactionId();
         $data = array(
-            "UserId" => session('id') ? session('id') : session('guestid'),
+            "UserId" => session('uid') ? session('uid') : session('guestid'),
             "ord_id" => $orderid,
             "TxnId" => $txnid,
             "TransactionAmount" => $TransactionAmount,
@@ -436,7 +557,7 @@ class HomeModel extends Model
             "PaymentRefrenceId" => '',
             "PaymentDescription" => '',
             "CreateTime" => date("Y-m-d H:i:s"),
-            "CreateBy" => session('id') ? session('id') : session('guestid'),
+            "CreateBy" => session('uid') ? session('uid') : session('guestid'),
         );
         $builder->insert($data);
         $response = "Redirecting to Payment Gateway ... Please wait !!! Don't press Back or Refresh";

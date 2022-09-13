@@ -3,12 +3,12 @@
 <?= $this->section('content') ?>
 <style>
 	.btn.btn-sm {
-    padding: 5px;
-}
+		padding: 5px;
+	}
 </style>
 <?php //echo"<pre>";print_r($cart);exit;
 ?>
-<form action="<?= url('Home/cart') ?>" class="" method="post">
+<form action="<?= url('Home/final_cart') ?>" class="ajax-form-submit" method="post">
 	<!-- Cart -->
 	<section class="middle">
 		<div class="container">
@@ -31,54 +31,12 @@
 								<th>Price</th>
 								<th>Quantity</th>
 								<th>Total</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 						</tbody>
 					</table>
-					<!-- <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x mb-4">
-
-						<? //php foreach ($cart as $row) { 
-						?>
-							<li class="list-group-item">
-								<div class="row align-items-center">
-									<div class="col-3">
-										<!-- Image
-										<a href="product.html"><img src="<? //= $row['image'] 
-																			?>" alt="..." class="img-fluid"></a>
-									</div>
-									<div class="col d-flex align-items-center justify-content-between">
-										<div class="cart_single_caption pl-2">
-											<h4 class="product_title fs-md ft-medium mb-1 lh-1"><? //= $row['name'] 
-																								?></h4>
-											<p class="mb-1 lh-1"><span class="text-dark">Size: 40</span></p>
-											<p class="mb-3 lh-1"><span class="text-dark">Color: Blue</span></p>
-											<h4 class="fs-md ft-medium mb-3 lh-1">₹<? //= $row['price'] 
-																					?></h4>
-											<div class="input-group quantity mr-3" style="width: 130px;">
-												<span class="input-group-btn">
-													<button type="button" class="btn btn-secondary" onclick="decrement(this)">
-														<span class="fa fa-minus"></span>
-													</button>
-												</span>
-												<input type="text" name="qty" class="form-control text-center quantity" value="<? //= $row['quantity'] 
-																																?>" min="1" max="10" style="width: 130px;" readonly>
-												<span class="input-group-btn">
-													<button type="button" class="btn btn-secondary" onclick="increment(this)">
-														<span class="fa fa-plus"></span>
-													</button>
-												</span>
-											</div>
-										</div>
-										<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-									</div>
-								</div>
-							</li>
-						<? //php } 
-						?>
-
-
-					</ul> -->
 
 					<div class="row align-items-end justify-content-between mb-10 mb-md-0">
 						<div class="col-12 col-md-7">
@@ -125,8 +83,7 @@
 						</div>
 					</div>
 
-					<a class="btn btn-block btn-dark mb-3" href="<?= url('Home/checkout') ?>">Proceed to Checkout</a>
-
+					<button class="btn btn-block btn-dark mb-3" id="save_data" type="submit">Proceed to Checkout</button>
 					<a class="btn-link text-dark ft-medium" href="shop.html">
 						<i class="ti-back-left mr-2"></i> Continue Shopping
 					</a>
@@ -143,55 +100,56 @@
 	$(document).ready(function() {
 		datatable_load();
 	});
+
 	function increment(val) {
-        var qty = $(val).closest('.qty_class').find('input[name="qty[]"]').val();
-        qty++;
+		var qty = $(val).closest('.qty_class').find('input[name="qty[]"]').val();
+		qty++;
 
-        $(val).closest('.qty_class').find('.count').text(qty);
-        $(val).closest('.qty_class').find('input[name="qty[]"]').val(qty);
+		$(val).closest('.qty_class').find('.count').text(qty);
+		$(val).closest('.qty_class').find('input[name="qty[]"]').val(qty);
 
-        calcu();
-    }
+		calcu();
+	}
 
-    function decrement(val) {
-        var qty = $(val).closest('.qty_class').find('input[name="qty[]"]').val();
+	function decrement(val) {
+		var qty = $(val).closest('.qty_class').find('input[name="qty[]"]').val();
 
-        if (qty != 1) {
-            qty--;
-        }
-        // $(".qty").val(qty);
-        $(val).closest('.qty_class').find('.count').text(qty);
-        $(val).closest('.qty_class').find('input[name="qty[]"]').val(qty);
+		if (qty != 1) {
+			qty--;
+		}
+		// $(".qty").val(qty);
+		$(val).closest('.qty_class').find('.count').text(qty);
+		$(val).closest('.qty_class').find('input[name="qty[]"]').val(qty);
 
-        calcu();
-    }
+		calcu();
+	}
 
-    function calcu() {
-        // console.log("aes0");
+	function calcu() {
+		// console.log("aes0");
 
-        var qty = $('input[name="qty[]"]').map(function() {
-            return parseFloat(this.value);
-        }).get();
+		var qty = $('input[name="qty[]"]').map(function() {
+			return parseFloat(this.value);
+		}).get();
 
-        var price = $('input[name="price[]"]').map(function() {
-            return parseFloat(this.value);
-        }).get();
+		var price = $('input[name="price[]"]').map(function() {
+			return parseFloat(this.value);
+		}).get();
 
-        var total = 0;
+		var total = 0;
 
-        for (var i = 0; i < qty.length; i++) {
-            // console.log("hello");
-            var sub = qty[i] * price[i];
-            $('input[name="sub[]"]').eq(i).val(sub);
+		for (var i = 0; i < qty.length; i++) {
+			// console.log("hello");
+			var sub = qty[i] * price[i];
+			$('input[name="sub[]"]').eq(i).val(sub);
 
-            total += sub;
-        }
+			total += sub;
+		}
 
-        var sub_tot = $(".sub_total_amt").text(total);
-        $(".total_amt").text($(".sub_total_amt").text());
-        var grand_tot = $(".sub_total_amt").text();
-        $("#grand_total").val(grand_tot);
-    }
+		var sub_tot = $(".sub_total_amt").text(total);
+		$(".total_amt").text($(".sub_total_amt").text());
+		var grand_tot = $(".sub_total_amt").text();
+		$("#grand_total").val(grand_tot);
+	}
 	// });
 
 	function datatable_load(filter_val) {
@@ -276,5 +234,37 @@
 			// })}
 		});
 	}
+	$('.ajax-form-submit').on('submit', function(e) {
+		// console.log("abc");
+		$('#save_data').prop('disabled', true);
+		$('.save_data').attr("disabled", true);
+
+		$('.error-msg').html('');
+		$('.form_proccessing').html('Please wait...');
+		e.preventDefault();
+
+		var aurl = $(this).attr('action');
+		$.ajax({
+			type: "POST",
+			url: aurl,
+			data: $(this).serialize(),
+			success: function(response) {
+
+				if (response == "1") {
+				swal("success!", "Cart detail Updated!", "success");
+				} else {
+					$('.form_proccessing').html('');
+					$('#save_data').prop('disabled', false);
+					$('.error-msg').html(response.msg);
+				}
+			},
+			error: function() {
+				$('#save_data').prop('disabled', false);
+				alert('Error');
+			}
+		});
+
+		return false;
+	});
 </script>
 <?= $this->endSection() ?>

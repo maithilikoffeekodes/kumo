@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/home-15.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Sep 2022 05:19:06 GMT -->
-
 <head>
 	<meta charset="utf-8" />
-	<meta name="author" content="Themezhub" />
+	<meta name="author" content="Maithili" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Kumo- Fashion eCommerce HTML Template</title>
+	<title>Kumo- Fashion eCommerce</title>
+	<!-- Favicon -->
+	<link href="<?= ASSETS; ?>img/logo.png" rel="icon">
 
 	<!-- Custom CSS -->
 	<link href="<?= ASSETS; ?>css/styles.css" rel="stylesheet">
+
 	<link href="<?= ASSETS; ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/sweet-alert/sweetalert2.min.css">
-    <link href="<?= ASSETS; ?>plugins/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/dataTables.bootstrap4.min.css"/>
-    <link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/datatable/responsivebootstrap4.min.css"/>
-    <link rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?= ASSETS;?>plugins/datatable/fileexport/buttons.bootstrap4.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/sweet-alert/sweetalert2.min.css">
+	<link href="<?= ASSETS; ?>plugins/dropzone/dropzone.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/dataTables.bootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/responsivebootstrap4.min.css" />
+	<link rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.dataTables.min.css" />
+	<link rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/fileexport/buttons.bootstrap4.min.css" />
 	<!---Select2 css-->
-	<!-- <link href="<?= ASSETS ?>plugins/select2/css/select2.min.css" rel="stylesheet"> -->
+	<link href="<?= ASSETS; ?>plugins/select2/css/select2.min.css" rel="stylesheet">
+
+	<!--Mutipleselect css-->
+	<link rel="stylesheet" href="<?= ASSETS; ?>plugins/multipleselect/multiple-select.css">
 </head>
 
 <body>
@@ -379,7 +383,7 @@
 		</div>
 
 		<!-- Wishlist -->
-		<div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Wishlist">
+		<!-- <div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Wishlist">
 			<div class="rightMenu-scroll">
 				<div class="d-flex align-items-center justify-content-between slide-head py-3 px-3">
 					<h4 class="cart_heading fs-md ft-medium mb-0">Saved Products</h4>
@@ -388,7 +392,7 @@
 				<div class="right-ch-sideBar">
 
 					<div class="cart_select_items py-2">
-						<!-- Single Item -->
+						<!-- Single Item 
 						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
 							<div class="cart_single d-flex align-items-center">
 								<div class="cart_selected_single_thumb">
@@ -402,37 +406,6 @@
 							</div>
 							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
 						</div>
-
-						<!-- Single Item -->
-						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
-							<div class="cart_single d-flex align-items-center">
-								<div class="cart_selected_single_thumb">
-									<a href="#"><img src="<?= ASSETS; ?>img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="cart_single_caption pl-2">
-									<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Floral Print Jumpsuit</h4>
-									<p class="mb-2"><span class="text-dark ft-medium small">36</span>, <span class="text-dark small">Red</span></p>
-									<h4 class="fs-md ft-medium mb-0 lh-1">$129</h4>
-								</div>
-							</div>
-							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-						</div>
-
-						<!-- Single Item -->
-						<div class="d-flex align-items-center justify-content-between px-3 py-3">
-							<div class="cart_single d-flex align-items-center">
-								<div class="cart_selected_single_thumb">
-									<a href="#"><img src="<?= ASSETS; ?>img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="cart_single_caption pl-2">
-									<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Solid A-Line Dress</h4>
-									<p class="mb-2"><span class="text-dark ft-medium small">30</span>, <span class="text-dark small">Blue</span></p>
-									<h4 class="fs-md ft-medium mb-0 lh-1">$100</h4>
-								</div>
-							</div>
-							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-						</div>
-
 					</div>
 
 					<div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
@@ -451,7 +424,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Cart -->
 		<!-- <div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="Cart">
@@ -464,71 +437,40 @@
 
 					<div class="cart_select_items py-2">
 						<!-- Single Item 
-						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
-							<div class="cart_single d-flex align-items-center">
-								<div class="cart_selected_single_thumb">
-									<a href="#"><img src="<?= ASSETS; ?>img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="cart_single_caption pl-2">
-									<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Women Striped Shirt Dress</h4>
-									<p class="mb-2"><span class="text-dark ft-medium small">36</span>, <span class="text-dark small">Red</span></p>
-									<h4 class="fs-md ft-medium mb-0 lh-1">$129</h4>
-								</div>
-							</div>
-							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-						</div>
-
-						<!-- Single Item 
-						<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
-							<div class="cart_single d-flex align-items-center">
-								<div class="cart_selected_single_thumb">
-									<a href="#"><img src="<?= ASSETS; ?>img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="cart_single_caption pl-2">
-									<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Floral Print Jumpsuit</h4>
-									<p class="mb-2"><span class="text-dark ft-medium small">36</span>, <span class="text-dark small">Red</span></p>
-									<h4 class="fs-md ft-medium mb-0 lh-1">$129</h4>
-								</div>
-							</div>
-							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-						</div>
-
-						<!-- Single Item
-						<div class="d-flex align-items-center justify-content-between px-3 py-3">
-							<div class="cart_single d-flex align-items-center">
-								<div class="cart_selected_single_thumb">
-									<a href="#"><img src="<?= ASSETS; ?>img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="cart_single_caption pl-2">
-									<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Solid A-Line Dress</h4>
-									<p class="mb-2"><span class="text-dark ft-medium small">30</span>, <span class="text-dark small">Blue</span></p>
-									<h4 class="fs-md ft-medium mb-0 lh-1">$100</h4>
-								</div>
-							</div>
-							<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
-						</div>
-
-					</div>
-
-					<div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
-						<h6 class="mb-0">Subtotal</h6>
-						<h3 class="mb-0 ft-medium">$1023</h3>
-					</div>
-
-					<div class="cart_action px-3 py-3">
-						<div class="form-group">
-							<a href="<?= url('Home/checkout') ?>"><button type="button" class="btn d-block full-width btn-dark">Checkout Now</button></a>
-						</div>
-						<div class="form-group">
-							<a href="<?= url('Home/cart') ?>"><button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button></a>
-						</div>
-					</div>
-
+		<div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
+			<div class="cart_single d-flex align-items-center">
+				<div class="cart_selected_single_thumb">
+					<a href="#"><img src="<?= ASSETS; ?>img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
+				</div>
+				<div class="cart_single_caption pl-2">
+					<h4 class="product_title fs-sm ft-medium mb-0 lh-1">Women Striped Shirt Dress</h4>
+					<p class="mb-2"><span class="text-dark ft-medium small">36</span>, <span class="text-dark small">Red</span></p>
+					<h4 class="fs-md ft-medium mb-0 lh-1">$129</h4>
 				</div>
 			</div>
-		</div> -->
+			<div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+		</div>
+	</div>
 
-		<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+	<div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
+		<h6 class="mb-0">Subtotal</h6>
+		<h3 class="mb-0 ft-medium">$1023</h3>
+	</div>
+
+	<div class="cart_action px-3 py-3">
+		<div class="form-group">
+			<a href="<?= url('Home/checkout') ?>"><button type="button" class="btn d-block full-width btn-dark">Checkout Now</button></a>
+		</div>
+		<div class="form-group">
+			<a href="<?= url('Home/cart') ?>"><button type="button" class="btn d-block full-width btn-dark-light">Edit or View</button></a>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	</div> -->
+
+	<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
 
 	</div>

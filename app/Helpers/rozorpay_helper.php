@@ -149,7 +149,7 @@ if (!function_exists('PaymentExecute')) {
         $result = $query->getRow();
         //    echo '<pre>'; print_r($result);exit;
         if (!empty($result)) {
-            if ($result->PatmentExecute == 0) {
+            if ($result->PaymentSuccess == 0) {
         //    echo '<pre>'; print_r($result);exit;
                 $data = array(
                     "PatmentExecute" => 1,
@@ -182,10 +182,10 @@ if (!function_exists('PaymentExecute')) {
                 ));
 
                 $subject = "Your Order Details #OrderID - " . $result->ord_id . "- Kumo";
-                // helper('mail_template');
-                // $message = mail_template($result->ord_id);
-                helper('send_mail');
-                send_mail('maithili.koffeekodes@gmail.com');
+                helper('mail_template');
+                $message = mail_template($result->ord_id);
+                // echo "<pre>";print_r($message);exit;
+
 
                 $db      = \Config\Database::connect();
                 $builder = $db->table('orders');
@@ -195,28 +195,19 @@ if (!function_exists('PaymentExecute')) {
                 $order   = $query->getRow();
                 // echo "<pre>";print_r($order);exit;
 
-                // if ($order->default_add != 0)  //check session isset login user if not then call guest user 
-                // {
-                //     $builder = $db->table('signup');
-                //     $builder->select('email');
-                //     $builder->where('id', $order->default_add);
-                //     $query    = $builder->get();
-                //     $data1    = $query->getRow();
-                //     $email    = $data1->email;
-                //     // print_r($email);exit;
-                // } else {
-                //     $builder = $db->table('address');
-                //     $builder->select('email');
-                //     $builder->where('id', $order->ship_id);
-                //     $query  = $builder->get();
-                //     $data = $query->getRow();
-                //     $email = $data->email;
-                // }
-                // print_r("hrllo");exit;
-                // order_mail('maithili.koffeekodes@gmail.com', $subject,$message);
-                // order_mail('ravi.codesmith@gmail.com', $subject, $message);
+                if ($order->ship_id != 0)  //check session isset login user if not then call guest user 
+                {
+                    $builder = $db->table('shipping_address');
+                    $builder->select('email');
+                    $builder->where('id', $order->ship_id);
+                    $query  = $builder->get();
+                    $data = $query->getRow();
+                    $email = $data->email;
+                }
+                // echo "<pre>";print_r($email);exit;
 
-                // $builder = $db->table('order_item');
+                order_mail($email,$subject,$message);
+                $builder = $db->table('order_item');
             }
         }
     }

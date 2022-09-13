@@ -43,7 +43,7 @@
 
             <div class="form-group">
                 <label>Image<span class="tx-danger">*</span></label>
-                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty($item)) ? $item['image'] : ''; ?>" required>
+                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty($item)) ? $item['image'] : ''; ?>">
             </div>
             <div class="col-lg-12 form-group">
                 <label class="form-label">Galary Pic</label>
