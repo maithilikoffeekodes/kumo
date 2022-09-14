@@ -3,8 +3,9 @@
 <?= $this->section('content') ?>
 
 <style>
-	.btn_love:hover{
-		background-color: black;color: white;
+	.btn_love:hover {
+		background-color: black;
+		color: white;
 	}
 </style>
 
@@ -173,12 +174,18 @@
 							<div class="widget-boxed-header">
 								<h4><a href="#pricing" data-toggle="collapse" aria-expanded="false" role="button">Pricing</a></h4>
 							</div>
-						
+
 							<div class="widget-boxed-body collapse show" id="pricing" data-parent="#pricing">
 								<div class="side-list no-border mb-4">
-									<div class="rg-slider">
+									<p>
+										<label for="amount">Price range:</label>
+										<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+									</p>
+
+									<div id="slider-range"></div>
+									<!-- <div class="rg-slider">
 										<input type="text" class="js-range-slider" name="my_range" value="" />
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -581,7 +588,14 @@
 			}
 		});
 	});
+	$(document).on('change','#amount',function(){
+		var a= $('#amount').val();
+		var b= $('#amount').text();
+		var s = $('#slider-range').text();
+		console.log(a);
+		console.log(b);
 
+	});
 	$("#brand").select2({
 		width: '100%',
 		placeholder: 'Search...',
@@ -641,7 +655,7 @@
 		var price = $("#price option:selected").val();
 		filter();
 	});
-	$(document).on('change','.js-range-slider',)
+	
 	$(document).on('click', '.pagination li a', function(event) {
 		event.preventDefault();
 		var page = $(this).data('ci-pagination-page');
@@ -685,7 +699,22 @@
 
 		});
 	}
-
+</script>
+<script>
+	$(function() {
+		$("#slider-range").slider({
+			range: true,
+			min: 0,
+			max: <?= $max_value ?>,
+			values: [0,<?= $max_value ?>],
+			slide: function(event, ui) {
+				$("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+			}
+		});
+		$("#amount").val("₹" + $("#slider-range").slider("values", 0) +
+			" - ₹" + $("#slider-range").slider("values", 1));
+			filter();
+	});
 
 </script>
 <?= $this->endSection() ?>
