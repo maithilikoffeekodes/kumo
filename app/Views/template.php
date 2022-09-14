@@ -8,7 +8,7 @@
 
 	<title>Kumo- Fashion eCommerce</title>
 	<!-- Favicon -->
-	<link href="<?= ASSETS; ?>img/logo.png" rel="icon">
+	<link href="<?= ASSETS; ?>img/Klogo.png" rel="icon">
 
 	<!-- Custom CSS -->
 	<link href="<?= ASSETS; ?>css/styles.css" rel="stylesheet">
@@ -25,9 +25,9 @@
 	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/fileexport/buttons.bootstrap4.min.css" />
 	<!---Select2 css-->
 	<link href="<?= ASSETS; ?>plugins/select2/css/select2.min.css" rel="stylesheet">
-
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 	<!--Mutipleselect css-->
-	<link rel="stylesheet" href="<?= ASSETS; ?>plugins/multipleselect/multiple-select.css">
+	<!-- <link rel="stylesheet" href="<?= ASSETS; ?>plugins/multipleselect/multiple-select.css"> -->
 </head>
 
 <body>

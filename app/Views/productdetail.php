@@ -24,7 +24,7 @@
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="prd_details">
 
-                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['category'] ?></span></div>
+                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['category_name'] ?></span></div>
                     <div class="prt_02 mb-3">
                         <h2 class="ft-bold mb-1"><?= $product['name'] ?></h2>
                         <div class="text-left">
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="prt_04 mb-4">
-                        <p class="d-flex align-items-center mb-1">Category:<strong class="fs-sm text-dark ft-medium ml-1"><?= $product['category'] ?></strong></p>
+                        <p class="d-flex align-items-center mb-1">Category:<strong class="fs-sm text-dark ft-medium ml-1"><?= $product['category_name'] ?></strong></p>
                         <!-- <p class="d-flex align-items-center mb-0">SKU:<strong class="fs-sm text-dark ft-medium ml-1">KUMO42568</strong></p> -->
                     </div>
 

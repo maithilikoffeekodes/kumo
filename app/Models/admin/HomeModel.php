@@ -104,6 +104,8 @@ class HomeModel extends Model
         return $msg;
     }
     public function insert_edit_slider($post,$file){
+        //   print_r($post);exit;
+
         $db = $this->db;
         $builder = $db->table('slider');
         $builder->select('*');
@@ -150,7 +152,42 @@ class HomeModel extends Model
         }
         return $msg;
     }
-    
+    public function insert_edit_coupon($post)
+    {
+        $db = $this->db;
+        $builder = $db->table('coupon');
+        $builder->select('*');
+        $builder->where(array('id' => $post['id']));
+        $query = $builder->get();
+        $result = $query->getRowArray();
+        $pdata = array(
+            'coupon_code' => $post['coupon'],
+            'coupon_value' => $post['coupon_value'],
+            'coupon_type' => $post['coupon_type'],
+            'cart_min_value' => $post['min_price'],
+        );
+        if (!empty($result)) {
+            $pdata['updated_at'] = date('Y-m-d H:i:s');
+            $pdata['updated_by'] = session('id');
+            $builder->where('id', $post['id']);
+            $res = $builder->update($pdata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Update successfully');
+            } else {
+                $msg = array('st' => 'failed');
+            }
+        } else {
+            $pdata['created_at'] = date('Y-m-d H:i:s');
+            $pdata['created_by'] = session('id');
+            $res = $builder->insert($pdata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            } else {
+                $msg = array('st' => 'failed');
+            }
+        }
+        return $msg;
+    }
     public function get_brand_data()
     {
         $db = $this->db;
@@ -161,7 +198,7 @@ class HomeModel extends Model
         $data_table->setSearchableColumns(['id', 'brand']);
         $data_table->edit('image', function ($row) {
             $img_tag = '';
-            $img_tag .= '<img src=" ' . $row->image . ' " width="100" height="100">';
+            $img_tag .= '<img src=" ' . $row->image . ' " width="265px" height="118px">';
             return $img_tag;
         });
         $data_table->add('action', function ($row) {
@@ -205,7 +242,7 @@ class HomeModel extends Model
         $data_table->setSearchableColumns(['id', 'slider']);
         $data_table->edit('image', function ($row) {
             $img_tag = '';
-            $img_tag .= '<img src=" ' . $row->image . ' " width="100" height="100">';
+            $img_tag .= '<img src=" ' . $row->image . ' " width="400px" height="200px">';
             return $img_tag;
         });
         $data_table->add('action', function ($row) {
@@ -220,9 +257,11 @@ class HomeModel extends Model
     public function get_item_data()
     {
         $db = $this->db;
-        $builder = $db->table('item');
-        $builder->select('id,brand,category,name,image,price,listedprice,discount,stock');
-        $builder->where('is_delete', 0);
+        $builder = $db->table('item i');
+        $builder->select('i.id,b.brand as brand_name,c.category as category_name,i.name,i.image,i.price,i.listedprice,i.discount,i.stock');
+        $builder->join('brand b','b.id=i.brand');
+        $builder->join('category c','c.id=i.category');
+        $builder->where('i.is_delete', 0);
         $data_table =  DataTable::of($builder);
         $data_table->setSearchableColumns(['id', 'item']);
         $data_table->edit('image', function ($row) {
@@ -239,7 +278,6 @@ class HomeModel extends Model
 
         return $data_table->toJSON();
     }
-
     public function getbrand($post)
     {
 
@@ -298,6 +336,21 @@ class HomeModel extends Model
         });
         return $data_table->toJSON();
     }
+    public function get_coupon_data(){
+        $db = $this->db;
+        $builder = $db->table('coupon');
+        $builder->select('id,coupon_code,coupon_value,coupon_type,cart_min_value,created_at');
+        // $builder->where('o.is_delete', '0');
+        $data_table = DataTable::of($builder);
+        $data_table->setSearchableColumns(['id']);
+        $data_table->add('action', function ($row) {
+            $btnedit = '<a data-toggle="modal" data-target="#fm_model" href="' . url('admin/Home/createcoupon/') . $row->id . '" data-title="Edit Coupons : ' . $row->coupon_code . '"  class="btn btn-link pd-10"><i class="far fa-edit"></i></a> ';
+
+            $btndelete = '<a data-toggle="modal" target="_blank"   title="Coupon name: ' . $row->coupon_code . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="far fa-trash-alt"></i></a> ';
+            return $btnedit . $btndelete;
+        }, 'last');
+        return $data_table->toJSON();
+    }
     public function get_data($id)
     {
         $db = $this->db;
@@ -333,7 +386,6 @@ class HomeModel extends Model
 
         return $result;
     }
-
     public function get_orderviewdata($get)
     {
 
@@ -354,6 +406,19 @@ class HomeModel extends Model
         });
         return $data_table->toJSON();
     }
+    public function get_item($id){
+        $db = $this->db;
+        $builder = $db->table('item i');
+        $builder->select('i.*,b.brand as brand_name,c.category as category_name');
+        $builder->join('brand b','b.id=i.brand');
+        $builder->join('category c','c.id=i.category');
+        $builder->where('i.id', $id);
+        $builder->where('i.is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getRowArray();
+        // echo"<pre>";print_r($result);exit;
+        return $result;
+    }
     public function get_master_data($method, $id)
     {
         $db = $this->db;
@@ -371,11 +436,10 @@ class HomeModel extends Model
             $gmodel = new GeneralModel();
             $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id),'*');
         }
-        if ($method == 'item') {
+        if ($method == 'coupon') {
             $gmodel = new GeneralModel();
-            $result['item'] = $gmodel->get_data_table('item', array('id' => $id),'*');
+            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id),'*');
         }
-
         return $result;
     }
     public function UpdateData($post)
@@ -394,6 +458,11 @@ class HomeModel extends Model
 
                 $gmodel = new GeneralModel();
                 $result = $gmodel->update_data_table('category', array('id' => $post['pk']), array('is_delete' => '1'));
+            }
+            if ($post['method'] == 'slider') {
+
+                $gmodel = new GeneralModel();
+                $result = $gmodel->update_data_table('slider', array('id' => $post['pk']), array('is_delete' => '1'));
             }
         }
         return $result;
@@ -460,7 +529,7 @@ class HomeModel extends Model
         );
         if (isset($file)) {
             if ($file->isValid() && !$file->hasMoved()) {
-                $originalPath = '/brand/' . date('Ymd') . '/';
+                $originalPath = '/item/' . date('Ymd') . '/';
                 if (!file_exists(getcwd() . $originalPath)) {
                     mkdir(getcwd() . $originalPath, 0777, true);
                 }

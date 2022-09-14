@@ -3,6 +3,9 @@
 </script>
 
 <script src="<?= ASSETS; ?>js/jquery.min.js"></script>
+<!-- Select2 js-->
+<script src="<?= ASSETS; ?>plugins/select2/js/select2.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 <script src="<?= ASSETS; ?>js/popper.min.js"></script>
 <script src="<?= ASSETS; ?>js/bootstrap.min.js"></script>
 <script src="<?= ASSETS; ?>js/ion.rangeSlider.min.js"></script>
@@ -28,12 +31,10 @@
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.html5.min.js" type="text/javascript"></script>
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.print.min.js" type="text/javascript"></script>
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.bootstrap4.min.js" type="text/javascript"></script>
-<!-- Select2 js-->
-<script src="<?= ASSETS; ?>plugins/select2/js/select2.min.js"></script>
 
 <!--MutipleSelect js-->
-<script src="<?= ASSETS; ?>plugins/multipleselect/multiple-select.js"></script>
-<script src="<?= ASSETS; ?>plugins/multipleselect/multi-select.js"></script>
+<!-- <script src="<?= ASSETS; ?>plugins/multipleselect/multiple-select.js"></script> -->
+<!-- <script src="<?= ASSETS; ?>plugins/multipleselect/multi-select.js"></script> -->
 
 <!-- ============================================================== -->
 <!-- This page plugins -->

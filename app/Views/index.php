@@ -23,7 +23,7 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$row['name']; ?></h1>
                                 <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<?= url('Home/shopl')?>">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                             <img class="position-absolute w-100 h-100" src="<?= @$row['image']; ?>" style="object-fit: cover;">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$rs['name']; ?></h1>
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$row['name']; ?></h1>
                                     <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
                                     <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
                                 </div>
@@ -200,39 +200,11 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="smart-brand">
-
+                <?php foreach($rand_brand as $row) { ?>
                     <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-1.png" class="img-fluid" alt="" />
+                        <img src="<?= $row['image']?>" class="img-fluid" alt="" />
                     </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-2.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-3.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-4.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-5.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-6.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-1.png" class="img-fluid" alt="" />
-                    </div>
-
-                    <div class="single-brnads">
-                        <img src="<?= ASSETS; ?>img/shop-logo-2.png" class="img-fluid" alt="" />
-                    </div>
-
+                    <?php } ?>
                 </div>
             </div>
         </div>

@@ -39,11 +39,12 @@
             <div class="form-group">
                 <label>Item Name<span class="tx-danger">*</span></label>
                 <input type="text" name="item" class="form-control" value="<?= @$item['name']; ?>" placeholder="Enter Item Name" required>
+                <input value="<?= @$item['id'] ?>" name="id" type="hidden">
             </div>
 
             <div class="form-group">
                 <label>Image<span class="tx-danger">*</span></label>
-                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty($item)) ? $item['image'] : ''; ?>">
+                <input type="file" class="dropify" data-height="200" name="image" data-height="100" data-default-file="<?= (!empty(@$item)) ? @$item['image'] : ''; ?>">
             </div>
             <div class="col-lg-12 form-group">
                 <label class="form-label">Galary Pic</label>
@@ -106,7 +107,7 @@
 
 <script>
     Dropzone.autoDiscover = false;
-    var filegalary = <?= ((@$data['gallery']) ? @$data['gallery'] : 'new Array') ?>;
+    var filegalary = <?= ((@$item['gallery']) ? @$item['gallery'] : 'new Array') ?>;
     console.log(filegalary);
 
     var dz2 = $("#dzupload_galary_image").dropzone({

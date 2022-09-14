@@ -352,25 +352,25 @@
     $("#state").select2({
         width: '100%',
         placeholder: 'Select...',
-        ajax: {
-            url: PATH + "Home/Getdata/getstate",
-            type: "post",
-            allowClear: true,
-            dataType: 'json',
-            delay: 250,
-            data: function(params) {
-                return {
-                    searchTerm: params.term // search term
-                };
-            },
-            processResults: function(response) {
-                console.log(response);
-                return {
-                    results: response
-                };
-            },
-            cache: true
-        }
+        // ajax: {
+        //     url: PATH + "Home/Getdata/getstate",
+        //     type: "post",
+        //     allowClear: true,
+        //     dataType: 'json',
+        //     delay: 250,
+        //     data: function(params) {
+        //         return {
+        //             searchTerm: params.term // search term
+        //         };
+        //     },
+        //     processResults: function(response) {
+        //         console.log(response);
+        //         return {
+        //             results: response
+        //         };
+        //     },
+        //     cache: true
+        // }
     });
     $("#city").select2({
         width: '100%',

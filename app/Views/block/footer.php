@@ -67,10 +67,10 @@
 									<img src="<?=ASSETS;?>img/logo-light.png" class="img-footer small mb-2" alt="" />
 									
 									<div class="address mt-3">
-										3298 Grant Street Longview, TX<br>United Kingdom 75601	
+										3298 Grant Street Longview, TX<br> Surat Gujarat 75601	
 									</div>
 									<div class="address mt-3">
-										1-202-555-0106<br>help@shopper.com
+										1-202-555-0106<br>help@kumo.com
 									</div>
 									<div class="address mt-3">
 										<ul class="list-inline">
@@ -88,12 +88,12 @@
 								<div class="footer_widget">
 									<h4 class="widget_title">Supports</h4>
 									<ul class="footer-menu">
-										<li><a href="#">Contact Us</a></li>
-										<li><a href="#">About Page</a></li>
+										<li><a href="<?= url('Home/contact')?>">Contact Us</a></li>
+										<li><a href="<?= url('Home/about')?>">About Page</a></li>
 										<li><a href="#">Size Guide</a></li>
 										<li><a href="#">Shipping & Returns</a></li>
-										<li><a href="#">FAQ's Page</a></li>
-										<li><a href="#">Privacy</a></li>
+										<li><a href="<?= url('Home/faq')?>">FAQ's Page</a></li>
+										<li><a href="<?= url('Home/privacy')?>">Privacy</a></li>
 									</ul>
 								</div>
 							</div>
@@ -102,11 +102,11 @@
 								<div class="footer_widget">
 									<h4 class="widget_title">Shop</h4>
 									<ul class="footer-menu">
-										<li><a href="#">Men's Shopping</a></li>
-										<li><a href="#">Women's Shopping</a></li>
-										<li><a href="#">Kids's Shopping</a></li>
-										<li><a href="#">Furniture</a></li>
-										<li><a href="#">Discounts</a></li>
+										<li><a href="<?= url('Home/shoplist')?>">Men's Shopping</a></li>
+										<li><a href="<?= url('Home/shoplist')?>">Women's Shopping</a></li>
+										<li><a href="<?= url('Home/shoplist')?>">Kids's Shopping</a></li>
+										<li><a href="<?= url('Home/shoplist')?>">Furniture</a></li>
+										<li><a href="<?= url('Home/shoplist')?>">Discounts</a></li>
 									</ul>
 								</div>
 							</div>
@@ -115,10 +115,10 @@
 								<div class="footer_widget">
 									<h4 class="widget_title">Company</h4>
 									<ul class="footer-menu">
-										<li><a href="#">About</a></li>
-										<li><a href="#">Blog</a></li>
+										<li><a href="<?= url('Home/about')?>">About</a></li>
+										<li><a href="<?= url('Home/blog')?>">Blog</a></li>
 										<li><a href="#">Affiliate</a></li>
-										<li><a href="#">Login</a></li>
+										<li><a href="<?= url('Home/login')?>">Login</a></li>
 									</ul>
 								</div>
 							</div>
@@ -150,7 +150,7 @@
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2021 Kumo. Designd By <a href="https://themezhub.com/">ThemezHub</a>.</p>
+								<p class="mb-0">© 2021 Kumo. Designd By Maithili.</p>
 							</div>
 						</div>
 					</div>

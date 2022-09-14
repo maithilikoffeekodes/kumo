@@ -95,7 +95,9 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('item i');
-        $builder->select('i.*');
+        $builder->select('i.*,b.brand as brand_name,c.category as category_name');
+        $builder->join('brand b', 'b.id=i.brand');
+        $builder->join('category c', 'c.id=i.category');
         $builder->where('i.id', $id);
         $builder->where('i.is_delete', 0);
         $query = $builder->get();
@@ -128,6 +130,19 @@ class HomeModel extends Model
         $getRandslider = $query->getResultArray();
         // echo "<pre>";print_r($getRanditem);exit;
         return $getRandslider;
+    }
+    public function get_randombrand_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('brand');
+        $builder->select('*');
+        $builder->orderBy('id', 'RANDOM');
+        $builder->where('is_delete', '0');
+        $builder->limit(8);
+        $query = $builder->get();
+        $getRandBrand = $query->getResultArray();
+        // echo "<pre>";print_r($getRanditem);exit;
+        return $getRandBrand;
     }
     public function insert_cart_data($post)
     {
@@ -239,7 +254,11 @@ class HomeModel extends Model
         $data_table->add('action', function () {
             $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
             return $btntotal;
-        })
+        });
+        $data_table->add('action', function ($row) {
+            $btndelete = '<a  title="Cart name: ' . $row->name . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="fas fa-trash-alt" style="color:grey"></i></a> ';
+            return $btndelete;
+        }, 'last')
 
             ->hide('product_id')
             ->hide('id')
@@ -264,8 +283,8 @@ class HomeModel extends Model
         $data_table->add('action', function ($row) {
 
             $btnquantity = '
-      <div class="qty_class" style="width:110px;">
-      <span class="count" style="margin-left:5px;margin-right:5px;">' . $row->quantity . '</span>
+      <div class="qty_class">
+      <span class="count">' . $row->quantity . '</span>
       <input type="hidden" class="form-control qty" name="qty[]" value="' . $row->quantity . '">
       <input type="hidden" class="form-control qty" name="cart_id[]" value="' . $row->product_id . '">
       <input type="text" class="form-control price_hidden d-none" name="price[]" value="' . $row->price . '">
@@ -277,12 +296,7 @@ class HomeModel extends Model
         $data_table->add('action', function () {
             $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
             return $btntotal;
-        });
-
-        $data_table->add('action', function ($row) {
-            $btndelete = '<a  title="Category name: ' . $row->name . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="fa fa-trash-o"></i></a> ';
-            return $btndelete;
-        },'last')
+        })
             ->hide('product_id')
             ->hide('id')
             ->hide('quantity');
@@ -429,7 +443,7 @@ class HomeModel extends Model
         $builder = $db->table('wishlist w');
         $builder->select('w.id,i.image,i.name,i.price,w.product_id');
         $builder->join('item i', 'i.id=w.product_id');
-        $builder->where('w.user_id',session('uid') ? session('uid') : session('guestid'));
+        $builder->where('w.user_id', session('uid') ? session('uid') : session('guestid'));
         $builder->where('w.is_delete', 0);
         $query =  $builder->get();
         $result = $query->getResultArray();
@@ -473,6 +487,20 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function UpdateData($post)
+    {
+        $result = array();
+        $db = $this->db;
+
+            if ($post['type'] == 'Remove') {
+                $builder = $db->table('cart');
+                $builder->where("id", @$post['pk']);
+                $result = $builder->update(array('is_delete' => '1'));
+                $result = array('st' => 'success');
+            }
+        
+        return $result;
+    }
     public function payment_data($post)
     {
         // echo "<pre>";
@@ -495,8 +523,8 @@ class HomeModel extends Model
             'email' => $post['email'],
             'mobileno' => $post['mobileno'],
             'address1' => $post['address'],
-            'state' => $post['state'],
-            'city' => $post['city'],
+            // 'state' => @$post['state'],
+            // 'city' => @$post['city'],
             'pincode' => $post['pincode'],
             // 'type' => $post['address_type']
         );

@@ -47,6 +47,13 @@ class Home extends BaseController
         }
         return view('admin/item/item');
     }
+    public function coupon()
+    {
+        if (!session('id')) {
+            return redirect()->to(url('admin/Auth/login'));
+        }
+        return view('admin/coupon/coupon');
+    }
     public function createbrand($id = '')
     {
         $post = $this->request->getPost();
@@ -80,14 +87,15 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         $file = $this->request->getFile('image');
+        // echo"<pre>";print_r($post);exit;
         if (!empty($post)) {
             $msg = $this->model->insert_edit_slider($post,$file);
             return $this->response->setJSON($msg);
         }
-        if ($id != '') {
+        // if ($id != '') {
             $data = $this->model->get_master_data('slider', $id);
-        }
-        return view('admin/slider/createslider', $data);
+        // }
+        return view('admin/slider/createslider',$data);
     }
     public function createitem($id = '')
     {
@@ -99,9 +107,24 @@ class Home extends BaseController
             return $this->response->setJSON($msg);
         }
         if ($id != '') {
-            $data = $this->model->get_master_data('item', $id);
+        // echo"<pre>";print_r($id);exit;
+            $data['item'] = $this->model->get_item($id);
         }
+        $data['id'] = $id;
         return view('admin/item/createitem',$data);
+    }
+    public function createCoupon($id = '')
+    {
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->insert_edit_coupon($post);
+            return $this->response->setJSON($msg);
+        }
+        if ($id != '') {
+            $data = $this->model->get_master_data('coupon', $id);
+        }
+        $data['id'] = $id;
+        return view('admin/coupon/createcoupon', $data);
     }
     public function order()
     {
@@ -140,6 +163,10 @@ class Home extends BaseController
         }
         if ($method == 'order') {
             $data = $this->model->get_order_data();
+            return $data;
+        }
+        if ($method == 'Coupon') {
+            $data = $this->model->get_coupon_data();
             return $data;
         }
         if ($method == 'orderview') {

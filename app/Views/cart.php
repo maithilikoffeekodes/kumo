@@ -41,15 +41,16 @@
 					<div class="row align-items-end justify-content-between mb-10 mb-md-0">
 						<div class="col-12 col-md-7">
 							<!-- Coupon -->
-							<form class="mb-7 mb-md-0">
+							<form class="mb-7 mb-md-0" >
 								<label class="fs-sm ft-medium text-dark">Coupon code:</label>
 								<div class="row form-row">
 									<div class="col">
-										<input class="form-control" type="text" placeholder="Enter coupon code*">
+										<input class="form-control coupon" type="text" placeholder="Enter coupon code*" name="coupon-apply">
 									</div>
 									<div class="col-auto">
-										<button class="btn btn-dark" type="submit">Apply</button>
+										<button class="btn btn-dark applycoupon" type="submit">Apply</button>
 									</div>
+									<div class="error-msg"></div>
 								</div>
 							</form>
 						</div>
@@ -84,7 +85,7 @@
 					</div>
 
 					<button class="btn btn-block btn-dark mb-3" id="save_data" type="submit">Proceed to Checkout</button>
-					<a class="btn-link text-dark ft-medium" href="shop.html">
+					<a class="btn-link text-dark ft-medium" href="<?= url('Home/shoplist')?>">
 						<i class="ti-back-left mr-2"></i> Continue Shopping
 					</a>
 				</div>
@@ -234,6 +235,33 @@
 			// })}
 		});
 	}
+	$('.applycoupon').click(function(){
+		var coupon = $('.coupon').val();
+		$.ajax({
+                url: "<?php echo url('Home/applycoupon'); ?>",
+                method: "POST",
+                data: {
+                    coupon: coupon,
+                },
+                success: function(response) {
+					console.log(response);
+                    // if (response.st == 'success') {
+
+                    //     toastr.success(response.msg);
+                    //     var cart_count = parseInt($(".cart_count").text());
+                    //     $(".cart_count").text(cart_count + 1);
+                    // }
+                    // if (response.st == 'added') {
+                    //     toastr.info(response.msg);
+                    // } else {
+                    //     $('.form_processing').html('');
+                    //     $('#cartbtn').prop('disabled', false);
+                    //     $('.error-msg').html(response.msg);
+                    // }
+                }
+
+            });
+	});
 	$('.ajax-form-submit').on('submit', function(e) {
 		// console.log("abc");
 		$('#save_data').prop('disabled', true);
@@ -249,9 +277,9 @@
 			url: aurl,
 			data: $(this).serialize(),
 			success: function(response) {
-
+				// console.log(response);
 				if (response == "1") {
-				swal("success!", "Cart detail Updated!", "success");
+				window.location.href="<?= url('Home/checkout')?>";
 				} else {
 					$('.form_proccessing').html('');
 					$('#save_data').prop('disabled', false);

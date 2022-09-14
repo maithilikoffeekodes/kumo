@@ -1,0 +1,10 @@
+	git status   				(check git status)
+	git init     				(initialize git repo)
+	git add .    				(add changes to staging)
+	git commit -m "your message" 		(Commit changes)
+	git push origin master			(push code to GitHub)
+
+	git push origin -b <your branch>	(push code to different branch)
+	git pull				(pull code from repo)
+	git clone <git repo link>		(clone the repo to your local machine)
+	git clone -b <branch name>		(clone a specific git branch)

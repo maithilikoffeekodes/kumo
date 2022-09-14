@@ -31,7 +31,9 @@
 					<li class="nav-item">
 						<a class="nav-sub-link" href="<?= url('admin/Home/item') ?>"><span class="sidemenu-label">Item</span></a>
 					</li>
-					
+					<li class="nav-item">
+						<a class="nav-sub-link" href="<?= url('admin/Home/coupon') ?>"><span class="sidemenu-label">Coupon</span></a>
+					</li>
 				</ul>
 			</li>
 			<li class="nav-label">Order</li>

@@ -11,28 +11,15 @@
 
 						<li><a href="<?= url('Home/shoplist') ?>">Shop</a>
 						</li>
+						<li><a href="<?= url('Home/about')?>">About Us</a></li>
+						<li><a href="<?= url('Home/contact')?>">Contact</a></li>
+						<li><a href="<?= url('Home/blog')?>">Blog</a></li>
+						<!-- <li><a href="<?= url('Home/errorpage')?>">404 Page</a></li>
+						<li><a href="<?= url('Home/privacy')?>">Privacy Policy</a></li>
+						<li><a href="<?= url('Home/faq')?>">FAQs</a></li> -->
 
-						<li><a href="javascript:void(0);">Product</a>
-							<ul class="nav-dropdown nav-submenu">
-								<li><a href="shop-single-v1.html">Product Detail v01</a></li>
-								<li><a href="shop-single-v2.html">Product Detail v02</a></li>
-								<li><a href="shop-single-v3.html">Product Detail v03</a></li>
-								<li><a href="shop-single-v4.html">Product Detail v04</a></li>
-							</ul>
-						</li>
 
-						<li><a href="javascript:void(0);">Pages</a>
-							<ul class="nav-dropdown nav-submenu">
-								<li><a href="blog.html">Blog Style</a></li>
-								<li><a href="about-us.html">About Us</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="404.html">404 Page</a></li>
-								<li><a href="privacy.html">Privacy Policy</a></li>
-								<li><a href="faq.html">FAQs</a></li>
-							</ul>
-						</li>
-
-						<li><a href="docs.html">Docs</a></li>
+						<!-- <li><a href="docs.html">Docs</a></li> -->
 						<!-- <li><a href="javascript:void(0);" style="    margin-left: 553px;"><i class="lni lni-user mr-1"></i></a>
 							<ul class="nav-dropdown nav-submenu">
 								<li><a href="my-orders.html">My Order</a></li>
@@ -48,9 +35,9 @@
 							</a>
 						</li>
 						<li style="margin-left: 1014px;margin-top: -36px;color: white;">
-						<i class="lni lni-user">
-							
-						</i>
+							<i class="lni lni-user">
+
+							</i>
 							<ul class="nav-dropdown nav-submenu">
 								<?php if (!empty(session('uid'))) { ?>
 									<li><a href="<?= url('Home/login') ?>">SignIn</a></li>
@@ -67,27 +54,27 @@
 							<a href="<?= url('Home/wishlist') ?>" onclick="openWishlist()">
 								<i class="lni lni-heart"></i>
 								<?php
-                            $db = \config\Database::Connect();
-                            $builder = $db->table('wishlist');
-                            $builder->select('count(id)as count_n');
-                            $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'is_delete' => 0));
-                            $query = $builder->get();
-                            $count = $query->getRow();
-                            ?>
+								$db = \config\Database::Connect();
+								$builder = $db->table('wishlist');
+								$builder->select('count(id)as count_n');
+								$builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'is_delete' => 0));
+								$query = $builder->get();
+								$count = $query->getRow();
+								?>
 								<span class="dn-counter bg-danger"><?= $count->count_n ?></span>
 							</a>
 						</li>
 						<li style="margin-left: 1089px;margin-top: -53px;">
-							<a  href="<?= url('Home/cart') ?>" onclick="openCart()">
+							<a href="<?= url('Home/cart') ?>" onclick="openCart()">
 								<i class="lni lni-shopping-basket"></i>
 								<?php
-                            $db = \config\Database::Connect();
-                            $builder = $db->table('cart');
-                            $builder->select('count(id)as count_n');
-                            $builder->where(array('user_id' => session('id') ? session('id') : session('guestid'), 'is_delete' => 0));
-                            $query = $builder->get();
-                            $count = $query->getRow();
-                            ?>
+								$db = \config\Database::Connect();
+								$builder = $db->table('cart');
+								$builder->select('count(id)as count_n');
+								$builder->where(array('user_id' => session('id') ? session('id') : session('guestid'), 'is_delete' => 0));
+								$query = $builder->get();
+								$count = $query->getRow();
+								?>
 								<span class="dn-counter bg-success"><?= $count->count_n ?></span>
 							</a>
 						</li>

@@ -1,0 +1,799 @@
+CRITICAL - 2022-09-13 01:05:00 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 90)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:05:33 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 90)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+ERROR - 2022-09-13 01:41:35 --> Unknown column 'user_id' in 'where clause'
+CRITICAL - 2022-09-13 01:41:35 --> Unknown column 'user_id' in 'where clause'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\kumo\app\Models\admin\HomeModel.php(349): Hermawan\DataTables\DataTable->toJson()
+#7 D:\kumo\app\Controllers\admin\Home.php(166): App\Models\admin\HomeModel->get_coupon_data()
+#8 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('Coupon')
+#9 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#10 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#13 {main}
+ERROR - 2022-09-13 01:41:45 --> Unknown column 'user_id' in 'where clause'
+CRITICAL - 2022-09-13 01:41:45 --> Unknown column 'user_id' in 'where clause'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\kumo\app\Models\admin\HomeModel.php(349): Hermawan\DataTables\DataTable->toJson()
+#7 D:\kumo\app\Controllers\admin\Home.php(166): App\Models\admin\HomeModel->get_coupon_data()
+#8 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('Coupon')
+#9 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#10 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#13 {main}
+CRITICAL - 2022-09-13 01:42:08 --> Undefined property: stdClass::$brand
+#0 D:\kumo\app\Models\admin\HomeModel.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\kumo\\app\\Mod...', 343)
+#1 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(91): App\Models\admin\HomeModel->App\Models\admin\{closure}(Object(stdClass))
+#2 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\kumo\app\Models\admin\HomeModel.php(348): Hermawan\DataTables\DataTable->toJson()
+#4 D:\kumo\app\Controllers\admin\Home.php(166): App\Models\admin\HomeModel->get_coupon_data()
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('Coupon')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-13 01:42:27 --> Undefined property: stdClass::$coupon
+#0 D:\kumo\app\Models\admin\HomeModel.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\kumo\\app\\Mod...', 343)
+#1 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(91): App\Models\admin\HomeModel->App\Models\admin\{closure}(Object(stdClass))
+#2 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\kumo\app\Models\admin\HomeModel.php(348): Hermawan\DataTables\DataTable->toJson()
+#4 D:\kumo\app\Controllers\admin\Home.php(166): App\Models\admin\HomeModel->get_coupon_data()
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('Coupon')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-13 01:44:39 --> Undefined variable $coupon
+#0 D:\kumo\app\Views\admin\coupon\createcoupon.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 4)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('admin/coupon/cr...', Array, true)
+#4 D:\kumo\app\Controllers\admin\Home.php(124): view('admin/coupon/cr...', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createCoupon()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-13 01:45:46 --> Undefined variable $coupon
+#0 D:\kumo\app\Views\admin\coupon\createcoupon.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 10)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('admin/coupon/cr...', Array, true)
+#4 D:\kumo\app\Controllers\admin\Home.php(124): view('admin/coupon/cr...', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createCoupon()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-13 01:45:47 --> Undefined variable $coupon
+#0 D:\kumo\app\Views\admin\coupon\createcoupon.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 10)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('admin/coupon/cr...', Array, true)
+#4 D:\kumo\app\Controllers\admin\Home.php(124): view('admin/coupon/cr...', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createCoupon()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-13 01:47:57 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 97)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:47:59 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 97)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:48:51 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 97)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:49:21 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 98)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:49:31 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 98)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:49:45 --> Undefined array key "id"
+#0 D:\kumo\app\Models\admin\HomeModel.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 112)
+#1 D:\kumo\app\Controllers\admin\Home.php(92): App\Models\admin\HomeModel->insert_edit_slider(Array, NULL)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-13 01:50:06 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 98)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:50:14 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 98)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 01:51:28 --> Undefined array key "id"
+#0 D:\kumo\app\Models\admin\HomeModel.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 112)
+#1 D:\kumo\app\Controllers\admin\Home.php(92): App\Models\admin\HomeModel->insert_edit_slider(Array, NULL)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-13 01:51:43 --> Undefined array key "id"
+#0 D:\kumo\app\Models\admin\HomeModel.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 112)
+#1 D:\kumo\app\Controllers\admin\Home.php(92): App\Models\admin\HomeModel->insert_edit_slider(Array, NULL)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-13 01:51:49 --> Undefined array key "id"
+#0 D:\kumo\app\Models\admin\HomeModel.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 112)
+#1 D:\kumo\app\Controllers\admin\Home.php(92): App\Models\admin\HomeModel->insert_edit_slider(Array, NULL)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-13 02:04:49 --> Undefined array key "state"
+#0 D:\kumo\app\Models\HomeModel.php(498): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 498)
+#1 D:\kumo\app\Controllers\Home.php(88): App\Models\HomeModel->payment_data(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+ERROR - 2022-09-13 02:05:50 --> Column 'state' cannot be null
+CRITICAL - 2022-09-13 02:05:50 --> Column 'state' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sh...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sh...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sh...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sh...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(503): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(88): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 02:06:00 --> Column 'state' cannot be null
+CRITICAL - 2022-09-13 02:06:00 --> Column 'state' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sh...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sh...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sh...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sh...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(503): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(88): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-13 03:51:16 --> Undefined array key "id"
+#0 D:\kumo\app\Models\admin\HomeModel.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 112)
+#1 D:\kumo\app\Controllers\admin\Home.php(92): App\Models\admin\HomeModel->insert_edit_slider(Array, NULL)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createslider()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-13 03:53:52 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 03:53:58 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 03:55:06 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 03:55:33 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-13 04:12:58 --> Unclosed '{' on line 19
+#0 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(27): view('index', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-13 04:39:28 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+ERROR - 2022-09-13 04:51:08 --> Column 'is_delete' in where clause is ambiguous
+CRITICAL - 2022-09-13 04:51:08 --> Column 'is_delete' in where clause is ambiguous
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\kumo\app\Models\admin\HomeModel.php(279): Hermawan\DataTables\DataTable->toJson()
+#7 D:\kumo\app\Controllers\admin\Home.php(159): App\Models\admin\HomeModel->get_item_data()
+#8 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('item')
+#9 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#10 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#13 {main}
+ERROR - 2022-09-13 05:02:24 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:02:24 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:02:31 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:02:31 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:02:37 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:02:37 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:23 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:23 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:25 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:25 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:27 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:27 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:36 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:36 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:56 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:56 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:03:59 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:03:59 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:04:23 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:04:23 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:04:24 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:04:24 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:04:43 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:04:43 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:04:45 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:04:45 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:05:49 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:05:49 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(418): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:05:51 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:05:51 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(418): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('item', '')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:06:58 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:06:58 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:07:00 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:07:00 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-13 05:07:10 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\admin\Home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 112)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+ERROR - 2022-09-13 05:07:12 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:07:12 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:08:23 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:08:23 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:08:25 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:08:25 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:11:43 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:11:43 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:11:58 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:11:58 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:12:40 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:12:40 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(110): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:13:26 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:13:26 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:13:34 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:13:34 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:13:55 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:13:55 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:14:55 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:14:55 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:15:02 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:15:02 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:15:05 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:15:05 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:15:12 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:15:12 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\admin\HomeModel.php(417): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\admin\Home.php(111): App\Models\admin\HomeModel->get_item('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->createitem('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 05:26:53 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 05:26:53 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(103): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-13 06:40:10 --> cURL error 6: Could not resolve host: api.razorpay.com
+#0 D:\kumo\vendor\rmccue\requests\src\Transport\Curl.php(219): WpOrg\Requests\Transport\Curl->process_response('', Array)
+#1 D:\kumo\vendor\rmccue\requests\src\Requests.php(469): WpOrg\Requests\Transport\Curl->request('https://api.raz...', Array, Array, Array)
+#2 D:\kumo\vendor\razorpay\razorpay\src\Request.php(57): WpOrg\Requests\Requests::request('https://api.raz...', Array, Array, 'POST', Array)
+#3 D:\kumo\vendor\razorpay\razorpay\src\Entity.php(92): Razorpay\Api\Request->request('POST', 'https://api.raz...', Array)
+#4 D:\kumo\vendor\razorpay\razorpay\src\Entity.php(20): Razorpay\Api\Entity->request('POST', 'orders/', Array)
+#5 D:\kumo\vendor\razorpay\razorpay\src\Order.php(12): Razorpay\Api\Entity->create(Array)
+#6 D:\kumo\app\Helpers\rozorpay_helper.php(82): Razorpay\Api\Order->create(Array)
+#7 D:\kumo\app\Helpers\rozorpay_helper.php(23): generate_order_id_razor('1000', '89ef91bdf0b31f7...')
+#8 D:\kumo\app\Models\HomeModel.php(598): SendRazor('1000', '89ef91bdf0b31f7...', Array)
+#9 D:\kumo\app\Controllers\Home.php(127): App\Models\HomeModel->payment_data(Array)
+#10 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#11 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#15 {main}
+ERROR - 2022-09-13 06:52:55 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 06:52:55 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(103): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('2')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('2')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-13 06:53:01 --> Unknown column 'b.brand_name' in 'field list'
+CRITICAL - 2022-09-13 06:53:01 --> Unknown column 'b.brand_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `i`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `i`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `i`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `i`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(103): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(56): App\Models\HomeModel->get_product_data('1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->productdetail('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
