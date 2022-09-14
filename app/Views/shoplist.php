@@ -588,14 +588,13 @@
 			}
 		});
 	});
-	$(document).on('change','#amount',function(){
-		var a= $('#amount').val();
-		var b= $('#amount').text();
-		var s = $('#slider-range').text();
+	$(function() {
+		$("#amount").slider();
+		var a = $("#amount").slider("value",0);
 		console.log(a);
-		console.log(b);
 
 	});
+	
 	$("#brand").select2({
 		width: '100%',
 		placeholder: 'Search...',
@@ -655,7 +654,7 @@
 		var price = $("#price option:selected").val();
 		filter();
 	});
-	
+
 	$(document).on('click', '.pagination li a', function(event) {
 		event.preventDefault();
 		var page = $(this).data('ci-pagination-page');
@@ -706,15 +705,14 @@
 			range: true,
 			min: 0,
 			max: <?= $max_value ?>,
-			values: [0,<?= $max_value ?>],
+			values: [0, <?= $max_value ?>],
 			slide: function(event, ui) {
 				$("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
 			}
 		});
 		$("#amount").val("₹" + $("#slider-range").slider("values", 0) +
 			" - ₹" + $("#slider-range").slider("values", 1));
-			filter();
+		filter();
 	});
-
 </script>
 <?= $this->endSection() ?>
