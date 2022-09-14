@@ -2,7 +2,11 @@
 
 <?= $this->section('content') ?>
 
-
+<style>
+	.btn_love:hover{
+		background-color: black;color: white;
+	}
+</style>
 
 <!-- ======================= Shop Style 1 ======================== -->
 <section class="bg-cover" style="background:url(<?= ASSETS; ?>img/banner-2.png) no-repeat;">
@@ -169,25 +173,14 @@
 							<div class="widget-boxed-header">
 								<h4><a href="#pricing" data-toggle="collapse" aria-expanded="false" role="button">Pricing</a></h4>
 							</div>
-							<!-- <div class="form-price-range-filter">
-								<form method="post" action="">
-									<div>
-										<input type="" id="min" name="min_price" value="<?//php echo $min; ?>">
-										<div id="slider-range"></div>
-										<input type="" id="max" name="max_price" value="<?//php echo $max; ?>">
-									</div>
-									<div>
-										<input type="submit" name="submit_range" value="Filter Product" class="btn-submit">
-									</div>
-								</form>
-							</div> -->
-							<!-- <div class="widget-boxed-body collapse show" id="pricing" data-parent="#pricing">
+						
+							<div class="widget-boxed-body collapse show" id="pricing" data-parent="#pricing">
 								<div class="side-list no-border mb-4">
 									<div class="rg-slider">
 										<input type="text" class="js-range-slider" name="my_range" value="" />
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 
 						<!-- Single Option -->
@@ -648,6 +641,7 @@
 		var price = $("#price option:selected").val();
 		filter();
 	});
+	$(document).on('change','.js-range-slider',)
 	$(document).on('click', '.pagination li a', function(event) {
 		event.preventDefault();
 		var page = $(this).data('ci-pagination-page');
@@ -659,8 +653,7 @@
 	function filter(page = 1) {
 		var brand_id = $('#brand option:selected').val();
 		var category_id = $('#category option:selected').val();
-		// var cat = "<? //= isset($_GET['category']) ? $_GET['category'] : ''; ?>";
-		// var brand = "<? //= isset($_GET['brand']) ? $_GET['brand'] : ''; ?>";
+
 		var price = $("#price option:selected").val();
 		var min_price = $('.js-range-slider').text();
 		var max_price = $('.js-range-slider').text();
@@ -693,8 +686,6 @@
 		});
 	}
 
-	function getproduct(id) {
-		location.href = "<?= url('Home/productdetail/') ?>" + id;
-	}
+
 </script>
 <?= $this->endSection() ?>

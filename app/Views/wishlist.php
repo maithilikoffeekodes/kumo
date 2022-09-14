@@ -41,12 +41,12 @@
 						<?php foreach ($wishlist as $row) { ?>
 							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 								<div class="product_grid card b-0">
-									<div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-									<button class="btn btn_love position-absolute ab-right theme-cl"><i class="fas fa-times"></i></button>
+									<!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
+									<button class="btn btn_love position-absolute ab-right theme-cl" onclick="editable_remove()" data-val="<?= $row['id'] ?>" data-pk="<?= $row['id'] ?>"><i class="fas fa-times"></i></button>
 									<div class="card-body p-0">
 										<div class="shop_thumb position-relative">
-											<a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..."></a>
-											<button type="submit" class="btn btn-block custom-height bg-dark mb-2 cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id']?>" data-price="<?= @$row['price'] ?>" data-quantity="1">
+											<a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..." style="height: 350px ;width: 250px;"></a>
+											<button type="submit" class="btn btn-block custom-height bg-dark mb-2 cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id']?>" data-price="<?= @$row['price'] ?>" data-quantity="1" style="width: 250px;">
 												<i class="lni lni-shopping-basket mr-2"></i>Add to Cart
 											</button>
 										</div>
@@ -154,7 +154,7 @@
 	});
 
 	function editable_remove(data_edit) {
-		var type = 'Remove';
+		var type = 'Wishlist';
 
 		var data_val = $(data_edit).data('val');
 
@@ -181,7 +181,7 @@
 				});
 
 				if (data_val != undefined && data_val != '') {
-					$.post(PATH + "/" + $("#table_list_data").data('module') + "/Action/Update1", _data, function(
+					$.post(PATH + "/" + $("#table_list_data").data('module') + "/Action/Update", _data, function(
 						data) {
 
 						if (data.st == 'success') {

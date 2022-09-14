@@ -675,7 +675,7 @@ class HomeModel extends Model
                             <div class="shop_thumb position-relative">
                                 <a class="card-img-top d-block overflow-hidden" href="' . url('Home/productdetail/' . $row['id']) . '"><img class="card-img-top" src="' . $row['image'] . '" alt="..." style="height: 350px ;width: 280px;"></a>
                                 <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                    <div class="edlio"><a href="" class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1"></i>Add to cart</a></div>
+                                    <div class="edlio"><a class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1"></i>Add to cart</a></div>
                                 </div>
                             </div>
                         </div>
@@ -702,7 +702,12 @@ class HomeModel extends Model
             $result = $builder->update(array('is_delete' => '1'));
             $result = array('st' => 'success');
         }
-
+        if ($post['type'] == 'Wishlist') {
+            $builder = $db->table('wishlist');
+            $builder->where("id", @$post['pk']);
+            $result = $builder->update(array('is_delete' => '1'));
+            $result = array('st' => 'success');
+        }
         return $result;
     }
     public function payment_data($post)
@@ -814,4 +819,14 @@ class HomeModel extends Model
     }
     // return $data;
     // echo "<pre>";print_r($data);exit;
+    public function get_max_val()
+    {
+      $db = $this->db;
+      $builder = $db->table('item');
+      $builder->select('MAX(price) as max_value');
+      $builder->where('is_delete', '0');
+      $query = $builder->get();
+      $max_value = $query->getRow();
+      return $max_value->max_value;
+    }
 }

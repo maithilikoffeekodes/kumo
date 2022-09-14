@@ -430,3 +430,27 @@ CRITICAL - 2022-09-14 05:43:40 --> Undefined variable $min
 #8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #10 {main}
+CRITICAL - 2022-09-14 06:20:40 --> Undefined variable $min
+#0 D:\kumo\app\Views\shoplist.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 172)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('shoplist', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(68): view('shoplist', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shoplist()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-14 06:43:23 --> Undefined variable $max
+#0 D:\kumo\app\Views\shoplist.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 177)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('shoplist', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(68): view('shoplist', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shoplist()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}

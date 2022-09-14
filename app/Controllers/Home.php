@@ -63,6 +63,8 @@ class Home extends BaseController
     public function shoplist()
     {
         $data['rand_item'] = $this->model->get_randomitem_data();
+        $data['max_value'] = $this->model->get_max_val();
+
         return view('shoplist',$data);
     }
     public function faq()

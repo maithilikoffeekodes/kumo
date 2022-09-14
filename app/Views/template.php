@@ -12,7 +12,8 @@
 
 	<!-- Custom CSS -->
 	<link href="<?= ASSETS; ?>css/styles.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
 	<link href="<?= ASSETS; ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> -->
@@ -26,9 +27,8 @@
 	<link rel="stylesheet" type="text/css" href="<?= ASSETS; ?>plugins/datatable/fileexport/buttons.bootstrap4.min.css" />
 	<!---Select2 css-->
 	<link href="<?= ASSETS; ?>plugins/select2/css/select2.min.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-	<!--Mutipleselect css-->
-	<!-- <link rel="stylesheet" href="<?= ASSETS; ?>plugins/multipleselect/multiple-select.css"> -->
+
+
 </head>
 
 <body>
@@ -471,7 +471,7 @@
 	</div>
 	</div> -->
 
-	<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+		<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
 
 	</div>
