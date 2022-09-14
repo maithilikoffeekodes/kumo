@@ -31,7 +31,7 @@
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.html5.min.js" type="text/javascript"></script>
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.print.min.js" type="text/javascript"></script>
 <script src="<?=  ASSETS?>plugins/datatable/fileexport/buttons.bootstrap4.min.js" type="text/javascript"></script>
-
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 <!--MutipleSelect js-->
 <!-- <script src="<?= ASSETS; ?>plugins/multipleselect/multiple-select.js"></script> -->
 <!-- <script src="<?= ASSETS; ?>plugins/multipleselect/multi-select.js"></script> -->

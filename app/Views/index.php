@@ -6,43 +6,35 @@
 ?>
 
 <!-- ============================ Hero Banner  Start================================== -->
-<div class="container-fluid mb-3">
-    <div class="row px-xl-5">
-        <div class="col-lg-12">
-            <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#header-carousel" data-slide-to="1"></li>
-                    <li data-target="#header-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <?php foreach (@$rand_slider as $row) ?>
-                    <div class="carousel-item position-relative active" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="<?= @$row['image']; ?>" style="object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$row['name']; ?></h1>
-                                <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<?= url('Home/shopl')?>">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php foreach (@$rand_slider as $row) { ?>
-                        <div class="carousel-item position-relative" style="height: 430px;">
-                            <img class="position-absolute w-100 h-100" src="<?= @$row['image']; ?>" style="object-fit: cover;">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown"><?= @$row['name']; ?></h1>
-                                    <!-- <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p> -->
-                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <?php foreach (@$rand_slider as $row)  ?>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="<?= @$row['image']; ?>" alt="First slide" style="height:600px ;">
         </div>
+        <?php foreach (@$rand_slider as $row) { ?>
+
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?= @$row['image']; ?>" alt="Second slide" style="height:600px ;">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?= @$row['image']; ?>" alt="Third slide" style="height:600px ;">
+            </div>
     </div>
+<?php } ?>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
 </div>
 <!-- ============================ Hero Banner End ================================== -->
 <!-- ======================= All Category ======================== -->
@@ -59,71 +51,19 @@
         </div>
 
         <div class="row align-items-center justify-content-center">
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/fashion.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Wear</a></h6>
-                    </div>
-                </div>
-            </div>
+            <?php foreach (@$rand_category as $row) { ?>
 
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/tshirt.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Kid's Wear</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/accessories.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Accessories</a></h6>
+                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
+                    <div class="cats_side_wrap text-center mx-auto mb-3">
+                        <div class="sl_cat_01">
+                            <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="<?= url('Home/shoplist')?>" class="d-block"><img src="<?= $row['image'] ?>" class="img-fluid" width="40" alt=""></a></div>
+                        </div>
+                        <div class="sl_cat_02">
+                            <h6 class="m-0 ft-medium fs-sm"><a href="<?= url('Home/shoplist')?>"><?= $row['category'] ?></a></h6>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/sneakers.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Shoes</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/television.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Television</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/pant.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Pants</a></h6>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
 
     </div>
@@ -151,11 +91,11 @@
                         <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
                         <div class="card-body p-0">
                             <div class="shop_thumb position-relative">
-                                <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..."></a>
+                                <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..." style="height: 350px ;width: 250px;"></a>
                                 <div class="product-left-hover-overlay">
                                     <ul class="left-over-buttons">
                                         <li><a class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
-                                        <li><a class="d-inline-flex circle align-items-center justify-content-center wish" id="wishlist" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1" ><i class="far fa-heart position-absolute"></i></a></li>
+                                        <li><a class="d-inline-flex circle align-items-center justify-content-center wish" id="wishlist" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="far fa-heart position-absolute"></i></a></li>
                                         <li><a class="d-inline-flex circle align-items-center justify-content-center  cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
                                     </ul>
                                 </div>
@@ -164,7 +104,7 @@
                         <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
                             <div class="text-left">
                                 <div class="text-left">
-                                    <div class="elso_titl"><span class="small"><?= $row['category'] ?></span></div>
+                                    <div class="elso_titl"><span class="small"><?= $row['category_name'] ?></span></div>
                                     <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?= $row['name'] ?></a></h5>
                                     <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                         <i class="fas fa-star filled"></i>
@@ -185,7 +125,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="position-relative text-center">
-                    <a href="shop-style-1.html" class="btn stretched-link borders">Explore More<i class="lni lni-arrow-right ml-2"></i></a>
+                    <a href="<?= url('Home/shoplist') ?>" class="btn stretched-link borders">Explore More<i class="lni lni-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>
@@ -200,10 +140,10 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="smart-brand">
-                <?php foreach($rand_brand as $row) { ?>
-                    <div class="single-brnads">
-                        <img src="<?= $row['image']?>" class="img-fluid" alt="" />
-                    </div>
+                    <?php foreach ($rand_brand as $row) { ?>
+                        <div class="single-brnads">
+                            <img src="<?= $row['image'] ?>" class="img-fluid" alt="" />
+                        </div>
                     <?php } ?>
                 </div>
             </div>
@@ -232,156 +172,7 @@
 </section>
 <!-- ======================= Tag Wrap Start ============================ -->
 
-<!-- ======================= All Category ======================== -->
-<section class="middle">
-    <div class="container">
 
-        <div class="row justify-content-center">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="sec_title position-relative text-center">
-                    <h2 class="off_title">Popular Categories</h2>
-                    <h3 class="ft-bold pt-3">Trending Categories</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center justify-content-center">
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/headphones.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Headphones</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/watch.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Watches</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/washing-machine.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Washing Machine</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/cell-phone.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">iPhones</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/safety-goggles.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Goggles</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/camera.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Video Camera</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/fashion.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Wear</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/tshirt.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Kid's Wear</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/accessories.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Accessories</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/sneakers.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Shoes</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/television.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Television</a></h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
-                <div class="cats_side_wrap text-center mx-auto mb-3">
-                    <div class="sl_cat_01">
-                        <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="javascript:void(0);" class="d-block"><img src="<?= ASSETS; ?>img/pant.png" class="img-fluid" width="40" alt=""></a></div>
-                    </div>
-                    <div class="sl_cat_02">
-                        <h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Men's Pants</a></h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- ======================= All Category ======================== -->
 
 <!-- ======================= Customer Review ======================== -->
 <section class="gray">

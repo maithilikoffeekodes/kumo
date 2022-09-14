@@ -18,6 +18,8 @@ class Home extends BaseController
         $data['rand_item'] = $this->model->get_randomitem_data();
         $data['rand_slider'] = $this->model->get_randomslider_data();
         $data['rand_brand'] = $this->model->get_randombrand_data();
+        $data['rand_category'] = $this->model->get_randomcategory_data();
+
         if (!session('guestid') && !session('uid')) {
             $guestid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
             $session = session();
@@ -60,7 +62,8 @@ class Home extends BaseController
     }
     public function shoplist()
     {
-        return view('shoplist');
+        $data['rand_item'] = $this->model->get_randomitem_data();
+        return view('shoplist',$data);
     }
     public function faq()
     {
@@ -149,6 +152,14 @@ class Home extends BaseController
             return $this->response->setJSON($msg);
         }
     }
+    public function fetch_data($page = 1){
+
+        $post = $this->request->getPost();
+        // print_r($page);
+        $output = $this->model->fetch_data($post,$page);
+        // echo "<pre>";print_r($output);exit;
+        return $this->response->setJSON($output);
+    }
     public function order()
     {
         return view('order/order');
@@ -179,8 +190,8 @@ class Home extends BaseController
             return $msg;
         }
         if ($method == 'getstate') {
-            print_r($method);
-            exit;
+            // print_r($method);
+            // exit;
             $get = $this->request->getGet();
             $data = $this->model->get_states($get);
             return $this->response->setJSON($data);
@@ -188,6 +199,16 @@ class Home extends BaseController
         if ($method == 'getcity') {
             $post = $this->request->getPost();
             $data = $this->model->get_city($post);
+            return $this->response->setJSON($data);
+        }
+        if ($method == 'getbrand') {
+            $get = $this->request->getGet();
+            $data = $this->model->get_brand($get);
+            return $this->response->setJSON($data);
+        }
+        if ($method == 'getcategory') {
+            $post = $this->request->getPost();
+            $data = $this->model->get_category($post);
             return $this->response->setJSON($data);
         }
     }

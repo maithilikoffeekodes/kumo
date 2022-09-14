@@ -100,25 +100,25 @@
                                 </div>
                             </div> -->
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="form-group">
-                            <label>States<span class="tx-danger">*</span></label>
-                            <select name="state" id="state" class="form-control">
-                                <?php if (isset($data['state'])) { ?>
-                                    <option value="<?= @$data['state'] ?>" selected><?= @$data['state_name'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
+                            <div class="form-group">
+                                <label>States<span class="tx-danger">*</span></label>
+                                <select name="state" id="state" class="form-control">
+                                    <?php if (isset($data['state'])) { ?>
+                                        <option value="<?= @$data['state'] ?>" selected><?= @$data['state_name'] ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="form-group">
-                            <label>City<span class="tx-danger">*</span></label>
-                            <select name="city" id="city" class="form-control">
-                                <?php if (isset($data['city'])) { ?>
-                                    <option value="<?= @$data['city'] ?>" selected><?= @$data['city_name'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
+                            <div class="form-group">
+                                <label>City<span class="tx-danger">*</span></label>
+                                <select name="city" id="city" class="form-control">
+                                    <?php if (isset($data['city'])) { ?>
+                                        <option value="<?= @$data['city'] ?>" selected><?= @$data['city_name'] ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -193,6 +193,53 @@
 <script type="text/javascript">
     $(document).ready(function() {
         datatable_load();
+        $("#state").select2({
+        width: '100%',
+        placeholder: 'Select...',
+        ajax: {
+            url: PATH + "/Home/Getdata/getstate",
+            type: "post",
+            allowClear: true,
+            dataType: 'json',
+            delay: 250,
+            data: function(params) {
+                console.log(params);
+                return {
+                    searchTerm: params.term // search term
+                };
+            },
+            processResults: function(response) {
+                console.log(response);
+                return {
+                    results: response
+                };
+            },
+            cache: true
+        }
+    });
+    $("#city").select2({
+        width: '100%',
+        placeholder: 'Select...',
+        ajax: {
+            url: PATH + "/Home/Getdata/getcity",
+            type: "post",
+            allowClear: true,
+            dataType: 'json',
+            delay: 250,
+            data: function(params) {
+                return {
+                    searchTerm: params.term, // search term
+                    state_id: $('select[name="state"]').val(),
+                };
+            },
+            processResults: function(response) {
+                return {
+                    results: response
+                };
+            },
+            cache: true
+        }
+    });
     });
     $('.final_payment').on('submit', function(e) {
         // console.log("abc");
@@ -263,7 +310,7 @@
 
         return false;
     });
-    
+
     function increment(val) {
         var qty = $(val).closest('.qty_class').find('input[name="qty[]"]').val();
         qty++;
@@ -346,54 +393,7 @@
             }
         });
     }
-    // $('#state').click(function(){
-    //     alert('success');
-    // });
-    $("#state").select2({
-        width: '100%',
-        placeholder: 'Select...',
-        // ajax: {
-        //     url: PATH + "Home/Getdata/getstate",
-        //     type: "post",
-        //     allowClear: true,
-        //     dataType: 'json',
-        //     delay: 250,
-        //     data: function(params) {
-        //         return {
-        //             searchTerm: params.term // search term
-        //         };
-        //     },
-        //     processResults: function(response) {
-        //         console.log(response);
-        //         return {
-        //             results: response
-        //         };
-        //     },
-        //     cache: true
-        // }
-    });
-    $("#city").select2({
-        width: '100%',
-        placeholder: 'Select...',
-        ajax: {
-            url: PATH + "Home/Getdata/getcity",
-            type: "post",
-            allowClear: true,
-            dataType: 'json',
-            delay: 250,
-            data: function(params) {
-                return {
-                    searchTerm: params.term, // search term
-                    state_id: $('select[name="state"]').val(),
-                };
-            },
-            processResults: function(response) {
-                return {
-                    results: response
-                };
-            },
-            cache: true
-        }
-    });
+
+  
 </script>
 <?= $this->endSection() ?>

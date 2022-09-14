@@ -82,7 +82,9 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('item i');
-        $builder->select('i.*');
+        $builder->select('i.*,b.brand as brand_name,c.category as category_name');
+        $builder->join('brand b', 'b.id=i.brand');
+        $builder->join('category c', 'c.id=i.category');
         $builder->orderBy('i.id', 'RANDOM');
         $builder->where('i.is_delete', '0');
         $builder->limit(8);
@@ -143,6 +145,19 @@ class HomeModel extends Model
         $getRandBrand = $query->getResultArray();
         // echo "<pre>";print_r($getRanditem);exit;
         return $getRandBrand;
+    }
+    public function get_randomcategory_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('category');
+        $builder->select('*');
+        $builder->orderBy('id', 'desc');
+        $builder->where('is_delete', '0');
+        // $builder->limit(8);
+        $query = $builder->get();
+        $getRandCatergory = $query->getResultArray();
+        // echo "<pre>";print_r($getRanditem);exit;
+        return $getRandCatergory;
     }
     public function insert_cart_data($post)
     {
@@ -417,6 +432,56 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function get_brand($get)
+    {
+
+        $db = $this->db;
+        $builder = $db->table('brand');
+        $builder->select('id,brand');
+
+        if (!empty($post)) {
+            $builder->like('brand', (@$get['searchTerm']) ? @$get['searchTerm'] : '');
+        }
+
+        $builder->where('is_delete', 0);
+        // $builder->limit(3);
+        $query = $builder->get();
+        $getdata = $query->getResultArray();
+        // print_r($getdata);exit;
+        $result = array();
+        foreach ($getdata as $row) {
+            $result[] = array(
+                "text" => $row['brand'],
+                "id" => $row['id'],
+            );
+        }
+        return $result;
+    }
+    public function get_category($get)
+    {
+
+        $db = $this->db;
+        $builder = $db->table('category');
+        $builder->select('id,category');
+
+        if (!empty($post)) {
+            $builder->like('category', (@$get['searchTerm']) ? @$get['searchTerm'] : '');
+        }
+
+        $builder->where('is_delete', 0);
+        // $builder->limit(3);
+        $query = $builder->get();
+        $getdata = $query->getResultArray();
+        // print_r($getdata);exit;
+        $result = array();
+        foreach ($getdata as $row) {
+            $result[] = array(
+                "text" => $row['category'],
+                "id" => $row['id'],
+            );
+        }
+        return $result;
+    }
     public function insert_wishlist($post)
     {
         // print_r($post);exit;
@@ -487,18 +552,157 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function fetch_data($post, $page)
+    {
+        // print_r($post);
+        // exit;
+        $db = $this->db;
+        $builder = $db->table('item');
+        $builder->select('*');
+        // $builder->where('is_delete',0);
+        $results_per_page = 6;
+        $page_first_result = ($page - 1) * $results_per_page;
+
+        if (!empty($post['brand_id'])) {
+            $builder->where('brand', $post['brand_id']);
+        }
+        if (!empty($post['category_id'])) {
+            $builder->where('category', $post['category_id']);
+        }
+        if (!empty($post['cat'])) {
+            $builder->where('category', $post['cat']);
+        }
+        if (!empty($post['brand'])) {
+            $builder->where('brand', $post['brand']);
+        }
+        if (empty($post['price'])) {
+            $builder->where('is_delete', 0);
+        } elseif (!empty($post['price'] == '1')) {
+            $builder->orderBy('created_at', 'desc');
+        } elseif (!empty($post['price'] == '2')) {
+            $builder->orderBy('price', 'asc');
+        } elseif (!empty($post['price'] == '3')) {
+            $builder->orderBy('price', 'desc');
+        }
+
+        $number_of_result = $builder->countAllResults();
+        $number_of_page = ceil($number_of_result / $results_per_page);
+        //    print_r( $number_of_page);exit;
+        $builder->select('*');
+        if (!empty($post['brand_id'])) {
+            $builder->where('brand', $post['brand_id']);
+        }
+        if (!empty($post['category_id'])) {
+            $builder->where('category', $post['category_id']);
+        }
+        if (!empty($post['cat'])) {
+            $builder->where('category', $post['cat']);
+        }
+        if (!empty($post['brand'])) {
+            $builder->where('brand', $post['brand']);
+        }
+        if (empty($post['price'])) {
+            $builder->where('is_delete', 0);
+        } elseif (!empty($post['price'] == '1')) {
+            $builder->orderBy('created_at', 'desc');
+        } elseif (!empty($post['price'] == '2')) {
+            $builder->orderBy('price', 'asc');
+        } elseif (!empty($post['price'] == '3')) {
+            $builder->orderBy('price', 'desc');
+        } else {
+            $builder->orderBy('id', 'asc');
+        }
+        $builder->limit($results_per_page, $page_first_result);
+        $result = $builder->get();
+
+        $paging = '<ul class="pagination justify-content-center">';
+        if ($page > 1) {
+            $paging .= ' <li class="page-item"><a class="page-link" ' .
+                'href="' . url('Home/fetch_data/' . ($page - 1)) . '" data-ci-pagination-page="' . ($page - 1) . '">' . 'PREV</a></li>';
+        }
+        if ($page > 4) {
+            $paging .= '<li class="page-item"><a class="page-link"' .
+                'href="' . url('Home/fetch_data/' . ($page - 1)) . '" data-ci-pagination-page="1">1</a></li>' .
+                '<li class="blank">...</li>';
+        }
+        if ($page - 2 > 0) {
+            $paging .= '<li class="page-item"><a class="page-link"' .
+                'href="' . url('Home/fetch_data/' . ($page - 2)) . '" data-ci-pagination-page="' . ($page - 2) . '">' . ($page - 2) . '</a>' .
+                '</li>';
+        }
+        if ($page - 1 > 0) {
+            $paging .= '<li class="page-item"><a class="page-link"' .
+                'href="' . url('Home/fetch_data/' . ($page - 1)) . '" data-ci-pagination-page="' . ($page - 1) . '">' . ($page - 1) . '</a>' .
+                '</li>';
+        }
+        $paging .= '<li class="page-item"><a class="page-link current"
+    href="' . url('Home/fetch_data/' . ($page)) . '" data-ci-pagination-page="' . ($page) . '">' . $page . '</a>
+    </li>';
+
+        if ($page + 1 < $number_of_page + 1) {
+            $paging .= '<li class="page-item"><a class="page-link"
+        href="' . url('Home/fetch_data/' . ($page + 1)) . '" data-ci-pagination-page="' . ($page + 1) . '">' . ($page + 1) . '</a>
+    </li>';
+        }
+        if ($page + 2 < $number_of_page + 1) {
+            $paging .= '<li class="page-item"><a class="page-link"
+        href="' . url('Home/fetch_data/' . ($page + 2)) . '" data-ci-pagination-page="' . ($page + 2) . '">' . ($page + 2) . '</a>
+    </li>';
+        }
+
+        if ($page < $number_of_page - 2) {
+            $paging .= '<li lass="page-item">...</li>
+        <li><a class="page-link"
+                href="' . url('Home/fetch_data/' . ($number_of_page)) . '" data-ci-pagination-page="' . ($number_of_page) . '">' . $number_of_page . '</a>
+        </li>';
+        }
+
+        if ($page < $number_of_page) {
+            $paging .= '<li class="page-item"><a class="page-link"
+        href="' . url('Home/fetch_data /' . ($page + 1)) . '" data-ci-pagination-page="' . ($page + 1) . '" >Next</a></li>';
+        }
+        $paging .= '</ul>';
+        $output = '';
+        // echo "<pre>";print_r($result->getResultArray());exit;
+        foreach ($result->getResultArray() as $row) {
+
+            $output .= '
+                <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                    <div class="product_grid card b-0">
+                        <!-- <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">New</div> -->
+                        <button class="snackbar-wishlist btn btn_love position-absolute ab-right wish" id="wishlist" data-product_id="' . @$row['id'] . ' " data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="far fa-heart"></i></button>
+                        <div class="card-body p-0">
+                            <div class="shop_thumb position-relative">
+                                <a class="card-img-top d-block overflow-hidden" href="' . url('Home/productdetail/' . $row['id']) . '"><img class="card-img-top" src="' . $row['image'] . '" alt="..." style="height: 350px ;width: 280px;"></a>
+                                <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
+                                    <div class="edlio"><a href="" class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1"></i>Add to cart</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer b-0 p-0 pt-2 bg-white">
+                            <div class="text-left">
+                                <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="' . url('Home/productdetail/' . $row['id']) . '">' . $row['name'] . '</a></h5>
+                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹' . $row['listedprice'] . '</span><span class="text-secondary p-2 p-2"><del>₹' . $row['price'] . '</del></span><span class="text-success bg-light-success rounded px-2 py-1">' . $row['discount'] . ' % off</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ';
+        }
+        return array('product_list' => $output, 'pagination_link' => $paging);
+    }
     public function UpdateData($post)
     {
         $result = array();
         $db = $this->db;
 
-            if ($post['type'] == 'Remove') {
-                $builder = $db->table('cart');
-                $builder->where("id", @$post['pk']);
-                $result = $builder->update(array('is_delete' => '1'));
-                $result = array('st' => 'success');
-            }
-        
+        if ($post['type'] == 'Remove') {
+            $builder = $db->table('cart');
+            $builder->where("id", @$post['pk']);
+            $result = $builder->update(array('is_delete' => '1'));
+            $result = array('st' => 'success');
+        }
+
         return $result;
     }
     public function payment_data($post)
@@ -523,8 +727,8 @@ class HomeModel extends Model
             'email' => $post['email'],
             'mobileno' => $post['mobileno'],
             'address1' => $post['address'],
-            // 'state' => @$post['state'],
-            // 'city' => @$post['city'],
+            'state' => $post['state'],
+            'city' => $post['city'],
             'pincode' => $post['pincode'],
             // 'type' => $post['address_type']
         );

@@ -7,8 +7,10 @@ use \Hermawan\DataTables\DataTable;
 
 class HomeModel extends Model
 {
-    public function insert_edit_brand($post,$file)
+    public function insert_edit_brand($post, $file)
     {
+
+        // echo"<pre>";print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('brand');
         $builder->select('*');
@@ -18,12 +20,12 @@ class HomeModel extends Model
         $pdata = array(
             'brand' => $post['brand'],
         );
-        // echo"<pre>";print_r($file);exit;
 
-        if($_FILES['image']['error'] == 4){
-            $msg = array('st' => 'error', 'msg' => 'Please select a image');
-            return $msg;
-        }
+        // if ($_FILES['image']['size'] == 0 && $_FILES['image']['error'] > 0) {
+        //     echo "<pre>";
+        //     print_r($_FILES);
+        //     exit;
+        // }
         if (isset($file)) {
             //  print_r($file);exit;
             if ($file->isValid() && !$file->hasMoved()) {
@@ -36,10 +38,12 @@ class HomeModel extends Model
                 $pdata['image'] = $originalPath . $newName;
             }
         }
+
         if (!empty($result)) {
-        // echo"<pre>";print_r($file);exit;
+            //  echo"<pre>";print_r($post);exit;
             $pdata['updated_at'] = date('Y-m-d H:i:s');
             $pdata['updated_by'] = session('id');
+
             $builder->where('id', $post['id']);
             $res = $builder->update($pdata);
             if ($res) {
@@ -57,9 +61,14 @@ class HomeModel extends Model
                 $msg = array('st' => 'failed');
             }
         }
+        // } else {
+        //     $msg = array('st' => 'error', 'msg' => 'Please select a image');
+        // }
+
         return $msg;
     }
-    public function insert_edit_category($post,$file){
+    public function insert_edit_category($post, $file)
+    {
         $db = $this->db;
         $builder = $db->table('category');
         $builder->select('*');
@@ -103,7 +112,8 @@ class HomeModel extends Model
         }
         return $msg;
     }
-    public function insert_edit_slider($post,$file){
+    public function insert_edit_slider($post, $file)
+    {
         //   print_r($post);exit;
 
         $db = $this->db;
@@ -259,8 +269,8 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('item i');
         $builder->select('i.id,b.brand as brand_name,c.category as category_name,i.name,i.image,i.price,i.listedprice,i.discount,i.stock');
-        $builder->join('brand b','b.id=i.brand');
-        $builder->join('category c','c.id=i.category');
+        $builder->join('brand b', 'b.id=i.brand');
+        $builder->join('category c', 'c.id=i.category');
         $builder->where('i.is_delete', 0);
         $data_table =  DataTable::of($builder);
         $data_table->setSearchableColumns(['id', 'item']);
@@ -322,7 +332,8 @@ class HomeModel extends Model
         }
         return $result;
     }
-    public function get_order_data(){
+    public function get_order_data()
+    {
         $db = $this->db;
         $builder = $db->table('orders o');
         $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
@@ -336,7 +347,8 @@ class HomeModel extends Model
         });
         return $data_table->toJSON();
     }
-    public function get_coupon_data(){
+    public function get_coupon_data()
+    {
         $db = $this->db;
         $builder = $db->table('coupon');
         $builder->select('id,coupon_code,coupon_value,coupon_type,cart_min_value,created_at');
@@ -406,12 +418,13 @@ class HomeModel extends Model
         });
         return $data_table->toJSON();
     }
-    public function get_item($id){
+    public function get_item($id)
+    {
         $db = $this->db;
         $builder = $db->table('item i');
         $builder->select('i.*,b.brand as brand_name,c.category as category_name');
-        $builder->join('brand b','b.id=i.brand');
-        $builder->join('category c','c.id=i.category');
+        $builder->join('brand b', 'b.id=i.brand');
+        $builder->join('category c', 'c.id=i.category');
         $builder->where('i.id', $id);
         $builder->where('i.is_delete', 0);
         $query = $builder->get();
@@ -425,20 +438,20 @@ class HomeModel extends Model
         $result = array();
         if ($method == 'brand') {
             $gmodel = new GeneralModel();
-            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id),'*');
+            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id), '*');
         }
 
         if ($method == 'category') {
             $gmodel = new GeneralModel();
-            $result['category'] = $gmodel->get_data_table('category', array('id' => $id),'*');
+            $result['category'] = $gmodel->get_data_table('category', array('id' => $id), '*');
         }
         if ($method == 'slider') {
             $gmodel = new GeneralModel();
-            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id),'*');
+            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id), '*');
         }
         if ($method == 'coupon') {
             $gmodel = new GeneralModel();
-            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id),'*');
+            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id), '*');
         }
         return $result;
     }
@@ -464,10 +477,15 @@ class HomeModel extends Model
                 $gmodel = new GeneralModel();
                 $result = $gmodel->update_data_table('slider', array('id' => $post['pk']), array('is_delete' => '1'));
             }
+            if ($post['method'] == 'item') {
+
+                $gmodel = new GeneralModel();
+                $result = $gmodel->update_data_table('item', array('id' => $post['pk']), array('is_delete' => '1'));
+            }
         }
         return $result;
     }
-    public function insert_edit_item($post,$file)
+    public function insert_edit_item($post, $file)
     {
         //   echo "<pre>";  print_r($post);exit;print_r($file);exit;
         $db = $this->db;
@@ -475,17 +493,19 @@ class HomeModel extends Model
         $builder->select('*');
         $builder->where(array('id' => $post['id']));
         $query = $builder->get();
-        $result = $query->getResultArray();
-        // echo "<pre>";print_r($result);exit;
+        $result_array = $query->getRow();
+
         if (!empty($post['p_images'])) {
-            // echo '<pre>'; print_r($post['p_images']);exit;
+
+
             $builder_img = $db->table('imagebook');
             $builder_img->select('*');
             $builder_img->whereIn('iid', $post['p_images']);
             $builder_img->where(array('isdelete' => '0', 'isunlink' => '0'));
             $img_query = $builder_img->get();
             $img_data = $img_query->getResultArray();
-            // echo "<pre>";print_r($img_data);exit;
+
+
             $pimages_galary = array();
             $pIid = array();
             if (!empty($img_data)) {
@@ -508,7 +528,7 @@ class HomeModel extends Model
                     }
 
                     $pIid[] = $images['id'];
-                    // echo '<pre>'; print_r($pIid);exit;  
+                    // echo '<pre>'; print_r($pIid);
                 }
             }
         }
@@ -538,7 +558,7 @@ class HomeModel extends Model
                 $pdata['image'] = $originalPath . $newName;
             }
         }
-        if (!empty($result)) {
+        if (!empty($result_array)) {
             $msg = array();
             if (!empty($pimages_galary)) {
                 $pdata2['update_time'] = date('Y-m-d H:i:s');
@@ -559,21 +579,25 @@ class HomeModel extends Model
         } else {
             $pdata['created_at'] = date('Y-m-d H:i:s');
             $pdata['created_by'] = session('id');
-            $res = $builder->insert($pdata);
-            $id = $db->insertID();
-            $pdata2['pid'] = $id;
-            $builder1 = $db->table('imagebook');
-            $builder1->where(array("pid" => 0));
-            $result1 = $builder1->Update($pdata2);
-            if ($res && $result1) {
-                $msg = array('st' => 'success', 'msg' => "Data Inserted");
+            if (!empty($pimages_galary)) {
+                $res = $builder->insert($pdata);
+                $id = $db->insertID();
+                $pdata2['pid'] = $id;
+                $builder1 = $db->table('imagebook');
+                $builder1->where(array("pid" => 0));
+                $result1 = $builder1->Update($pdata2);
+                if ($res && $result1) {
+                    $msg = array('st' => 'success', 'msg' => "Data Inserted");
+                } else {
+                    $msg = array('st' => 'fail', 'msg' => "Data Inserted fail");
+                }
             } else {
-                $msg = array('st' => 'fail', 'msg' => "Data Inserted fail");
+                $msg = array('st' => 'fail', 'msg' => " Image Required");
             }
         }
         return $msg;
     }
-    public function multipleupload($data)
+    public function multipleupload($data, $post)
     {
         // echo "<pre>"; print_r($data);exit;
         $db = $this->db;
@@ -581,8 +605,8 @@ class HomeModel extends Model
             helper('base');
             ini_set('memory_limit', '-1');
 
-            $last_array = isset($data['last_array']) ? trim($data['last_array']) : 0;
-
+            $last_array = isset($post['last_array']) ? trim($post['last_array']) : 0;
+            // echo "<pre>"; print_r($last_array);exit;
             $original_path = '/imgbook/o/' . date('Ymd') . '/';
 
             $host_path = base_url();
@@ -663,5 +687,4 @@ class HomeModel extends Model
 
         return $result;
     }
-    
 }

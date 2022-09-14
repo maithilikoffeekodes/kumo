@@ -126,6 +126,7 @@ class Home extends BaseController
         $data['id'] = $id;
         return view('admin/coupon/createcoupon', $data);
     }
+   
     public function order()
     {
         return view('admin/order/order');
@@ -204,6 +205,8 @@ class Home extends BaseController
         $model = $this->model;
         $post = $this->request->getPost();
         $data = $this->request->getFiles();
+        // echo"<pre>";print_r($data);exit;
+
         $result = array();
         // print_r($post);exit;
         $result = $this->model->multipleupload($data, $post);
