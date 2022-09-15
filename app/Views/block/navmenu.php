@@ -71,7 +71,7 @@
 								$db = \config\Database::Connect();
 								$builder = $db->table('cart');
 								$builder->select('count(id)as count_n');
-								$builder->where(array('user_id' => session('id') ? session('id') : session('guestid'), 'is_delete' => 0));
+								$builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'is_delete' => 0));
 								$query = $builder->get();
 								$count = $query->getRow();
 								?>

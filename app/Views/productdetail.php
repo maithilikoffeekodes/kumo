@@ -15,7 +15,7 @@
                     for ($i = 1; $i < count($image); $i++) {
                     ?>
                         <div class="single_view_slide">
-                            <a href="<?= $product['image'][$i]; ?>" data-lightbox="roadtrip" class="d-block mb-4"><img src="<?= $product['image'][$i]; ?>" class="img-fluid rounded" alt="" style="height: 500px;width:500px;"/></a>
+                            <a href="<?= $product['image'][$i]; ?>" data-lightbox="roadtrip" class="d-block mb-4"><img src="<?= $product['image'][$i]; ?>" class="img-fluid rounded" alt="" style="height: 500px;width:500px;" /></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -24,17 +24,20 @@
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="prd_details">
 
-                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['category_name'] ?></span></div>
+                    <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['brand_name'] ?></span></div>
                     <div class="prt_02 mb-3">
                         <h2 class="ft-bold mb-1"><?= $product['name'] ?></h2>
+
                         <div class="text-left">
                             <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star filled"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="small">(412 Reviews)</span>
+                                <?php for (@$i = 1; @$i <=  get_review_count($product['id']); @$i++) { ?>
+                                    <i class="text-primary fas fa-star" value="1"></i>
+                                <?php } ?>
+                                <?php for (@$i = 1; @$i <= 5 - (int) get_review_count($product['id']); @$i++) { ?>
+                                    <i class="text-primary far fa-star" value="1"></i>
+                                <?php } ?>
+
+                                <span class="small">(<?= get_review_total($product['id']) ?>) Reviews</span>
                             </div>
                             <div class="elis_rty"><span class="ft-bold theme-cl fs-lg p-2"><?= $product['listedprice'] ?></span><span class="ft-medium text-muted line-through fs-md mr-2 p-2">$<?= $product['price'] ?></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $product['discount'] ?>% Off</span></div>
                         </div>
@@ -140,13 +143,16 @@
                     </div>
 
                     <!-- Reviews Content -->
-                    <?php //echo"<pre>";print_r($review);exit;?>
+                    <?php //echo"<pre>";print_r($review);exit;
+                    ?>
                     <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                         <div class="reviews_info">
+                            <?php //echo"<pre>";print_r($review);exit;
+                            ?>
                             <?php foreach ($review as $row) { ?>
                                 <!-- Single Review -->
                                 <div class="single_rev d-flex align-items-start br-bottom py-3">
-                                <?php $date = new DateTime(@$row['created_at']); ?>
+                                    <?php $date = new DateTime(@$row['created_at']); ?>
                                     <div class="single_rev_thumb"><img src="<?= ASSETS; ?>img/team-2.jpg" class="img-fluid circle" width="90" alt="" /></div>
                                     <div class="single_rev_caption d-flex align-items-start pl-3">
                                         <div class="single_capt_left">
@@ -160,7 +166,7 @@
                                                     <i class="fas fa-star filled" value="1"></i>
                                                 <?php } ?>
                                                 <?php for ($i = 1; $i <= 5 - (int)@$row['rating']; $i++) { ?>
-                                                    <i class="fas fa-star filled" value="1"></i>
+                                                    <i class="far fa-star filled" value="1"></i>
                                                 <?php } ?>
                                             </div>
                                         </div>
@@ -204,30 +210,30 @@
                                             </div>
                                         </div>
 
-                                        <div class="srt_014">
+                                        <!-- <div class="srt_014">
                                             <h6 class="mb-0">4 Star</h6>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Full Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" />
+                                        <input type="text" class="form-control" id="name" name="name" required />
                                     </div>
                                 </div>
 
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Email Address</label>
-                                        <input type="email" class="form-control" id="email" name="email" />
+                                        <input type="email" class="form-control" id="email" name="email" required />
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Description</label>
-                                        <textarea class="form-control" name="review" cols="30" rows="5"></textarea>
+                                        <textarea class="form-control" name="review" cols="30" rows="5" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -267,15 +273,18 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="slide_items">
-
+                    <? //php foreach(@$related as $row) { 
+                    ?>
                     <!-- single Item -->
                     <div class="single_itesm">
                         <div class="product_grid card b-0 mb-0">
-                            <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
+                            <!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
                             <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
                             <div class="card-body p-0">
                                 <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/8.jpg" alt="..."></a>
+                                    <a class="card-img-top d-block overflow-hidden" href="<? //= url('Home/productdetail/'.@$row['id'])
+                                                                                            ?>"><img class="card-img-top" src="<? //= @$row['image'] 
+                                                                                                                                                                            ?>" alt="..."></a>
                                     <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
                                         <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
                                     </div>
@@ -284,156 +293,16 @@
                             <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
                                 <div class="text-left">
                                     <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Half Running Set</a></h5>
+                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="<? //= url('Home/productdetail/'.@$row['id'])
+                                                                                            ?>">Half Running Set</a></h5>
                                         <div class="elis_rty"><span class="ft-bold fs-md text-dark">$119.00</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">New</div>
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/9.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Formal Men Lowers</a></h5>
-                                        <div class="elis_rty"><span class="text-muted ft-medium line-through mr-2">$129.00</span><span class="ft-bold theme-cl fs-md">$79.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/10.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Half Running Suit</a></h5>
-                                        <div class="elis_rty"><span class="ft-bold fs-md text-dark">$80.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <div class="badge bg-warning text-white position-absolute ft-regular ab-left text-upper">Hot</div>
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/11.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Half Fancy Lady Dress</a></h5>
-                                        <div class="elis_rty"><span class="text-muted ft-medium line-through mr-2">$149.00</span><span class="ft-bold theme-cl fs-md">$110.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/12.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Flix Flox Jeans</a></h5>
-                                        <div class="elis_rty"><span class="text-muted ft-medium line-through mr-2">$90.00</span><span class="ft-bold theme-cl fs-md">$49.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <div class="badge bg-danger text-white position-absolute ft-regular ab-left text-upper">Hot</div>
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/13.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Fancy Salwar Suits</a></h5>
-                                        <div class="elis_rty"><span class="ft-bold fs-md text-dark">$114.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div>
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="<?= ASSETS; ?>img/product/14.jpg" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">Collot Full Dress</a></h5>
-                                        <div class="elis_rty"><span class="ft-bold theme-cl fs-md text-dark">$120.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <? //php } 
+                    ?>
                 </div>
             </div>
         </div>
@@ -507,6 +376,9 @@
                         wish.removeClass("wish");
                         wish.addClass("removeWish")
                         $('#cartbtn').prop('disabled', false);
+                    }
+                    if (response.st == 'added') {
+                        toastr.warning(response.msg);
                     } else {
                         $('.form_processing').html('');
                         $('#cartbtn').prop('disabled', false);
@@ -579,8 +451,8 @@
             data: formdata ? formdata : form.serialize(),
             success: function(response) {
                 if (response.st == "success") {
-                    $('.form_proccessing').html('');
-                    location.reload();
+                    window.location.href(<?= url('Home/productdetail/' . $product['id']) ?>);
+                    // window.location.reload();
                 } else {
                     location.reload();
                     $('.form_proccessing').html('');

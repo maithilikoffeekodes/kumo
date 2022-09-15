@@ -396,7 +396,7 @@
         var discount = $('#discount').val();
         var discountprice = (mrp * discount) / 100;
         var listedprice = mrp - discountprice;
-        $('#listed_price').val(listedprice);
+        $('#listed_price').val(listedprice.toFixed());
 
     }
 
@@ -412,7 +412,7 @@
         } else {
             var discount_price = (listedprice * 100) / mrp;
             var discount = 100 - discount_price;
-            $('#discount').val(discount);
+            $('#discount').val(discount.toFixed());
         }
 
     }

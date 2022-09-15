@@ -56,10 +56,10 @@
                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-4">
                     <div class="cats_side_wrap text-center mx-auto mb-3">
                         <div class="sl_cat_01">
-                            <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="<?= url('Home/shoplist')?>" class="d-block"><img src="<?= $row['image'] ?>" class="img-fluid" width="40" alt=""></a></div>
+                            <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="<?= url('Home/shoplist?category=' . @$row['id']) ?>" class="d-block"><img src="<?= $row['image'] ?>" class="img-fluid" width="40" alt=""></a></div>
                         </div>
                         <div class="sl_cat_02">
-                            <h6 class="m-0 ft-medium fs-sm"><a href="<?= url('Home/shoplist')?>"><?= $row['category'] ?></a></h6>
+                            <h6 class="m-0 ft-medium fs-sm"><a href="<?= url('Home/shoplist') ?>"><?= $row['category'] ?></a></h6>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                     <h2 class="mb-0 text-white ft-bold">Big Sale Up To 70% Off</h2>
                     <p class="text-light fs-lg mb-4">Exclussive Offers For Limited Time</p>
                     <p>
-                        <a href="#" class="btn btn-lg bg-white px-5 text-dark ft-medium">Explore Your Order</a>
+                        <a href="<?= url('Home/shoplist') ?>" class="btn btn-lg bg-white px-5 text-dark ft-medium">Explore More</a>
                     </p>
                 </div>
             </div>
@@ -206,55 +206,24 @@
                             </div>
                         </div>
                     </div>
+                    <?php foreach ($review as $row) { ?>
 
-                    <!-- single review -->
-                    <div class="single_review">
-                        <div class="sng_rev_thumb">
-                            <figure><img src="<?= ASSETS; ?>img/team-2.jpg" class="img-fluid circle" alt="" /></figure>
-                        </div>
-                        <div class="sng_rev_caption text-center">
-                            <div class="rev_desc mb-4">
-                                <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                        <!-- single review -->
+                        <div class="single_review">
+                            <div class="sng_rev_thumb">
+                                <figure><img src="<?= ASSETS; ?>img/team-2.jpg" class="img-fluid circle" alt="" /></figure>
                             </div>
-                            <div class="rev_author">
-                                <h4 class="mb-0">Henna Bajaj</h4>
-                                <span class="fs-sm">Aqua Founder</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single review -->
-                    <div class="single_review">
-                        <div class="sng_rev_thumb">
-                            <figure><img src="<?= ASSETS; ?>img/team-3.jpg" class="img-fluid circle" alt="" /></figure>
-                        </div>
-                        <div class="sng_rev_caption text-center">
-                            <div class="rev_desc mb-4">
-                                <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                            </div>
-                            <div class="rev_author">
-                                <h4 class="mb-0">John Cenna</h4>
-                                <span class="fs-sm">CEO of Plike</span>
+                            <div class="sng_rev_caption text-center">
+                                <div class="rev_desc mb-4">
+                                    <p class="fs-md"><?= $row['review'] ?></p>
+                                </div>
+                                <div class="rev_author">
+                                    <h4 class="mb-0"><?= $row['name'] ?></h4>
+                                    <!-- <span class="fs-sm">Aqua Founder</span> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- single review -->
-                    <div class="single_review">
-                        <div class="sng_rev_thumb">
-                            <figure><img src="<?= ASSETS; ?>img/team-4.jpg" class="img-fluid circle" alt="" /></figure>
-                        </div>
-                        <div class="sng_rev_caption text-center">
-                            <div class="rev_desc mb-4">
-                                <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                            </div>
-                            <div class="rev_author">
-                                <h4 class="mb-0">Madhu Sharma</h4>
-                                <span class="fs-sm">Team Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -263,7 +232,7 @@
 <!-- ======================= Customer Review ======================== -->
 
 <!-- ======================= Top Seller Start ============================ -->
-<section class="space min">
+<!-- <section class="space min">
     <div class="container">
 
         <div class="row">
@@ -274,7 +243,7 @@
                 </div>
                 <div class="ftr-content">
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -298,7 +267,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -322,7 +291,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -354,7 +323,7 @@
                     <h4 class="ft-medium">Featured Products</h4>
                 </div>
                 <div class="ftr-content">
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -378,7 +347,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -402,7 +371,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -433,7 +402,7 @@
                     <h4 class="ft-medium">Recent Products</h4>
                 </div>
                 <div class="ftr-content">
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -457,7 +426,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -481,7 +450,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Item -->
+                    <!-- Single Item --
                     <div class="product_grid row">
                         <div class="col-xl-4 col-lg-5 col-md-5 col-4">
                             <div class="shop_thumb position-relative">
@@ -510,7 +479,7 @@
         </div>
 
     </div>
-</section>
+</section> -->
 <!-- ======================= Top Seller Start ============================ -->
 
 
@@ -545,7 +514,6 @@
                 },
                 success: function(response) {
                     if (response.st == 'success') {
-
                         toastr.success(response.msg);
                         var cart_count = parseInt($(".cart_count").text());
                         $(".cart_count").text(cart_count + 1);
@@ -583,11 +551,15 @@
                 productid: product_id
             },
             success: function(response) {
+                console.log(response);
                 if (response.st == 'success') {
                     toastr.success(response.msg);
                     wish.removeClass("wish");
                     wish.addClass("removeWish")
                     $('#cartbtn').prop('disabled', false);
+                }
+                if (response.st == 'added') {
+                    toastr.warning(response.msg);
                 } else {
                     $('.form_processing').html('');
                     $('#cartbtn').prop('disabled', false);

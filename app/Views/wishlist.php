@@ -1,6 +1,12 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
+<style>
+	.btn_love:hover {
+		background-color: black;
+		color: white;
+	}
+</style>
 <form action="">
 	<section class="middle">
 		<div class="container">
@@ -22,7 +28,7 @@
 							<h4 class="px-3 py-2 mb-0 lh-2 gray fs-sm ft-medium text-muted text-uppercase text-left">Dashboard Navigation</h4>
 							<ul class="dahs_navbar">
 								<li><a href="my-orders.html"><i class="lni lni-shopping-basket mr-2"></i>My Order</a></li>
-								<li><a href="wishlist.html" class="active"><i class="lni lni-heart mr-2"></i>Wishlist</a></li>
+								<li><a href="<?= url('Home/wishlist')?>" class="active"><i class="lni lni-heart mr-2"></i>Wishlist</a></li>
 								<li><a href="profile-info.html"><i class="lni lni-user mr-2"></i>Profile Info</a></li>
 								<li><a href="addresses.html"><i class="lni lni-map-marker mr-2"></i>Addresses</a></li>
 								<li><a href="payment-methode.html"><i class="lni lni-mastercard mr-2"></i>Payment Methode</a></li>
@@ -39,10 +45,10 @@
 
 						<!-- Single -->
 						<?php foreach ($wishlist as $row) { ?>
-							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" id="wishlist_product" data-id="wish" data-module="Home">
 								<div class="product_grid card b-0">
 									<!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
-									<button class="btn btn_love position-absolute ab-right theme-cl" onclick="editable_remove()" data-val="<?= $row['id'] ?>" data-pk="<?= $row['id'] ?>"><i class="fas fa-times"></i></button>
+									<button class="btn btn_love position-absolute ab-right theme-cl" onclick="editable_remove(this)" data-val="<?= $row['id'] ?>" data-pk="<?= $row['id'] ?>"><i class="fas fa-times"></i></button>
 									<div class="card-body p-0">
 										<div class="shop_thumb position-relative">
 											<a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..." style="height: 350px ;width: 250px;"></a>
@@ -76,43 +82,11 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		datatable_load('');
+		// datatable_load('');
 
 	});
 
-	function datatable_load(filter_val) {
-
-		$('#table_list_data').DataTable({
-			destroy: true,
-			paging: false,
-			info: false,
-			processing: true,
-			serverSide: true,
-			scrollX: false,
-			searching: false,
-			ordering: false,
-			buttons: [
-
-			],
-			dom: "<'row be-datatable-header'<'col-sm-2'l><'col-sm-6 text-left'B><'col-sm-4 text-right'f>>" +
-				"<'row be-datatable-body'<'col-sm-12'tr>>" +
-				"<'row be-datatable-footer'<'col-sm-5'i><'col-sm-7'p>>",
-			order: [
-				[0, "desc"]
-			],
-			ajax: {
-				"type": "POST",
-				"url": PATH + "/" + $("#table_list_data").data('module') + "/Getdata/" + $("#table_list_data").data(
-					'id') + '?filter_data=' + $("#table_list_data").data('filter_data')
-			},
-
-			language: {
-				"emptyTable": "Empty Wishlist"
-			}
-
-		});
-	}
-
+	
 	$(document).on('click', '.cartbtn', function() {
 
 		var product_id = $(this).data("product_id");
@@ -153,56 +127,78 @@
 
 	});
 
+	// function editable_remove(data_edit) {
+	// 	var type = 'Remove';
+
+	// 	var data_val = $(data_edit).data('val');
+
+	// 	var ot_title = $(data_edit).attr('title');
+	// 	var pkno = $(data_edit).data('pk');
+	// 	//console.log(pkno);
+	// 	swal.fire({
+	// 		title: "Are you sure Remove " + ot_title + " ?",
+	// 		text: "You will not be able to recover this Data!",
+	// 		type: "warning",
+	// 		showCancelButton: true,
+	// 		confirmButtonClass: "btn-danger",
+	// 		confirmButtonText: "Yes, delete it!",
+	// 		cancelButtonText: "No, cancel plx!",
+	// 		//closeOnConfirm: false,
+	// 		//closeOnCancel: false
+	// 	}).then((result) => {
+	// 		// function(isConfirm) {
+	// 		if (result.value) {
+	// 			_data = $.param({
+	// 				pk: pkno
+	// 			}) + '&' + $.param({
+	// 				val: data_val
+	// 			}) + '&' + $.param({
+	// 				type: type
+	// 			}) + '&' + $.param({
+	// 				method: $("#wishlist_product").data('id')
+	// 			});
+
+	// 			if (data_val != undefined && data_val != '') {
+	// 				$.post(PATH + "/" + $("#wishlist_product").data('module') + "/Action/Update", _data, function(
+	// 					data) {
+
+	// 					if (data.st == 'success') {
+	// 						datatable_load('');
+	// 						swal.fire("Deleted!", "Your Data has been deleted.", "success");
+
+	// 					}
+
+	// 				});
+	// 			}
+
+	// 		} else {
+	// 			swal("Cancelled", "Your Data is safe :)", "error");
+	// 		}
+	// 		// })}
+	// 	});
+	// }
 	function editable_remove(data_edit) {
-		var type = 'Wishlist';
+        var type = 'Remove';
+        var data_val = $(data_edit).data('val');
+		// alert(data_val);
+        if (data_val != '') {
+            _data = $.param({
+                val: data_val,
+                type: type
+            });
+            $.post(PATH + "/Home/Action/Update/wish", _data, function(response) {
 
-		var data_val = $(data_edit).data('val');
-
-		var ot_title = $(data_edit).attr('title');
-		var pkno = $(data_edit).data('pk');
-		swal.fire({
-			title: "Are you sure Remove " + ot_title + " ?",
-			text: "You will not be able to recover this imaginary file!",
-			type: "warning",
-			showCancelButton: true,
-			confirmButtonClass: "btn-danger",
-			confirmButtonText: "Yes, delete it!",
-			cancelButtonText: "No, cancel plx!",
-		}).then((result) => {
-			if (result.value) {
-				_data = $.param({
-					pk: pkno
-				}) + '&' + $.param({
-					val: data_val
-				}) + '&' + $.param({
-					type: type
-				}) + '&' + $.param({
-					method: $("#table_list_data").data('id')
-				});
-
-				if (data_val != undefined && data_val != '') {
-					$.post(PATH + "/" + $("#table_list_data").data('module') + "/Action/Update", _data, function(
-						data) {
-
-						if (data.st == 'success') {
-							datatable_load('');
-							swal.fire("Deleted!", "Your imaginary file has been deleted.", "success");
-
-						}
-
-					});
-				}
-
-			} else {
-				swal("Cancelled", "Your imaginary file is safe :)", "error");
-			}
-			// })}
-		});
-	}
-
-	if ($.isFunction($.fn.datatable_load)) {
-		datatable_load('');
-	}
+                if (response.st == 'success') {
+                    $("#wishlist_product").remove();
+                }
+            });
+        } else {
+            console.log("fail");
+        }
+    }
+	// if ($.isFunction($.fn.datatable_load)) {
+	// 	datatable_load('');
+	// }
 
 
 	$('#ajax-form-submit').on('submit', function(e) {

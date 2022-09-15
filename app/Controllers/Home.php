@@ -19,6 +19,7 @@ class Home extends BaseController
         $data['rand_slider'] = $this->model->get_randomslider_data();
         $data['rand_brand'] = $this->model->get_randombrand_data();
         $data['rand_category'] = $this->model->get_randomcategory_data();
+        $data['review'] = $this->model->get_randomreview_data();
 
         if (!session('guestid') && !session('uid')) {
             $guestid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
@@ -57,6 +58,7 @@ class Home extends BaseController
     {
         $data['product'] = $this->model->get_product_data($id);
         $data['review'] = $this->model->get_review($id);
+        // $data['related'] = $this->model->get_related_product_data($data['product']['category']);
         // echo "<pre>";print_r($data);exit;
         return view('productdetail', $data);
     }
@@ -98,9 +100,11 @@ class Home extends BaseController
     public function applycoupon()
     {
         $post = $this->request->getPost();
-        echo "<pre>";
-        print_r($post);
-        exit;
+        if (!empty($post)) {
+            $output = $this->model->applycoupon($post);
+            // print_r($data);exit;
+            return $this->response->setJSON($output);
+        }
     }
 
     public function cart()
@@ -126,7 +130,6 @@ class Home extends BaseController
     }
     public function checkout()
     {
-
         $post = $this->request->getPost();
         if (!empty($post)) {
             $data = $this->model->payment_data($post);
@@ -214,6 +217,14 @@ class Home extends BaseController
             return $this->response->setJSON($data);
         }
     }
+    public function subscribe()
+    {
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->insert_edit_subscribe($post);
+            return $this->response->setJSON($msg);
+        }
+    }
     public function Payment($type = "")
     {
         $get = $this->request->getGet();
@@ -238,11 +249,14 @@ class Home extends BaseController
     }
     public function Action($method = '')
     {
+        print_r($method);exit;
+
         $result = array();
         if ($method == 'Update') {
             $post = $this->request->getPost();
             $result = $this->model->UpdateData($post);
         }
+        // print_r($result);exit;
         return $this->response->setJSON($result);
     }
     public function PaymentExcuate($txn = "")

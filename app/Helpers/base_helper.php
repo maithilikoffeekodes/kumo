@@ -247,6 +247,18 @@ function get_product_count($id)
     
     return $sum;
 }
+function get_item_count()
+{
+    $db = \Config\Database::connect();
+    $builder = $db->table('item');
+    $builder->select('COUNT(`id`) as total');
+    $builder->where('is_delete', 0);
+    $query = $builder->get();
+    $result = $query->getRow();
+    $sum = $result->total;
+    
+    return $sum;
+}
 // function send_otp($email,$otp) {
 
 //     $mail = new PHPMailer();  
@@ -447,7 +459,7 @@ function mail_template($ord_id)
 											<tr>
 												<td  valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif;  " class="mobile-center">
 													<h1 style="  margin: 0; color: #ffffff;">
-                                                        <img src="http://localhost:8080/assets/img/logo.png" class="logo" alt=""  height="20px"style="height: 66px;">
+                                                        <img src="'.base_url().'/assets/img/logo.png" class="logo" alt=""  height="20px"style="height: 66px;">
                                                     </h1>
 												</td>
 											</tr>

@@ -180,6 +180,8 @@
 									<p>
 										<label for="amount">Price range:</label>
 										<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+										<input type="hidden" name="min_price" id="min">
+										<input type="hidden" name="max_price" id="max">
 									</p>
 
 									<div id="slider-range"></div>
@@ -451,14 +453,14 @@
 						<div class="border mb-3 mfliud">
 							<div class="row align-items-center py-2 m-0">
 								<div class="col-xl-3 col-lg-4 col-md-5 col-sm-12">
-									<h6 class="mb-0">315 Items Found</h6>
+									<h6 class="mb-0"><?= get_item_count()?> Items</h6>
 								</div>
 
 								<div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
 									<div class="filter_wraps d-flex align-items-center justify-content-end m-start">
 										<div class="single_fitres mr-2 br-right">
 											<select class="custom-select simple" id="price">
-												<option value="1" selected="">Newest</option>
+												<option value="1">Newest</option>
 												<option value="2">Sort by price: Low price</option>
 												<option value="3">Sort by price: Hight price</option>
 												<!-- <option value="4">Sort by rating</option>
@@ -588,13 +590,8 @@
 			}
 		});
 	});
-	$(function() {
-		$("#amount").slider();
-		var a = $("#amount").slider("value",0);
-		console.log(a);
 
-	});
-	
+
 	$("#brand").select2({
 		width: '100%',
 		placeholder: 'Search...',
@@ -658,7 +655,7 @@
 	$(document).on('click', '.pagination li a', function(event) {
 		event.preventDefault();
 		var page = $(this).data('ci-pagination-page');
-		console.log(page);
+		// console.log(page);
 		filter(page);
 
 	});
@@ -666,10 +663,10 @@
 	function filter(page = 1) {
 		var brand_id = $('#brand option:selected').val();
 		var category_id = $('#category option:selected').val();
-
+        var cat = "<?= isset($_GET['category']) ? $_GET['category'] : ''; ?>";
 		var price = $("#price option:selected").val();
-		var min_price = $('.js-range-slider').text();
-		var max_price = $('.js-range-slider').text();
+		var min_price = $('#min').text();
+		var max_price = $('#max').text();
 		console.log(page);
 		$.ajax({
 			url: "<?php echo url('Home/fetch_data'); ?>" + "/" + page,
@@ -678,13 +675,13 @@
 				brand_id: brand_id,
 				category_id: category_id,
 				price: price,
-				// cat: cat,
+				cat: cat,
 				// brand: brand,
 				min_price: min_price,
 				max_price: max_price,
 			},
 			success: function(response) {
-				// console.log(response);
+				console.log(response);
 				if (response.product_list == "") {
 					$('.filter_data').html('No item found....');
 					$('#pagination_link').hide();
@@ -692,13 +689,14 @@
 				} else {
 					$('.filter_data').html(response.product_list);
 					$('#pagination_link').html(response.pagination_link);
-					$('#product').hide();
+					// $('#product').hide();
 				}
 			}
 
 		});
 	}
 </script>
+
 <script>
 	$(function() {
 		$("#slider-range").slider({
@@ -708,11 +706,13 @@
 			values: [0, <?= $max_value ?>],
 			slide: function(event, ui) {
 				$("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+				$('#min').text(ui.values[0])
+				$('#max').text(ui.values[1])
+				filter();
 			}
 		});
 		$("#amount").val("₹" + $("#slider-range").slider("values", 0) +
 			" - ₹" + $("#slider-range").slider("values", 1));
-		filter();
 	});
 </script>
 <?= $this->endSection() ?>

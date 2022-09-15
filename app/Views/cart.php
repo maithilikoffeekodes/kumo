@@ -5,6 +5,9 @@
 	.btn.btn-sm {
 		padding: 5px;
 	}
+	ul li .display_content{
+		display: none !important;
+	}
 </style>
 <?php //echo"<pre>";print_r($cart);exit;
 ?>
@@ -41,7 +44,7 @@
 					<div class="row align-items-end justify-content-between mb-10 mb-md-0">
 						<div class="col-12 col-md-7">
 							<!-- Coupon -->
-							<form class="mb-7 mb-md-0" >
+							<form class="mb-7 mb-md-0">
 								<label class="fs-sm ft-medium text-dark">Coupon code:</label>
 								<div class="row form-row">
 									<div class="col">
@@ -73,6 +76,9 @@
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
 									<span>Delivery Charges</span> <span class="ml-auto text-dark ft-medium">Free</span>
 								</li>
+								<li class="list-group-item d-flex text-dark fs-sm ft-regular" id="discount">
+									<span>Coupons Discount</span> <span class="ml-auto text-dark ft-medium coupon-discount">0</span>
+								</li>
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
 									<input type="hidden" name="grand_total" id="grand_total" value='0'>
 									<span>Total</span> <span class="ml-auto text-dark ft-medium total_amt">0</span>
@@ -85,7 +91,7 @@
 					</div>
 
 					<button class="btn btn-block btn-dark mb-3" id="save_data" type="submit">Proceed to Checkout</button>
-					<a class="btn-link text-dark ft-medium" href="<?= url('Home/shoplist')?>">
+					<a class="btn-link text-dark ft-medium" href="<?= url('Home/shoplist') ?>">
 						<i class="ti-back-left mr-2"></i> Continue Shopping
 					</a>
 				</div>
@@ -100,6 +106,8 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		datatable_load();
+		// $('#discount').hide();
+
 	});
 
 	function increment(val) {
@@ -191,10 +199,11 @@
 
 		var data_val = $(data_edit).data('val');
 
+		var ot_title = $(data_edit).attr('title');
 		var pkno = $(data_edit).data('pk');
-		// console.log(pkno);
+		//console.log(pkno);
 		swal.fire({
-			title: "Are you sure Remove  ?",
+			title: "Are you sure Remove " + ot_title + " ?",
 			text: "You will not be able to recover this Data!",
 			type: "warning",
 			showCancelButton: true,
@@ -213,17 +222,17 @@
 				}) + '&' + $.param({
 					type: type
 				}) + '&' + $.param({
-					method: $("#add").data('id')
+					method: $("#table_list_data").data('id')
 				});
 
 				if (data_val != undefined && data_val != '') {
-					$.post(PATH + $("#add").data('module') + "/Action/Update", _data, function(
+					$.post(PATH + "/" + $("#table_list_data").data('module') + "/Action/Update", _data, function(
 						data) {
-						// console.log($.post);
+
 						if (data.st == 'success') {
 							datatable_load('');
 							swal.fire("Deleted!", "Your Data has been deleted.", "success");
-							location.reload();
+
 						}
 
 					});
@@ -235,32 +244,35 @@
 			// })}
 		});
 	}
-	$('.applycoupon').click(function(){
+	$('.applycoupon').on('click', function(e) {
 		var coupon = $('.coupon').val();
+		var total = $('.total_amt').text();
+		// alert(coupon);
+		e.preventDefault();
+		$('.applycoupon').prop('disabled', true);
+
 		$.ajax({
-                url: "<?php echo url('Home/applycoupon'); ?>",
-                method: "POST",
-                data: {
-                    coupon: coupon,
-                },
-                success: function(response) {
-					console.log(response);
-                    // if (response.st == 'success') {
+			url: "<?php echo url('Home/applycoupon'); ?>",
+			method: "POST",
+			data: {
+				coupon: coupon,
+				total: total,
+			},
+			success: function(response) {
+				console.log(response);
+				if (response) {
+					$('.coupon-discount').html(response.coupon_discount);
+					$('.total_amt').text(response.final_total);
+					$('#grand_total').val(response.final_total);
+					$('.applycoupon').prop('disabled', false);
 
-                    //     toastr.success(response.msg);
-                    //     var cart_count = parseInt($(".cart_count").text());
-                    //     $(".cart_count").text(cart_count + 1);
-                    // }
-                    // if (response.st == 'added') {
-                    //     toastr.info(response.msg);
-                    // } else {
-                    //     $('.form_processing').html('');
-                    //     $('#cartbtn').prop('disabled', false);
-                    //     $('.error-msg').html(response.msg);
-                    // }
-                }
+				} else {
+					$('.applycoupon').prop('disabled', true);
+					// $('.error-msg').html(response.final_total);
+				}
+			}
 
-            });
+		});
 	});
 	$('.ajax-form-submit').on('submit', function(e) {
 		// console.log("abc");
@@ -279,7 +291,7 @@
 			success: function(response) {
 				// console.log(response);
 				if (response == "1") {
-				window.location.href="<?= url('Home/checkout')?>";
+					window.location.href = "<?= url('Home/checkout') ?>";
 				} else {
 					$('.form_proccessing').html('');
 					$('#save_data').prop('disabled', false);

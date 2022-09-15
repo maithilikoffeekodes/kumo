@@ -159,6 +159,20 @@ class HomeModel extends Model
         // echo "<pre>";print_r($getRanditem);exit;
         return $getRandCatergory;
     }
+    public function get_randomreview_data()
+    {
+        // print_r($id);exit;
+        $db = $this->db;
+        $builder = $db->table('review');
+        $builder->select('*');
+        $builder->orderBy('id', 'RANDOM');
+        $builder->where('is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getResultArray();
+        // echo "<pre>"; print_r($result);exit;
+
+        return $result;
+    }
     public function insert_cart_data($post)
     {
         // echo "<pre>";print_r($post);exit;                                                                         
@@ -169,35 +183,40 @@ class HomeModel extends Model
         $query =  $builder->get();
         $result = $query->getRowArray();
         // echo "<pre>";print_r($result);exit;
-        $pdata = array(
-            'user_id' =>  session('uid') ? session('uid') : session('guestid'),
-            'product_id' => $post['product_id'],
-            'quantity' => $post['quantity'],
-            'date' => date('y-m-d'),
-            'price' => $post['price']
-        );
-
-        if (!empty($result)) {
-            // $pdata['updated_at'] = date('Y-m-d H:i:s');
-            // $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
-
-            $builder->where(array('product_id' => $post['product_id']));
-            $res = $builder->update($pdata);
-            if ($res) {
-                $msg = array('st' => 'added', 'msg' => 'Item Update to Cart');
+        if(empty($result)){
+            $pdata = array(
+                'user_id' =>  session('uid') ? session('uid') : session('guestid'),
+                'product_id' => $post['product_id'],
+                'quantity' => $post['quantity'],
+                'date' => date('y-m-d'),
+                'price' => $post['price']
+            );
+    
+            if (!empty($result)) {
+                // $pdata['updated_at'] = date('Y-m-d H:i:s');
+                // $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
+    
+                $builder->where(array('product_id' => $post['product_id']));
+                $res = $builder->update($pdata);
+                if ($res) {
+                    $msg = array('st' => 'added', 'msg' => 'Item Update to Cart');
+                } else {
+                    $msg = array('st' => 'failed', 'msg' => 'Failed Update to Cart');
+                }
             } else {
-                $msg = array('st' => 'failed', 'msg' => 'Failed Update to Cart');
-            }
-        } else {
-            $pdata['created_at'] = date('Y-m-d H:i:s');
-            $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
-
-            $res = $builder->insert($pdata);
-            if ($res) {
-                $msg = array('st' => 'success', "msg" => "Item Added to Cart");
-            } else {
-                $msg = array('st' => 'failed', "msg" => "Failed to Cart");
-            }
+                $pdata['created_at'] = date('Y-m-d H:i:s');
+                $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+    
+                $res = $builder->insert($pdata);
+                if ($res) {
+                    $msg = array('st' => 'success', "msg" => "Item Added to Cart");
+                } else {
+                    $msg = array('st' => 'failed', "msg" => "Failed to Cart");
+                }
+        }
+        
+        }else{
+            $msg = array('st' => 'added', "msg" => "Already Added to Cart");
         }
 
         return $msg;
@@ -221,11 +240,12 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('cart');
         $qty = $post['qty'];
-        // $id = $post['id'];
+        $grand_total = $post['grand_total'];
 
         for ($i = 0; $i < count($qty); $i++) {
             $pdata = array(
-                'quantity' => $qty[$i]
+                'quantity' => $qty[$i],
+                'price' => $grand_total,
             );
 
             $builder->where('user_id', session('uid') ? session('uid') : session('guestid'));
@@ -286,7 +306,7 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('cart c');
-        $builder->select('c.id,image,i.name,i.price,c.quantity,c.product_id');
+        $builder->select('c.id,image,i.name,c.price,c.quantity,c.product_id');
         $builder->join('item i', 'i.id=c.product_id');
         $builder->where('c.is_delete', 0);
         $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
@@ -487,19 +507,30 @@ class HomeModel extends Model
         // print_r($post);exit;
         $db = $this->db;
         $builder = $db->table("wishlist");
-        $pdata = array(
-            'user_id' => session('uid') ? session('uid') : session('guestid'),
-            'product_id' => $post['productid'],
-        );
-        $pdata['created_at'] = date('Y-m-d H:i:s');
-        $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
-
-        $res = $builder->insert($pdata);
-        if ($res) {
-            $msg = array('st' => 'success', "msg" => "Item Added to wish");
-        } else {
-            $msg = array('st' => 'failed', "msg" => "Failed to wish");
+        $builder->select('*');
+        $builder->where('is_delete', 0);
+        $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'),'product_id' => $post['productid']));
+        $query = $builder->get();
+        $result =  $query->getRowArray();
+        // print_r($result);exit;
+        if(empty($result)){
+            $pdata = array(
+                'user_id' => session('uid') ? session('uid') : session('guestid'),
+                'product_id' => $post['productid'],
+            );
+            $pdata['created_at'] = date('Y-m-d H:i:s');
+            $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+    
+            $res = $builder->insert($pdata);
+            if ($res) {
+                $msg = array('st' => 'success', "msg" => "Item Added to wish");
+            } else {
+                $msg = array('st' => 'failed', "msg" => "Failed to wish");
+            }
+        }else{
+            $msg = array('st' => 'added', "msg" => "Already Added Wishlist");
         }
+        
         return $msg;
     }
     public function get_wishlist()
@@ -552,6 +583,48 @@ class HomeModel extends Model
 
         return $result;
     }
+    public function get_related_product_data($cid)
+    {
+        // print_r($cid);exit;
+        $db = $this->db;
+        $builder = $db->table('item i');
+        $builder->select('i.id,i.category,i.name as item_name,i.image as item_image,c.name as cat_name,c.image as cat_image,i.price,i.dis_price');
+        $builder->join('category c', 'c.id=i.category');
+        $builder->where('c.id', $cid);
+        $query = $builder->get();
+        $relatedproduct = $query->getResultArray();
+        // echo "<pre>"; print_r($relatedproduct);exit;
+        return $relatedproduct;
+    }
+    public function applycoupon($post){
+        // print_r($post);exit;
+        $db = $this->db;
+        $builder = $db->table('coupon');
+        $builder->select('*');
+        $builder->where('coupon_code', $post['coupon']);
+        $query = $builder->get();
+        $result = $query->getRowArray();
+
+        // if(empty($result)){
+        //     $data = 'Coupon is not valid !!! Please enter valid coupon';
+        // }else{
+            if($post['total'] >= $result['cart_min_value']){
+                if($result['coupon_type'] == 'Rupees'){
+                    $value = $result['coupon_value'];
+                    $data = $post['total'] - $value;
+                }else{
+                    $value = ($post['total']*$result['coupon_value'])/100;
+                    $data = $post['total'] - $value;
+                }
+            }else{
+                $data = 'Grand total must be'.$result['cart_min_value'];
+            }
+        // }
+        // print_r($data);exit;
+
+        $output = array('final_total' => $data ,'coupon_discount' => $value);
+        return $output;
+    }
     public function fetch_data($post, $page)
     {
         // print_r($post);
@@ -559,10 +632,21 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('item');
         $builder->select('*');
+        
+        $minvalue = $post['min_price'];
+        $maxvalue = $post['max_price'];
         // $builder->where('is_delete',0);
         $results_per_page = 6;
         $page_first_result = ($page - 1) * $results_per_page;
 
+        if(empty($max_value)){
+            $builder->where('is_delete', 0);
+            $builder->orderBy('price', 'asc');
+        }
+        if(!empty($minvalue || $maxvalue)){
+            $builder->where('is_delete', 0);
+            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");    
+        }
         if (!empty($post['brand_id'])) {
             $builder->where('brand', $post['brand_id']);
         }
@@ -589,6 +673,16 @@ class HomeModel extends Model
         $number_of_page = ceil($number_of_result / $results_per_page);
         //    print_r( $number_of_page);exit;
         $builder->select('*');
+
+        if(empty($max_value)){
+            $builder->where('is_delete', 0);
+            $builder->orderBy('price', 'asc');
+        }
+        if(!empty($minvalue || $maxvalue)){
+            $builder->where('is_delete', 0);
+            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");    
+        }
+
         if (!empty($post['brand_id'])) {
             $builder->where('brand', $post['brand_id']);
         }
@@ -612,6 +706,8 @@ class HomeModel extends Model
         } else {
             $builder->orderBy('id', 'asc');
         }
+        $builder->orderBy('id', 'asc');
+
         $builder->limit($results_per_page, $page_first_result);
         $result = $builder->get();
 
@@ -673,16 +769,16 @@ class HomeModel extends Model
                         <button class="snackbar-wishlist btn btn_love position-absolute ab-right wish" id="wishlist" data-product_id="' . @$row['id'] . ' " data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="far fa-heart"></i></button>
                         <div class="card-body p-0">
                             <div class="shop_thumb position-relative">
-                                <a class="card-img-top d-block overflow-hidden" href="' . url('Home/productdetail/' . $row['id']) . '"><img class="card-img-top" src="' . $row['image'] . '" alt="..." style="height: 350px ;width: 280px;"></a>
-                                <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                    <div class="edlio"><a class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1"></i>Add to cart</a></div>
+                                <a class="card-img-top d-block overflow-hidden" href="' . url('Home/productdetail/' . @$row['id']) . '"><img class="card-img-top" src="' . @$row['image'] . '" alt="..." style="height: 350px ;width: 280px;"></a>
+                                <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center" style="width:280px;">
+                                    <div class="edlio"><a class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1" ></i>Add to cart</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer b-0 p-0 pt-2 bg-white">
                             <div class="text-left">
-                                <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="' . url('Home/productdetail/' . $row['id']) . '">' . $row['name'] . '</a></h5>
-                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹' . $row['listedprice'] . '</span><span class="text-secondary p-2 p-2"><del>₹' . $row['price'] . '</del></span><span class="text-success bg-light-success rounded px-2 py-1">' . $row['discount'] . ' % off</span></div>
+                                <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="' . url('Home/productdetail/' . @$row['id']) . '">' . @$row['name'] . '</a></h5>
+                                <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹' . @$row['listedprice'] . '</span><span class="text-secondary p-2 p-2"><del>₹' . @$row['price'] . '</del></span><span class="text-success bg-light-success rounded px-2 py-1">' . @$row['discount'] . ' % off</span></div>
                             </div>
                         </div>
                     </div>
@@ -693,20 +789,24 @@ class HomeModel extends Model
     }
     public function UpdateData($post)
     {
+        // print_r($post);exit;
+
         $result = array();
         $db = $this->db;
-
         if ($post['type'] == 'Remove') {
-            $builder = $db->table('cart');
-            $builder->where("id", @$post['pk']);
-            $result = $builder->update(array('is_delete' => '1'));
-            $result = array('st' => 'success');
-        }
-        if ($post['type'] == 'Wishlist') {
-            $builder = $db->table('wishlist');
-            $builder->where("id", @$post['pk']);
-            $result = $builder->update(array('is_delete' => '1'));
-            $result = array('st' => 'success');
+
+            if ($post['method'] == 'cart') {
+                $builder = $db->table('cart');
+                $builder->where("id", @$post['pk']);
+                $result = $builder->update(array('is_delete' => '1'));
+                $result = array('st' => 'success');
+            }
+            if ($post['method'] == 'wish') {
+                $builder = $db->table('wishlist');
+                $builder->where("id", @$post['pk']);
+                $result = $builder->update(array('is_delete' => '1'));
+                $result = array('st' => 'success');
+            }
         }
         return $result;
     }
@@ -828,5 +928,37 @@ class HomeModel extends Model
       $query = $builder->get();
       $max_value = $query->getRow();
       return $max_value->max_value;
+    }
+    public function insert_edit_subscribe($post)
+    {
+        // print_r($post);exit;
+        $db = $this->db;
+        $builder = $db->table("subscribe");
+        $builder->select('*');
+        $builder->where('is_delete', 0);
+        $builder->where(array('email' => $post['email']));
+        $query = $builder->get();
+        $result =  $query->getRowArray();
+        if (empty($result)) {
+            $data = array(
+                'email' => $post['email'],
+                'user_id' => session('uid') ? session('uid') : session('guestid')
+            );
+            $data['created_at'] = date('Y-m-d H:i:s');
+            @$data['created_by'] = session('uid') ? session('uid') : session('guestid');
+
+            // if (empty($msg)) {
+            $res = $builder->insert($data);
+            if ($res) {
+                $msg = array('st' => 'success', "msg" => "Subcribe Success");
+            } else {
+                $msg = array('st' => 'failed', "msg" => "Subscrib Failed");
+            }
+            // }
+        } else {
+
+            $msg = array('st' => 'added', "msg" => "Already Subscibe");
+        }
+        return $msg;
     }
 }

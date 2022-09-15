@@ -19,7 +19,7 @@
             <div class="card-header card-header-divider">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover table-fw-widget" id="table_list_data" data-id="order" data-module="admin/Home" data-filter_data='' style="width:100%">
+                        <table class="table table-striped table-hover table-fw-widget" id="table_list_data" data-id="order" data-module="Home" data-filter_data='' style="width:100%">
                             <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
                             <thead>
                                 <tr>
