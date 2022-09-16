@@ -11,7 +11,7 @@
                 <div class="pay-sucess">
                     <div class="pd">
                     <div class="image-section">
-                        <img src="<?= ASSETS; ?>images/sucess.png" alt="">
+                        <img src="<?= ASSETS; ?>img/success.png" alt="">
                     </div>
                     <h1 class="text-success">Successful Payment </h1>
                     <h6>your order has been completed successfully. </h6>

@@ -378,58 +378,97 @@ class HomeModel extends Model
 
         return $data_table->toJSON();
     }
-
     public function get_order_data()
     {
-        $db = $this->db;
-        $builder = $db->table('orders o');
-        $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
-        $builder->where('user_id', session('id'));
-        // $builder->where('o.is_delete', '0');
-        $data_table = DataTable::of($builder);
-        $data_table->setSearchableColumns(['id']);
-        $data_table->add('action', function ($row) {
-            $btnview = '<a href="' . url('Home/orderview/') . $row->id . '"  class="btn btn-link pd-10"><i class="far fa-eye"></i></a> ';
-            return $btnview;
-        });
-        return $data_table->toJSON();
+      $db = $this->db;
+      $builder= $db->table('orders o');
+      $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+      $builder->join('order_item oi', 'o.id = oi.order_id','left');
+      $builder->join('item i', 'i.id = oi.product_id','left');
+      $builder->where('o.user_id',session('uid') ? session('uid') : session('guestid'));
+      $query = $builder->get();
+      $order = $query->getResultArray();
+    //   echo "<pre>"; print_r($order);exit;
+      return $order;
     }
-    public function get_data($id)
+  
+    public function get_order_details($id)
     {
-        // print_r($id);exit;
-        $db = $this->db;
-        $builder = $db->table('orders o');
-        $builder->select('o.*');
-        $builder->where('o.id', $id);
-        // $builder->where('o.is_delete', 0);
-        $query = $builder->get();
-        $result = $query->getRowArray();
-        // if ($result['ship_id'] != 0) {
-        //     $db = $this->db;
-        //     $builder = $db->table('signup u');
-        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=u.city');
-        //     $builder->join('states s', 's.id=u.state');
-        //     $builder->where('u.id', $result2['default_add']);
-        //     $builder->where('u.is_delete', 0);
-        //     $query = $builder->get();
-        //     $result1 = $query->getRowArray();
-        // // } else {
-        //     $db = $this->db;
-        //     $builder = $db->table('address a');
-        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=a.city');
-        //     $builder->join('states s', 's.id=a.state');
-        //     $builder->where('a.id', $result['ship_id']);
-        //     $builder->where('a.is_delete', 0);
-        //     $query = $builder->get();
-        //     $result = $query->getRowArray();
-        // }
-        // $result = array_merge($result1, $result2);
-        // // echo"<pre>";print_r($result);exit;
-
-        return $result;
+      // print_r($id);exit;
+      $db = $this->db;
+      $builder= $db->table('orders o');
+      $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+      $builder->join('order_item oi', 'o.id = oi.order_id','left');
+      $builder->join('item i', 'i.id = oi.product_id');
+      $builder->where('o.id',$id);
+      $query = $builder->get();
+      $order_detail1 = $query->getrowArray();
+      // echo"<pre>";print_r($order_detail1);exit;
+      $order_detail1['item_name'] = $order_detail1['name'];
+      // $order_detail1['order_date'] = $order_detail1['created_at'];
+      if($order_detail1['ship_id'] != 0)
+      {
+        $gmodel = new GeneralModel();
+        $order_detail2  = $gmodel->get_data_table('shipping_address',array('id'=>$order_detail1['ship_id']),'*');
+      }
+      else{
+        $gmodel = new GeneralModel();
+        $order_detail2 = $gmodel->get_data_table('users',array('id'=>$order_detail1['default_add']),'*');
+      }
+      $order_detail = array_merge($order_detail1,$order_detail2);
+      return $order_detail;
     }
+    // public function get_order_data()
+    // {
+    //     $db = $this->db;
+    //     $builder = $db->table('orders o');
+    //     $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
+    //     $builder->where('user_id', session('id'));
+    //     // $builder->where('o.is_delete', '0');
+    //     $data_table = DataTable::of($builder);
+    //     $data_table->setSearchableColumns(['id']);
+    //     $data_table->add('action', function ($row) {
+    //         $btnview = '<a href="' . url('Home/orderview/') . $row->id . '"  class="btn btn-link pd-10"><i class="far fa-eye"></i></a> ';
+    //         return $btnview;
+    //     });
+    //     return $data_table->toJSON();
+    // }
+    // public function get_data($id)
+    // {
+    //     // print_r($id);exit;
+    //     $db = $this->db;
+    //     $builder = $db->table('orders o');
+    //     $builder->select('o.*');
+    //     $builder->where('o.id', $id);
+    //     // $builder->where('o.is_delete', 0);
+    //     $query = $builder->get();
+    //     $result = $query->getRowArray();
+    //     // if ($result['ship_id'] != 0) {
+    //     //     $db = $this->db;
+    //     //     $builder = $db->table('signup u');
+    //     //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+    //     //     $builder->join('cities c', 'c.id=u.city');
+    //     //     $builder->join('states s', 's.id=u.state');
+    //     //     $builder->where('u.id', $result2['default_add']);
+    //     //     $builder->where('u.is_delete', 0);
+    //     //     $query = $builder->get();
+    //     //     $result1 = $query->getRowArray();
+    //     // // } else {
+    //     //     $db = $this->db;
+    //     //     $builder = $db->table('address a');
+    //     //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+    //     //     $builder->join('cities c', 'c.id=a.city');
+    //     //     $builder->join('states s', 's.id=a.state');
+    //     //     $builder->where('a.id', $result['ship_id']);
+    //     //     $builder->where('a.is_delete', 0);
+    //     //     $query = $builder->get();
+    //     //     $result = $query->getRowArray();
+    //     // }
+    //     // $result = array_merge($result1, $result2);
+    //     // // echo"<pre>";print_r($result);exit;
+
+    //     return $result;
+    // }
 
     public function get_orderviewdata($get)
     {

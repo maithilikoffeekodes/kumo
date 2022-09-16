@@ -209,7 +209,12 @@ class Home extends BaseController
     }
     public function order()
     {
-        return view('order/order');
+        if (!empty(session('uid'))) {
+            $data['my_orders'] = $this->model->get_order_data();
+            return view('myorder', $data);
+        } else {
+            return view('Home/login');
+        }
     }
     public function orderview($id = '')
     {
