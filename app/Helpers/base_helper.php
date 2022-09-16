@@ -214,7 +214,7 @@ function get_review_count($id)
     $result = $query->getRow();
     $avg = $result->rateavg;
     // print_r($avg);
-   
+
     return $avg;
 }
 function get_review_total($id)
@@ -222,14 +222,14 @@ function get_review_total($id)
     $db = \Config\Database::connect();
     $builder = $db->table('review');
     $builder->select('SUM(`rating`) as ratesum');
-    
+
     $builder->where('product_id', $id);
     $builder->where('is_delete', 0);
     $query = $builder->get();
     $result = $query->getRow();
     $sum = $result->ratesum;
     // print_r($sum);exit;
-    if($sum ==''){
+    if ($sum == '') {
         $sum = 0;
     }
     return $sum;
@@ -244,7 +244,7 @@ function get_product_count($id)
     $query = $builder->get();
     $result = $query->getRow();
     $sum = $result->total;
-    
+
     return $sum;
 }
 function get_item_count()
@@ -256,154 +256,87 @@ function get_item_count()
     $query = $builder->get();
     $result = $query->getRow();
     $sum = $result->total;
-    
+
     return $sum;
 }
-// function send_otp($email,$otp) {
-
-//     $mail = new PHPMailer();  
-//     try {
-//         $mail->isSMTP();
-//         $mail->SMTPDebug = 0;  
-//         $mail->Host         = 'smtp.gmail.com'; //smtp.google.com
-//         $mail->SMTPAuth     = true;     
-//         $mail->Username     = 'jenithdavda12345@gmail.com';  
-//         $mail->Password     = 'bfrafoqvwumpohlz';
-//         $mail->SMTPSecure   = 'tls';  
-//         $mail->Port         = 587;  
-//         $mail->Subject      =  'OTP';
-//         $mail->Body         = 'Your One Time Password is'.' '.$otp;
-//         $mail->setfrom('jenithdavda12345@gmail.com', 'Eshop');
-
-//         $mail->addAddress($email);  
-//         $mail->isHTML(true); 
-//         $mail->send();
 
 
-
-//         // if(!$mail->send()) {
-//         //     echo "Something went wrong. Please try again.";
-//         // }
-//         // else {
-//         //     echo "Email sent successfully.";exit;
-//         // }
-
-//     } catch (Exception $e) {
-//         echo "Something went wrong. Please try again.";
-//     }  
-// }
-function send_mail($post)
-
-{
-    //  print_r($post);exit;
-    $mail = new PHPMailer();
-    try {
-        $mail->isSMTP();
-        $mail->SMTPDebug = 0;
-        $mail->Host         = 'smtp.gmail.com'; //smtp.google.com
-        $mail->SMTPAuth     = true;
-        $mail->Username     = 'maithilijejani12@gmail.com';
-        $mail->Password     = 'ojyqnxhexjwhwtvu';
-        $mail->SMTPSecure   = 'tls';
-        $mail->Port         =  587;
-        $mail->Subject      =  "your mail";
-        $mail->Body         =  "hello how are you?";
-        // $mail->AddAttachment(getcwd().$attachment);
-        $mail->setfrom('maithilijejani12@gmail.com');
-        $mail->addAddress($post);
-        $mail->isHTML(true);
-        $mail->send();
-
-        // if(!$mail->send()) {
-        //     echo "Something went wrong. Please try again.";
-        // }
-        // else {
-        //     echo "Email sent successfully.";exit;
-        // }
-
-    } catch (Exception $e) {
-        echo "Something went wrong. Please try again.";
-    }
-}
-function order_mail($email, $subject, $message)
-
-{
-    //  print_r($email);exit;
-    $mail = new PHPMailer();
-    try {
-        $mail->isSMTP();
-        $mail->SMTPDebug = 0;
-        $mail->Host         = 'smtp.gmail.com'; //smtp.google.com
-        $mail->SMTPAuth     = true;
-        $mail->Username     = 'maithilijejani12@gmail.com';
-        $mail->Password     = 'ojyqnxhexjwhwtvu';
-        $mail->SMTPSecure   = 'tls';
-        $mail->Port         =  587;
-        $mail->Subject      =  $subject;
-        $mail->Body         =  $message;
-        // $mail->AddAttachment(getcwd().$attachment);
-        $mail->setfrom('maithilijejani12@gmail.com', 'Kumo');
-        $mail->addAddress($email);
-        $mail->isHTML(true);
-        $mail->send();
-
-        // if(!$mail->send()) {
-        //     echo "Something went wrong. Please try again.";
-        // }
-        // else {
-        //     echo "Email sent successfully.";exit;
-        // }
-
-    } catch (Exception $e) {
-        echo "Something went wrong. Please try again.";
-    }
-}
-
-
-function mail_template($ord_id)
-{
-    /**
-     * goto order table get all order info
-     * goto cl_order_items to get all order item info
-     * @return string
-     */
-    //  print_r($ord_id);exit;
-
-    $db      = \Config\Database::connect();
-    $builder = $db->table('orders o');
-    $builder->select('o.*,sum(o.total_payment) as grandtotal');
-    // $builder->select('sum(o.total) as grandtotal');
-    $builder->where('o.id', $ord_id);
-    $query  = $builder->get();
-    $order = $query->getRow();
-    // echo"";print_r($order);exit;
-    if ($order->ship_id != 0)  //check session isset login user if not then call guest user 
+    function order_mail($email, $subject, $message)
     {
-    //     $builder = $db->table('signup');
-    //     $builder->select('*');
-    //     $builder->where('id', $order->default_add);
-    //     $query    = $builder->get();
-    //     $order_details = $query->getRow();
-    // } else {
-        $builder = $db->table('shipping_address');
-        $builder->select('*');
-        $builder->where('id', $order->ship_id);
-        $query  = $builder->get();
-        $order_details = $query->getRow();
-        $name = @$order_details->fname . @$order_details->lname;
-    // echo"";print_r($order_details);exit;
+        //  print_r($email);exit;
+        $mail = new PHPMailer();
+        try {
+            $mail->isSMTP();
+            $mail->SMTPDebug = 0;
+            $mail->Host         = 'smtp.gmail.com'; //smtp.google.com
+            $mail->SMTPAuth     = true;
+            $mail->Username     = 'maithilijejani12@gmail.com';  
+            $mail->Password     = 'bldvdjvbfqbytzvn';
+            $mail->SMTPSecure   = 'tls';
+            $mail->Port         =  587;
+            $mail->Subject      =  $subject;
+            $mail->Body         =  $message;
+            // $mail->AddAttachment(getcwd().$attachment);
+            $mail->setfrom('maithilijejani12@gmail.com', 'Kumo');
+            $mail->addAddress($email);
+            $mail->isHTML(true);
+            $mail->send();
 
+            if(!$mail->send()) {
+                echo "Something went wrong. Please try again.";
+            }
+            else {
+                echo "Email sent successfully.";
+            }
+
+        } catch (Exception $e) {
+            echo "Something went wrong. Please try again.";
+        }
     }
 
-    $builder = $db->table('order_item o');
-    $builder->select('o.*,i.name');
-    $builder->join('item  i', 'i.id = o.product_id');
-    $builder->where('o.order_id', $ord_id);
-    $query  = $builder->get();
-    $order_items = $query->getResult();
-    // echo"";print_r($order_items);exit;
 
-    $message = '<!DOCTYPE html>
+    function mail_template($ord_id)
+    {
+        /**
+         * goto order table get all order info
+         * goto cl_order_items to get all order item info
+         * @return string
+         */
+        //  print_r($ord_id);exit;
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('orders o');
+        $builder->select('o.*,sum(o.total_payment) as grandtotal');
+        $builder->where('o.id', $ord_id);
+        $query  = $builder->get();
+        $order = $query->getRow();
+        // echo"";print_r($order);exit;
+        if ($order->default_add != 0)  //check session isset login user if not then call guest user 
+        {
+            $builder = $db->table('user');
+            $builder->select('*');
+            $builder->where('id', $order->default_add);
+            $query    = $builder->get();
+            $order_details = $query->getRow();
+        } else {
+            $builder = $db->table('shipping_address');
+            $builder->select('*');
+            $builder->where('id', $order->ship_id);
+            $query  = $builder->get();
+            $order_details = $query->getRow();
+            $name = @$order_details->fname . @$order_details->lname;
+        }
+
+
+        $builder = $db->table('order_item o');
+        $builder->select('o.*,i.name');
+        $builder->join('item  i', 'i.id = o.product_id');
+        $builder->where('o.order_id', $ord_id);
+        $query  = $builder->get();
+        $order_items = $query->getResult();
+        // echo"";print_r($order_items);exit;
+
+        $message = '<!DOCTYPE html>
 					<html>
 					<head>
 					<title></title>
@@ -459,7 +392,7 @@ function mail_template($ord_id)
 											<tr>
 												<td  valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif;  " class="mobile-center">
 													<h1 style="  margin: 0; color: #ffffff;">
-                                                        <img src="'.base_url().'/assets/img/logo.png" class="logo" alt=""  height="20px"style="height: 66px;">
+                                                        <img src="' . base_url() . '/assets/img/logo.png" class="logo" alt=""  height="20px"style="height: 66px;">
                                                     </h1>
 												</td>
 											</tr>
@@ -475,7 +408,7 @@ function mail_template($ord_id)
 											<td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;" >
 												<img  src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
 												<h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;">
-                                                Thanks ' .$name.' For Your Order!
+                                                Thanks '.@$name.' For Your Order!
                                                 </h2>
 											</td>
 										</tr>
@@ -497,20 +430,20 @@ function mail_template($ord_id)
 															' . @$order->id . '
 														</td>
 													</tr>';
-    foreach ($order_items as $item) {
-        $message .= '
+        foreach (@$order_items as $item) {
+            $message .= '
                                                                     <tr>
                                                                         <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
-                                                                            ' . $item->name . ' &nbsp;(' . $item->quantity . ')
+                                                                            ' . @$item->name . ' &nbsp;(' . @$item->quantity . ')
                                                                         </td>
                                                                         <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
-                                                                            ₹ ' . $item->price . '
+                                                                            ₹ ' . @$item->price . '
                                                                         </td>
                                                                 </tr>';
-    }
+        }
 
 
-    $message .= '</table>
+        $message .= '</table>
 											</td>
 										</tr>
 										<tr>
@@ -543,7 +476,7 @@ function mail_template($ord_id)
 															<td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
 																<p style="font-weight: 800;">Delivery Address</p>
 															
-                                                                <p>' . @$order_details->address . '<br>INDIA, ' . @$order_details->pincode . '</p>
+                                                                <p>'.@$order_details->address.' <br>INDIA, '.@$order_details->pincoe.'</p>
 
 
 															</td>
@@ -621,5 +554,6 @@ function mail_template($ord_id)
 					</html>';
 
 
-    return $message;
-}
+        return $message;
+    }
+

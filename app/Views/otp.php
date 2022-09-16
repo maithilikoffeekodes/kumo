@@ -11,7 +11,7 @@
 			<div class="row align-items-start justify-content-center">
 
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-					<form class="border p-3 rounded" action="<?= url('Home/login')?>" method="post">
+					<form class="border p-3 rounded" action="<?= url('Home/otp')?>" method="post">
 						<div class="form-group">
 							<label>Email *</label>
 							<input type="text" class="form-control" placeholder="Username*" name="email">
@@ -38,10 +38,7 @@
 						<div class="form-group">
 							<button type="submit" id="save_data" class="btn btn-md full-width bg-dark text-light fs-md ft-medium">Login</button>
 						</div>
-						<div class="mt-3 text-center">
-								<p class="mb-1"><a href="">Forgot password?</a></p>
-								<p class="mb-0">Don't have an account? <a href="<?= url('Home/register')?>">Create an Account</a></p>
-							</div>
+						
 					</form>
 				</div>	
 			</div>

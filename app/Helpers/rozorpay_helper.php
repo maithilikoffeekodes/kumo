@@ -182,11 +182,10 @@ if (!function_exists('PaymentExecute')) {
                 ));
 
                 $subject = "Your Order Details #OrderID - " . $result->ord_id . "- Kumo";
-                helper('mail_template');
+
+                helper('base');
                 $message = mail_template($result->ord_id);
-                // echo "<pre>";print_r($message);exit;
-
-
+              
                 $db      = \Config\Database::connect();
                 $builder = $db->table('orders');
                 $builder->select('*');
@@ -194,9 +193,16 @@ if (!function_exists('PaymentExecute')) {
                 $query   = $builder->get();
                 $order   = $query->getRow();
                 // echo "<pre>";print_r($order);exit;
-
-                if ($order->ship_id != 0)  //check session isset login user if not then call guest user 
+                if ($order->default_add != 0)  //check session isset login user if not then call guest user 
                 {
+                    $builder = $db->table('user');
+                    $builder->select('email');
+                    $builder->where('id', $order->default_add);
+                    $query    = $builder->get();
+                    $data1    = $query->getRow();
+                    $email    = $data1->email;
+                    // print_r($email);exit;
+                } else {
                     $builder = $db->table('shipping_address');
                     $builder->select('email');
                     $builder->where('id', $order->ship_id);
@@ -204,6 +210,7 @@ if (!function_exists('PaymentExecute')) {
                     $data = $query->getRow();
                     $email = $data->email;
                 }
+                
                 // echo "<pre>";print_r($email);exit;
 
                 order_mail($email,$subject,$message);

@@ -29,8 +29,14 @@ class Home extends BaseController
         // echo"<pre>";print_r($data);exit;    
         return view('index', $data);
     }
+    // public function test(){
+    //     helper('base');
+    //     order_mail('maithili.koffeekodes@gmail.com','heelo','helllllllo');
+    //     return('dfsd');
+    // }
     public function login()
     {
+
         $msg = array('st' => '', 'msg' => '');
         $post = $this->request->getPost();
         if (!empty($post) && isset($post['email']) && isset($post['password'])) {
@@ -42,15 +48,42 @@ class Home extends BaseController
         }
         return view('login', $data);
     }
+    public function logout()
+    {
+        $session = session();
+        $session->remove('uid');
+        return redirect()->to(url('Home/login'));
+    }
+    public function otp()
+    {
+        $post = $this->request->getPost();
+
+        if (!empty($post)) {
+            $msg = $this->model->otp($post);
+            return $this->response->setJSON($msg);
+        }
+        return view('demo');
+    }
+    public function verify()
+    {
+        $post = $this->request->getPost();
+
+        if (!empty($post)) {
+            $msg = $this->model->verify($post);
+            return $this->response->setJSON($msg);
+        }
+        return view('verify');
+    }
     public function register($id = '')
     {
-        // $post = $this->request->getPost();
-        // if (!empty($post)) {
-        //     $msg = $this->model->insert_edit_data($post);
-        //     return $this->response->setJSON($msg);
-        // }
-
-        // $data['data'] = $this->model->get_register_data('data', $id);
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->insert_edit_data($post);
+            return $this->response->setJSON($msg);
+        }
+        if($id !=''){
+        $data['data'] = $this->model->get_register_data('data', $id);
+        }
         // print_r($data);exit;
         return view('register');
     }
@@ -97,6 +130,13 @@ class Home extends BaseController
     {
         return view('coupon');
     }
+    public function shipping_address(){
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->insert_edit_address($post);
+            return $this->response->setJSON($msg);
+        }
+    }
     public function applycoupon()
     {
         $post = $this->request->getPost();
@@ -135,7 +175,9 @@ class Home extends BaseController
             $data = $this->model->payment_data($post);
             return $this->response->setJSON($data);
         }
-        return view('checkout');
+        $data['address'] = $this->model->get_address_data();
+
+        return view('checkout',$data);
     }
     public function wishlist()
     {
@@ -195,10 +237,9 @@ class Home extends BaseController
             return $msg;
         }
         if ($method == 'getstate') {
-            // print_r($method);
-            // exit;
             $get = $this->request->getGet();
             $data = $this->model->get_states($get);
+            // print_r($data);exit;
             return $this->response->setJSON($data);
         }
         if ($method == 'getcity') {
@@ -249,7 +290,7 @@ class Home extends BaseController
     }
     public function Action($method = '')
     {
-        print_r($method);exit;
+        // print_r($method);exit;
 
         $result = array();
         if ($method == 'Update') {

@@ -28,6 +28,8 @@
                             <div class="form-group col-md-6">
                                 <label>First Name<span class="text-danger"> * </span></label>
                                 <input type="text" class="form-control" placeholder="Enter First Name" name="fname" required>
+                                <input type="hidden" value="<?= @$data['id']; ?>" name="id" id="id">
+
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Last Name<span class="text-danger"> * </span></label>
@@ -52,17 +54,17 @@
                             <div class="form-group col-md-4">
                                 <label>States<span class="text-danger">*</span></label>
                                 <select name="state" id="state" class="form-control" required>
-                                    <?//php if (isset($data['state'])) { ?>
-                                        <option value="" selected></option>
-                                    <?//php } ?>
+                                    <?php if (isset($data['state'])) { ?>
+                                        <option value="<?//= @$data['state'] ?>" selected><?//= @$data['state_name'] ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label>City<span class="text-danger">*</span></label>
                                 <select name="city" id="city" class="form-control" required>
-                                    <?//php if (isset($data['city'])) { ?>
-                                        <option value="" selected></option>
-                                    <?//php } ?>
+                                    <?php if (isset($data['city'])) { ?>
+                                        <option value="<?//= @$data['city'] ?>" selected><?//= @$data['city_name'] ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
@@ -107,22 +109,24 @@
 <?= $this->endSection() ?>
 <?= $this->section('scripts') ?>
 <script>
-      $("#state").select2({
+    $(document).ready(function(){
+        $("#state").select2({
         width: '100%',
         placeholder: 'Select...',
         ajax: {
-            url: PATH + "Home/Getdata/getstate",
+            url: PATH + "/Home/Getdata/getstate",
             type: "post",
             allowClear: true,
             dataType: 'json',
             delay: 250,
             data: function(params) {
+                console.log(params);
                 return {
                     searchTerm: params.term // search term
                 };
             },
             processResults: function(response) {
-                console(response);
+                console.log(response);
                 return {
                     results: response
                 };
@@ -134,7 +138,7 @@
         width: '100%',
         placeholder: 'Select...',
         ajax: {
-            url: PATH + "Home/Getdata/getcity",
+            url: PATH + "/Home/Getdata/getcity",
             type: "post",
             allowClear: true,
             dataType: 'json',
@@ -177,8 +181,6 @@
                 // console.log(response);
                 //  alert(response);return;
                 if (response.st == 'success') {
-
-                    //  alert("sweetaert");return;
                     swal("Success!", response.msg, "success");
                     window.location.href = "<?= url('Home/login') ?>";
                     datatable_load('');
@@ -198,5 +200,7 @@
         return false;
     });
   
+    });
+   
 </script>
 <?= $this->endSection() ?>

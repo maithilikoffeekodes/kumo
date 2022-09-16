@@ -5,7 +5,8 @@
 	.btn.btn-sm {
 		padding: 5px;
 	}
-	ul li .display_content{
+
+	ul li .display_content {
 		display: none !important;
 	}
 </style>
@@ -53,8 +54,8 @@
 									<div class="col-auto">
 										<button class="btn btn-dark applycoupon" type="submit">Apply</button>
 									</div>
-									<div class="error-msg"></div>
 								</div>
+								<div class="error-msg text-danger"></div>
 							</form>
 						</div>
 						<!-- <div class="col-12 col-md-auto mfliud">
@@ -77,6 +78,7 @@
 									<span>Delivery Charges</span> <span class="ml-auto text-dark ft-medium">Free</span>
 								</li>
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular" id="discount">
+									<input type="hidden" name="coupon_discount" id="coupon_discount" value='0'>
 									<span>Coupons Discount</span> <span class="ml-auto text-dark ft-medium coupon-discount">0</span>
 								</li>
 								<li class="list-group-item d-flex text-dark fs-sm ft-regular">
@@ -106,8 +108,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		datatable_load();
-		// $('#discount').hide();
-
 	});
 
 	function increment(val) {
@@ -158,6 +158,7 @@
 		$(".total_amt").text($(".sub_total_amt").text());
 		var grand_tot = $(".sub_total_amt").text();
 		$("#grand_total").val(grand_tot);
+		$("#coupon_discount").val($('.coupon-discount').text());
 	}
 	// });
 
@@ -248,8 +249,11 @@
 		var coupon = $('.coupon').val();
 		var total = $('.total_amt').text();
 		// alert(coupon);
-		e.preventDefault();
+		$('.error-msg').html('');
 		$('.applycoupon').prop('disabled', true);
+		$(".total_amt").text($(".sub_total_amt").text());
+
+		e.preventDefault();
 
 		$.ajax({
 			url: "<?php echo url('Home/applycoupon'); ?>",
@@ -260,15 +264,16 @@
 			},
 			success: function(response) {
 				console.log(response);
-				if (response) {
+				if (response.final_total && response.coupon_discount != '') {
 					$('.coupon-discount').html(response.coupon_discount);
 					$('.total_amt').text(response.final_total);
 					$('#grand_total').val(response.final_total);
+					$("#coupon_discount").val(response.coupon_discount);
+					$('.error-msg').html(response.msg);
 					$('.applycoupon').prop('disabled', false);
-
 				} else {
-					$('.applycoupon').prop('disabled', true);
-					// $('.error-msg').html(response.final_total);
+					$('.applycoupon').prop('disabled', false);
+					$('.error-msg').html(response.msg);
 				}
 			}
 

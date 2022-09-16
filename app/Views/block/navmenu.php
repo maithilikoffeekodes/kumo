@@ -39,7 +39,7 @@
 
 							</i>
 							<ul class="nav-dropdown nav-submenu">
-								<?php if (!empty(session('uid'))) { ?>
+								<?php if (empty(session('uid'))) { ?>
 									<li><a href="<?= url('Home/login') ?>">SignIn</a></li>
 									<li><a href="<?= url('Home/register') ?>">SignUp</a></li>
 								<?php } else { ?>

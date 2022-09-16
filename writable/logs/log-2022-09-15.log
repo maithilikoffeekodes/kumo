@@ -652,3 +652,21 @@ CRITICAL - 2022-09-15 07:33:03 --> Trying to access array offset on value of typ
 #5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #7 {main}
+CRITICAL - 2022-09-15 23:32:10 --> Undefined variable $data
+#0 D:\kumo\app\Models\HomeModel.php(626): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Mod...', 626)
+#1 D:\kumo\app\Controllers\Home.php(104): App\Models\HomeModel->applycoupon(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->applycoupon()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-15 23:32:36 --> Undefined variable $value
+#0 D:\kumo\app\Models\HomeModel.php(627): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Mod...', 627)
+#1 D:\kumo\app\Controllers\Home.php(104): App\Models\HomeModel->applycoupon(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->applycoupon()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}

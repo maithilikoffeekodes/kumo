@@ -13,13 +13,13 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('user');
         $builder->select('*');
-        $builder->where(array('id' => $post['id']));
+        $builder->where(array('id' => @$post['id']));
         $query = $builder->get();
         $result = $query->getRowArray();
 
         $pdata = array(
-            'first_name' => $post['fname'],
-            'last_name' => $post['lname'],
+            'name' => $post['fname'] . $post['lname'],
+            // 'last_name' => $post['lname'],
             'email' => $post['email'],
             'password' => $post['password'],
             'mobileno' => $post['mobileno'],
@@ -42,7 +42,7 @@ class HomeModel extends Model
             if ($post['password'] == $post['confirm-password']) {
                 $res = $builder->insert($pdata);
                 if ($res) {
-                    $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+                    $msg = array('st' => 'success', 'msg' => 'Register successfully');
                 } else {
                     $msg = array('st' => 'failed');
                 }
@@ -55,6 +55,7 @@ class HomeModel extends Model
     }
     public function login($post)
     {
+        // print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('user');
         $builder->select('*');
@@ -77,6 +78,40 @@ class HomeModel extends Model
         }
         return $msg;
     }
+    public function logout()
+    {
+        $session = session();
+        $session->remove('uid');
+        return redirect()->to(url('Home/login'));
+    }
+    // public function otp($post)
+    // {
+    //     // print_r($post);exit;
+    //     helper('send_otp');
+    //     if (!empty($post)) {
+
+    //         $randotp = mt_rand(100000, 999999);
+    //         send_otp($randotp, $post);
+    //         $session = session();
+    //         $session->set('otp', $randotp);
+    //        //  echo "<pre>";print_r(session('id')); exit;
+    //         $msg = array("st" => "success", "msg" => "OTP Send Successfully!!!");
+    //     }
+
+    //     return $msg;
+    // }
+    // public function verify($post)
+    // {
+    //     $session = session();
+    //     $verify = $session->get('otp');
+    //     if ($post['otp'] == $verify) {
+    //         $msg = array("st" => "success", "msg" => "OTP Verify Successfully!!!");
+    //     } else {
+    //         $msg = array("st" => "failed", "msg" => "OTP Verify Failed!!!");
+    //     }
+
+    //     return $msg;
+    // }
 
     public function get_randomitem_data()
     {
@@ -183,7 +218,7 @@ class HomeModel extends Model
         $query =  $builder->get();
         $result = $query->getRowArray();
         // echo "<pre>";print_r($result);exit;
-        if(empty($result)){
+        if (empty($result)) {
             $pdata = array(
                 'user_id' =>  session('uid') ? session('uid') : session('guestid'),
                 'product_id' => $post['product_id'],
@@ -191,11 +226,11 @@ class HomeModel extends Model
                 'date' => date('y-m-d'),
                 'price' => $post['price']
             );
-    
+
             if (!empty($result)) {
                 // $pdata['updated_at'] = date('Y-m-d H:i:s');
                 // $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
-    
+
                 $builder->where(array('product_id' => $post['product_id']));
                 $res = $builder->update($pdata);
                 if ($res) {
@@ -206,16 +241,15 @@ class HomeModel extends Model
             } else {
                 $pdata['created_at'] = date('Y-m-d H:i:s');
                 $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
-    
+
                 $res = $builder->insert($pdata);
                 if ($res) {
                     $msg = array('st' => 'success', "msg" => "Item Added to Cart");
                 } else {
                     $msg = array('st' => 'failed', "msg" => "Failed to Cart");
                 }
-        }
-        
-        }else{
+            }
+        } else {
             $msg = array('st' => 'added', "msg" => "Already Added to Cart");
         }
 
@@ -240,12 +274,12 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('cart');
         $qty = $post['qty'];
-        $grand_total = $post['grand_total'];
+        $coupon_discount = $post['coupon_discount'];
 
         for ($i = 0; $i < count($qty); $i++) {
             $pdata = array(
                 'quantity' => $qty[$i],
-                'price' => $grand_total,
+                'coupon_discount' => $coupon_discount,
             );
 
             $builder->where('user_id', session('uid') ? session('uid') : session('guestid'));
@@ -260,7 +294,7 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('cart c');
-        $builder->select('c.id,image,i.name,i.price,c.quantity,c.product_id');
+        $builder->select('c.id,image,i.name,c.price,c.quantity,c.product_id');
         $builder->join('item i', 'i.id=c.product_id');
         $builder->where('c.is_delete', 0);
         $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
@@ -306,7 +340,7 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('cart c');
-        $builder->select('c.id,image,i.name,c.price,c.quantity,c.product_id');
+        $builder->select('c.id,image,i.name,c.price,c.quantity,c.product_id,i.igst,c.coupon_discount');
         $builder->join('item i', 'i.id=c.product_id');
         $builder->where('c.is_delete', 0);
         $builder->where('c.user_id', session('uid') ? session('uid') : session('guestid'));
@@ -327,14 +361,19 @@ class HomeModel extends Model
 
             return $btnquantity;
         });
-
-        $data_table->add('action', function () {
-            $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">';
+        $data_table->add('action', function ($row) {
+            // print_r($row);
+            $btntotal = '<input type="text" class="total text-center" name="sub[]" readonly style="border:none;color:#6F6F6F;">
+            <input type="hidden" class="tax text-center" name="tax[]" value="' . $row->igst . '" style="border:none;color:#6F6F6F;">
+            <input type="hidden" class="coupon_discount text-center" name="coupon_discount[]" id="coupon_discount" value="' . $row->coupon_discount . '" style="border:none;color:#6F6F6F;">';
             return $btntotal;
         })
             ->hide('product_id')
             ->hide('id')
-            ->hide('quantity');
+            ->hide('quantity')
+            ->hide('coupon_discount')
+            ->hide('igst');
+
 
 
         return $data_table->toJSON();
@@ -357,6 +396,7 @@ class HomeModel extends Model
     }
     public function get_data($id)
     {
+        // print_r($id);exit;
         $db = $this->db;
         $builder = $db->table('orders o');
         $builder->select('o.*');
@@ -509,28 +549,28 @@ class HomeModel extends Model
         $builder = $db->table("wishlist");
         $builder->select('*');
         $builder->where('is_delete', 0);
-        $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'),'product_id' => $post['productid']));
+        $builder->where(array('user_id' => session('uid') ? session('uid') : session('guestid'), 'product_id' => $post['productid']));
         $query = $builder->get();
         $result =  $query->getRowArray();
         // print_r($result);exit;
-        if(empty($result)){
+        if (empty($result)) {
             $pdata = array(
                 'user_id' => session('uid') ? session('uid') : session('guestid'),
                 'product_id' => $post['productid'],
             );
             $pdata['created_at'] = date('Y-m-d H:i:s');
             $pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
-    
+
             $res = $builder->insert($pdata);
             if ($res) {
                 $msg = array('st' => 'success', "msg" => "Item Added to wish");
             } else {
                 $msg = array('st' => 'failed', "msg" => "Failed to wish");
             }
-        }else{
+        } else {
             $msg = array('st' => 'added', "msg" => "Already Added Wishlist");
         }
-        
+
         return $msg;
     }
     public function get_wishlist()
@@ -596,7 +636,8 @@ class HomeModel extends Model
         // echo "<pre>"; print_r($relatedproduct);exit;
         return $relatedproduct;
     }
-    public function applycoupon($post){
+    public function applycoupon($post)
+    {
         // print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('coupon');
@@ -604,25 +645,28 @@ class HomeModel extends Model
         $builder->where('coupon_code', $post['coupon']);
         $query = $builder->get();
         $result = $query->getRowArray();
-
-        // if(empty($result)){
-        //     $data = 'Coupon is not valid !!! Please enter valid coupon';
-        // }else{
-            if($post['total'] >= $result['cart_min_value']){
-                if($result['coupon_type'] == 'Rupees'){
+        $msg = '';
+        $data = '';
+        $value = '';
+        if (empty($result)) {
+            $msg = 'Coupon is not found !!! Please enter valid coupon';
+        } else {
+            if ($post['total'] >= $result['cart_min_value']) {
+                if ($result['coupon_type'] == 'Rupees') {
                     $value = $result['coupon_value'];
                     $data = $post['total'] - $value;
-                }else{
-                    $value = ($post['total']*$result['coupon_value'])/100;
+                } else {
+                    $value = ($post['total'] * $result['coupon_value']) / 100;
                     $data = $post['total'] - $value;
                 }
-            }else{
-                $data = 'Grand total must be'.$result['cart_min_value'];
+            } else {
+                $msg = 'Grand total must be ₹' . $result['cart_min_value'];
             }
-        // }
+        }
         // print_r($data);exit;
 
-        $output = array('final_total' => $data ,'coupon_discount' => $value);
+        $output = array('final_total' => $data, 'coupon_discount' => $value, 'msg' => $msg);
+        // print_r($output);exit;
         return $output;
     }
     public function fetch_data($post, $page)
@@ -632,20 +676,20 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('item');
         $builder->select('*');
-        
+
         $minvalue = $post['min_price'];
         $maxvalue = $post['max_price'];
         // $builder->where('is_delete',0);
         $results_per_page = 6;
         $page_first_result = ($page - 1) * $results_per_page;
 
-        if(empty($max_value)){
+        if (empty($max_value)) {
             $builder->where('is_delete', 0);
             $builder->orderBy('price', 'asc');
         }
-        if(!empty($minvalue || $maxvalue)){
+        if (!empty($minvalue || $maxvalue)) {
             $builder->where('is_delete', 0);
-            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");    
+            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");
         }
         if (!empty($post['brand_id'])) {
             $builder->where('brand', $post['brand_id']);
@@ -674,13 +718,13 @@ class HomeModel extends Model
         //    print_r( $number_of_page);exit;
         $builder->select('*');
 
-        if(empty($max_value)){
+        if (empty($max_value)) {
             $builder->where('is_delete', 0);
             $builder->orderBy('price', 'asc');
         }
-        if(!empty($minvalue || $maxvalue)){
+        if (!empty($minvalue || $maxvalue)) {
             $builder->where('is_delete', 0);
-            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");    
+            $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");
         }
 
         if (!empty($post['brand_id'])) {
@@ -771,7 +815,7 @@ class HomeModel extends Model
                             <div class="shop_thumb position-relative">
                                 <a class="card-img-top d-block overflow-hidden" href="' . url('Home/productdetail/' . @$row['id']) . '"><img class="card-img-top" src="' . @$row['image'] . '" alt="..." style="height: 350px ;width: 280px;"></a>
                                 <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center" style="width:280px;">
-                                    <div class="edlio"><a class="text-white fs-sm ft-medium cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1" ></i>Add to cart</a></div>
+                                    <div class="edlio"><a class="text-white fs-sm ft-medium cartbtn" id="cartbtn" data-product_id="' . @$row['id'] . '" data-price="' . @$row['listedprice'] . '" data-quantity="1"><i class="lni lni-shopping-basket mr-1" ></i>Add to cart</a></div>
                                 </div>
                             </div>
                         </div>
@@ -810,35 +854,85 @@ class HomeModel extends Model
         }
         return $result;
     }
-    public function payment_data($post)
+    public function insert_edit_address($post)
     {
-        // echo "<pre>";
-        // print_r($post);
-        // exit;
-        // if (!empty($post['add2'])) {
-        //     $ship_id = $post['id'];
-        //     $default_add = 0;
-        // } else {
 
-        //     $ship_id = 0;
-        //     $default_add = session('id');
-        // }
         $db = $this->db;
         $builder = $db->table('shipping_address');
+        $builder->select('*');
+        $builder->where('id', @$post['id']);
+        $builder->where('is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getResultArray();
+        // print_r($post);exit;
         $adata = array(
             'fname' => $post['fname'],
             'lname' => $post['lname'],
             'user_id' => session('uid') ? session('uid') : session('guestid'),
             'email' => $post['email'],
             'mobileno' => $post['mobileno'],
-            'address1' => $post['address'],
+            'address' => $post['address'],
             'state' => $post['state'],
             'city' => $post['city'],
             'pincode' => $post['pincode'],
-            // 'type' => $post['address_type']
+            'type' => $post['address_type']
         );
-        $result = $builder->insert($adata);
-        $ship_id = $db->insertID();
+        if (!empty($result)) {
+            // print_r($result);exit;
+            $builder->where('id', $post['id']);
+            $res = $builder->update($adata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Update successfully');
+            } else {
+                $msg = array('st' => 'failed', 'msg' => 'Update failed');
+            }
+        } else {
+            $res = $builder->insert($adata);
+            if ($res) {
+                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            } else {
+                $msg = array('st' => 'failed');
+            }
+        }
+        return $msg;
+    }
+    public function get_address_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('user u');
+        $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+        $builder->join('cities c', 'c.id=u.city');
+        $builder->join('states s', 's.id=u.state');
+        $builder->where('u.id', session('uid'));
+        $builder->where('u.is_delete', 0);
+        $query = $builder->get();
+        $result1 = $query->getResultArray();
+
+        $builder = $db->table('shipping_address a');
+        $builder->select('a.*,s.sname as state_name,c.cname as city_name,a.fname as name');
+        $builder->join('cities c', 'c.id=a.city');
+        $builder->join('states s', 's.id=a.state');
+        $builder->where('a.user_id', session('uid'));
+        $builder->where('a.is_delete', 0);
+        $query = $builder->get();
+        $result2 = $query->getResultArray();
+        $result = array_merge($result1, $result2);
+        // echo "<pre>";print_r($result);exit;
+        return $result;
+    }
+    public function payment_data($post)
+    {
+        // echo "<pre>";
+        // print_r($post);
+        // exit;
+        if (!empty($post['add2'])) {
+            $ship_id = $post['id'];
+            $default_add = 0;
+        } else {
+
+            $ship_id = 0;
+            $default_add = session('uid');
+        }
 
         $db = $this->db;
         $builder = $db->table('orders');
@@ -846,7 +940,7 @@ class HomeModel extends Model
             'user_id' => session('uid') ? session('uid') : session('guestid'),
             'total_payment' => $post['grand_total'],
             'ship_id' => $ship_id,
-            // 'default_add' => $default_add,
+            'default_add' => $default_add,
             'payment_type' => 'Razorpay',
             'is_login' => session('id') ? 0 : 1
         );
@@ -899,9 +993,12 @@ class HomeModel extends Model
         $builder->insert($data);
         $response = "Redirecting to Payment Gateway ... Please wait !!! Don't press Back or Refresh";
         $shipingDetails = array(
-            'email' => $post['email'],
-            'contact' => $post['mobileno'],
-            'username' => $post['fname']
+            'email' => 'bhushansalunkhe20@gmail.com',
+            'contact' => '9595888075',
+            'username' => 'bhushan'
+            // 'email' => $post['email'],
+            // 'contact' => $post['mobileno'],
+            // 'username' => $post['fname']
         );
         helper('rozorpay');
         $payment = SendRazor($TransactionAmount, $txnid, $shipingDetails);
@@ -921,13 +1018,13 @@ class HomeModel extends Model
     // echo "<pre>";print_r($data);exit;
     public function get_max_val()
     {
-      $db = $this->db;
-      $builder = $db->table('item');
-      $builder->select('MAX(price) as max_value');
-      $builder->where('is_delete', '0');
-      $query = $builder->get();
-      $max_value = $query->getRow();
-      return $max_value->max_value;
+        $db = $this->db;
+        $builder = $db->table('item');
+        $builder->select('MAX(price) as max_value');
+        $builder->where('is_delete', '0');
+        $query = $builder->get();
+        $max_value = $query->getRow();
+        return $max_value->max_value;
     }
     public function insert_edit_subscribe($post)
     {

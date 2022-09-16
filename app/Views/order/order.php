@@ -5,10 +5,10 @@
 
 <div class="page-header">
     <div>
-        <h2 class="main-content-title tx-24 mg-b-5">order</h2>
+        <h2 class="main-content-title tx-24 mg-b-5">Order</h2>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">order Detail</a></li>
-            <li class="breadcrumb-item active" aria-current="page">order Details</li>
+            <li class="breadcrumb-item"><a href="#">Order Detail</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Order Details</li>
         </ol>
     </div>
 </div>
