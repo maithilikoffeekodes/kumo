@@ -541,8 +541,8 @@
 			},
 			success: function(response) {
 				if (response.st == 'success') {
-
 					toastr.success(response.msg);
+					window.location.reload();
 					var cart_count = parseInt($(".cart_count").text());
 					$(".cart_count").text(cart_count + 1);
 				}
@@ -579,6 +579,8 @@
 			success: function(response) {
 				if (response.st == 'success') {
 					toastr.success(response.msg);
+					window.location.reload();
+
 					wish.removeClass("wish");
 					wish.addClass("removeWish")
 					$('#cartbtn').prop('disabled', false);

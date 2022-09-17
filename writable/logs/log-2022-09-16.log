@@ -2395,3 +2395,57 @@ CRITICAL - 2022-09-16 07:38:38 --> Invalid file: myorders.php
 #6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #8 {main}
+CRITICAL - 2022-09-16 23:32:17 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(918): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 918)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-16 23:32:22 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(918): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 918)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-16 23:33:30 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(918): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 918)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-16 23:34:40 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(918): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 918)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-16 23:35:26 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(918): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 918)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-16 23:38:13 --> Undefined array key "id"
+#0 D:\kumo\app\Models\HomeModel.php(919): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 919)
+#1 D:\kumo\app\Controllers\Home.php(137): App\Models\HomeModel->insert_edit_address(Array)
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->shipping_address()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}

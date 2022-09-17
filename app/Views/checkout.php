@@ -40,26 +40,26 @@
                     </div>
                     <?php //echo "<pre>";print_r($address);exit;
                     ?>
-                    <div class="row border shadow p-2 mb-5 bg-white rounded">
+                    <div class="row border shadow p-2 mb-5 bg-white rounded" id="add" data-id="address" data-module="Home">
                         <?php foreach (@$address as $row) { ?>
                             <div class="address-info pt-3 border-bottom col-lg-12 ">
                                 <div style="float:left">
                                     <div class="row mb-4">
                                         <div class="form-check col-12">
-                                            <input class="form-check-input" type="radio"  name="add2" id="add2" value="<?= @$row['type'] ?>" checked>
-                                            
+                                            <input class="form-check-input" type="radio" name="add2" id="add2" value="<?= @$row['type'] ?>" checked>
+
                                             <label class="form-check-label" for="">
                                                 <?= $row['name'] ?>
                                             </label>
                                             <input type="hidden" value="<?= @$row['id'] ?>" name="id">
-                                        <input type="hidden" value="<?= @$row['type'] ?>" name="type" id="type">
+                                            <input type="hidden" value="<?= @$row['type'] ?>" name="type" id="type">
                                         </div>
                                         <div class="form-check col-12">
                                             <label class="" for="">
                                                 Address . <?= @$row['address']; ?>
                                                 <p>Mobile No. +91 <?= @$row['mobileno']; ?><br>
-                                                <?= @$row['state_name']?> , <?= @$row['city_name']?>
-                                            </p>
+                                                    <?= @$row['state_name'] ?> , <?= @$row['city_name'] ?>
+                                                </p>
                                             </label>
                                         </div>
                                     </div>
@@ -68,19 +68,19 @@
                                 <div class="form-group" style="float:right;">
                                     <div class="sr-btn-wrap text-center">
                                         <span class="btn btn-block btn-dark mb-3">
-                                            <?php if (empty($row['type'])) {
+                                            <?php if (empty($row['address_type'])) {
                                             ?>
                                                 Home
                                             <?php } else {
                                             ?>
-                                                <?= @$row['type']
+                                                <?= @$row['address_type']
                                                 ?>
                                             <?php }
                                             ?>
                                         </span>
                                     </div>
                                     <div class="remove-btn pt-2">
-                                        <?php if (!empty($row['type'])) {
+                                        <?php if (!empty($row['address_type'])) {
                                         ?>
                                             <button class="btn mb-3 text-info edit" type="button" onclick="edit_address(this)" _data data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['type'] ?>">Edit</button> |
                                             <button type="button" class="btn mb-3 text-danger remove" onclick="editable_remove(this)" data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['id'] ?>">Remove</button>
@@ -107,6 +107,8 @@
                     <div class="form-group">
                         <label class="text-dark">First Name *</label>
                         <input type="text" class="form-control" name="fname" placeholder="First Name" />
+                        <input type="hidden" id="id" name="id" value="">
+
                     </div>
                 </div>
 
@@ -161,9 +163,7 @@
                     <div class="form-group">
                         <label>States<span class="tx-danger">*</span></label>
                         <select name="state" id="state" class="form-control">
-                            <?php if (isset($data['state'])) { ?>
-                                <option value="<?= @$data['state'] ?>" selected><?= @$data['state_name'] ?></option>
-                            <?php } ?>
+                            <option value="<?= @$row['state'] ?>" selected><?= @$row['state_name'] ?></option>
                         </select>
                     </div>
                 </div>
@@ -172,9 +172,7 @@
                     <div class="form-group">
                         <label>City<span class="tx-danger">*</span></label>
                         <select name="city" id="city" class="form-control">
-                            <?php if (isset($data['city'])) { ?>
-                                <option value="<?= @$data['city'] ?>" selected><?= @$data['city_name'] ?></option>
-                            <?php } ?>
+                            <option value="<?= @$row['city'] ?>" selected><?= @$row['city_name'] ?></option>
                         </select>
                     </div>
                 </div>
@@ -234,10 +232,10 @@
                     <span>Subtotal</span> <span class="ml-auto text-dark ft-medium sub_total_amt">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
-                    <span>Tax</span> <span class="ml-auto text-dark ft-medium tax">0</span>
+                    <span>Tax</span> (<span class="gst">%</span>) <span class="ml-auto text-dark ft-medium tax">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
-                    <span>Delivery Charges</span> <span class="ml-auto text-dark ft-medium">Free</span>
+                    <span>Delivery Charges</span> <span class="ml-auto text-dark ft-medium">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular" id="discount">
                     <span>Coupons Discount</span> <span class="ml-auto text-dark ft-medium coupon-discount">0</span>
@@ -327,8 +325,6 @@
     });
     $('#address_btn').click(function() {
         $('.shipping_address').on('submit', function(e) {
-            alert("abc");
-            return;
             $('#address_btn').prop('disabled', true);
             $('.address_btn').attr("disabled", true);
             $('.error-msg').html('');
@@ -343,7 +339,6 @@
                 success: function(response) {
 
                     if (response.st == "success") {
-                        
                         location.reload();
                         $('#address_btn').prop('disabled', true);
 
@@ -363,6 +358,53 @@
         });
 
     });
+
+    function editable_remove(data_edit) {
+        var type = 'Remove';
+        var data_val = $(data_edit).data('val');
+        var pkno = $(data_edit).data('pk');
+        swal.fire({
+            title: "Are you sure Remove  ?",
+            text: "You will not be able to recover this Data!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel plx!",
+            //closeOnConfirm: false,
+            //closeOnCancel: false
+        }).then((result) => {
+            // function(isConfirm) {
+            if (result.value) {
+                _data = $.param({
+                    pk: pkno
+                }) + '&' + $.param({
+                    val: data_val
+                }) + '&' + $.param({
+                    type: type
+                }) + '&' + $.param({
+                    method: $("#add").data('id')
+                });
+
+                if (data_val != undefined && data_val != '') {
+                    $.post(PATH + "/" + $("#add").data('module') + "/Action/Update", _data, function(
+                        data) {
+                        console.log($.post);
+                        if (data.st == 'success') {
+                            datatable_load('');
+                            swal.fire("Deleted!", "Your Data has been deleted.", "success");
+                            location.reload();
+                        }
+
+                    });
+                }
+
+            } else {
+                swal("Cancelled", "Your Data is safe :)", "error");
+            }
+            // })}
+        });
+    }
 
     $('.final_payment').on('submit', function(e) {
         // console.log("abc");
@@ -489,37 +531,35 @@
         var sub_tot = $(".sub_total_amt").text(total);
         $(".total_amt").text($(".sub_total_amt").text());
         var grand_tot = $(".sub_total_amt").text();
+    
 
-        var tax_amt = $('.tax').text(tax);
+        var x = parseInt($('.sub_total_amt').text());
+        var cal = x * tax / 100;
+        var gst = x + cal;
+        var tax_amt = $('.tax').text(cal);
+        $('.gst').text(tax + '%');
+
+        // var state = $('select[name="state"]').val();
+        // console.log(state);
+        // if (state === '12') {
+        //     $('.gst').text('cgst,sgst');
+        //     $('.tax').text()
+        // } else {
+        //     $('.gst').text('igst');
+        // }
 
         $('.coupon-discount').text(discount);
-        $(".total_amt").text($(".sub_total_amt").text() - $('.coupon-discount').text());
-        $("#grand_total").val($(".sub_total_amt").text() - $('.coupon-discount').text());
+        var grand_total = gst - $('.coupon-discount').text();
+        console.log(grand_total);
+        $(".total_amt").text(grand_total);
+        $("#grand_total").val(grand_total);
     }
 
     // function discount() {
     //     var x = document.getElementById("coupon_discount").value;
     //     console.log(x);
     // }
-    $('#state').on('select2:select', function(e) {
-        var data = e.params.data;
-        var id = $('#state').val(data.id);
-        // var val = $('#account_state').val(data.state);
-        var state = $('#account_state').val();
-        $('.ttax').show();
 
-        if (state === '12') {
-            $('.tax').text('cgst,sgst');
-            $('.tax').val('cgst,sgst');
-            $('.igsttax').hide();
-            $('.cgsttax').show();
-        } else {
-            $('.tax').text('igst');
-            $('.tax').val('igst');
-            $('.cgsttax').hide();
-            $('.igsttax').show();
-        }
-    });
 
     function datatable_load(filter_val) {
         // console.log("abc");return;
@@ -561,16 +601,17 @@
             val: id
         });
         console.log(id);
-        $.post(PATH + "Home/getaddress", _data, function(response) {
+        $.post(PATH + "/Home/getaddress", _data, function(response) {
             console.log(response);
             $(".collapse").slideToggle();
             $('input[name = "id"]').val(response.id);
-            $('input[name = "name"]').val(response.name);
+            $('input[name = "fname"]').val(response.fname);
+            $('input[name = "lname"]').val(response.lname);
             $('input[name = "email"]').val(response.email);
             $('input[name = "mobileno"]').val(response.mobileno);
             $('input[name = "address"]').val(response.address);
-            $('select[name = "city"]').val(response.city_name);
-            $('select[name = "state"]').val(response.state_name);
+            $('select[name = "city"]').val(response.city);
+            $('select[name = "state"]').val(response.state);
             $('input[name = "pincode"]').val(response.pincode);
             $('input[name = "address_type"]').val(response.address_type);
         });

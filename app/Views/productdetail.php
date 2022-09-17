@@ -1,6 +1,12 @@
 <?= $this->extend(THEME . 'template') ?>
 
 <?= $this->section('content') ?>
+<style>
+	.btn_love:hover {
+		background-color: black;
+		color: white;
+	}
+</style>
 <?php //echo"<pre>";print_r($product);exit;
 ?>
 <!-- ======================= Product Detail ======================== -->
@@ -78,12 +84,12 @@
                         <div class="col-12 col-lg">
                             <!-- Submit -->
 
-                            <div class="col-4">
-                                <!-- Wishlist -->
+                            <!-- <div class="col-4">
+                                <!-- Wishlist -
                                 <button type="submit" class="btn custom-height btn-default btn-block mb-2 text-dark wish" id="wish" data-product_id="<?php echo @$product['id'] ?> " data-price="<?= @$row['price'] ?>" data-quantity="1" data-toggle="button">
                                     <i class="lni lni-heart mr-2"></i>Wishlist
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -265,7 +271,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="sec_title position-relative text-center">
                     <h2 class="off_title">Similar Products</h2>
-                    <h3 class="ft-bold pt-3">Matching Producta</h3>
+                    <h3 class="ft-bold pt-3">Matching Product</h3>
                 </div>
             </div>
         </div>
@@ -273,35 +279,36 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="slide_items">
-                    <? //php foreach(@$related as $row) { 
+                    <?php foreach (@$related_product as $row) {
                     ?>
-                    <!-- single Item -->
-                    <div class="single_itesm">
-                        <div class="product_grid card b-0 mb-0">
-                            <!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
-                            <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
-                            <div class="card-body p-0">
-                                <div class="shop_thumb position-relative">
-                                    <a class="card-img-top d-block overflow-hidden" href="<? //= url('Home/productdetail/'.@$row['id'])
-                                                                                            ?>"><img class="card-img-top" src="<? //= @$row['image'] 
-                                                                                                                                                                            ?>" alt="..."></a>
-                                    <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                        <div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
+                        <!-- single Item -->
+                        <div class="single_itesm">
+                            <div class="product_grid card b-0 mb-0">
+                                <!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
+                                <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
+                                <div class="card-body p-0">
+                                    <div class="shop_thumb position-relative">
+                                        <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . @$row['id'])
+                                                                                                ?>"><img class="card-img-top" src="<?= @$row['image']
+                                                                                                                                ?>" alt="..." style="height: 350px ;width: 272px;"></a>
+                                        <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
+                                            <div class="edlio"><a href="#"  class="text-white fs-sm ft-medium cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id']?>" data-price="<?= @$row['price'] ?>" data-quantity="1"><i class="lni lni-shopping-basket mr-2"></i>Add to Cart</a></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
-                                <div class="text-left">
-                                    <div class="text-center">
-                                        <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="<? //= url('Home/productdetail/'.@$row['id'])
-                                                                                            ?>">Half Running Set</a></h5>
-                                        <div class="elis_rty"><span class="ft-bold fs-md text-dark">$119.00</span></div>
+                                <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
+                                    <div class="text-left">
+                                        <div class="text-center">
+                                            <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="<?= url('Home/productdetail/'.@$row['id'])
+                                                                                                ?>"><?= $row['name']?></a></h5>
+                                                                                                
+                                            <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹<?= $row['listedprice'] ?></span><span class="text-secondary p-2 p-2"><del>₹<?= $row['price'] ?></del></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $row['discount'] ?> % off</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <? //php } 
+                    <?php }
                     ?>
                 </div>
             </div>
@@ -337,8 +344,9 @@
                 },
                 success: function(response) {
                     if (response.st == 'success') {
-
                         toastr.success(response.msg);
+                        window.location.reload();
+
                         var cart_count = parseInt($(".cart_count").text());
                         $(".cart_count").text(cart_count + 1);
                     }
@@ -373,6 +381,8 @@
                 success: function(response) {
                     if (response.st == 'success') {
                         toastr.success(response.msg);
+                        window.location.reload();
+
                         wish.removeClass("wish");
                         wish.addClass("removeWish")
                         $('#cartbtn').prop('disabled', false);

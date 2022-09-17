@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\HomeModel;
 use App\Models\admin\GeneralModel;
+use Dompdf\Dompdf;
 
 class Home extends BaseController
 {
@@ -81,8 +82,8 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_data($post);
             return $this->response->setJSON($msg);
         }
-        if($id !=''){
-        $data['data'] = $this->model->get_register_data('data', $id);
+        if ($id != '') {
+            $data['data'] = $this->model->get_register_data('data', $id);
         }
         // print_r($data);exit;
         return view('register');
@@ -91,8 +92,7 @@ class Home extends BaseController
     {
         $data['product'] = $this->model->get_product_data($id);
         $data['review'] = $this->model->get_review($id);
-        // $data['related'] = $this->model->get_related_product_data($data['product']['category']);
-        // echo "<pre>";print_r($data);exit;
+        $data['related_product'] = $this->model->get_related_product($id);
         return view('productdetail', $data);
     }
     public function shoplist()
@@ -100,7 +100,7 @@ class Home extends BaseController
         $data['rand_item'] = $this->model->get_randomitem_data();
         $data['max_value'] = $this->model->get_max_val();
 
-        return view('shoplist',$data);
+        return view('shoplist', $data);
     }
     public function faq()
     {
@@ -130,7 +130,8 @@ class Home extends BaseController
     {
         return view('coupon');
     }
-    public function shipping_address(){
+    public function shipping_address()
+    {
         $post = $this->request->getPost();
         if (!empty($post)) {
             $msg = $this->model->insert_edit_address($post);
@@ -177,7 +178,7 @@ class Home extends BaseController
         }
         $data['address'] = $this->model->get_address_data();
 
-        return view('checkout',$data);
+        return view('checkout', $data);
     }
     public function wishlist()
     {
@@ -199,11 +200,12 @@ class Home extends BaseController
             return $this->response->setJSON($msg);
         }
     }
-    public function fetch_data($page = 1){
+    public function fetch_data($page = 1)
+    {
 
         $post = $this->request->getPost();
         // print_r($page);
-        $output = $this->model->fetch_data($post,$page);
+        $output = $this->model->fetch_data($post, $page);
         // echo "<pre>";print_r($output);exit;
         return $this->response->setJSON($output);
     }
@@ -218,9 +220,27 @@ class Home extends BaseController
     }
     public function orderview($id = '')
     {
-        $data['order'] = $this->model->get_data($id);
-
+        // print_r($id);exit;
+        $data['order_detail'] = $this->model->get_order_details($id);
+        // echo"<pre>";print_r($data);exit;
         return view('order/orderview', $data);
+    }
+    public function invoice(){
+        $dompdf = new Dompdf();
+        $html =  view('Hello');
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A3', 'portrait');
+        $dompdf->render();  
+    }
+    public function getaddress()
+    {
+
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->getaddress($post);
+            // print_r($msg);exit;
+            return $this->response->setJSON($msg);
+        }
     }
     public function Getdata($method = '')
     {

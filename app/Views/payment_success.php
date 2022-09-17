@@ -3,25 +3,24 @@
 <?= $this->section('content') ?>
 
 <!-- Page -->
-<div class="page main-signin-wrapper">
-    <div class="be-content">
-    <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
-                <div class="pay-sucess">
-                    <div class="pd">
-                    <div class="image-section">
-                        <img src="<?= ASSETS; ?>img/success.png" alt="">
-                    </div>
-                    <h1 class="text-success">Successful Payment </h1>
-                    <h6>your order has been completed successfully. </h6>
-                    <p><b>Transaction Id: </b> <?=$txn;?> </p>
-                   
-                </div>
-                </div>
-                </div>
+<section class="middle">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
+
+                <!-- Icon -->
+                <div class="p-4 d-inline-flex align-items-center justify-content-center circle bg-light-success text-success mx-auto mb-4"><i class="lni lni-heart-filled fs-lg"></i></div>
+                <!-- Heading -->
+                <h2 class="mb-2 ft-bold">Your Order is Completed!</h2>
+                <!-- Text -->
+                <p class="ft-regular fs-md mb-5">Your order <span class="text-body text-dark"><?= $txn; ?></span> has been completed. Your order details are shown for your personal accont.</p>
+                <!-- Button -->
+                <a class="btn btn-dark" href="#!">Track Your Orders</a>
             </div>
         </div>
+
     </div>
-</div>
+</section>
+
 <?= $this->endSection() ?>

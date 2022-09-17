@@ -48,11 +48,7 @@
 		<!-- Top header  -->
 		<!-- ============================================================== -->
 		<!-- Top Header -->
-		<div class="py-2 br-bottom">
-			<div class="container">
-				<?= $this->include(THEME . 'block/topheader') ?>
-			</div>
-		</div>
+		
 
 		<?= $this->include(THEME . 'block/header') ?>
 

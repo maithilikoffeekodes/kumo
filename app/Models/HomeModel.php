@@ -380,43 +380,56 @@ class HomeModel extends Model
     }
     public function get_order_data()
     {
-      $db = $this->db;
-      $builder= $db->table('orders o');
-      $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
-      $builder->join('order_item oi', 'o.id = oi.order_id','left');
-      $builder->join('item i', 'i.id = oi.product_id','left');
-      $builder->where('o.user_id',session('uid') ? session('uid') : session('guestid'));
-      $query = $builder->get();
-      $order = $query->getResultArray();
-    //   echo "<pre>"; print_r($order);exit;
-      return $order;
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
+        $builder->join('item i', 'i.id = oi.product_id', 'left');
+        $builder->where('o.user_id', session('uid') ? session('uid') : session('guestid'));
+        $query = $builder->get();
+        $order = $query->getResultArray();
+        //   echo "<pre>"; print_r($order);exit;
+        return $order;
     }
-  
+
     public function get_order_details($id)
     {
-      // print_r($id);exit;
-      $db = $this->db;
-      $builder= $db->table('orders o');
-      $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
-      $builder->join('order_item oi', 'o.id = oi.order_id','left');
-      $builder->join('item i', 'i.id = oi.product_id');
-      $builder->where('o.id',$id);
-      $query = $builder->get();
-      $order_detail1 = $query->getrowArray();
-      // echo"<pre>";print_r($order_detail1);exit;
-      $order_detail1['item_name'] = $order_detail1['name'];
-      // $order_detail1['order_date'] = $order_detail1['created_at'];
-      if($order_detail1['ship_id'] != 0)
-      {
-        $gmodel = new GeneralModel();
-        $order_detail2  = $gmodel->get_data_table('shipping_address',array('id'=>$order_detail1['ship_id']),'*');
-      }
-      else{
-        $gmodel = new GeneralModel();
-        $order_detail2 = $gmodel->get_data_table('users',array('id'=>$order_detail1['default_add']),'*');
-      }
-      $order_detail = array_merge($order_detail1,$order_detail2);
-      return $order_detail;
+        // print_r($id);exit;
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
+        $builder->join('item i', 'i.id = oi.product_id');
+        $builder->where('o.id', $id);
+        $query = $builder->get();
+        $order_detail1 = $query->getrowArray();
+        // echo"<pre>";print_r($order_detail1);exit;
+
+        // $order_detail1['order_date'] = $order_detail1['created_at'];
+        if ($order_detail1['default_add'] != 0) {
+            $db = $this->db;
+            $builder = $db->table('user u');
+            $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=u.city');
+            $builder->join('states s', 's.id=u.state');
+            $builder->where('u.id', $order_detail1['default_add']);
+            $builder->where('u.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        } else {
+            $db = $this->db;
+            $builder = $db->table('shipping_address a');
+            $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=a.city');
+            $builder->join('states s', 's.id=a.state');
+            $builder->where('a.id', $order_detail1['ship_id']);
+            $builder->where('a.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        }
+        // echo"<pre>";print_r($order_detail2);exit;
+        $order_detail = array_merge($order_detail1, $order_detail2);
+        return $order_detail;
     }
     // public function get_order_data()
     // {
@@ -489,6 +502,22 @@ class HomeModel extends Model
             return $img;
         });
         return $data_table->toJSON();
+    }
+    public function getaddress($post)
+    {
+        // echo"<pre>";print_r($post);exit;
+
+        $db =  $this->db;
+        $builder = $db->table('shipping_address a');
+        $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+        $builder->join('cities c', 'c.id=a.city');
+        $builder->join('states s', 's.id=a.state');
+        $builder->where('a.id', $post['val']);
+        $builder->where('a.is_delete', 0);
+        $query = $builder->get();
+        $result = $query->getRowArray();
+        // echo"<pre>";print_r($result);exit;
+        return $result;
     }
     public function get_states($post)
     {
@@ -675,6 +704,24 @@ class HomeModel extends Model
         // echo "<pre>"; print_r($relatedproduct);exit;
         return $relatedproduct;
     }
+    public function get_related_product($id)
+    {
+        // print_r($id);exit;
+
+        $db = $this->db;
+        $builder = $db->table('item');
+        $builder->select('*');
+        $builder->orderBy('id', 'RANDOM');
+        $builder->where('brand', $id);
+        // $builder->limit(4);
+        $query = $builder->get();
+        $related_product = $query->getResultArray();
+        // echo "<pre>";
+        // print_r($related_product);
+        // exit;
+        return $related_product;
+    }
+
     public function applycoupon($post)
     {
         // print_r($post);exit;
@@ -890,20 +937,28 @@ class HomeModel extends Model
                 $result = $builder->update(array('is_delete' => '1'));
                 $result = array('st' => 'success');
             }
+            if ($post['method'] == 'address') {
+                $builder = $db->table('shipping_address');
+                $builder->where("id", @$post['pk']);
+                $result = $builder->update(array('is_delete' => '1'));
+                $result = array('st' => 'success');
+            }
         }
         return $result;
     }
     public function insert_edit_address($post)
     {
+        // print_r($post);exit;
 
         $db = $this->db;
         $builder = $db->table('shipping_address');
         $builder->select('*');
-        $builder->where('id', @$post['id']);
+        $builder->where('id', $post['id']);
         $builder->where('is_delete', 0);
         $query = $builder->get();
         $result = $query->getResultArray();
-        // print_r($post);exit;
+        // print_r($result);exit;
+
         $adata = array(
             'fname' => $post['fname'],
             'lname' => $post['lname'],
@@ -914,7 +969,7 @@ class HomeModel extends Model
             'state' => $post['state'],
             'city' => $post['city'],
             'pincode' => $post['pincode'],
-            'type' => $post['address_type']
+            'address_type' => $post['address_type']
         );
         if (!empty($result)) {
             // print_r($result);exit;

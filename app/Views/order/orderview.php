@@ -1,105 +1,108 @@
 <?= $this->extend(THEME . 'template') ?>
 <?= $this->section('content') ?>
-<div class="page-header">
-    <div>
-        <h2 class="main-content-title tx-24 mg-b-5">View Your Order</h2>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">User</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Your Order Details</li>
-        </ol>
-    </div>
-</div>
+<section class="middle">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="text-center d-block mb-5">
+                    <h2>Order View</h2>
+                </div>
+            </div>
+        </div>
 
-<!-- End Page Header -->
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card custom-card">
-            <div class="card-header card-header-divider">
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-fw-widget mb-0">
-                            <tr>
-                                <th>User Name</th>
-                                <td><?= @$order['name'] ?></td>
-                                <th>Email</th>
-                                <td><?= @$order['email'] ?></td>
-                            </tr>
-                            <tr>
-                                <th>Contact Number</th>
-                                <td><?= @$order['mobileno'] ?></td>
-                                <th>Address</th>
-                                <td>
-                                    <? //= @$order['address']  
-                                    ?>
-                                    <? //= (!empty(@$order['city_name']) ? ',' . $order['city_name'] : '') 
-                                    ?>
-                                    <? //= (!empty(@$order['state_name']) ? ',' . $order['state_name'] : '') 
-                                    ?>
-                                    <? //= (!empty(@$order['pincode']) ? ',' . $order['pincode'] : '') 
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Transaction</th>
-                                <td><?= @$order['transaction_id'] ?></td>
-                                <th>Payment Type</th>
-                                <td><?php if (@$order['payment_type'] == 'Razorpay') {
-                                        echo "Online Payment";
-                                    } ?>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="admin/Home" data-filter_data="<?= @$order['id'] ?>">
-                            <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
-                            <thead>
-                                <tr>
-                                    <th>Image</th>
-                                    <th>Products</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                        <div class="col-lg-6 mt-3" style="float:right;">
-                            <table class="table table-bordered table-fw-widget mb-0">
-                                <tr>
+        <!-- End Page Header -->
 
-                                    <th>Total Amount</th>
-                                    <td>
-                                        <h5 class="sub_total_amt">&#8377 <?= @$order['total_payment'] ?> </h5>
-                                    </td>
-                                </tr>
-                                <tr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card custom-card">
+                    <div class="card-header card-header-divider">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-borderless table-hover text-left mb-0">
+                                    <tr>
+                                        <th>User Name</th>
+                                        <td><?= @$order_detail['name'] ?></td>
+                                        <th>Email</th>
+                                        <td><?= @$order_detail['email'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contact Number</th>
+                                        <td><?= @$order_detail['mobileno'] ?></td>
+                                        <th>Address</th>
+                                        <td>
+                                            <?= @$order_detail['address']
+                                            ?>
+                                            <?= (!empty(@$order_detail['city_name']) ? ',' . $order_detail['city_name'] : '')
+                                            ?>
+                                            <?= (!empty(@$order_detail['state_name']) ? ',' . $order_detail['state_name'] : '')
+                                            ?>
+                                            <?= (!empty(@$order_detail['pincode']) ? ',' . $order_detail['pincode'] : '')
+                                            ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Transaction</th>
+                                        <td><?= @$order_detail['transaction_id'] ?></td>
+                                        <th>Payment Type</th>
+                                        <td><?php if (@$order_detail['payment_type'] == 'Razorpay') {
+                                                echo "Online Payment";
+                                            } ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="admin/Home" data-filter_data="<?= @$order_detail['id'] ?>">
+                                    <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Products</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                <div class="col-lg-6 mt-3" style="float:right;">
+                                    <table class="table table-bordered table-fw-widget mb-0">
+                                        <tr>
 
-                                    <th>Discount</th>
-                                    <td>
-                                        <h5>&#8377 0 </h5>
-                                    </td>
-                                </tr>
-                                <tr>
+                                            <th>Total Amount</th>
+                                            <td class="sub_total_amt">
+                                                &#8377 <?= @$order_detail['total_payment'] ?> 
+                                            </td>
+                                        </tr>
+                                        <tr>
 
-                                    <th>
-                                        <h5>Grand Total</h5>
-                                    </th>
-                                    <td>
-                                        <h5 class="">&#8377 <?= @$order['total_payment'] ?> </h5>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-lg-6 mt-3" style="float:left;">
-                        <a href="<?= url('admin/Home/invoice/') ?>" download target="_blank" class=" btn btn-danger">Invoice Pdf</a>
+                                            <th>Discount</th>
+                                            <td>
+                                                &#8377 0 
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+
+                                            <th>Grand Total</th>
+
+                                            <td>
+                                                &#8377 <?= @$order_detail['total_payment'] ?> 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-lg-6 mt-3" style="float:left;">
+                                    <a href="<?= url('Home/invoice/'.@$order_detail['order_id']) ?>" download target="_blank" class=" btn btn-danger">Invoice Pdf</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
