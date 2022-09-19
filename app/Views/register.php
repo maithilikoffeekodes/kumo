@@ -27,35 +27,35 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>First Name<span class="text-danger"> * </span></label>
-                                <input type="text" class="form-control" placeholder="Enter First Name" name="fname" required>
+                                <input type="text" class="form-control" placeholder="Enter First Name" name="fname" id="inputName" value="<?= @$data['fname']; ?>" required>
                                 <input type="hidden" value="<?= @$data['id']; ?>" name="id" id="id">
 
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Last Name<span class="text-danger"> * </span></label>
-                                <input type="text" class="form-control" placeholder="Enter Last Name" name="lname" required>
+                                <input type="text" class="form-control" placeholder="Enter Last Name" name="lname" id="inputName" value="<?= @$data['lname']; ?>" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Email <span class="text-danger"> * </span></label>
-                                <input type="email" class="form-control" placeholder="Enter Email" name="email" required>
+                                <input type="email" class="form-control" placeholder="Enter Email" name="email" id="inputName" value="<?= @$data['email']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>MobileNo <span class="text-danger"> * </span></label>
-                                <input type="number" class="form-control" placeholder="Enter MolbileNo" name="mobileno" required>
+                                <input type="number" class="form-control" placeholder="Enter MolbileNo" name="mobileno" id="inputName" value="<?= @$data['mobileno']; ?>" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Address <span class="text-danger"> * </span></label>
-                            <textarea class="form-control" name="address" id="" cols="30" rows="10" placeholder="Enter Address"></textarea>
+                            <textarea class="form-control" name="address" id="" cols="30" rows="10" id="inputName" placeholder="Enter Address"><?= @$data['address']; ?></textarea>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-4">
                                 <label>States<span class="text-danger">*</span></label>
                                 <select name="state" id="state" class="form-control" required>
                                     <?php if (isset($data['state'])) { ?>
-                                        <option value="<?//= @$data['state'] ?>" selected><?//= @$data['state_name'] ?></option>
+                                        <option value="<?= @$data['state'] ?>" selected><?= @$data['state_name'] ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -63,25 +63,31 @@
                                 <label>City<span class="text-danger">*</span></label>
                                 <select name="city" id="city" class="form-control" required>
                                     <?php if (isset($data['city'])) { ?>
-                                        <option value="<?//= @$data['city'] ?>" selected><?//= @$data['city_name'] ?></option>
+                                        <option value="<?= @$data['city'] ?>" selected><?= @$data['city_name'] ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Pincode<span class="text-danger"> * </span></label>
-                                <input class="form-control" placeholder="Enter your pincode" type="text" name="pincode" value="<?= @$data['pincode']; ?>" required>
+                                <input class="form-control" placeholder="Enter your pincode" type="text" id="inputName" name="pincode" value="<?= @$data['pincode']; ?>" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>Password <span class="text-danger"> * </span></label>
-                                <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+                                <input type="password" class="form-control" placeholder="Enter Password" id="inputName" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
                             </div>
-
+                            <div class="row" style="justify-content:left;">
+                                <div id="para" style="margin-left:20px;color:red;margin-bottom:10px;"></div>
+                                <div id="letter" style="color:red;text-align:left;"></div>
+                                <div id="upletter" style="color:red;text-align:left;"></div>
+                                <div id="no" style="color:red;"></div>
+                                <div id="len" style="color:red;"></div>
+                            </div>
                             <div class="form-group col-md-6">
                                 <label>Confirm Password <span class="text-danger"> * </span></label>
-                                <input type="password" class="form-control" placeholder="Enter Confirm Password" name="confirm-password" required>
+                                <input type="password" class="form-control" placeholder="Enter Confirm Password" id="inputName" name="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
                             </div>
                         </div>
                         <div class="error-msg"></div>
@@ -109,98 +115,144 @@
 <?= $this->endSection() ?>
 <?= $this->section('scripts') ?>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
         $("#state").select2({
-        width: '100%',
-        placeholder: 'Select...',
-        ajax: {
-            url: PATH + "/Home/Getdata/getstate",
-            type: "post",
-            allowClear: true,
-            dataType: 'json',
-            delay: 250,
-            data: function(params) {
-                console.log(params);
-                return {
-                    searchTerm: params.term // search term
-                };
-            },
-            processResults: function(response) {
-                console.log(response);
-                return {
-                    results: response
-                };
-            },
-            cache: true
-        }
-    });
-    $("#city").select2({
-        width: '100%',
-        placeholder: 'Select...',
-        ajax: {
-            url: PATH + "/Home/Getdata/getcity",
-            type: "post",
-            allowClear: true,
-            dataType: 'json',
-            delay: 250,
-            data: function(params) {
-                return {
-                    searchTerm: params.term, // search term
-                    state_id: $('select[name="state"]').val(),
-                };
-            },
-            processResults: function(response) {
-                return {
-                    results: response
-                };
-            },
-            cache: true
-        }
-    });
-    $('.ajax-form-submit').on('submit', function(e) {
-        alert('rdgbdfb');
-        $('.error-msg').html('');
-        $('.form_proccessing').html('Please wait...');
-        e.preventDefault();
-        var aurl = $(this).attr('action');
-        var form = $(this);
-        var formdata = false;
-        $('#save_data').prop('disabled', true);
-        if (window.FormData) {
-            //  alert("form");return;
-            formdata = new FormData(form[0]);
-        }
-        $.ajax({
-            type: "POST",
-            url: aurl,
-            cache: false,
-            contentType: false,
-            processData: false,
-            data: formdata ? formdata : form.serialize(),
-            success: function(response) {
-                // console.log(response);
-                //  alert(response);return;
-                if (response.st == 'success') {
-                    swal("Success!", response.msg, "success");
-                    window.location.href = "<?= url('Home/login') ?>";
-                    datatable_load('');
-                    //  alert("succes");return;
-                    $('#save_data').prop('disabled', false);
-                } else {
-                    $('.form_proccessing').html('');
-                    $('#save_data').prop('disabled', false);
-                    $('.error-msg').html(response.msg);
-                }
-            },
-            error: function() {
-                $('#save_data').prop('disabled', false);
-                alert('Error');
+            width: '100%',
+            placeholder: 'Select...',
+            ajax: {
+                url: PATH + "/Home/Getdata/getstate",
+                type: "post",
+                allowClear: true,
+                dataType: 'json',
+                delay: 250,
+                data: function(params) {
+                    console.log(params);
+                    return {
+                        searchTerm: params.term // search term
+                    };
+                },
+                processResults: function(response) {
+                    console.log(response);
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
             }
         });
-        return false;
+        $("#city").select2({
+            width: '100%',
+            placeholder: 'Select...',
+            ajax: {
+                url: PATH + "/Home/Getdata/getcity",
+                type: "post",
+                allowClear: true,
+                dataType: 'json',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        searchTerm: params.term, // search term
+                        state_id: $('select[name="state"]').val(),
+                    };
+                },
+                processResults: function(response) {
+                    return {
+                        results: response
+                    };
+                },
+                cache: true
+            }
+        });
+        $('.ajax-form-submit').on('submit', function(e) {
+            alert('rdgbdfb');
+            $('.error-msg').html('');
+            $('.form_proccessing').html('Please wait...');
+            e.preventDefault();
+            var aurl = $(this).attr('action');
+            var form = $(this);
+            var formdata = false;
+            $('#save_data').prop('disabled', true);
+            if (window.FormData) {
+                //  alert("form");return;
+                formdata = new FormData(form[0]);
+            }
+            $.ajax({
+                type: "POST",
+                url: aurl,
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: formdata ? formdata : form.serialize(),
+                success: function(response) {
+                    // console.log(response);
+                    //  alert(response);return;
+                    if (response.st == 'success') {
+                        swal("Success!", response.msg, "success");
+                        window.location.href = "<?= url('Home/login') ?>";
+                        datatable_load('');
+                        //  alert("succes");return;
+                        $('#save_data').prop('disabled', false);
+                    } else {
+                        $('.form_proccessing').html('');
+                        $('#save_data').prop('disabled', false);
+                        $('.error-msg').html(response.msg);
+                    }
+                },
+                error: function() {
+                    $('#save_data').prop('disabled', false);
+                    alert('Error');
+                }
+            });
+            return false;
+        });
+
     });
-  
-    });
-   
+    var myInput = document.getElementById("txtPassword");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+
+    myInput.onblur = function() {
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                $("#letter").hide();
+
+            } else {
+                $("#letter").html("Lowercase", " ");
+                $("#letter").show();
+            }
+
+            var symbol = /[@,_,.]/g;
+            if (myInput.value.match(symbol)) {
+                $("#letter").hide();
+
+            } else {
+                $("#letter").html("&nbsp;Symbol", " ");
+                $("#letter").show();
+            }
+
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                $("#upletter").hide();
+            } else {
+                $("#upletter").html("&nbsp;Uppercase");
+                $("#upletter").show();
+            }
+
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                $("#no").hide();
+            } else {
+                $("#no").html("&nbsp;Number");
+                $("#no").show();
+            }
+
+            if (myInput.value.length >= 6) {
+                $("#len").hide();
+            } else {
+                $("#len").html("&nbsp;Minimum 6 characters");
+                $("#len").show();
+            }
 </script>
 <?= $this->endSection() ?>

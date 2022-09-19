@@ -593,6 +593,7 @@
 		});
 	});
 
+	
 
 	$("#brand").select2({
 		width: '100%',
@@ -667,6 +668,8 @@
 		var category_id = $('#category option:selected').val();
         var cat = "<?= isset($_GET['category']) ? $_GET['category'] : ''; ?>";
 		var price = $("#price option:selected").val();
+        var search = "<?= isset($_GET['search']) ? $_GET['search'] : ''; ?>";
+		// var search = $('#searchdata').val();
 		var min_price = $('#min').text();
 		var max_price = $('#max').text();
 		console.log(page);
@@ -679,6 +682,8 @@
 				price: price,
 				cat: cat,
 				// brand: brand,
+				// search1:search1,
+				search:search,
 				min_price: min_price,
 				max_price: max_price,
 			},

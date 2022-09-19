@@ -54,6 +54,20 @@ class Home extends BaseController
         }
         return view('admin/coupon/coupon');
     }
+    public function subscribe()
+    {
+        if (!session('id')) {
+            return redirect()->to(url('admin/Auth/login'));
+        }
+        return view('admin/subscribe');
+    }
+    public function contact()
+    {
+        if (!session('id')) {
+            return redirect()->to(url('admin/Auth/login'));
+        }
+        return view('admin/contact');
+    }
     public function createbrand($id = '')
     {
         $post = $this->request->getPost();
@@ -133,7 +147,7 @@ class Home extends BaseController
     }
     public function orderview($id = '')
     {
-        $data['order'] = $this->model->get_data($id);
+        $data['order'] = $this->model->get_order_details($id);
 
         return view('admin/order/orderview', $data);
     }
@@ -168,6 +182,14 @@ class Home extends BaseController
         }
         if ($method == 'Coupon') {
             $data = $this->model->get_coupon_data();
+            return $data;
+        }
+        if ($method == 'subscribe') {
+            $data = $this->model->get_subscribe_data();
+            return $data;
+        }
+        if ($method == 'contact') {
+            $data = $this->model->get_contact_data();
             return $data;
         }
         if ($method == 'orderview') {

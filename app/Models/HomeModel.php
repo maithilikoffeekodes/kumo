@@ -19,7 +19,8 @@ class HomeModel extends Model
 
         $pdata = array(
             'name' => $post['fname'] . $post['lname'],
-            // 'last_name' => $post['lname'],
+            'first_name' => $post['fname'],
+            'last_name' => $post['lname'],
             'email' => $post['email'],
             'password' => $post['password'],
             'mobileno' => $post['mobileno'],
@@ -53,6 +54,19 @@ class HomeModel extends Model
             return $msg;
         }
     }
+    public function get_register_data()
+    {
+
+        $db = $this->db;
+        $builder = $db->table('user u');
+        $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+        $builder->join('states s', 's.id=u.state');
+        $builder->join('cities c', 'c.id=u.city');
+        $builder->where('u.id', session('uid'));
+        $query = $builder->get();
+        $result = $query->getRowArray();
+        return $result;
+    }
     public function login($post)
     {
         // print_r($post);exit;
@@ -84,34 +98,37 @@ class HomeModel extends Model
         $session->remove('uid');
         return redirect()->to(url('Home/login'));
     }
-    // public function otp($post)
-    // {
-    //     // print_r($post);exit;
-    //     helper('send_otp');
-    //     if (!empty($post)) {
+    public function change_password($post)
+    {
+        // print_r($post);exit;
 
-    //         $randotp = mt_rand(100000, 999999);
-    //         send_otp($randotp, $post);
-    //         $session = session();
-    //         $session->set('otp', $randotp);
-    //        //  echo "<pre>";print_r(session('id')); exit;
-    //         $msg = array("st" => "success", "msg" => "OTP Send Successfully!!!");
-    //     }
+        $db = $this->db;
+        $builder = $db->table('user');
+        $builder->select('*');
+        $builder->where(array('id' => session('uid'), 'password' => $post['password']));
+        $result = $builder->get();
+        $result_array = $result->getRow();
+        if (!empty($result_array)) {
+            $msg = array('st' => '', 'msg' => '');
+            if ($result_array->password == $post['password']) {
+                if ($post['npassword'] == $post['cpassword']) {
+                    // print_r($post);exit;
+                    $builder->where('id', session('uid'));
+                    $builder->update(array('password' => $post['npassword']));
+                    $msg = array('st' => 'success', 'msg' => 'Password Changed');
+                } else {
+                    $msg = array('st' => 'failed', 'msg' => 'Confirm Password doesnot matched');
+                }
+            } else {
+                $msg = array('st' => 'failed', 'msg' => 'Password cannot Repeat');
+            }
+        } else {
+            $msg = array('st' => 'failed', 'msg' => 'Old Password doesnt match');
+        }
 
-    //     return $msg;
-    // }
-    // public function verify($post)
-    // {
-    //     $session = session();
-    //     $verify = $session->get('otp');
-    //     if ($post['otp'] == $verify) {
-    //         $msg = array("st" => "success", "msg" => "OTP Verify Successfully!!!");
-    //     } else {
-    //         $msg = array("st" => "failed", "msg" => "OTP Verify Failed!!!");
-    //     }
+        return $msg;
+    }
 
-    //     return $msg;
-    // }
 
     public function get_randomitem_data()
     {
@@ -382,9 +399,10 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('orders o');
-        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*,c.category as category_name');
         $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
         $builder->join('item i', 'i.id = oi.product_id', 'left');
+        $builder->join('category c','c.id=i.category');
         $builder->where('o.user_id', session('uid') ? session('uid') : session('guestid'));
         $query = $builder->get();
         $order = $query->getResultArray();
@@ -402,7 +420,7 @@ class HomeModel extends Model
         $builder->join('item i', 'i.id = oi.product_id');
         $builder->where('o.id', $id);
         $query = $builder->get();
-        $order_detail1 = $query->getrowArray();
+        $order_detail1 = $query->getRowArray();
         // echo"<pre>";print_r($order_detail1);exit;
 
         // $order_detail1['order_date'] = $order_detail1['created_at'];
@@ -431,58 +449,46 @@ class HomeModel extends Model
         $order_detail = array_merge($order_detail1, $order_detail2);
         return $order_detail;
     }
-    // public function get_order_data()
-    // {
-    //     $db = $this->db;
-    //     $builder = $db->table('orders o');
-    //     $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
-    //     $builder->where('user_id', session('id'));
-    //     // $builder->where('o.is_delete', '0');
-    //     $data_table = DataTable::of($builder);
-    //     $data_table->setSearchableColumns(['id']);
-    //     $data_table->add('action', function ($row) {
-    //         $btnview = '<a href="' . url('Home/orderview/') . $row->id . '"  class="btn btn-link pd-10"><i class="far fa-eye"></i></a> ';
-    //         return $btnview;
-    //     });
-    //     return $data_table->toJSON();
-    // }
-    // public function get_data($id)
-    // {
-    //     // print_r($id);exit;
-    //     $db = $this->db;
-    //     $builder = $db->table('orders o');
-    //     $builder->select('o.*');
-    //     $builder->where('o.id', $id);
-    //     // $builder->where('o.is_delete', 0);
-    //     $query = $builder->get();
-    //     $result = $query->getRowArray();
-    //     // if ($result['ship_id'] != 0) {
-    //     //     $db = $this->db;
-    //     //     $builder = $db->table('signup u');
-    //     //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
-    //     //     $builder->join('cities c', 'c.id=u.city');
-    //     //     $builder->join('states s', 's.id=u.state');
-    //     //     $builder->where('u.id', $result2['default_add']);
-    //     //     $builder->where('u.is_delete', 0);
-    //     //     $query = $builder->get();
-    //     //     $result1 = $query->getRowArray();
-    //     // // } else {
-    //     //     $db = $this->db;
-    //     //     $builder = $db->table('address a');
-    //     //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
-    //     //     $builder->join('cities c', 'c.id=a.city');
-    //     //     $builder->join('states s', 's.id=a.state');
-    //     //     $builder->where('a.id', $result['ship_id']);
-    //     //     $builder->where('a.is_delete', 0);
-    //     //     $query = $builder->get();
-    //     //     $result = $query->getRowArray();
-    //     // }
-    //     // $result = array_merge($result1, $result2);
-    //     // // echo"<pre>";print_r($result);exit;
+    public function get_orders_details($id)
+    {
+        // print_r($id);exit;
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
+        $builder->join('item i', 'i.id = oi.product_id');
+        $builder->where('o.id', $id);
+        $query = $builder->get();
+        $order_detail1 = $query->getResultArray();
+        // echo"<pre>";print_r($order_detail1);exit;
 
-    //     return $result;
-    // }
-
+        // $order_detail1['order_date'] = $order_detail1['created_at'];
+        // if ($order_detail1[0]['default_add'] != 0) {
+        //     $db = $this->db;
+        //     $builder = $db->table('user u');
+        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=u.city');
+        //     $builder->join('states s', 's.id=u.state');
+        //     $builder->where('u.id', $order_detail1['default_add']);
+        //     $builder->where('u.is_delete', 0);
+        //     $query = $builder->get();
+        //     $order_detail2 = $query->getRowArray();
+        // } else {
+        //     $db = $this->db;
+        //     $builder = $db->table('shipping_address a');
+        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+        //     $builder->join('cities c', 'c.id=a.city');
+        //     $builder->join('states s', 's.id=a.state');
+        //     $builder->where('a.id', $order_detail1['ship_id']);
+        //     $builder->where('a.is_delete', 0);
+        //     $query = $builder->get();
+        //     $order_detail2 = $query->getRowArray();
+        // }
+        // echo"<pre>";print_r($order_detail2);exit;
+        $order_detail = array_merge($order_detail1);
+        
+        return $order_detail;
+    }
     public function get_orderviewdata($get)
     {
 
@@ -677,6 +683,40 @@ class HomeModel extends Model
         }
         return $msg;
     }
+    public function insert_edit_contact($post)
+    {
+        $db = $this->db;
+        $builder = $db->table("contact");
+        $query = $builder->get();
+        $pdata = array(
+            'name' => $post['name'],
+            'email' => $post['email'],
+            'subject' => $post['subject'],
+            'message' => $post['message']
+        );
+
+        $name = $post['name'];
+        $email = $post['email'];
+        $subject = $post['subject'];
+        $message = $post['message'];
+        // print_r($email);exit;
+        helper('base');
+        send_email($name, $email,$subject, $message);
+        send_email($name, 'maithili.koffeekodes@gmail.com', $subject, $message);
+
+        $pdata['created_at'] = date('Y-m-d H:i:s');
+        @$pdata['created_by'] = session('uid') ? session('uid') : session('guestid');
+        if (empty($msg)) {
+            $res = $builder->insert($pdata);
+            if ($res) {
+                $msg = array('st' => 'success', "msg" => "Your info add success");
+            } else {
+                $msg = array('st' => 'failed', "msg" => "Failed to insert");
+            }
+        }
+        // print_r($msg);exit;
+        return $msg;
+    }
     public function get_review($id)
     {
         // print_r($id);exit;
@@ -789,6 +829,12 @@ class HomeModel extends Model
         if (!empty($post['brand'])) {
             $builder->where('brand', $post['brand']);
         }
+        if(!empty($post['search'])){
+            $builder->like('brand', $post['search'],'both');
+            $builder->orLike('category', $post['search'],'both');
+            $builder->orLike('name', $post['search'],'both');
+            
+        }
         if (empty($post['price'])) {
             $builder->where('is_delete', 0);
         } elseif (!empty($post['price'] == '1')) {
@@ -824,6 +870,12 @@ class HomeModel extends Model
         }
         if (!empty($post['brand'])) {
             $builder->where('brand', $post['brand']);
+        }
+        if(!empty($post['search'])){
+            $builder->like('brand', $post['search'],'both');
+            $builder->orLike('category', $post['search'],'both');
+            $builder->orLike('name', $post['search'],'both');
+            
         }
         if (empty($post['price'])) {
             $builder->where('is_delete', 0);
@@ -1149,6 +1201,69 @@ class HomeModel extends Model
         } else {
 
             $msg = array('st' => 'added', "msg" => "Already Subscibe");
+        }
+        return $msg;
+    }
+    public function send_otp_mail($post)
+    {
+        helper('base');
+        $db = $this->db;
+        $builder = $db->table('user');
+        $builder->select('*');
+        $builder->where(array("email" => $post['email']));
+        $result = $builder->get();
+        $result_array = $result->getRowArray();
+        $email = $post['email'];
+
+        $otp = random_int(100000, 999999);
+        if (!empty($otp)) {
+            $ootp['otp'] = $otp;
+        }
+
+        $session = session();
+        $session->set($ootp);
+        $session->set('email', $post['email']);
+
+        send_otp($email, $otp);
+
+        if ($result_array) {
+            $msg = array("st" => "success", "msg" => "Success");
+        } else {
+            $msg = array("st" => "failed", "msg" => "Enter Valid Email");
+        }
+        return $msg;
+    }
+
+    public function verify_otp($post)
+    {
+        $check = $post['user_otp'] == session('otp');
+        if ($check) {
+            $result = array("st" => "success", "msg" => "Success");
+        } else {
+            $result = array("st" => "failed", "msg" => "Enter Valid OTP");
+        }
+        return $result;
+    }
+
+    public function set_new_pass($post)
+    {
+        $db = $this->db;
+        $builder = $db->table('user');
+        $builder->select('*');
+        $builder->where(array("email" => $post['email']));
+        $result = $builder->get();
+        $result_array = $result->getRow();
+        if (!empty($result_array)) {
+            if ($result_array->password != $post['password']) {
+                $builder->where('email', $post['email']);
+                $builder->update(array('password' => $post['password']));
+                $msg = array('st' => 'success', 'msg' => 'New Password is Set');
+            } else {
+                $msg = array('st' => 'failed', 'msg' => 'Old Password is same use different...');
+            }
+            return $msg;
+        } else {
+            $msg = array('st' => 'failed', 'msg' => 'Failed to set password');
         }
         return $msg;
     }

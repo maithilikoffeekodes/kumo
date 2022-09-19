@@ -30,13 +30,13 @@
                                 <td><?= @$order['mobileno'] ?></td>
                                 <th>Address</th>
                                 <td>
-                                    <? //= @$order['address']  
+                                    <?= @$order['address']  
                                     ?>
-                                    <? //= (!empty(@$order['city_name']) ? ',' . $order['city_name'] : '') 
+                                    <?= (!empty(@$order['city_name']) ? ',' . $order['city_name'] : '') 
                                     ?>
-                                    <? //= (!empty(@$order['state_name']) ? ',' . $order['state_name'] : '') 
+                                    <?= (!empty(@$order['state_name']) ? ',' . $order['state_name'] : '') 
                                     ?>
-                                    <? //= (!empty(@$order['pincode']) ? ',' . $order['pincode'] : '') 
+                                    <?= (!empty(@$order['pincode']) ? ',' . $order['pincode'] : '') 
                                     ?>
                                 </td>
                             </tr>

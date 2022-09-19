@@ -2,10 +2,10 @@
 
 <?= $this->section('content') ?>
 <style>
-	.btn_love:hover {
-		background-color: black;
-		color: white;
-	}
+    .btn_love:hover {
+        background-color: black;
+        color: white;
+    }
 </style>
 <?php //echo"<pre>";print_r($product);exit;
 ?>
@@ -182,7 +182,7 @@
                         </div>
 
                         <div class="reviews_rate">
-                            <form class="row" action="<?= url('Home/review') ?>" method="post" class="ajax-form-submit">
+                            <form class="row" method="post">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <h4>Submit Rating</h4>
                                 </div>
@@ -239,7 +239,7 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label class="medium text-dark ft-medium">Description</label>
-                                        <textarea class="form-control" name="review" cols="30" rows="5" required></textarea>
+                                        <textarea class="form-control" id="review" name="review" cols="30" rows="5" required></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -248,7 +248,7 @@
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group m-0">
-                                        <button id="save_data" name="submit" type="submit" class="btn btn-white stretched-link hover-black save_data">Review<i class="lni lni-arrow-right"></i></button>
+                                        <button id="save_data" name="submit" type="submit" class="btn btn-white stretched-link hover-black save_data review_btn">Review<i class="lni lni-arrow-right"></i></button>
                                     </div>
                                 </div>
 
@@ -290,18 +290,18 @@
                                     <div class="shop_thumb position-relative">
                                         <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . @$row['id'])
                                                                                                 ?>"><img class="card-img-top" src="<?= @$row['image']
-                                                                                                                                ?>" alt="..." style="height: 350px ;width: 272px;"></a>
+                                                                                                                                    ?>" alt="..." style="height: 350px ;width: 272px;"></a>
                                         <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
-                                            <div class="edlio"><a href="#"  class="text-white fs-sm ft-medium cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id']?>" data-price="<?= @$row['price'] ?>" data-quantity="1"><i class="lni lni-shopping-basket mr-2"></i>Add to Cart</a></div>
+                                            <div class="edlio"><a href="#" class="text-white fs-sm ft-medium cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?>" data-price="<?= @$row['price'] ?>" data-quantity="1"><i class="lni lni-shopping-basket mr-2"></i>Add to Cart</a></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-footer b-0 p-3 pb-0 d-flex align-items-start justify-content-center">
                                     <div class="text-left">
                                         <div class="text-center">
-                                            <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="<?= url('Home/productdetail/'.@$row['id'])
-                                                                                                ?>"><?= $row['name']?></a></h5>
-                                                                                                
+                                            <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="<?= url('Home/productdetail/' . @$row['id'])
+                                                                                                ?>"><?= $row['name'] ?></a></h5>
+
                                             <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹<?= $row['listedprice'] ?></span><span class="text-secondary p-2 p-2"><del>₹<?= $row['price'] ?></del></span><span class="text-success bg-light-success rounded px-2 py-1"><?= $row['discount'] ?> % off</span></div>
                                         </div>
                                     </div>
@@ -445,38 +445,79 @@
             $(button).addClass("fas fa-star");
         }
     }
-    $('.ajax-form-submit').on('submit', function(e) {
-        // console.log("abc");
-        $('#save_data').prop('disabled', true);
-        $('.save_data').attr("disabled", true);
-        $('.error-msg').html('');
-        $('.form_proccessing').html('Please wait...');
-        e.preventDefault();
-        var aurl = $(this).attr('action');
-        var form = $(this);
-        var formdata = false;
+
+    
+    $(document).on('click', '.review_btn', function() {
+
+        var email = $('#email').val();
+        var name = $('#name').val();
+        var review = $('#review').val();
+        var rating = $('#rating').val();
+        var product_id = $('#product_id').val();
+
+        toastr.options = {
+            "closeButton": true,
+            "newestOnTop": true,
+            "positionClass": "toast-top-right"
+        };
+
         $.ajax({
-            type: "POST",
-            url: aurl,
-            data: formdata ? formdata : form.serialize(),
+            url: "<?php echo url('Home/review'); ?>",
+            method: "POST",
+            data: {
+                email: email,
+                name: name,
+                review: review,
+                rating: rating,
+                product_id: product_id
+            },
             success: function(response) {
-                if (response.st == "success") {
-                    window.location.href(<?= url('Home/productdetail/' . $product['id']) ?>);
-                    // window.location.reload();
+                if (response.st == 'success') {
+                    toastr.success(response.msg);
                 } else {
-                    location.reload();
-                    $('.form_proccessing').html('');
-                    $('#save_data').prop('disabled', false);
+                    $('.form_processing').html('');
+                    $('#cartbtn').prop('disabled', false);
                     $('.error-msg').html(response.msg);
                 }
-            },
-            error: function() {
-                $('#save_data').prop('disabled', false);
-                alert('Error');
             }
+
         });
 
-        return false;
     });
+    // $('.ajax-form-submit').on('submit', function(e) {
+    //     // console.log("abc");
+    //     $('#save_data').prop('disabled', true);
+    //     $('.save_data').attr("disabled", true);
+    //     $('.error-msg').html('');
+    //     $('.form_proccessing').html('Please wait...');
+    //     e.preventDefault();
+    //     var aurl = $(this).attr('action');
+    //     var form = $(this);
+    //     var formdata = false;
+    //     $.ajax({
+    //         type: "POST",
+    //         url: aurl,
+    //         data: formdata ? formdata : form.serialize(),
+    //         success: function(response) {
+    //             alert("sdjkhbfkdfkgbkdf");return;
+    //             if (response.st == "success") {
+    //                 alert("fpiohgldfhoigh");return;
+    //                 // window.location.href( //= url('Home/productdetail/' . $product['id']) );
+    //                 location.reload();
+    //             } else {
+    //                 location.reload();
+    //                 $('.form_proccessing').html('');
+    //                 $('#save_data').prop('disabled', false);
+    //                 $('.error-msg').html(response.msg);
+    //             }
+    //         },
+    //         error: function() {
+    //             $('#save_data').prop('disabled', false);
+    //             alert('Error');
+    //         }
+    //     });
+
+    //     return false;
+    // });
 </script>
 <?= $this->endSection() ?>

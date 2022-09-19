@@ -36,6 +36,12 @@
 					</li>
 				</ul>
 			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="<?= url('admin/Home/subscribe') ?>"><i class="fa fa-envelope"></i><span class="sidemenu-label">Subscribe </span></a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="<?= url('admin/Home/contact') ?>"><i class="fa fa-phone"></i><span class="sidemenu-label">Contact </span></a>
+			</li>
 			<li class="nav-label">Order</li>
 
 			<li class="nav-item">

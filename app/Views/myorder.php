@@ -47,7 +47,7 @@
                                                         ?></h6>
                         </div>
                         <div class="olh_flex">
-                            <a href="javascript:void(0);" class="btn btn-sm btn-dark">Track Order</a>
+                            <a href="<?= url('Home/track_order')?>" class="btn btn-sm btn-dark">Track Order</a>
                         </div>
                     </div>
                     <?php //echo"<pre>";print_r($my_orders);exit;
@@ -63,7 +63,7 @@
                                             <a href="#"><img src="<?= @$order['image'] ?>" width="75" class="img-fluid rounded" alt=""></a>
                                         </div>
                                         <div class="cart_single_caption pl-3">
-                                            <p class="mb-0"><span class="text-muted small"><?= @$order['category'] ?></span></p>
+                                            <p class="mb-0"><span class="text-muted small"><?= @$order['category_name'] ?></span></p>
                                             <h4 class="product_title fs-sm ft-medium mb-1 lh-1"><?= @$order['name'] ?></h4>
                                             <!-- <p class="mb-2"><span class="text-dark medium">Size: 36</span>, <span class="text-dark medium">Color: Red</span></p> -->
                                             <h4 class="fs-sm ft-bold mb-0 lh-1"><?= @$order['listedprice'] ?></h4>

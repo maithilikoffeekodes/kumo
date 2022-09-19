@@ -1,0 +1,140 @@
+CRITICAL - 2022-09-18 23:29:26 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:35:59 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:35:59 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:38:00 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:38:02 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:38:31 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:39:13 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:39:14 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:39:20 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:39:39 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 90)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:39:40 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 90)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:40:26 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:40:27 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-18 23:40:47 --> Undefined variable $data
+#0 D:\kumo\app\Controllers\Home.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Con...', 88)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+ERROR - 2022-09-18 23:49:00 --> Unknown column 'first_name' in 'field list'
+CRITICAL - 2022-09-18 23:49:00 --> Unknown column 'first_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user` S...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` S...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` S...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `user` S...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\kumo\app\Controllers\Home.php(82): App\Models\HomeModel->insert_edit_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-18 23:49:14 --> Unknown column 'first_name' in 'field list'
+CRITICAL - 2022-09-18 23:49:14 --> Unknown column 'first_name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `user` S...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` S...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` S...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `user` S...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(35): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\kumo\app\Controllers\Home.php(82): App\Models\HomeModel->insert_edit_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->register()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}

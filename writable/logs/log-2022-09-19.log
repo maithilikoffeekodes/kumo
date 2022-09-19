@@ -1,0 +1,896 @@
+ERROR - 2022-09-19 00:02:13 --> Unknown column 'is_delete' in 'field list'
+CRITICAL - 2022-09-19 00:02:13 --> Unknown column 'is_delete' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `coupon`...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `coupon`...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `coupon`...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `coupon`...', Array, false)
+#4 D:\kumo\app\Models\admin\GeneralModel.php(15): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\kumo\app\Models\admin\HomeModel.php(490): App\Models\admin\GeneralModel->update_data_table('coupon', Array, Array)
+#6 D:\kumo\app\Controllers\admin\Home.php(195): App\Models\admin\HomeModel->UpdateData(Array)
+#7 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Action('Update')
+#8 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#9 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#12 {main}
+ERROR - 2022-09-19 00:05:30 --> Unknown column 'c.is_delete' in 'where clause'
+CRITICAL - 2022-09-19 00:05:30 --> Unknown column 'c.is_delete' in 'where clause'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\kumo\app\Models\admin\HomeModel.php(365): Hermawan\DataTables\DataTable->toJson()
+#7 D:\kumo\app\Controllers\admin\Home.php(170): App\Models\admin\HomeModel->get_coupon_data()
+#8 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('Coupon')
+#9 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#10 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#13 {main}
+ERROR - 2022-09-19 00:25:39 --> Table 'kumo.users' doesn't exist
+CRITICAL - 2022-09-19 00:25:39 --> Table 'kumo.users' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(108): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(95): App\Models\HomeModel->change_password(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->change_password()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 01:33:57 --> Undefined array key "st"
+#0 D:\kumo\app\Controllers\Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Con...', 47)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-19 01:42:49 --> Invalid file: set_password.php
+#0 D:\kumo\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('set_password.ph...')
+#1 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('set_password', Array, true)
+#2 D:\kumo\app\Controllers\Home.php(130): view('set_password')
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->set_new_pass()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+ERROR - 2022-09-19 01:50:39 --> Table 'kumo.users' doesn't exist
+CRITICAL - 2022-09-19 01:50:39 --> Table 'kumo.users' doesn't exist
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(1167): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(127): App\Models\HomeModel->set_new_pass(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->set_new_pass()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 01:55:06 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\admin\HomeModel.php(379): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 379)
+#1 D:\kumo\app\Controllers\admin\Home.php(136): App\Models\admin\HomeModel->get_order_details('index.html')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->orderview('index.html')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 02:04:13 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\admin\HomeModel.php(395): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 395)
+#1 D:\kumo\app\Controllers\admin\Home.php(136): App\Models\admin\HomeModel->get_order_details('index.html')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->orderview('index.html')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 02:08:56 --> Undefined property: stdClass::$slider
+#0 D:\kumo\app\Models\admin\HomeModel.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\kumo\\app\\Mod...', 377)
+#1 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(91): App\Models\admin\HomeModel->App\Models\admin\{closure}(Object(stdClass))
+#2 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\kumo\app\Models\admin\HomeModel.php(395): Hermawan\DataTables\DataTable->toJson()
+#4 D:\kumo\app\Controllers\admin\Home.php(181): App\Models\admin\HomeModel->get_subscribe_data()
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('subscribe')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 02:09:32 --> Undefined property: stdClass::$name
+#0 D:\kumo\app\Models\admin\HomeModel.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\kumo\\app\\Mod...', 377)
+#1 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(91): App\Models\admin\HomeModel->App\Models\admin\{closure}(Object(stdClass))
+#2 D:\kumo\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#3 D:\kumo\app\Models\admin\HomeModel.php(395): Hermawan\DataTables\DataTable->toJson()
+#4 D:\kumo\app\Controllers\admin\Home.php(181): App\Models\admin\HomeModel->get_subscribe_data()
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Home->Getdata('subscribe')
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 04:21:26 --> Undefined array key "min_price"
+#0 D:\kumo\app\Models\HomeModel.php(766): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 766)
+#1 D:\kumo\app\Controllers\Home.php(257): App\Models\HomeModel->fetch_data(Array, 'T-shirt')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('T-shirt')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+ERROR - 2022-09-19 04:41:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'' at line 4
+CRITICAL - 2022-09-19 04:41:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'' at line 4
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(805): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\kumo\app\Controllers\Home.php(257): App\Models\HomeModel->fetch_data(Array, '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-19 04:43:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'
+ORDER BY `price` ASC' at line 4
+CRITICAL - 2022-09-19 04:43:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'
+ORDER BY `price` ASC' at line 4
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(794): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(257): App\Models\HomeModel->fetch_data(Array, '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-19 04:47:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'
+ORDER BY `price` ASC, `created_at` DESC, `i...' at line 4
+CRITICAL - 2022-09-19 04:47:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%girls shirt%' ESCAPE '!'
+ORDER BY `price` ASC, `created_at` DESC, `i...' at line 4
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(851): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(257): App\Models\HomeModel->fetch_data(Array, '1')
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->fetch_data('1')
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 05:28:21 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('order', '1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:28:28 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('order', '1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:41:03 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:41:28 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:41:30 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:41:45 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:42:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:42:01 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 23)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:43:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 29)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:43:02 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 29)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:44:01 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 29)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:44:11 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 29)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:44:12 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\TestModel.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 29)
+#1 D:\kumo\app\Controllers\Test.php(248): App\Models\TestModel->order('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:56:04 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:56:07 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:56:25 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:58:24 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:58:26 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 05:59:24 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:00:16 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:00:18 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:00:29 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:00:30 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 426)
+#1 D:\kumo\app\Controllers\Home.php(273): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:02:05 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:02:18 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 06:47:10 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:19:40 --> Undefined variable $id
+#0 D:\kumo\app\Views\test.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 10)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('test', Array, true)
+#4 D:\kumo\app\Controllers\Test.php(246): view('test')
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->button()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:19:41 --> Undefined variable $id
+#0 D:\kumo\app\Views\test.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 10)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('test', Array, true)
+#4 D:\kumo\app\Controllers\Test.php(246): view('test')
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->button()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:19:42 --> Undefined variable $id
+#0 D:\kumo\app\Views\test.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 10)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('test', Array, true)
+#4 D:\kumo\app\Controllers\Test.php(246): view('test')
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->button()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:28:18 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:29:41 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:30:51 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:30:54 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:24 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:25 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:26 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:57 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:58 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:59 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:59 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:59 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:31:59 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:00 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:01 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:36 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:32:36 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 465)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-19 07:36:12 --> Undefined array key "default_add"
+#0 D:\kumo\app\Models\HomeModel.php(471): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Mod...', 471)
+#1 D:\kumo\app\Controllers\Home.php(283): App\Models\HomeModel->get_orders_details('1')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice('1')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+ERROR - 2022-09-19 07:39:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `category_name`
+WHERE `o`.`user_id` = '1'' at line 5
+CRITICAL - 2022-09-19 07:39:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `category_name`
+WHERE `o`.`user_id` = '1'' at line 5
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `o`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(407): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(264): App\Models\HomeModel->get_order_data()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-19 07:39:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `category_name`
+WHERE `o`.`user_id` = '1'' at line 5
+CRITICAL - 2022-09-19 07:39:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `category_name`
+WHERE `o`.`user_id` = '1'' at line 5
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `o`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(407): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(264): App\Models\HomeModel->get_order_data()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-19 07:40:56 --> Unknown column 'c.name' in 'field list'
+CRITICAL - 2022-09-19 07:40:56 --> Unknown column 'c.name' in 'field list'
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `o`.*, `...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `o`.*, `...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `o`.*, `...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `o`.*, `...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(407): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kumo\app\Controllers\Home.php(264): App\Models\HomeModel->get_order_data()
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 07:44:12 --> Undefined array key "order_id"
+#0 D:\kumo\app\Views\myorder.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Vie...', 46)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('myorder', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(265): view('myorder', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:49:02 --> Undefined variable $order
+#0 D:\kumo\app\Views\track-order.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 167)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:55:21 --> Undefined variable $i
+#0 D:\kumo\app\Views\track-order.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 170)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:55:28 --> Undefined variable $i
+#0 D:\kumo\app\Views\track-order.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 170)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:55:29 --> Undefined variable $i
+#0 D:\kumo\app\Views\track-order.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 170)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:55:37 --> Undefined variable $i
+#0 D:\kumo\app\Views\track-order.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 170)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:55:38 --> Undefined variable $i
+#0 D:\kumo\app\Views\track-order.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 170)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 07:56:36 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#3 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-19 07:56:37 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#3 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-19 08:00:22 --> Undefined variable $order
+#0 D:\kumo\app\Views\track-order.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-19 08:03:55 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:04:04 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:04:18 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:04:55 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:05:03 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:05:04 --> DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'DateTime::__con...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\app\Views\track-order.php(189): DateTime->__construct(NULL)
+#2 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#3 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#5 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-19 08:05:47 --> Undefined variable $date
+#0 D:\kumo\app\Views\track-order.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 189)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('track-order', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(279): view('track-order', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->track_order()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}

@@ -336,8 +336,9 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('orders o');
-        $builder->select('o.id,o.user_id,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
-        $builder->where('user_id', session('id'));
+        $builder->select('o.id,u.name,o.created_at,o.total_payment,o.transaction_id,o.payment_type,o.transaction_status');
+        $builder->join('user u', 'u.id = o.user_id');
+        $builder->where('user_id', session('uid') ? session('uid') : session('guestid'));
         // $builder->where('o.is_delete', '0');
         $data_table = DataTable::of($builder);
         $data_table->setSearchableColumns(['id']);
@@ -352,7 +353,7 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('coupon');
         $builder->select('id,coupon_code,coupon_value,coupon_type,cart_min_value,created_at');
-        // $builder->where('o.is_delete', '0');
+        $builder->where('is_delete', '0');
         $data_table = DataTable::of($builder);
         $data_table->setSearchableColumns(['id']);
         $data_table->add('action', function ($row) {
@@ -363,40 +364,89 @@ class HomeModel extends Model
         }, 'last');
         return $data_table->toJSON();
     }
-    public function get_data($id)
+    public function get_subscribe_data()
     {
         $db = $this->db;
-        $builder = $db->table('orders o');
-        $builder->select('o.*');
-        $builder->where('o.id', $id);
-        // $builder->where('o.is_delete', 0);
-        $query = $builder->get();
-        $result = $query->getRowArray();
-        // if ($result2['default_add'] != 0) {
-        //     $db = $this->db;
-        //     $builder = $db->table('signup u');
-        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=u.city');
-        //     $builder->join('states s', 's.id=u.state');
-        //     $builder->where('u.id', $result2['default_add']);
-        //     $builder->where('u.is_delete', 0);
-        //     $query = $builder->get();
-        //     $result1 = $query->getRowArray();
-        // } else {
-        //     $db = $this->db;
-        //     $builder = $db->table('address a');
-        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=a.city');
-        //     $builder->join('states s', 's.id=a.state');
-        //     $builder->where('a.id', $result2['ship_id']);
-        //     $builder->where('a.is_delete', 0);
-        //     $query = $builder->get();
-        //     $result1 = $query->getRowArray();
-        // }
-        // $result = array_merge($result1, $result2);
-        // // echo"<pre>";print_r($result);exit;
+        $builder = $db->table('subscribe');
+        $builder->select('id,user_id,email');
+        $builder->where('is_delete', 0);
+        $data_table =  DataTable::of($builder);
+        $data_table->setSearchableColumns(['id', 'email']);
+        $data_table->add('action', function ($row) {
 
-        return $result;
+            $btndelete = '<a data-toggle="modal" target="_blank"   title="Subscribe name: ' . $row->email . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="far fa-trash-alt"></i></a> ';
+            return $btndelete;
+        }, 'last');
+        $data_table->edit('user_id', function ($row) {
+            $gmodel = new GeneralModel();
+            $user = $gmodel->get_data_table('user', array('id' => $row->user_id), 'name');
+            if(isset($user['name']))
+            {
+                return $user['name'];
+                // echo '<pre>'; print_r($user);exit;
+            }
+            else{
+                $user='Unknown';
+                return $user;
+            }
+        },'last' );
+
+
+        return $data_table->toJSON();
+    }
+    public function get_contact_data()
+    {
+        $db = $this->db;
+        $builder = $db->table('contact');
+        $builder->select('id,name,email,subject,message');
+        $builder->where('is_delete', 0);
+        $data_table =  DataTable::of($builder);
+        $data_table->setSearchableColumns(['id','name']);
+
+        $data_table->add('action', function ($row) {
+
+            $btndelete = '<a data-toggle="modal" target="_blank"   title="Name: ' . $row->name . '"  onclick="editable_remove(this)"  data-val="' . $row->id . '"  data-pk="' . $row->id . '" tabindex="-1" class="btn btn-link"><i class="far fa-trash-alt "></i></a> ';
+            return  $btndelete;
+        }, 'last');
+
+        return $data_table->toJSON();
+    }
+    public function get_order_details($id)
+    {
+        // print_r($id);exit;
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
+        $builder->join('item i', 'i.id = oi.product_id');
+        $builder->where('o.id', $id);
+        $query = $builder->get();
+        $order_detail1 = $query->getRowArray();
+
+        if ($order_detail1['default_add'] != 0) {
+            $db = $this->db;
+            $builder = $db->table('user u');
+            $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=u.city');
+            $builder->join('states s', 's.id=u.state');
+            $builder->where('u.id', $order_detail1['default_add']);
+            $builder->where('u.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        } else {
+            $db = $this->db;
+            $builder = $db->table('shipping_address a');
+            $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=a.city');
+            $builder->join('states s', 's.id=a.state');
+            $builder->where('a.id', $order_detail1['ship_id']);
+            $builder->where('a.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        }
+        // echo"<pre>";print_r($order_detail2);exit;
+        $order_detail = array_merge($order_detail1, $order_detail2);
+        return $order_detail;
     }
     public function get_orderviewdata($get)
     {
@@ -406,7 +456,6 @@ class HomeModel extends Model
         $builder = $db->table('order_item oi');
         $builder->select('i.image,i.name,oi.price,oi.quantity,oi.total');
         $builder->join('item i', 'i.id=oi.product_id');
-
         $builder->where('oi.order_id', $get);
         $builder->where('oi.is_delete', '0');
         $data_table = DataTable::of($builder);
@@ -438,20 +487,19 @@ class HomeModel extends Model
         $result = array();
         if ($method == 'brand') {
             $gmodel = new GeneralModel();
-            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id), '*');
+            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id,'is_delete' => 0), '*');
         }
-
         if ($method == 'category') {
             $gmodel = new GeneralModel();
-            $result['category'] = $gmodel->get_data_table('category', array('id' => $id), '*');
+            $result['category'] = $gmodel->get_data_table('category', array('id' => $id,'is_delete' => 0), '*');
         }
         if ($method == 'slider') {
             $gmodel = new GeneralModel();
-            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id), '*');
+            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id,'is_delete' => 0), '*');
         }
         if ($method == 'coupon') {
             $gmodel = new GeneralModel();
-            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id), '*');
+            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id,'is_delete' => 0), '*');
         }
         return $result;
     }
@@ -482,6 +530,22 @@ class HomeModel extends Model
                 $gmodel = new GeneralModel();
                 $result = $gmodel->update_data_table('item', array('id' => $post['pk']), array('is_delete' => '1'));
             }
+            if ($post['method'] == 'Coupon') {
+
+                $gmodel = new GeneralModel();
+                $result = $gmodel->update_data_table('coupon', array('id' => $post['pk']), array('is_delete' => '1'));
+            }
+            if ($post['method'] == 'subscribe') {
+
+                $gmodel = new GeneralModel();
+                $result = $gmodel->update_data_table('subscribe', array('id' => $post['pk']), array('is_delete' => '1'));
+            }
+            if ($post['method'] == 'contact') {
+
+                $gmodel = new GeneralModel();
+                $result = $gmodel->update_data_table('contact', array('id' => $post['pk']), array('is_delete' => '1'));
+            }
+            
         }
         return $result;
     }

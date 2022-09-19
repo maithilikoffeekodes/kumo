@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\TestModel;
+use Dompdf\Dompdf;
 
 
-class Test extends BaseController{
+class Test extends BaseController
+{
     public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
     {
         parent::initController($request, $response, $logger);
         $this->model = new TestModel();
-        
     }
     public function index()
     {
@@ -110,7 +112,7 @@ class Test extends BaseController{
                                             </td>
                                         </tr>';
 
-$message .= '
+        $message .= '
                                                         <tr>
                                                             <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">
                                                                )
@@ -122,7 +124,7 @@ $message .= '
 
 
 
-$message .= '</table>
+        $message .= '</table>
                                 </td>
                             </tr>
                             <tr>
@@ -231,12 +233,31 @@ $message .= '</table>
             
         </body>
         </html>';
-    order_mail('maithili.koffeekodes@gmail.com','heelo',$message);
+        order_mail('maithili.koffeekodes@gmail.com', 'heelo', $message);
         return $message;
-
     }
-   public function mail(){
-    helper('base');
-    order_mail('maithili.koffeekodes@gmail.com','heelo','hellllllo');
-   }
+    public function mail()
+    {
+        helper('base');
+        order_mail('maithili.koffeekodes@gmail.com', 'heelo', 'hellllllo');
+    }
+    public function button()
+    {
+        return view('test');
+    }
+    public function invoice($id = '2')
+    {
+        $dompdf = new Dompdf();
+        $data['order'] = $this->model->order($id);
+        $html =  view('invoice', $data);
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A3', 'portrait');
+        $dompdf->render();
+        $dompdf->stream('Invoice');
+    }
+    public function  send_otp()
+    {
+        helper('base');
+        send_otp('maithili.koffeekodes@gmail.com', 9786453);
+    }
 }

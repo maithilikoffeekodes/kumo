@@ -29,11 +29,11 @@
 								<li><a href="payment-methode.html">Payment Methode</a></li>
 							</ul>
 						</li> -->
-						<li style="margin-left: 954px;margin-top: -53px;">
+						<!-- <li style="margin-left: 954px;margin-top: -53px;">
 							<a href="#" onclick="openSearch()">
 								<i class="lni lni-search-alt"></i>
 							</a>
-						</li>
+						</li> -->
 						<li style="margin-left: 1014px;margin-top: -36px;color: white;">
 							<i class="lni lni-user">
 
@@ -45,6 +45,7 @@
 								<?php } else { ?>
 									<li><a href="<?= url('Home/order') ?>">Your Order</a></li>
 									<li><a href="<?= url('Home/register') ?>">Edit Profile</a></li>
+									<li><a href="<?= url('Home/change_password') ?>">Change Password</a></li>
 									<li><a href="<?= url('Home/logout') ?>">Logout</a></li>
 								<?php } ?>
 							</ul>

@@ -200,3 +200,212 @@ CRITICAL - 2022-09-17 03:07:32 --> Undefined array key "type"
 #5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #7 {main}
+CRITICAL - 2022-09-17 03:44:24 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:45:17 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:45:37 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:45:45 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:47:37 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:49:13 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:49:41 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+#0 D:\kumo\system\View\View.php(210): include()
+#1 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('invoice', Array, true)
+#3 D:\kumo\app\Controllers\Test.php(246): view('invoice')
+#4 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#5 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#6 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#9 {main}
+CRITICAL - 2022-09-17 03:49:53 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:49:55 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:50:21 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:50:22 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:50:33 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:50:34 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:29 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:29 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:30 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:45 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:45 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:46 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:46 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:51:46 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:52:48 --> You must set the database table to be used with your query.
+#0 D:\kumo\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\kumo\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\kumo\app\Controllers\Test.php(248): CodeIgniter\Model->__call('get_order_detai...', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-17 03:54:31 --> You must set the database table to be used with your query.
+#0 D:\kumo\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\kumo\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\kumo\app\Controllers\Test.php(248): CodeIgniter\Model->__call('get_order_detai...', Array)
+#3 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Test->invoice()
+#4 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-17 03:54:59 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}
+CRITICAL - 2022-09-17 03:55:01 --> Too few arguments to function App\Controllers\Home::invoice(), 0 passed in D:\kumo\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->invoice()
+#1 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#5 {main}

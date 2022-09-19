@@ -91,10 +91,10 @@
                         <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
                         <div class="card-body p-0">
                             <div class="shop_thumb position-relative">
-                                <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..." style="height: 350px ;width: 250px;"></a>
+                                <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . $row['id']) ?>"><img class="card-img-top" src="<?= $row['image'] ?>" alt="..." style="height: 350px ;width: 260px;"></a>
                                 <div class="product-left-hover-overlay">
                                     <ul class="left-over-buttons">
-                                        <li><a class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li>
+                                        <!-- <li><a class="d-inline-flex circle align-items-center justify-content-center"><i class="fas fa-expand-arrows-alt position-absolute"></i></a></li> -->
                                         <li><a class="d-inline-flex circle align-items-center justify-content-center wish" id="wishlist" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="far fa-heart position-absolute"></i></a></li>
                                         <li><a class="d-inline-flex circle align-items-center justify-content-center  cartbtn" id="cartbtn" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="fas fa-shopping-basket position-absolute"></i></a></li>
                                     </ul>
@@ -192,20 +192,6 @@
                 <div class="reviews-slide px-3">
 
                     <!-- single review -->
-                    <div class="single_review">
-                        <div class="sng_rev_thumb">
-                            <figure><img src="<?= ASSETS; ?>img/team-1.jpg" class="img-fluid circle" alt="" /></figure>
-                        </div>
-                        <div class="sng_rev_caption text-center">
-                            <div class="rev_desc mb-4">
-                                <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                            </div>
-                            <div class="rev_author">
-                                <h4 class="mb-0">Mark Jevenue</h4>
-                                <span class="fs-sm">CEO of Addle</span>
-                            </div>
-                        </div>
-                    </div>
                     <?php foreach ($review as $row) { ?>
 
                         <!-- single review -->
@@ -491,6 +477,11 @@
 
 <script>
     $(document).ready(function() {
+
+        function search1() {
+            var search = "<?= isset($_GET['search']) ? $_GET['search'] : ''; ?>";
+            window.location.href = "<?php echo url('Home/shoplist?search=') ?>" + search;
+        }
 
         $('.cartbtn').click(function(event) {
 

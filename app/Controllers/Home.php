@@ -82,11 +82,52 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_data($post);
             return $this->response->setJSON($msg);
         }
-        if ($id != '') {
-            $data['data'] = $this->model->get_register_data('data', $id);
-        }
+        // if ($id != '') {
+            $data['data'] = $this->model->get_register_data();
+        // }
         // print_r($data);exit;
-        return view('register');
+        return view('register',$data);
+    }
+    public function change_password()
+    {
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+            $msg = $this->model->change_password($post);
+            return $this->response->setJSON($msg);
+            
+        }
+        return view('change-password');
+    }
+    public function forgot_password()
+    {
+        $post = $this->request->getPost();
+        if(!empty($post))
+        {
+            $msg = $this->model->send_otp_mail($post);
+            return $this->response->setJSON($msg);
+        }
+        return view('forgot_password');
+    }
+    public function verify_otp()
+    {
+        $post = $this->request->getPost();
+        // print_r($post);exit;
+        if(!empty($post))
+        {
+            $result = $this->model->verify_otp($post);
+            return $this->response->setJson($result);
+        }
+    }
+
+    public function set_new_pass()
+    {
+        $post = $this->request->getPost();
+        if(!empty($post))
+        {
+            $result = $this->model->set_new_pass($post);
+            return $this->response->setJson($result);
+        }
+        return view('set_password');
     }
     public function productdetail($id = '')
     {
@@ -124,6 +165,13 @@ class Home extends BaseController
     }
     public function contact()
     {
+        $post = $this->request->getPost();
+        if (!empty($post)) {
+
+            $msg = $this->model->insert_edit_contact($post);
+            // print_r($msg);exit;
+            return $this->response->setJSON($msg);
+        }
         return view('contact');
     }
     public function coupon()
@@ -195,8 +243,9 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
-            // echo"<pre>";print_r($post);exit;
+            // print_r($post);exit;
             $msg = $this->model->insert_review($post);
+            // print_r($msg);
             return $this->response->setJSON($msg);
         }
     }
@@ -225,12 +274,20 @@ class Home extends BaseController
         // echo"<pre>";print_r($data);exit;
         return view('order/orderview', $data);
     }
-    public function invoice(){
+    public function track_order(){
+        $data['orders'] = $this->model->get_order_data();
+        return view('track-order',$data);
+    }
+    public function invoice($id)
+    {
         $dompdf = new Dompdf();
-        $html =  view('Hello');
+        $data['order'] = $this->model->get_orders_details($id);
+        $html =  view('invoice', $data);
+        // print_r($html);exit;
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A3', 'portrait');
-        $dompdf->render();  
+        $dompdf->render();
+        $dompdf->stream('Invoice');
     }
     public function getaddress()
     {
