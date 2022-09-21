@@ -168,8 +168,8 @@
 								</div>
 							</div>
 						</div> -->
-						<div class="boxed-header text-center">
-								<h3><a href="<?= url('Home/shoplist')?>">Clear All Filters</a></h3>
+						<div class="boxed-header text-center p-4 font-weight-bold">
+								<label><a href="<?= url('Home/shoplist')?>">Clear All Filters</a></label>
 							</div>
 						<!-- Single Option -->
 						<div class="single_search_boxed">
