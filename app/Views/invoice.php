@@ -4,7 +4,7 @@
         <td class="test" colspan="7" style="text-align:center;padding:50px;border:none;">
             <a href="" style="font-size:1.4em;color: #86C442;text-decoration:none;font-weight:600 ;">
                 <!-- <img src="http://localhost:8080/assets/img/logo.png" height="100px" style="text-align:center;height:100px; padding-left:85px;"> -->
-                <h1 style="text-align:center;padding:20px;color:black;">Kumo</h1>
+                <h1 style="text-align:center;padding-left:85px;color:black;">Kumo</h1>
             </a>
             <h3 style="margin: 0;padding-left:85px;">Kumo Pvt.Ltd. 3298 Grant Street Longview, TX <br>Surat - 395006</h3>
             <br>
