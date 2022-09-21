@@ -72,7 +72,7 @@
 									<div class="address mt-3">
 										1-202-555-0106<br>help@kumo.com
 									</div>
-									<div class="address mt-3">
+									<!-- <div class="address mt-3">
 										<ul class="list-inline">
 											<li class="list-inline-item"><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
 											<li class="list-inline-item"><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
@@ -80,7 +80,7 @@
 											<li class="list-inline-item"><a href="#"><i class="lni lni-instagram-filled"></i></a></li>
 											<li class="list-inline-item"><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
 										</ul>
-									</div>
+									</div> -->
 								</div>
 							</div>
 

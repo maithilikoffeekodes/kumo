@@ -387,3 +387,39 @@ CRITICAL - 2022-09-21 05:58:23 --> strtotime(): Passing null to parameter #1 ($d
 #9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #11 {main}
+CRITICAL - 2022-09-21 06:58:59 --> Undefined variable $product
+#0 D:\kumo\app\Views\index.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 110)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(30): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-21 06:59:18 --> Undefined variable $product
+#0 D:\kumo\app\Views\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 117)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(30): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}
+CRITICAL - 2022-09-21 06:59:21 --> Undefined variable $product
+#0 D:\kumo\app\Views\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\kumo\\app\\Vie...', 117)
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(30): view('index', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}

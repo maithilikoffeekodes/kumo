@@ -61,7 +61,7 @@
                     <div class="prt_05 mb-4">
                         <div class="row mb-7">
                             <div class="col">
-                                <div class="input-group quantity mr-3" style="width: 130px;">
+                                <div class="input-group quantity mr-3" style="width: 100px;">
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-secondary btn-minus" onclick="decrement(this)">
                                             <span class="fa fa-minus"></span>
