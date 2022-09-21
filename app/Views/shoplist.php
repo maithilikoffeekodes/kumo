@@ -168,7 +168,9 @@
 								</div>
 							</div>
 						</div> -->
-
+						<div class="boxed-header text-center">
+								<h3><a href="<?= url('Home/shoplist')?>">Clear All Filters</a></h3>
+							</div>
 						<!-- Single Option -->
 						<div class="single_search_boxed">
 							<div class="widget-boxed-header">
