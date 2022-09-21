@@ -957,7 +957,7 @@ class HomeModel extends Model
                         </div>
                         <div class="card-footer b-0 p-0 pt-2 bg-white">
                             <div class="text-left">
-                                <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="' . url('Home/productdetail/' . @$row['id']) . '">' . @$row['name'] . '</a></h5>
+                                <h5 class="fw-bolder fs-md mb-0 lh-1 mb-1" style="min-height:50px ;"><a href="' . url('Home/productdetail/' . @$row['id']) . '">' . @$row['name'] . '</a></h5>
                                 <div class="elis_rty"><span class="ft-bold text-dark fs-sm">₹' . @$row['listedprice'] . '</span><span class="text-secondary p-2 p-2"><del>₹' . @$row['price'] . '</del></span><span class="text-success bg-light-success rounded px-2 py-1">' . @$row['discount'] . ' % off</span></div>
                             </div>
                         </div>

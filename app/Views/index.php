@@ -59,7 +59,7 @@
                             <div class="d-inline-flex align-items-center justify-content-center p-4 circle mb-2 border"><a href="<?= url('Home/shoplist?category=' . @$row['id']) ?>" class="d-block"><img src="<?= $row['image'] ?>" class="img-fluid" width="40" alt=""></a></div>
                         </div>
                         <div class="sl_cat_02">
-                            <h6 class="m-0 ft-medium fs-sm"><a href="<?= url('Home/shoplist') ?>"><?= $row['category'] ?></a></h6>
+                            <h6 class="m-0 ft-medium fs-sm"><a href="<?= url('Home/shoplist?category=' . @$row['id']) ?>"><?= $row['category'] ?></a></h6>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             <div class="text-left">
                                 <div class="text-left">
                                     <div class="elso_titl"><span class="small"><?= $row['category_name'] ?></span></div>
-                                    <h5 class="fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html"><?= $row['name'] ?></a></h5>
+                                    <h5 class="fs-md mb-0 lh-1 mb-1" style="min-height:50px ;"><a href="shop-single-v1.html"><?= $row['name'] ?></a></h5>
                                     <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                     <?php for (@$i = 1; @$i <=  get_review_count($row['id']); @$i++) { ?>
                                     <i class="text-primary fas fa-star" value="1"></i>
