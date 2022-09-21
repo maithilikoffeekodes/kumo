@@ -14,7 +14,7 @@
 								<div class="input-group">
 									<input type="text" class="form-control custom-height b-0" id="searchdata" name="search" placeholder="Search for products..." />
 									<div class="input-group-append">
-										<div class="input-group-text"><button onclick="search1()" class="btn bg-white text-danger custom-height rounded px-3" type="submit"><i class="fas fa-search"></i></button></div>
+										<div class="input-group-text"><button onclick="return search1()" class="btn bg-white text-danger custom-height rounded px-3" type="submit"><i class="fas fa-search"></i></button></div>
 									</div>
 								</div>
 							</form>
@@ -81,8 +81,9 @@
 <script>
 	function search1() {
 		var search = document.getElementById('searchdata').value;
-		window.open(PATH + "/Home/shoplist?search="+ search);
-		// window.location.href = PATH + "/Home/shoplist?search=" + search;
+		window.location.href = "<?= url('Home/shoplist?search=')?>" + search;
+		// PATH + "/Home/shoplist?search=" + search
+		return false;
 	}
 </script>
 <?= $this->endSection() ?>
