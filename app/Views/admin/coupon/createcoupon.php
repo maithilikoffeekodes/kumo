@@ -17,9 +17,9 @@
             <div class="form-group">
                 <label class="form-label">Coupon Type: <span class="tx-danger">*</span></label>
                 <select name="coupon_type" id="type" class=" select2 form-control" required>
-                <option <?= (@$coupon[0]['coupon_type'] === '' ? 'selected' : '') ?> value="">None</option>
-                <option <?= (@$coupon[0]['coupon_type'] === 'Rupees' ? 'selected' : '') ?> value="Rupees">Rupees</option>
-                <option <?= (@$coupon[0]['coupon_type'] === 'Percentage' ? 'selected' : '') ?> value="Percentage">Percentage</option>
+                <option <?= (@$coupon['coupon_type'] === '' ? 'selected' : '') ?> value="">None</option>
+                <option <?= (@$coupon['coupon_type'] === 'Rupees' ? 'selected' : '') ?> value="Rupees">Rupees</option>
+                <option <?= (@$coupon['coupon_type'] === 'Percentage' ? 'selected' : '') ?> value="Percentage">Percentage</option>
             </select>
             </div>
             <div class="form-group">

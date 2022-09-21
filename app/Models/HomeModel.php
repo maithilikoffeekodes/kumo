@@ -9,7 +9,6 @@ class HomeModel extends Model
 {
     public function insert_edit_data($post)
     {
-        // print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('user');
         $builder->select('*');
@@ -30,7 +29,6 @@ class HomeModel extends Model
             'pincode' => $post['pincode']
         );
         if (!empty($result)) {
-            // print_r($result);exit;
             $builder->where('id', $post['id']);
             $res = $builder->update($pdata);
             if ($res) {
@@ -69,7 +67,6 @@ class HomeModel extends Model
     }
     public function login($post)
     {
-        // print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('user');
         $builder->select('*');
@@ -89,6 +86,8 @@ class HomeModel extends Model
             } else {
                 $msg = array("st" => "failed", "msg" => "Username or Password are Wrong!!!");
             }
+        } else {
+            $msg = array("st" => "failed", "msg" => "Username or Password are wrong!!");
         }
         return $msg;
     }
@@ -100,7 +99,7 @@ class HomeModel extends Model
     }
     public function change_password($post)
     {
-        // print_r($post);exit;
+
 
         $db = $this->db;
         $builder = $db->table('user');
@@ -112,7 +111,7 @@ class HomeModel extends Model
             $msg = array('st' => '', 'msg' => '');
             if ($result_array->password == $post['password']) {
                 if ($post['npassword'] == $post['cpassword']) {
-                    // print_r($post);exit;
+
                     $builder->where('id', session('uid'));
                     $builder->update(array('password' => $post['npassword']));
                     $msg = array('st' => 'success', 'msg' => 'Password Changed');
@@ -142,7 +141,7 @@ class HomeModel extends Model
         $builder->limit(8);
         $query = $builder->get();
         $getRanditem = $query->getResultArray();
-        // echo "<pre>";print_r($getRanditem);exit;
+
         return $getRanditem;
     }
     public function get_product_data($id)
@@ -156,7 +155,6 @@ class HomeModel extends Model
         $builder->where('i.is_delete', 0);
         $query = $builder->get();
         $getproduct = $query->getRowArray();
-        // echo"<pre>";print_r($getproduct) ;exit;
 
         $image = array();
         $image[0] = base_url() . $getproduct['image'];
@@ -245,8 +243,8 @@ class HomeModel extends Model
             );
 
             if (!empty($result)) {
-                // $pdata['updated_at'] = date('Y-m-d H:i:s');
-                // $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
+                $pdata['updated_at'] = date('Y-m-d H:i:s');
+                $pdata['updated_by'] = session('uid') ? session('uid') : session('guestid');
 
                 $builder->where(array('product_id' => $post['product_id']));
                 $res = $builder->update($pdata);
@@ -1084,11 +1082,14 @@ class HomeModel extends Model
         $builder = $db->table('orders');
         $order_data = array(
             'user_id' => session('uid') ? session('uid') : session('guestid'),
+            'sub_total' => $post['sub_total'],
+            'tax_amt' => $post['tax_amt'],
+            'coupon-discount' => $post['coupon-discount'],
             'total_payment' => $post['grand_total'],
             'ship_id' => $ship_id,
             'default_add' => $default_add,
             'payment_type' => 'Razorpay',
-            'is_login' => session('id') ? 0 : 1
+            'is_login' => session('uid') ? 0 : 1
         );
         $order_data['created_at'] = date('Y-m-d H:i:s');
         $order_data['created_by'] = session('uid') ? session('uid') : session('guestid');

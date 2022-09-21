@@ -93,7 +93,7 @@
                         </div>
                     </div>
 
-                    <div class="prt_06">
+                    <!-- <div class="prt_06">
                         <p class="mb-0 d-flex align-items-center">
                             <span class="mr-4">Share:</span>
                             <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted mr-2" href="#!">
@@ -106,7 +106,7 @@
                                 <i class="fab fa-pinterest-p position-absolute"></i>
                             </a>
                         </p>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -285,7 +285,7 @@
                         <div class="single_itesm">
                             <div class="product_grid card b-0 mb-0">
                                 <!-- <div class="badge bg-success text-white position-absolute ft-regular ab-left text-upper">Sale</div> -->
-                                <button class="snackbar-wishlist btn btn_love position-absolute ab-right"><i class="far fa-heart"></i></button>
+                                <button class="snackbar-wishlist btn btn_love position-absolute ab-right wish" id="wishlist" data-product_id="<?php echo @$row['id'] ?> " data-price="<?= @$row['listedprice'] ?>" data-quantity="1"><i class="far fa-heart"></i></button>
                                 <div class="card-body p-0">
                                     <div class="shop_thumb position-relative">
                                         <a class="card-img-top d-block overflow-hidden" href="<?= url('Home/productdetail/' . @$row['id'])
@@ -325,7 +325,7 @@
         $('.cartbtn').click(function(event) {
 
             var product_id = $(this).data("product_id");
-            var quantity = $('.quantity').val();
+            var quantity = $('.quantity').val()!='' ? $('.quantity').val() :$(this).data("quantity") ;
             var price = $(this).data("price");
             // alert(quantity);
             toastr.options = {

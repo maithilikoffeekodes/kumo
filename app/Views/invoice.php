@@ -3,7 +3,8 @@
     <tr>
         <td class="test" colspan="7" style="text-align:center;padding:50px;border:none;">
             <a href="" style="font-size:1.4em;color: #86C442;text-decoration:none;font-weight:600 ;">
-                <img src="http://localhost:8080/assets/img/logo.png" height="100px" style="text-align:center;height:100px; padding-left:85px;">
+                <!-- <img src="http://localhost:8080/assets/img/logo.png" height="100px" style="text-align:center;height:100px; padding-left:85px;"> -->
+                <h1 style="text-align:center;padding:20px;color:black;">Kumo</h1>
             </a>
             <h3 style="margin: 0;padding-left:85px;">Kumo Pvt.Ltd. 3298 Grant Street Longview, TX <br>Surat - 395006</h3>
             <br>
@@ -113,11 +114,11 @@
     <?php } ?>
     <tr>
         <th colspan="8" style="text-align:right;">Amount</th>
-        <td><?= @$order[0]['grand_total'] ?></td>
+        <td><?= @$order[0]['sub_total'] ?></td>
     </tr>
     <tr>
         <th colspan="8" style="text-align:right;">Tax Amount</th>
-        <td><?= @$order[0]['amount'] ?></td>
+        <td><?= @$order[0]['tax_amt'] ?></td>
     </tr>
     <tr>
         <th colspan="8" style="text-align:right;">Shipping + Convenience Charges</th>
@@ -128,8 +129,12 @@
         <td>0</td>
     </tr>
     <tr>
+        <th colspan="8" style="text-align:right;">Coupon Discount</th>
+        <td><?= @$order[0]['coupon-discount'] ?></td>
+    </tr>
+    <tr>
         <th colspan="8" style="text-align:right;">Total Amount Including Tax</th>
-        <td>0</td>
+        <td><?= (float) @$order[0]['sub_total'] + @$order[0]['tax_amt'] ?></td>
     </tr>
     <tr>
         <th colspan="8" style="text-align:right;">Refund Amount</th>

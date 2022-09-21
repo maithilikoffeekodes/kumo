@@ -28,7 +28,12 @@ class AuthModel extends Model
             } else {
                 $msg = array("st" => "failed", "msg" => "Username or Password are Wrong!!!");
             }
-            return $msg;
+  
         }
+        else 
+        {
+            $msg = array("st" => "failed","msg"=>"Username or Password are wrong");
+        }
+        return $msg;
     }
 }

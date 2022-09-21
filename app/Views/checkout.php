@@ -46,9 +46,9 @@
                                 <div style="float:left">
                                     <div class="row mb-4">
                                         <div class="form-check col-12">
-                                            <input class="form-check-input" type="radio" name="add2" id="add2" value="<?= @$row['type'] ?>" checked>
+                                            <input class="form-check-input" type="radio" name="add2" id="flexRadioDefault2" value="<?= @$row['type'] ?>" checked>
 
-                                            <label class="form-check-label" for="">
+                                            <label class="form-check-label" for="flexRadioDefault2">
                                                 <?= $row['name'] ?>
                                             </label>
                                             <input type="hidden" value="<?= @$row['id'] ?>" name="id">
@@ -200,9 +200,9 @@
                 <div class="form-group col-md-6">
                     <label for="address-names">Choose Address Type:</label>
                     <select name="address_type" class="form-control" id="address_type">
-                        <option value="home">Home</option>
-                        <option value="work">Work</option>
-                        <option value="other">Other</option>
+                        <option <?= (@$row['address_type'] === 'home' ? 'selected' : '') ?> value="home">Home</option>
+                        <option <?= (@$row['address_type'] === 'work' ? 'selected' : '') ?> value="work">Work</option>
+                        <option <?= (@$row['address_type'] === 'other' ? 'selected' : '') ?> value="other">Other</option>
                     </select>
                 </div>
             </div>
@@ -229,15 +229,18 @@
         <div class="card-body">
             <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                <input type="hidden" name="sub_total" id="sub_total" value='0'>
                     <span>Subtotal</span> <span class="ml-auto text-dark ft-medium sub_total_amt">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                <input type="hidden" name="tax_amt" id="tax_amt" value='0'>
                     <span>Tax</span> (<span class="gst">%</span>) <span class="ml-auto text-dark ft-medium tax">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
                     <span>Delivery Charges</span> <span class="ml-auto text-dark ft-medium">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular" id="discount">
+                <input type="hidden" name="coupon-discount" id="coupon-discount" value='0'>
                     <span>Coupons Discount</span> <span class="ml-auto text-dark ft-medium coupon-discount">0</span>
                 </li>
                 <li class="list-group-item d-flex text-dark fs-sm ft-regular">
@@ -529,6 +532,7 @@
         }
 
         var sub_tot = $(".sub_total_amt").text(total);
+        $('#sub_total').val(parseFloat(total));
         $(".total_amt").text($(".sub_total_amt").text());
         var grand_tot = $(".sub_total_amt").text();
     
@@ -537,6 +541,7 @@
         var cal = x * tax / 100;
         var gst = x + cal;
         var tax_amt = $('.tax').text(cal);
+        $('#tax_amt').val(parseFloat(cal));
         $('.gst').text(tax + '%');
 
         // var state = $('select[name="state"]').val();
@@ -549,6 +554,7 @@
         // }
 
         $('.coupon-discount').text(discount);
+        $('#coupon-discount').val(parseFloat(discount));
         var grand_total = gst - $('.coupon-discount').text();
         console.log(grand_total);
         $(".total_amt").text(grand_total);

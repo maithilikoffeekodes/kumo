@@ -275,7 +275,24 @@ function send_email($name, $email, $subject, $message)
         $mail->SMTPSecure   = 'tls';
         $mail->Port         = 587;
         $mail->Subject      =  $subject1;
-        $mail->Body         =  $message;
+        $mail->Body         =  '<html>
+        <body>
+        Dear '.$name.',
+
+<p>We are delighted to inform you that you have been our customer for Kumo!</p?
+
+<p>This message is to thank you for being part of our family.</p>
+
+<p>We are truly grateful for your constant support and loyalty. We are aware that we wouldn’t be here without devoted customers like yourself.</p>
+
+<p>You could have chosen any other e-store, but you picked and still shop with us. We appreciate you sticking with Kumo fashion.</p>
+
+<p>Thanks again, and have a wonderful day!</p>
+
+<p>Good Luck</p>
+<a href="'.base_url().'">Shop Again</a>
+        </body>
+        </html>';
         $mail->setfrom('maithilijejani12@gmail.com', 'Kumo');
 
         $mail->addAddress($email);
@@ -287,7 +304,7 @@ function send_email($name, $email, $subject, $message)
 }
 function send_otp($email, $otp)
 {
-// print_r($email);exit;
+    // print_r($email);exit;
     $mail = new PHPMailer();
     try {
         $mail->isSMTP();
@@ -305,7 +322,6 @@ function send_otp($email, $otp)
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->send();
-       
     } catch (Exception $e) {
         echo "Something went wrong. Please try again.";
     }
@@ -496,13 +512,16 @@ function mail_template($ord_id)
 										<tr>
 											<td align="left" style="padding-top: 20px;">
 												<table cellspacing="0" cellpadding="0" border="0" width="100%">
-													<tr>
-                                                    <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
+                                                <tr>
+														<td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
 															TAX
 														</td>
-                                                        <td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
-															₹ ' . @$order->tax . '
+														<td width="25%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
+															₹ ' . @$order->tax_amt . '
 														</td>
+													</tr>
+                                                    
+													<tr>
 														<td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">
 															TOTAL
 														</td>

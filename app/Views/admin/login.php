@@ -5,13 +5,20 @@
 <div class="row text-center pl-0 pr-0 ml-0 mr-0" style="margin-top: 176px;">
     <div class="col-lg-3 d-block mx-auto">
         <div class="text-center mb-2">
-            <img src="<?= ASSETS;?>img/brand/logo.png" class="header-brand-img" alt="logo">
-            <img src="<?= ASSETS;?>img/brand/logo-light.png" class="header-brand-img theme-logos" alt="logo">
+            <img src="<?= ASSETS; ?>img/brand/logo.png" class="header-brand-img" alt="logo">
+            <img src="<?= ASSETS; ?>img/brand/logo-light.png" class="header-brand-img theme-logos" alt="logo">
         </div>
         <div class="card custom-card">
             <div class="card-body">
                 <h4 class="text-center">Signin to Your Account</h4>
                 <form action="<?= url('admin/Auth/login') ?>" method="post">
+                    <?php if (!empty($msg) && $msg['st'] == 'failed') { ?>
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span class="mdi mdi-close" aria-hidden="true"></span></button>
+                            <div class="icon"> <span class="mdi mdi-close-circle-o"></span></div>
+                            <div class="message"><strong>Failed!</strong> <?= $msg['msg']; ?></div>
+                        </div>
+                    <?php } ?>
                     <div class="form-group text-left">
                         <label>Email</label>
                         <input class="form-control" placeholder="Enter your email" type="email" name="email" required>
@@ -32,5 +39,3 @@
 </div>
 
 <?= $this->endSection() ?>
-
-

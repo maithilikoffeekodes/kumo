@@ -260,4 +260,48 @@ class Test extends BaseController
         helper('base');
         send_otp('maithili.koffeekodes@gmail.com', 9786453);
     }
+    public function date()
+    {
+        date_default_timezone_set('Asia/Kolkata');
+        $today = date('Y-m-d');
+        $date = date('2022-09-23');
+
+        $delivery_date = date('Y-m-d', strtotime($today . ' +8 days'));
+        $pick_by_courier = date('Y-m-d', strtotime($today . ' +2 days'));
+        $on_the_way = date('Y-m-d', strtotime($pick_by_courier . ' +2 days'));
+        $ready_pickup = date('Y-m-d', strtotime($on_the_way . ' +2 days'));
+
+        echo $today . "<br>" . $delivery_date  . "<br>" .  $pick_by_courier  . "<br>" .  $on_the_way  . "<br>" .  $ready_pickup;
+
+        if($pick_by_courier == $date){
+            echo "pick by courier";
+        }else if($on_the_way == $date){
+            echo "on the way";
+        }else if($ready_pickup == $today){
+            echo "ready pickup";
+        }
+    }
+
+    public function mailing()
+    {
+        $message = '<html>
+        <body>
+        Dear Customer,
+
+<p>We are delighted to inform you that you have been our customer for Kumo!</p?
+
+<p>This message is to thank you for being part of our family.</p>
+
+<p>We are truly grateful for your constant support and loyalty. We are aware that we wouldn’t be here without devoted customers like yourself.</p>
+
+<p>You could have chosen any other e-store, but you picked and still shop with us. We appreciate you sticking with Kumo fashion.</p>
+
+<p>Thanks again, and have a wonderful day!</p>
+
+<p>Best,
+[company’s representative, can be a decision-maker] </p>
+        </body>
+        </html>';
+        return $message;
+    }
 }

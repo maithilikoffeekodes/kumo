@@ -20,12 +20,10 @@ class HomeModel extends Model
         $pdata = array(
             'brand' => $post['brand'],
         );
+        // echo "<pre>";
+        // print_r($_FILES['image']['name']);
+        // exit;
 
-        // if ($_FILES['image']['size'] == 0 && $_FILES['image']['error'] > 0) {
-        //     echo "<pre>";
-        //     print_r($_FILES);
-        //     exit;
-        // }
         if (isset($file)) {
             //  print_r($file);exit;
             if ($file->isValid() && !$file->hasMoved()) {
@@ -39,8 +37,8 @@ class HomeModel extends Model
             }
         }
 
+        // echo"<pre>";print_r($result);exit;
         if (!empty($result)) {
-            //  echo"<pre>";print_r($post);exit;
             $pdata['updated_at'] = date('Y-m-d H:i:s');
             $pdata['updated_by'] = session('id');
 
@@ -54,21 +52,24 @@ class HomeModel extends Model
         } else {
             $pdata['created_at'] = date('Y-m-d H:i:s');
             $pdata['created_by'] = session('id');
-            $res = $builder->insert($pdata);
-            if ($res) {
-                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            if (!empty($_FILES['image']['name'])) {
+                $res = $builder->insert($pdata);
+                if ($res) {
+                    $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+                } else {
+                    $msg = array('st' => 'failed');
+                }
             } else {
-                $msg = array('st' => 'failed');
+                $msg = array('st' => 'error', 'msg' => 'Please select a image');
             }
         }
-        // } else {
-        //     $msg = array('st' => 'error', 'msg' => 'Please select a image');
-        // }
+
 
         return $msg;
     }
     public function insert_edit_category($post, $file)
     {
+        // echo"<pre>";print_r($post);exit;
         $db = $this->db;
         $builder = $db->table('category');
         $builder->select('*');
@@ -93,6 +94,7 @@ class HomeModel extends Model
         if (!empty($result)) {
             $pdata['updated_at'] = date('Y-m-d H:i:s');
             $pdata['updated_by'] = session('id');
+
             $builder->where('id', $post['id']);
             $res = $builder->update($pdata);
             if ($res) {
@@ -103,11 +105,15 @@ class HomeModel extends Model
         } else {
             $pdata['created_at'] = date('Y-m-d H:i:s');
             $pdata['created_by'] = session('id');
-            $res = $builder->insert($pdata);
-            if ($res) {
-                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            if (!empty($_FILES['image']['name'])) {
+                $res = $builder->insert($pdata);
+                if ($res) {
+                    $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+                } else {
+                    $msg = array('st' => 'failed');
+                }
             } else {
-                $msg = array('st' => 'failed');
+                $msg = array('st' => 'error', 'msg' => 'Please select a image');
             }
         }
         return $msg;
@@ -153,11 +159,15 @@ class HomeModel extends Model
         } else {
             $pdata['created_at'] = date('Y-m-d H:i:s');
             $pdata['created_by'] = session('id');
-            $res = $builder->insert($pdata);
-            if ($res) {
-                $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+            if (!empty($_FILES['image']['name'])) {
+                $res = $builder->insert($pdata);
+                if ($res) {
+                    $msg = array('st' => 'success', 'msg' => 'Insert successfully');
+                } else {
+                    $msg = array('st' => 'failed');
+                }
             } else {
-                $msg = array('st' => 'failed');
+                $msg = array('st' => 'error', 'msg' => 'Please select a image');
             }
         }
         return $msg;
@@ -380,16 +390,14 @@ class HomeModel extends Model
         $data_table->edit('user_id', function ($row) {
             $gmodel = new GeneralModel();
             $user = $gmodel->get_data_table('user', array('id' => $row->user_id), 'name');
-            if(isset($user['name']))
-            {
+            if (isset($user['name'])) {
                 return $user['name'];
                 // echo '<pre>'; print_r($user);exit;
-            }
-            else{
-                $user='Unknown';
+            } else {
+                $user = 'Unknown';
                 return $user;
             }
-        },'last' );
+        }, 'last');
 
 
         return $data_table->toJSON();
@@ -401,7 +409,7 @@ class HomeModel extends Model
         $builder->select('id,name,email,subject,message');
         $builder->where('is_delete', 0);
         $data_table =  DataTable::of($builder);
-        $data_table->setSearchableColumns(['id','name']);
+        $data_table->setSearchableColumns(['id', 'name']);
 
         $data_table->add('action', function ($row) {
 
@@ -487,19 +495,19 @@ class HomeModel extends Model
         $result = array();
         if ($method == 'brand') {
             $gmodel = new GeneralModel();
-            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id,'is_delete' => 0), '*');
+            $result['brand'] = $gmodel->get_data_table('brand', array('id' => $id, 'is_delete' => 0), '*');
         }
         if ($method == 'category') {
             $gmodel = new GeneralModel();
-            $result['category'] = $gmodel->get_data_table('category', array('id' => $id,'is_delete' => 0), '*');
+            $result['category'] = $gmodel->get_data_table('category', array('id' => $id, 'is_delete' => 0), '*');
         }
         if ($method == 'slider') {
             $gmodel = new GeneralModel();
-            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id,'is_delete' => 0), '*');
+            $result['slider'] = $gmodel->get_data_table('slider', array('id' => $id, 'is_delete' => 0), '*');
         }
         if ($method == 'coupon') {
             $gmodel = new GeneralModel();
-            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id,'is_delete' => 0), '*');
+            $result['coupon'] = $gmodel->get_data_table('coupon', array('id' => $id, 'is_delete' => 0), '*');
         }
         return $result;
     }
@@ -545,7 +553,6 @@ class HomeModel extends Model
                 $gmodel = new GeneralModel();
                 $result = $gmodel->update_data_table('contact', array('id' => $post['pk']), array('is_delete' => '1'));
             }
-            
         }
         return $result;
     }

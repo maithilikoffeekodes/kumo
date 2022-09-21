@@ -6,7 +6,7 @@
 	<meta name="author" content="Maithili" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Kumo- Fashion eCommerce</title>
+	<title>Kumo eCommerce</title>
 	<!-- Favicon -->
 	<link href="<?= ASSETS; ?>img/Klogo.png" rel="icon">
 

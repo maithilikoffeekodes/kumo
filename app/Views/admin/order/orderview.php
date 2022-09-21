@@ -30,13 +30,13 @@
                                 <td><?= @$order['mobileno'] ?></td>
                                 <th>Address</th>
                                 <td>
-                                    <?= @$order['address']  
+                                    <?= @$order['address']
                                     ?>
-                                    <?= (!empty(@$order['city_name']) ? ',' . $order['city_name'] : '') 
+                                    <?= (!empty(@$order['city_name']) ? ',' . $order['city_name'] : '')
                                     ?>
-                                    <?= (!empty(@$order['state_name']) ? ',' . $order['state_name'] : '') 
+                                    <?= (!empty(@$order['state_name']) ? ',' . $order['state_name'] : '')
                                     ?>
-                                    <?= (!empty(@$order['pincode']) ? ',' . $order['pincode'] : '') 
+                                    <?= (!empty(@$order['pincode']) ? ',' . $order['pincode'] : '')
                                     ?>
                                 </td>
                             </tr>
@@ -69,30 +69,37 @@
                                 <tr>
 
                                     <th>Total Amount</th>
-                                    <td>
-                                        <h5 class="sub_total_amt">&#8377 <?= @$order['total_payment'] ?> </h5>
+                                    <td class="sub_total_amt">
+                                        &#8377 <?= @$order['sub_total'] ?>
                                     </td>
                                 </tr>
                                 <tr>
 
                                     <th>Discount</th>
                                     <td>
-                                        <h5>&#8377 0 </h5>
+                                        &#8377 <?= @$order['coupon-discount'] ?>
                                     </td>
                                 </tr>
                                 <tr>
 
-                                    <th>
-                                        <h5>Grand Total</h5>
-                                    </th>
+                                    <th>Tax</th>
                                     <td>
-                                        <h5 class="">&#8377 <?= @$order['total_payment'] ?> </h5>
+                                        &#8377 <?= @$order['tax_amt'] ?>
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <th>Grand Total</th>
+
+                                    <td>
+                                        &#8377 <?= @$order['total_payment'] ?>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="col-lg-6 mt-3" style="float:left;">
-                        <a href="<?= url('admin/Home/invoice/') ?>" download target="_blank" class=" btn btn-danger">Invoice Pdf</a>
+                            <!-- <a href="<?= url('admin/Home/invoice/') ?>" download target="_blank" class=" btn btn-danger">Invoice Pdf</a> -->
                         </div>
                     </div>
                 </div>

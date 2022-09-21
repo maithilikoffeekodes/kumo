@@ -1,0 +1,49 @@
+CRITICAL - 2022-09-20 23:00:46 --> Undefined array key "st"
+#0 D:\kumo\app\Controllers\Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\kumo\\app\\Con...', 47)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->login()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-20 23:04:12 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Controllers\admin\Auth.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Con...', 24)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Auth->login()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Auth))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-20 23:04:48 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Controllers\admin\Auth.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Con...', 24)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Auth->login()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Auth))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-20 23:05:50 --> Trying to access array offset on value of type null
+#0 D:\kumo\app\Controllers\admin\Auth.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\kumo\\app\\Con...', 24)
+#1 D:\kumo\system\CodeIgniter.php(832): App\Controllers\admin\Auth->login()
+#2 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Auth))
+#3 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#6 {main}
+CRITICAL - 2022-09-20 23:44:22 --> cURL error 6: Could not resolve host: api.razorpay.com
+#0 D:\kumo\vendor\rmccue\requests\src\Transport\Curl.php(219): WpOrg\Requests\Transport\Curl->process_response('', Array)
+#1 D:\kumo\vendor\rmccue\requests\src\Requests.php(469): WpOrg\Requests\Transport\Curl->request('https://api.raz...', Array, Array, Array)
+#2 D:\kumo\vendor\razorpay\razorpay\src\Request.php(57): WpOrg\Requests\Requests::request('https://api.raz...', Array, Array, 'POST', Array)
+#3 D:\kumo\vendor\razorpay\razorpay\src\Entity.php(92): Razorpay\Api\Request->request('POST', 'https://api.raz...', Array)
+#4 D:\kumo\vendor\razorpay\razorpay\src\Entity.php(20): Razorpay\Api\Entity->request('POST', 'orders/', Array)
+#5 D:\kumo\vendor\razorpay\razorpay\src\Order.php(12): Razorpay\Api\Entity->create(Array)
+#6 D:\kumo\app\Helpers\rozorpay_helper.php(82): Razorpay\Api\Order->create(Array)
+#7 D:\kumo\app\Helpers\rozorpay_helper.php(23): generate_order_id_razor('2968', '2fb489d4f22b6b1...')
+#8 D:\kumo\app\Models\HomeModel.php(1153): SendRazor('2968', '2fb489d4f22b6b1...', Array)
+#9 D:\kumo\app\Controllers\Home.php(225): App\Models\HomeModel->payment_data(Array)
+#10 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#11 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#15 {main}

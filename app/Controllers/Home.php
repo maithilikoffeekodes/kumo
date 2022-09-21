@@ -26,15 +26,9 @@ class Home extends BaseController
             $guestid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
             $session = session();
             $session->set('guestid', $guestid);
-        }
-        // echo"<pre>";print_r($data);exit;    
+        }   
         return view('index', $data);
     }
-    // public function test(){
-    //     helper('base');
-    //     order_mail('maithili.koffeekodes@gmail.com','heelo','helllllllo');
-    //     return('dfsd');
-    // }
     public function login()
     {
 
@@ -82,10 +76,7 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_data($post);
             return $this->response->setJSON($msg);
         }
-        // if ($id != '') {
             $data['data'] = $this->model->get_register_data();
-        // }
-        // print_r($data);exit;
         return view('register',$data);
     }
     public function change_password()
@@ -111,7 +102,6 @@ class Home extends BaseController
     public function verify_otp()
     {
         $post = $this->request->getPost();
-        // print_r($post);exit;
         if(!empty($post))
         {
             $result = $this->model->verify_otp($post);
@@ -167,9 +157,7 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
-
             $msg = $this->model->insert_edit_contact($post);
-            // print_r($msg);exit;
             return $this->response->setJSON($msg);
         }
         return view('contact');
@@ -191,7 +179,6 @@ class Home extends BaseController
         $post = $this->request->getPost();
         if (!empty($post)) {
             $output = $this->model->applycoupon($post);
-            // print_r($data);exit;
             return $this->response->setJSON($output);
         }
     }
@@ -209,18 +196,17 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
-            // echo "<pre>";print_r($post);exit;
             $data = $this->model->update_cart_data($post);
             if ($data) {
                 echo '1';
             }
         }
-        // return view('checkout');
     }
     public function checkout()
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
+            // echo "<pre>";print_r($post);exit;
             $data = $this->model->payment_data($post);
             return $this->response->setJSON($data);
         }
@@ -243,9 +229,7 @@ class Home extends BaseController
     {
         $post = $this->request->getPost();
         if (!empty($post)) {
-            // print_r($post);exit;
             $msg = $this->model->insert_review($post);
-            // print_r($msg);
             return $this->response->setJSON($msg);
         }
     }
@@ -253,7 +237,6 @@ class Home extends BaseController
     {
 
         $post = $this->request->getPost();
-        // print_r($page);
         $output = $this->model->fetch_data($post, $page);
         // echo "<pre>";print_r($output);exit;
         return $this->response->setJSON($output);
@@ -269,9 +252,7 @@ class Home extends BaseController
     }
     public function orderview($id = '')
     {
-        // print_r($id);exit;
         $data['order_detail'] = $this->model->get_order_details($id);
-        // echo"<pre>";print_r($data);exit;
         return view('order/orderview', $data);
     }
     public function track_order(){
@@ -295,7 +276,6 @@ class Home extends BaseController
         $post = $this->request->getPost();
         if (!empty($post)) {
             $msg = $this->model->getaddress($post);
-            // print_r($msg);exit;
             return $this->response->setJSON($msg);
         }
     }
@@ -372,14 +352,11 @@ class Home extends BaseController
     }
     public function Action($method = '')
     {
-        // print_r($method);exit;
-
         $result = array();
         if ($method == 'Update') {
             $post = $this->request->getPost();
             $result = $this->model->UpdateData($post);
         }
-        // print_r($result);exit;
         return $this->response->setJSON($result);
     }
     public function PaymentExcuate($txn = "")

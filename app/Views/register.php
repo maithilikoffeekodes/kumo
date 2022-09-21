@@ -27,13 +27,13 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label>First Name<span class="text-danger"> * </span></label>
-                                <input type="text" class="form-control" placeholder="Enter First Name" name="fname" id="inputName" value="<?= @$data['fname']; ?>" required>
+                                <input type="text" class="form-control" placeholder="Enter First Name" name="fname" id="inputName" value="<?= @$data['first_name']; ?>" required>
                                 <input type="hidden" value="<?= @$data['id']; ?>" name="id" id="id">
 
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Last Name<span class="text-danger"> * </span></label>
-                                <input type="text" class="form-control" placeholder="Enter Last Name" name="lname" id="inputName" value="<?= @$data['lname']; ?>" required>
+                                <input type="text" class="form-control" placeholder="Enter Last Name" name="lname" id="inputName" value="<?= @$data['last_name']; ?>" required>
                             </div>
                         </div>
                         <div class="row">
@@ -74,21 +74,28 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group  col-md-6">
                                 <label>Password <span class="text-danger"> * </span></label>
-                                <input type="password" class="form-control" placeholder="Enter Password" id="inputName" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
-                            </div>
-                            <div class="row" style="justify-content:left;">
-                                <div id="para" style="margin-left:20px;color:red;margin-bottom:10px;"></div>
-                                <div id="letter" style="color:red;text-align:left;"></div>
-                                <div id="upletter" style="color:red;text-align:left;"></div>
-                                <div id="no" style="color:red;"></div>
-                                <div id="len" style="color:red;"></div>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Enter Password" id="txtPassword" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
+                                    <div class="input-group-addon">
+                                        <a type="button" id="btnToggle" class="toggle">
+                                            <i id="eyeIcon" class="fa fa-eye"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Confirm Password <span class="text-danger"> * </span></label>
-                                <input type="password" class="form-control" placeholder="Enter Confirm Password" id="inputName" name="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
+                                <input type="password" class="form-control" placeholder="Enter Confirm Password" id="txtPassword" name="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@,_])(?=.*[A-Z]).{6,}" value="<?= @$data['password']; ?>" required>
                             </div>
+                        </div>
+                        <div class="row" style="justify-content:left;">
+                            <div id="para" style="margin-left:20px;color:red;margin-bottom:10px;"></div>
+                            <div id="letter" style="color:red;text-align:left;"></div>
+                            <div id="upletter" style="color:red;text-align:left;"></div>
+                            <div id="no" style="color:red;"></div>
+                            <div id="len" style="color:red;"></div>
                         </div>
                         <div class="error-msg"></div>
                         <div class="form_proccessing"></div>
@@ -114,6 +121,31 @@
 <!-- End Page -->
 <?= $this->endSection() ?>
 <?= $this->section('scripts') ?>
+<script>
+    let passwordInput = document.getElementById("txtPassword"),
+
+        toggle = document.getElementById("btnToggle"),
+        icon = document.getElementById("eyeIcon");
+
+    function togglePassword() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.add("fa-eye-slash");
+            //toggle.innerHTML = 'hide';
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            //toggle.innerHTML = 'show';
+        }
+    }
+
+    function checkInput() {
+
+    }
+
+    toggle.addEventListener("click", togglePassword, false);
+    passwordInput.addEventListener("keyup", checkInput, false);
+</script>
 <script>
     $(document).ready(function() {
         $("#state").select2({
@@ -163,50 +195,52 @@
                 cache: true
             }
         });
-        $('.ajax-form-submit').on('submit', function(e) {
-            alert('rdgbdfb');
-            $('.error-msg').html('');
-            $('.form_proccessing').html('Please wait...');
-            e.preventDefault();
-            var aurl = $(this).attr('action');
-            var form = $(this);
-            var formdata = false;
-            $('#save_data').prop('disabled', true);
-            if (window.FormData) {
-                //  alert("form");return;
-                formdata = new FormData(form[0]);
-            }
-            $.ajax({
-                type: "POST",
-                url: aurl,
-                cache: false,
-                contentType: false,
-                processData: false,
-                data: formdata ? formdata : form.serialize(),
-                success: function(response) {
-                    // console.log(response);
-                    //  alert(response);return;
-                    if (response.st == 'success') {
-                        swal("Success!", response.msg, "success");
-                        window.location.href = "<?= url('Home/login') ?>";
-                        datatable_load('');
-                        //  alert("succes");return;
-                        $('#save_data').prop('disabled', false);
-                    } else {
-                        $('.form_proccessing').html('');
-                        $('#save_data').prop('disabled', false);
-                        $('.error-msg').html(response.msg);
-                    }
-                },
-                error: function() {
-                    $('#save_data').prop('disabled', false);
-                    alert('Error');
-                }
-            });
-            return false;
-        });
+
 
     });
+
+    $('.ajax-form-submit').on('submit', function(e) {
+        $('.error-msg').html('');
+        $('.form_proccessing').html('Please wait...');
+        e.preventDefault();
+        var aurl = $(this).attr('action');
+        var form = $(this);
+        var formdata = false;
+        $('#save_data').prop('disabled', true);
+        if (window.FormData) {
+            //  alert("form");return;
+            formdata = new FormData(form[0]);
+        }
+        $.ajax({
+            type: "POST",
+            url: aurl,
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formdata ? formdata : form.serialize(),
+            success: function(response) {
+                // console.log(response);
+                //  alert(response);return;
+                if (response.st == 'success') {
+                    swal("Success!", response.msg, "success");
+                    window.location.href = "<?= url('Home/login') ?>";
+                    datatable_load('');
+                    //  alert("succes");return;
+                    $('#save_data').prop('disabled', false);
+                } else {
+                    $('.form_proccessing').html('');
+                    $('#save_data').prop('disabled', false);
+                    $('.error-msg').html(response.msg);
+                }
+            },
+            error: function() {
+                $('#save_data').prop('disabled', false);
+                alert('Error');
+            }
+        });
+        return false;
+    });
+
     var myInput = document.getElementById("txtPassword");
     var letter = document.getElementById("letter");
     var capital = document.getElementById("capital");
@@ -214,45 +248,46 @@
     var length = document.getElementById("length");
 
     myInput.onblur = function() {
-            var lowerCaseLetters = /[a-z]/g;
-            if (myInput.value.match(lowerCaseLetters)) {
-                $("#letter").hide();
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+            $("#letter").hide();
 
-            } else {
-                $("#letter").html("Lowercase", " ");
-                $("#letter").show();
-            }
+        } else {
+            $("#letter").html("Lowercase", " ");
+            $("#letter").show();
+        }
 
-            var symbol = /[@,_,.]/g;
-            if (myInput.value.match(symbol)) {
-                $("#letter").hide();
+        var symbol = /[@,_,.]/g;
+        if (myInput.value.match(symbol)) {
+            $("#letter").hide();
 
-            } else {
-                $("#letter").html("&nbsp;Symbol", " ");
-                $("#letter").show();
-            }
+        } else {
+            $("#letter").html("&nbsp;Symbol", " ");
+            $("#letter").show();
+        }
 
-            var upperCaseLetters = /[A-Z]/g;
-            if (myInput.value.match(upperCaseLetters)) {
-                $("#upletter").hide();
-            } else {
-                $("#upletter").html("&nbsp;Uppercase");
-                $("#upletter").show();
-            }
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+            $("#upletter").hide();
+        } else {
+            $("#upletter").html("&nbsp;Uppercase");
+            $("#upletter").show();
+        }
 
-            var numbers = /[0-9]/g;
-            if (myInput.value.match(numbers)) {
-                $("#no").hide();
-            } else {
-                $("#no").html("&nbsp;Number");
-                $("#no").show();
-            }
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+            $("#no").hide();
+        } else {
+            $("#no").html("&nbsp;Number");
+            $("#no").show();
+        }
 
-            if (myInput.value.length >= 6) {
-                $("#len").hide();
-            } else {
-                $("#len").html("&nbsp;Minimum 6 characters");
-                $("#len").show();
-            }
+        if (myInput.value.length >= 6) {
+            $("#len").hide();
+        } else {
+            $("#len").html("&nbsp;Minimum 6 characters");
+            $("#len").show();
+        }
+    }
 </script>
 <?= $this->endSection() ?>

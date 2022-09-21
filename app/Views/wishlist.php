@@ -28,7 +28,7 @@
 							<h4 class="px-3 py-2 mb-0 lh-2 gray fs-sm ft-medium text-muted text-uppercase text-left">Dashboard Navigation</h4>
 							<ul class="dahs_navbar">
 							<ul class="dahs_navbar">
-                            <li><a href="<?= url('Home/my_order')?>" class="active"><i class="lni lni-shopping-basket mr-2"></i>My Order</a></li>
+                            <li><a href="<?= url('Home/order')?>" class="active"><i class="lni lni-shopping-basket mr-2"></i>My Order</a></li>
                             <li><a href="<?= url('Home/wishlist')?>"><i class="lni lni-heart mr-2"></i>Wishlist</a></li>
                             <li><a href="<?= url('Home/register')?>"><i class="lni lni-user mr-2"></i>Profile Info</a></li>
                             <!-- <li><a href="<//?= url('Home/my_order')?>"><i class="lni lni-map-marker mr-2"></i>Addresses</a></li> -->

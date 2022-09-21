@@ -79,10 +79,10 @@
 
 <?= $this->section('scripts') ?>
 <script>
-		function search1() {
-		var search = document.getElementById('#searchdata').value;
-		alert(search);
-		window.location.href = "<?php echo url('Home/shoplist?search='); ?>" + search;
+	function search1() {
+		var search = document.getElementById('searchdata').value;
+		window.open(PATH + "/Home/shoplist?search="+ search);
+		// window.location.href = PATH + "/Home/shoplist?search=" + search;
 	}
 </script>
 <?= $this->endSection() ?>

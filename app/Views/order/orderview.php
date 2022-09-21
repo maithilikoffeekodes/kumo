@@ -51,7 +51,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="admin/Home" data-filter_data="<?= @$order_detail['id'] ?>">
+                                <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="Home" data-filter_data="<?= @$order_detail['id'] ?>">
                                     <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
                                     <thead>
                                         <tr>
@@ -71,14 +71,21 @@
 
                                             <th>Total Amount</th>
                                             <td class="sub_total_amt">
-                                                &#8377 <?= @$order_detail['total_payment'] ?> 
+                                                &#8377 <?= @$order_detail['sub_total'] ?> 
                                             </td>
                                         </tr>
                                         <tr>
 
                                             <th>Discount</th>
                                             <td>
-                                                &#8377 0 
+                                                &#8377 <?= @$order_detail['coupon-discount'] ?> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <th>Tax</th>
+                                            <td>
+                                                &#8377 <?= @$order_detail['tax_amt'] ?> 
                                             </td>
                                         </tr>
                                         <tr>

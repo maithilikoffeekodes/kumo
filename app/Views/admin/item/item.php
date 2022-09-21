@@ -30,7 +30,7 @@
                                     <th>Id</th>
                                     <th>Brand</th>
                                     <th>Category</th>
-                                    <th>product</th>
+                                    <th style="width:508px ;">product</th>
                                     <th>Image</th>
                                     <th>MRP Price</th>
                                     <th>Price</th>
