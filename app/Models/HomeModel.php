@@ -175,9 +175,9 @@ class HomeModel extends Model
         $db = $this->db;
         $builder = $db->table('slider');
         $builder->select('*');
-        $builder->orderBy('id', 'RANDOM');
+        // $builder->orderBy('id', 'desc');
         $builder->where('is_delete', '0');
-        $builder->limit(8);
+        // $builder->limit(5);
         $query = $builder->get();
         $getRandslider = $query->getResultArray();
         // echo "<pre>";print_r($getRanditem);exit;
@@ -190,7 +190,7 @@ class HomeModel extends Model
         $builder->select('*');
         $builder->orderBy('id', 'RANDOM');
         $builder->where('is_delete', '0');
-        $builder->limit(8);
+        // $builder->limit(8);
         $query = $builder->get();
         $getRandBrand = $query->getResultArray();
         // echo "<pre>";print_r($getRanditem);exit;
@@ -807,10 +807,7 @@ class HomeModel extends Model
         $results_per_page = 6;
         $page_first_result = ($page - 1) * $results_per_page;
 
-        if (empty($max_value)) {
-            $builder->where('is_delete', 0);
-            $builder->orderBy('price', 'asc');
-        }
+        
         if (!empty($minvalue || $maxvalue)) {
             $builder->where('is_delete', 0);
             $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");
@@ -848,10 +845,7 @@ class HomeModel extends Model
         //    print_r( $number_of_page);exit;
         $builder->select('*');
 
-        if (empty($max_value)) {
-            $builder->where('is_delete', 0);
-            $builder->orderBy('price', 'asc');
-        }
+        
         if (!empty($minvalue || $maxvalue)) {
             $builder->where('is_delete', 0);
             $builder->where("price BETWEEN '$minvalue' AND '$maxvalue'");

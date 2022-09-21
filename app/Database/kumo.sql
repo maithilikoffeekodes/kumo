@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2022 at 02:00 PM
+-- Generation Time: Sep 21, 2022 at 02:22 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -48697,7 +48697,8 @@ INSERT INTO `slider` (`id`, `slider`, `image`, `link`, `is_delete`, `created_by`
 (2, 'slider2', '/slider/20220913/1663059607_b16f2e5ee445f33548e7.jpg', 'http://localhost:8080/Home/shoplist', 0, '1', '2022-09-13', '', '0000-00-00'),
 (3, 'slider1', '/slider/20220913/1663059696_2ed81aa3bf3dcff5648a.jpg', 'http://localhost:8080/Home/shoplist', 0, '1', '2022-09-13', '1', '2022-09-13'),
 (4, 'dsfvse', '/slider/20220913/1663069588_414f18643cf01ea7baf7.jpg', 'localhost:8080/productdetail', 1, '1', '2022-09-13', '', '0000-00-00'),
-(5, 'dsfvse45345', '/slider/20220921/1663752528_700db2cae0a9106f73a3.png', 'localhost:8080/productdetail', 1, '1', '2022-09-21', '1', '2022-09-21');
+(5, 'dsfvse45345', '/slider/20220921/1663752528_700db2cae0a9106f73a3.png', 'localhost:8080/productdetail', 1, '1', '2022-09-21', '1', '2022-09-21'),
+(6, 'slider4', '/slider/20220921/1663762844_4297ff71afa0722ab705.png', 'http://localhost:8080/Home/shoplist', 0, '1', '2022-09-21', '1', '2022-09-21');
 
 -- --------------------------------------------------------
 
@@ -53110,7 +53111,7 @@ ALTER TABLE `shipping_address`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `states`
