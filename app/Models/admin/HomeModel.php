@@ -459,7 +459,7 @@ class HomeModel extends Model
     public function get_orderviewdata($get)
     {
 
-        //  print_r('dsvsdvf');exit;
+        //  print_r($get);exit;
         $db = $this->db;
         $builder = $db->table('order_item oi');
         $builder->select('i.image,i.name,oi.price,oi.quantity,oi.total');

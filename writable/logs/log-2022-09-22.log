@@ -838,3 +838,23 @@ CRITICAL - 2022-09-22 07:06:27 --> View themes, no current section.
 #8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #10 {main}
+CRITICAL - 2022-09-22 07:36:58 --> syntax error, unexpected token "public", expecting end of file
+#0 D:\kumo\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\kumo\\app\\Mod...')
+#1 D:\kumo\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\admi...')
+#2 D:\kumo\app\Controllers\admin\Home.php(15): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\admi...')
+#3 D:\kumo\system\CodeIgniter.php(810): App\Controllers\admin\Home->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#4 D:\kumo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}
+CRITICAL - 2022-09-22 07:37:00 --> syntax error, unexpected token "public", expecting end of file
+#0 D:\kumo\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\kumo\\app\\Mod...')
+#1 D:\kumo\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\admi...')
+#2 D:\kumo\app\Controllers\admin\Home.php(15): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\admi...')
+#3 D:\kumo\system\CodeIgniter.php(810): App\Controllers\admin\Home->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#4 D:\kumo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#5 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#8 {main}

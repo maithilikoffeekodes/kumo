@@ -50,7 +50,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="admin/Home" data-filter_data="<?= @$order['id'] ?>">
+                        <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="admin/Home" data-filter_data="<?= @$order['order_id'] ?>">
                             <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
                             <thead>
                                 <tr>
