@@ -277,20 +277,34 @@ function send_email($name, $email, $subject, $message)
         $mail->Subject      =  $subject1;
         $mail->Body         =  '<html>
         <body>
-        Dear '.$name.',
-
-<p>We are delighted to inform you that you have been our customer for Kumo!</p?
-
-<p>This message is to thank you for being part of our family.</p>
-
-<p>We are truly grateful for your constant support and loyalty. We are aware that we wouldn’t be here without devoted customers like yourself.</p>
-
-<p>You could have chosen any other e-store, but you picked and still shop with us. We appreciate you sticking with Kumo fashion.</p>
-
-<p>Thanks again, and have a wonderful day!</p>
-
-<p>Good Luck</p>
-<a href="'.base_url().'">Shop Again</a>
+        
+        <div class="box1" style="  background-color: black;
+        width: 680px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;">
+        <div class="box" style=" width: 650px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;">
+            <h1 style=" text-align: center;">Kumo</h1>
+            <title>Dear '.$name.',</title>
+            <p>Thank you for choosing kumo.com . We hope you a good experience!
+                we always strive to keep improving the services we offer.
+                Our highest priority is to ensure that these services meet your expectations.
+            </p>
+            <a href="'.base_url().'"><button style=" margin-left: 275px;
+            padding: 10px;
+            border-radius: 5px;
+        ">Shop Again</button></a>
+            <p>Thank for your time</p>
+            <hr>
+            <p style="text-align:center ;">help@kumo.com</p>
+        </div>
+    </div>
         </body>
         </html>';
         $mail->setfrom('maithilijejani12@gmail.com', 'Kumo');
@@ -373,7 +387,7 @@ function mail_template($ord_id)
     $builder->where('o.id', $ord_id);
     $query  = $builder->get();
     $order = $query->getRow();
-    // echo"";print_r($order);exit;
+    // echo"<pre>";print_r($order);exit;
     if ($order->default_add != 0)  //check session isset login user if not then call guest user 
     {
         $builder = $db->table('user');

@@ -12,7 +12,7 @@
 
 
         <!-- End Page Header -->
-
+<?php //echo"<pre>";print_r($order_detail);exit;?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card custom-card">
@@ -51,7 +51,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="Home" data-filter_data="<?= @$order_detail['id'] ?>">
+                                <table class="table table-bordered text-center mb-0" data-id="orderview" id="table_list_data" data-module="Home" data-filter_data="<?= @$order_detail['order_id'] ?>">
                                     <!-- data-filter_data is static as there are different tabs for filtering that are already defined -->
                                     <thead>
                                         <tr>

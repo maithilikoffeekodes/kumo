@@ -283,7 +283,7 @@ class HomeModel extends Model
         $builder->join('category c', 'c.id=i.category');
         $builder->where('i.is_delete', 0);
         $data_table =  DataTable::of($builder);
-        $data_table->setSearchableColumns(['id', 'item']);
+        $data_table->setSearchableColumns(['i.id','i.brand','i.category','i.name']);
         $data_table->edit('image', function ($row) {
             $img_tag = '';
             $img_tag .= '<img src=" ' . $row->image . ' " width="100" height="100">';

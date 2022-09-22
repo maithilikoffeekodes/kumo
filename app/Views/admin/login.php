@@ -29,10 +29,10 @@
                     </div>
                     <button type="submit" name="submit" class="btn ripple btn-main-primary btn-block">Sign In</button>
                 </form>
-                <div class="mt-3 text-center">
+                <!-- <div class="mt-3 text-center">
                     <p class="mb-1"><a href="">Forgot password?</a></p>
                     <p class="mb-0">Don't have an account? <a href="signup.html">Create an Account</a></p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -423,3 +423,104 @@ CRITICAL - 2022-09-21 06:59:21 --> Undefined variable $product
 #8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
 #10 {main}
+ERROR - 2022-09-21 22:55:18 --> Column 'default_add' cannot be null
+CRITICAL - 2022-09-21 22:55:18 --> Column 'default_add' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(1090): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(210): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-21 22:55:27 --> Column 'default_add' cannot be null
+CRITICAL - 2022-09-21 22:55:27 --> Column 'default_add' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(1090): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(210): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+ERROR - 2022-09-21 22:56:35 --> Column 'default_add' cannot be null
+CRITICAL - 2022-09-21 22:56:35 --> Column 'default_add' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(1090): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(210): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-21 22:59:34 --> Attempt to read property "email" on null
+#0 D:\kumo\app\Helpers\rozorpay_helper.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\kumo\\app\\Hel...', 203)
+#1 D:\kumo\app\Controllers\Home.php(367): PaymentExecute('9cc5335781c0f94...')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('9cc5335781c0f94...')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-21 23:02:19 --> Attempt to read property "email" on null
+#0 D:\kumo\app\Helpers\rozorpay_helper.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\kumo\\app\\Hel...', 203)
+#1 D:\kumo\app\Controllers\Home.php(367): PaymentExecute('9cc5335781c0f94...')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('9cc5335781c0f94...')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+ERROR - 2022-09-21 23:04:29 --> Column 'default_add' cannot be null
+CRITICAL - 2022-09-21 23:04:29 --> Column 'default_add' cannot be null
+#0 D:\kumo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `or...', 0)
+#1 D:\kumo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 D:\kumo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 D:\kumo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 D:\kumo\app\Models\HomeModel.php(1089): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\kumo\app\Controllers\Home.php(210): App\Models\HomeModel->payment_data(Array)
+#6 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->checkout()
+#7 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#11 {main}
+CRITICAL - 2022-09-21 23:05:03 --> Attempt to read property "email" on null
+#0 D:\kumo\app\Helpers\rozorpay_helper.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\kumo\\app\\Hel...', 211)
+#1 D:\kumo\app\Controllers\Home.php(367): PaymentExecute('22cc7af7595c5ff...')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->PaymentExcuate('22cc7af7595c5ff...')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-21 23:31:54 --> array_merge(): Argument #2 must be of type array, null given
+#0 D:\kumo\app\Models\HomeModel.php(447): array_merge(Array, NULL)
+#1 D:\kumo\app\Controllers\Home.php(255): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}
+CRITICAL - 2022-09-21 23:31:57 --> array_merge(): Argument #2 must be of type array, null given
+#0 D:\kumo\app\Models\HomeModel.php(447): array_merge(Array, NULL)
+#1 D:\kumo\app\Controllers\Home.php(255): App\Models\HomeModel->get_order_details('2')
+#2 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->orderview('2')
+#3 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#7 {main}

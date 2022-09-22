@@ -26,7 +26,7 @@
                             <li><a href="<?= url('Home/order') ?>" class="active"><i class="lni lni-shopping-basket mr-2"></i>My Order</a></li>
                             <li><a href="<?= url('Home/wishlist') ?>"><i class="lni lni-heart mr-2"></i>Wishlist</a></li>
                             <li><a href="<?= url('Home/register') ?>"><i class="lni lni-user mr-2"></i>Profile Info</a></li>
-                            <!-- <li><a href="<//?= url('Home/my_order')?>"><i class="lni lni-map-marker mr-2"></i>Addresses</a></li> -->
+                            <li><a href="<?= url('Home/shipping_address')?>"><i class="lni lni-map-marker mr-2"></i>Manage Addresses</a></li>
                             <!-- <li><a href="payment-methode.html"><i class="lni lni-mastercard mr-2"></i>Payment Methode</a></li> -->
                             <li><a href="<?= url('Home/logout') ?>"><i class="lni lni-power-switch mr-2"></i>Log Out</a></li>
                         </ul>
@@ -34,69 +34,31 @@
 
                 </div>
             </div>
-            <?php //echo"<pre>";print_r($my_orders);exit;?>
+            <?php //echo"<pre>";print_r($my_orders);exit;
+            ?>
 
             <div class="col-12 col-md-12 col-lg-8 col-xl-8 text-center">
-
+                <?php //echo"<pre>";print_r($my_orders);exit;
+                ?>
                 <!-- Single Order List -->
+                <?php foreach (@$my_orders as $order) { ?>
                 <div class="ord_list_wrap border mb-4 mfliud">
-                    <div class="ord_list_head gray d-flex align-items-center justify-content-between px-3 py-3">
-                        <div class="olh_flex">
-                            <p class="m-0 p-0"><span class="text-muted">Order ID</span></p>
-                            <h6 class="mb-0 ft-medium"><?= $my_orders[0]['order_id']
-                                                        ?></h6>
-                        </div>
-                        <div class="olh_flex">
-                            <a href="<?= url('Home/track_order')?>" class="btn btn-sm btn-dark">Track Order</a>
-                        </div>
-                    </div>
-                    <?php //echo"<pre>";print_r($my_orders);exit;
-                    ?>
-                    <div class="ord_list_body text-left">
-                        <!-- First Product -->
-                        <?php foreach (@$my_orders as $order) { ?>
-
-                            <div class="row align-items-center justify-content-center m-0 py-4 br-bottom">
-                                <div class="col-xl-5 col-lg-5 col-md-5 col-12">
-                                    <div class="cart_single d-flex align-items-start mfliud-bot">
-                                        <div class="cart_selected_single_thumb">
-                                            <a href="#"><img src="<?= @$order['image'] ?>" width="75" class="img-fluid rounded" alt=""></a>
-                                        </div>
-                                        <div class="cart_single_caption pl-3">
-                                            <p class="mb-0"><span class="text-muted small"><?= @$order['category_name'] ?></span></p>
-                                            <h4 class="product_title fs-sm ft-medium mb-1 lh-1"><?= @$order['name'] ?></h4>
-                                            <!-- <p class="mb-2"><span class="text-dark medium">Size: 36</span>, <span class="text-dark medium">Color: Red</span></p> -->
-                                            <h4 class="fs-sm ft-bold mb-0 lh-1"><?= @$order['listedprice'] ?></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-6">
-                                    <!-- <p class="mb-1 p-0"><span class="text-muted">Status</span></p> -->
-                                    <!-- <div class="delv_status"><span class="ft-medium small text-warning bg-light-warning rounded px-3 py-1">In Progress</span></div> -->
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-6">
-                                    <p class="mb-1 p-0"><span class="text-muted">Expected date by:</span></p>
-                                    <h6 class="mb-0 ft-medium fs-sm"><?php $date = date("Y-m-d", strtotime(@$my_orders[0]['order_date']));
-                                    echo $delivery_date = date('Y-m-d', strtotime($date . ' + 8 days')); ?></h6>
-                                </div>
+                        <div class="ord_list_head  d-flex align-items-center  px-3 py-3">
+                            <div class="olh_flex">
+                                <p class="m-0 p-0"><span class="text-muted">Order ID</span></p>
+                                <h6 class="mb-0 ft-medium"><?= $order['id'] ?></h6>
                             </div>
-
-                        <?php } ?>
-                    </div>
-                    <div class="ord_list_footer d-flex align-items-center justify-content-between br-top px-3">
-                        <div class="olf_flex text-left px-0 py-2 br-right"><a href="javascript:void(0);" class="btn btn-sm btn-dark"><i class="ti-close mr-2"></i>Cancel Order</a></div>
-                        <div class="olf_flex text-left px-0 py-2 br-right"><a href="<?= url('Home/orderview/'.@$order['order_id'])?>" class="btn btn-sm btn-dark"><i class="fa fa-eye mr-2"></i>View Order</a></div>
-                        <div class="col-xl-2 col-lg-2 col-md-4 pr-0 py-2 olf_flex d-flex align-items-center justify-content-between">
-                            <div class="olf_flex_inner hide_mob">
-                              
-                            </div>
-                            <div class="olf_inner_right">
-                                <h5 class="mb-0 fs-sm ft-bold">Total: <?= $my_orders[0]['total_payment']
-                                                                        ?></h5>
+                            <div class="olf_flex" style="margin-left: 434px;margin-right: 10px;"><a href="<?= url('Home/orderview/' . @$order['id']) ?>" class="btn btn-sm btn-dark"><i class="fa fa-eye mr-2"></i>View Order</a></div>
+                            <div class="olh_flex">
+                                <a href="<?= url('Home/track_order/'.@$order['id']) ?>" class="btn btn-sm btn-dark">Track Order</a>
                             </div>
                         </div>
+                        <div class="olf_inner_right" style="margin-right: 638px;">
+                            <h5 class="mb-0 fs-sm ft-bold">Total: <?= $order['total_payment']
+                                                                    ?></h5>
+                        </div>
                     </div>
-                </div>
+                    <?php } ?>
                 <!-- End Order List -->
 
             </div>

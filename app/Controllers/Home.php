@@ -26,8 +26,12 @@ class Home extends BaseController
             $guestid = substr(hash('sha256', mt_rand() . microtime()), 0, 20);
             $session = session();
             $session->set('guestid', $guestid);
-        }   
+        }
         return view('index', $data);
+    }
+    public function mail()
+    {
+        return view('mail');
     }
     public function login()
     {
@@ -76,8 +80,8 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_data($post);
             return $this->response->setJSON($msg);
         }
-            $data['data'] = $this->model->get_register_data();
-        return view('register',$data);
+        $data['data'] = $this->model->get_register_data();
+        return view('register', $data);
     }
     public function change_password()
     {
@@ -85,15 +89,13 @@ class Home extends BaseController
         if (!empty($post)) {
             $msg = $this->model->change_password($post);
             return $this->response->setJSON($msg);
-            
         }
         return view('change-password');
     }
     public function forgot_password()
     {
         $post = $this->request->getPost();
-        if(!empty($post))
-        {
+        if (!empty($post)) {
             $msg = $this->model->send_otp_mail($post);
             return $this->response->setJSON($msg);
         }
@@ -102,8 +104,7 @@ class Home extends BaseController
     public function verify_otp()
     {
         $post = $this->request->getPost();
-        if(!empty($post))
-        {
+        if (!empty($post)) {
             $result = $this->model->verify_otp($post);
             return $this->response->setJson($result);
         }
@@ -112,8 +113,7 @@ class Home extends BaseController
     public function set_new_pass()
     {
         $post = $this->request->getPost();
-        if(!empty($post))
-        {
+        if (!empty($post)) {
             $result = $this->model->set_new_pass($post);
             return $this->response->setJson($result);
         }
@@ -122,8 +122,10 @@ class Home extends BaseController
     public function productdetail($id = '')
     {
         $data['product'] = $this->model->get_product_data($id);
+        // echo"<pre>";print_r($data['product']['category']);exit;
+        $data['related_product'] = $this->model->get_related_product_data($data['product']['category']);
         $data['review'] = $this->model->get_review($id);
-        $data['related_product'] = $this->model->get_related_product($id);
+
         return view('productdetail', $data);
     }
     public function shoplist()
@@ -166,6 +168,20 @@ class Home extends BaseController
     {
         return view('coupon');
     }
+    public function address()
+    {
+        if (!empty(session('uid'))) {
+            $id = session('uid');
+            $data['address'] = $this->model->get_master_data('address', $id);
+            // echo '<pre>';
+            // print_r($data);
+            // exit;
+
+            return view('shipping_address', $data);
+        } else {
+            return view('Home/login');
+        }
+    }
     public function shipping_address()
     {
         $post = $this->request->getPost();
@@ -173,6 +189,7 @@ class Home extends BaseController
             $msg = $this->model->insert_edit_address($post);
             return $this->response->setJSON($msg);
         }
+        // return view('shipping_address',$data);
     }
     public function applycoupon()
     {
@@ -182,7 +199,6 @@ class Home extends BaseController
             return $this->response->setJSON($output);
         }
     }
-
     public function cart()
     {
         $post = $this->request->getPost();
@@ -224,7 +240,14 @@ class Home extends BaseController
         $data['wishlist'] = $this->model->get_wishlist();
         return view('wishlist', $data);
     }
-
+    // public function address(){
+    //     $post = $this->request->getPost();
+    //     if (!empty($post)) {
+    //         $msg = $this->model->insert_edit_address($post);
+    //         return $this->response->setJSON($msg);
+    //     }
+    //     return view('shipping_address');
+    // }
     public function review()
     {
         $post = $this->request->getPost();
@@ -255,9 +278,10 @@ class Home extends BaseController
         $data['order_detail'] = $this->model->get_order_details($id);
         return view('order/orderview', $data);
     }
-    public function track_order(){
-        $data['orders'] = $this->model->get_order_data();
-        return view('track-order',$data);
+    public function track_order($id = '')
+    {
+        $data['track_order'] = $this->model->get_track_order_data($id);
+        return view('track-order', $data);
     }
     public function invoice($id)
     {
@@ -333,6 +357,7 @@ class Home extends BaseController
         $get = $this->request->getGet();
 
         $txn = $get['txn'];
+
 
         $response = "Redirecting to System ... Please wait !!! Don't press Back or Refresh";
         helper('rozorpay');

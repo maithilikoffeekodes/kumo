@@ -46,13 +46,13 @@
                                 <div style="float:left">
                                     <div class="row mb-4">
                                         <div class="form-check col-12">
-                                            <input class="form-check-input" type="radio" name="add2" id="flexRadioDefault2" value="<?= @$row['type'] ?>" checked>
+                                            <input class="form-check-input" type="radio" name="add2" id="flexRadioDefault2" value="<?= @$row['address_type'] ?>" checked>
 
                                             <label class="form-check-label" for="flexRadioDefault2">
                                                 <?= $row['name'] ?>
                                             </label>
                                             <input type="hidden" value="<?= @$row['id'] ?>" name="id">
-                                            <input type="hidden" value="<?= @$row['type'] ?>" name="type" id="type">
+                                            <input type="hidden" value="<?= @$row['address_type'] ?>" name="type" id="type">
                                         </div>
                                         <div class="form-check col-12">
                                             <label class="" for="">

@@ -180,12 +180,12 @@
             ?>
         </ul>
         <div class="card-body">
-            <?php //echo"<pre>";print_r($orders);exit;
+            <?php //echo"<pre>";print_r($track_order);exit;
             ?>
-            <h6>Order ID: <?= $orders[0]['order_id'] ?></h6>
+            <h6>Order ID: <?= $track_order['id'] ?></h6>
             <article class="card">
                 <div class="card-body row">
-                    <?php $date = date("Y-m-d", strtotime(@$orders[0]['order_date']));
+                    <?php $date = date("Y-m-d", strtotime(@$track_order['order_date']));
                     date_default_timezone_set('Asia/Kolkata');
                     $today = date('Y-m-d');
                     // $today = date('2022-09-22');
@@ -276,7 +276,7 @@
             <hr>
 
             <hr>
-            <a href="<?= url('Home/orderview/' . @$orders[0]['order_id']) ?>" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to orders</a>
+            <a href="<?= url('Home/orderview/' . @$track_order['id']) ?>" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to orders</a>
         </div>
     </article>
 </div>

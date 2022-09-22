@@ -397,13 +397,26 @@ class HomeModel extends Model
     {
         $db = $this->db;
         $builder = $db->table('orders o');
-        $builder->select('o.*,o.created_at as order_date,oi.*,i.*,c.category as category_name');
-        $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
-        $builder->join('item i', 'i.id = oi.product_id', 'left');
-        $builder->join('category c','c.id=i.category');
+        $builder->select('o.*,o.created_at as order_date');
+        // $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
+        // $builder->join('item i', 'i.id = oi.product_id', 'left');
+        // $builder->join('category c','c.id=i.category');
         $builder->where('o.user_id', session('uid') ? session('uid') : session('guestid'));
         $query = $builder->get();
         $order = $query->getResultArray();
+        //   echo "<pre>"; print_r($order);exit;
+        return $order;
+    }
+    public function get_track_order_data($id)
+    {
+        //   echo "<pre>"; print_r($id);exit;
+
+        $db = $this->db;
+        $builder = $db->table('orders o');
+        $builder->select('o.*,o.created_at as order_date');
+        $builder->where('o.id', $id);
+        $query = $builder->get();
+        $order = $query->getRowArray();
         //   echo "<pre>"; print_r($order);exit;
         return $order;
     }
@@ -413,7 +426,7 @@ class HomeModel extends Model
         // print_r($id);exit;
         $db = $this->db;
         $builder = $db->table('orders o');
-        $builder->select('o.*,o.created_at as order_date,oi.*,i.*');
+        $builder->select('o.*,o.created_at as order_date,oi.*,i.*,i.name as item_name');
         $builder->join('order_item oi', 'o.id = oi.order_id', 'left');
         $builder->join('item i', 'i.id = oi.product_id');
         $builder->where('o.id', $id);
@@ -435,7 +448,7 @@ class HomeModel extends Model
         } else {
             $db = $this->db;
             $builder = $db->table('shipping_address a');
-            $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+            $builder->select('a.*,s.sname as state_name,c.cname as city_name,a.fname as name');
             $builder->join('cities c', 'c.id=a.city');
             $builder->join('states s', 's.id=a.state');
             $builder->where('a.id', $order_detail1['ship_id']);
@@ -445,6 +458,7 @@ class HomeModel extends Model
         }
         // echo"<pre>";print_r($order_detail2);exit;
         $order_detail = array_merge($order_detail1, $order_detail2);
+        // echo"<pre>";print_r($order_detail);exit;
         return $order_detail;
     }
     public function get_orders_details($id)
@@ -458,30 +472,30 @@ class HomeModel extends Model
         $builder->where('o.id', $id);
         $query = $builder->get();
         $order_detail1 = $query->getResultArray();
-        // echo"<pre>";print_r($order_detail1);exit;
+        echo"<pre>";print_r($order_detail1);exit;
 
-        // $order_detail1['order_date'] = $order_detail1['created_at'];
-        // if ($order_detail1[0]['default_add'] != 0) {
-        //     $db = $this->db;
-        //     $builder = $db->table('user u');
-        //     $builder->select('u.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=u.city');
-        //     $builder->join('states s', 's.id=u.state');
-        //     $builder->where('u.id', $order_detail1['default_add']);
-        //     $builder->where('u.is_delete', 0);
-        //     $query = $builder->get();
-        //     $order_detail2 = $query->getRowArray();
-        // } else {
-        //     $db = $this->db;
-        //     $builder = $db->table('shipping_address a');
-        //     $builder->select('a.*,s.sname as state_name,c.cname as city_name');
-        //     $builder->join('cities c', 'c.id=a.city');
-        //     $builder->join('states s', 's.id=a.state');
-        //     $builder->where('a.id', $order_detail1['ship_id']);
-        //     $builder->where('a.is_delete', 0);
-        //     $query = $builder->get();
-        //     $order_detail2 = $query->getRowArray();
-        // }
+        $order_detail1['order_date'] = $order_detail1['created_at'];
+        if ($order_detail1[0]['default_add'] != 0) {
+            $db = $this->db;
+            $builder = $db->table('user u');
+            $builder->select('u.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=u.city');
+            $builder->join('states s', 's.id=u.state');
+            $builder->where('u.id', $order_detail1['default_add']);
+            $builder->where('u.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        } else {
+            $db = $this->db;
+            $builder = $db->table('shipping_address a');
+            $builder->select('a.*,s.sname as state_name,c.cname as city_name');
+            $builder->join('cities c', 'c.id=a.city');
+            $builder->join('states s', 's.id=a.state');
+            $builder->where('a.id', $order_detail1['ship_id']);
+            $builder->where('a.is_delete', 0);
+            $query = $builder->get();
+            $order_detail2 = $query->getRowArray();
+        }
         // echo"<pre>";print_r($order_detail2);exit;
         $order_detail = array_merge($order_detail1);
         
@@ -490,12 +504,11 @@ class HomeModel extends Model
     public function get_orderviewdata($get)
     {
 
-        //  print_r('dsvsdvf');exit;
+        //  print_r($get);exit;
         $db = $this->db;
         $builder = $db->table('order_item oi');
         $builder->select('i.image,i.name,oi.price,oi.quantity,oi.total');
         $builder->join('item i', 'i.id=oi.product_id');
-
         $builder->where('oi.order_id', $get);
         $builder->where('oi.is_delete', '0');
         $data_table = DataTable::of($builder);
@@ -522,6 +535,34 @@ class HomeModel extends Model
         $result = $query->getRowArray();
         // echo"<pre>";print_r($result);exit;
         return $result;
+    }
+    public function get_master_data($method,$id)
+    {
+        $db = $this->db;
+        $data = array();
+       if($method == 'address')
+        {
+            $builder = $db->table('user ');
+            $builder->select('*,"default" as type');
+            $builder->where('id',session('uid'));
+            $builder->where('is_delete', 0);
+            $builder->limit(1);
+            $query = $builder->get();
+            $result = $query->getResultArray();
+
+            $builder = $db->table('shipping_address a');
+            $builder->select('a.*,c.cname,s.sname,"shipping" as type');
+            $builder->join('cities c','c.id=a.city','left');
+            $builder->join('states s','s.id=a.state','left');
+            $builder->where('user_id',session('uid') ? session('uid') : session('guestid'));
+            $builder->where('a.is_delete', 0);
+            $query = $builder->get();
+            $result1 = $query->getResultArray();
+            $data = array_merge($result,$result1);
+        
+        }  
+
+        return $data;
     }
     public function get_states($post)
     {
@@ -733,31 +774,14 @@ class HomeModel extends Model
     {
         // print_r($cid);exit;
         $db = $this->db;
-        $builder = $db->table('item i');
-        $builder->select('i.id,i.category,i.name as item_name,i.image as item_image,c.name as cat_name,c.image as cat_image,i.price,i.dis_price');
-        $builder->join('category c', 'c.id=i.category');
-        $builder->where('c.id', $cid);
-        $query = $builder->get();
-        $relatedproduct = $query->getResultArray();
-        // echo "<pre>"; print_r($relatedproduct);exit;
-        return $relatedproduct;
-    }
-    public function get_related_product($id)
-    {
-        // print_r($id);exit;
-
-        $db = $this->db;
         $builder = $db->table('item');
         $builder->select('*');
         $builder->orderBy('id', 'RANDOM');
-        $builder->where('brand', $id);
+        $builder->where('category', $cid);
         // $builder->limit(4);
         $query = $builder->get();
-        $related_product = $query->getResultArray();
-        // echo "<pre>";
-        // print_r($related_product);
-        // exit;
-        return $related_product;
+        $relatedproduct = $query->getResultArray();
+        return $relatedproduct;
     }
 
     public function applycoupon($post)
@@ -992,7 +1016,9 @@ class HomeModel extends Model
     }
     public function insert_edit_address($post)
     {
-        // print_r($post);exit;
+        // echo "<pre>";
+        // print_r($post);
+        // exit;
 
         $db = $this->db;
         $builder = $db->table('shipping_address');
@@ -1015,6 +1041,9 @@ class HomeModel extends Model
             'pincode' => $post['pincode'],
             'address_type' => $post['address_type']
         );
+        // echo "<pre>";
+        // print_r($adata);
+        // exit;
         if (!empty($result)) {
             // print_r($result);exit;
             $builder->where('id', $post['id']);
@@ -1050,7 +1079,7 @@ class HomeModel extends Model
         $builder->select('a.*,s.sname as state_name,c.cname as city_name,a.fname as name');
         $builder->join('cities c', 'c.id=a.city');
         $builder->join('states s', 's.id=a.state');
-        $builder->where('a.user_id', session('uid'));
+        $builder->where('a.user_id', session('uid') ? session('uid') : session('guestid'));
         $builder->where('a.is_delete', 0);
         $query = $builder->get();
         $result2 = $query->getResultArray();
@@ -1064,14 +1093,13 @@ class HomeModel extends Model
         // print_r($post);
         // exit;
         if (!empty($post['add2'])) {
-            $ship_id = $post['id'];
+            $ship_id = $post['id'] ;
             $default_add = 0;
         } else {
-
             $ship_id = 0;
-            $default_add = session('uid');
+            $default_add = session('uid') ? session('uid') : '';
         }
-
+       
         $db = $this->db;
         $builder = $db->table('orders');
         $order_data = array(
