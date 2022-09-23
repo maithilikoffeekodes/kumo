@@ -13,7 +13,7 @@
 						</li>
 						<li><a href="<?= url('Home/about')?>">About Us</a></li>
 						<li><a href="<?= url('Home/contact')?>">Contact</a></li>
-						<li><a href="<?= url('Home/blog')?>">Blog</a></li>
+						<!-- <li><a href="<?= url('Home/blog')?>">Blog</a></li> -->
 						<!-- <li><a href="<?= url('Home/errorpage')?>">404 Page</a></li>
 						<li><a href="<?= url('Home/privacy')?>">Privacy Policy</a></li>
 						<li><a href="<?= url('Home/faq')?>">FAQs</a></li> -->

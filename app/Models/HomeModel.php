@@ -559,7 +559,6 @@ class HomeModel extends Model
             $query = $builder->get();
             $result1 = $query->getResultArray();
             $data = array_merge($result,$result1);
-        
         }  
 
         return $data;

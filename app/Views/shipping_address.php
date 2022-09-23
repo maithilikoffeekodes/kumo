@@ -1,3 +1,7 @@
+<?= $this->extend(THEME . 'template') ?>
+
+<?= $this->section('content') ?>
+
 <section class="middle">
     <div class="container">
         <div class="row justify-content-center justify-content-between">
@@ -29,117 +33,120 @@
 
                 </div>
             </div>
-
-            <div class="col-12 col-md-12 col-lg-4 col-xl-4 text-center miliods">
+            <div class="" style="width: 783px;">
                 <div class="row border shadow p-2 mb-5 bg-white rounded" id="add" data-id="address" data-module="Home">
-                    <?php foreach (@$address as $row) {  if (!empty($row['user_id'])) { ?>
-                        <?php //echo"<pre>";print_r($row);exit;?>
-                        <div class="address-info pt-3 border-bottom col-lg-12 ">
-                            <div style="float:left">
-                                <div class="row mb-4">
-                                    <div class="form-check col-12">
-                                        <input class="form-check-input" type="radio" name="add2" id="flexRadioDefault2" value="<?= @$row['address_type'] ?>" checked>
+                    <?php foreach (@$address as $row) {
+                        if (!empty($row['user_id'])) { ?>
+                            <?php //echo "<pre>";print_r($row);exit; 
+                            ?>
+                            <div class="address-info pt-3 border-bottom col-lg-12 ">
+                                <div style="float:left">
+                                    <div class="row mb-4">
+                                        <div class="form-check col-12">
+                                            <input class="form-check-input" type="radio" name="add2" id="flexRadioDefault2" value="<?= @$row['address_type'] ?>" checked>
 
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            <?= $row['fname'] ?>
-                                        </label>
-                                        <input type="hidden" value="<?= @$row['id'] ?>" name="id">
-                                        <input type="hidden" value="<?= @$row['address_type'] ?>" name="type" id="type">
-                                    </div>
-                                    <div class="form-check col-12">
-                                        <label class="" for="">
-                                            Address . <?= @$row['address']; ?>
-                                            <p>Mobile No. +91 <?= @$row['mobileno']; ?><br>
-                                                <?= @$row['sname'] ?> , <?= @$row['cname'] ?>
-                                            </p>
-                                        </label>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <?= @$row['fname'] ?>
+                                            </label>
+                                            <input type="hidden" value="<?= @$row['id'] ?>" name="id">
+                                            <input type="hidden" value="<?= @$row['address_type'] ?>" name="type" id="type">
+                                        </div>
+                                        <div class="form-check col-12">
+                                            <label class="" for="">
+                                                Address . <?= @$row['address']; ?>
+                                                <p>Mobile No. +91 <?= @$row['mobileno']; ?><br>
+                                                    <?= @$row['sname'] ?> , <?= @$row['cname'] ?>
+                                                </p>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group" style="float:right;">
-                                <div class="sr-btn-wrap text-center">
-                                    <span class="btn btn-block btn-dark mb-3">
-                                        <?php if (empty($row['address_type'])) {
-                                        ?>
-                                            Home
-                                        <?php } else {
-                                        ?>
-                                            <?= @$row['address_type']
+                                <div class="form-group" style="float:right;">
+                                    <div class="sr-btn-wrap text-center">
+                                        <span class="btn btn-block btn-dark mb-3">
+                                            <?php if (empty($row['address_type'])) {
                                             ?>
+                                                Home
+                                            <?php } else {
+                                            ?>
+                                                <?= @$row['address_type']
+                                                ?>
+                                            <?php }
+                                            ?>
+                                        </span>
+                                    </div>
+                                    <div class="remove-btn pt-2">
+                                        <?php if (!empty($row['address_type'])) {
+                                        ?>
+                                            <button class="btn mb-3 text-info edit" type="button" onclick="edit_address(this)" _data data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['type'] ?>">Edit</button> |
+                                            <button type="button" class="btn mb-3 text-danger remove" onclick="editable_remove(this)" data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['id'] ?>">Remove</button>
                                         <?php }
                                         ?>
-                                    </span>
-                                </div>
-                                <div class="remove-btn pt-2">
-                                    <?php if (!empty($row['address_type'])) {
-                                    ?>
-                                        <button class="btn mb-3 text-info edit" type="button" onclick="edit_address(this)" _data data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['type'] ?>">Edit</button> |
-                                        <button type="button" class="btn mb-3 text-danger remove" onclick="editable_remove(this)" data-val="<?= @$row['id'] ?>" data-pk="<?= @$row['id'] ?>">Remove</button>
-                                    <?php }
-                                    ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } }
+                    <?php }
+                    }
                     ?>
                 </div>
-            </div>
-            <button class="btn btn-block btn-dark mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                + Add New Address
-            </button>
 
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <form action="<?= url('Home/shipping_address') ?>" method="post" class="shipping_address" id="shipping_address">
-                        <h5 class="mb-4 ft-medium">Billing Details</h5>
-                        <div class="row mb-2">
 
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">First Name *</label>
-                                    <input type="text" class="form-control" name="fname" placeholder="First Name" />
-                                    <input type="hidden" id="id" name="id" value="">
+                <button class="btn btn-block btn-dark mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    + Add New Address
+                </button>
 
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <form action="<?= url('Home/shipping_address') ?>" method="post" class="shipping_address" id="shipping_address">
+                            <h5 class="mb-4 ft-medium">Billing Details</h5>
+                            <div class="row mb-2">
+
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">First Name *</label>
+                                        <input type="text" class="form-control" name="fname" placeholder="First Name" />
+                                        <input type="hidden" id="id" name="id" value="">
+
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">Last Name *</label>
-                                    <input type="text" class="form-control" name="lname" placeholder="Last Name" />
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">Last Name *</label>
+                                        <input type="text" class="form-control" name="lname" placeholder="Last Name" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">Email *</label>
-                                    <input type="email" class="form-control" name="email" placeholder="Email" />
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">Email *</label>
+                                        <input type="email" class="form-control" name="email" placeholder="Email" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                             <div class="form-group">
                                                 <label class="text-dark">Company</label>
                                                 <input type="text" class="form-control" name="cn" placeholder="Company Name (optional)" />
                                             </div>
                                         </div> -->
 
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">Address*</label>
-                                    <input type="text" class="form-control" name="address" placeholder="Address" />
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">Address*</label>
+                                        <input type="text" class="form-control" name="address" placeholder="Address" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label class="text-dark">Address 2</label>
                                             <input type="text" class="form-control" name="fname" placeholder="Address 2" />
                                         </div>
                                     </div> -->
 
-                            <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label class="text-dark">Country *</label>
                                             <select class="custom-select" name="country" required>
@@ -151,60 +158,61 @@
                                             </select>
                                         </div>
                                     </div> -->
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label>States<span class="tx-danger">*</span></label>
-                                    <select name="state" id="state" class="form-control">
-                                        <option value="<?= @$row['state'] ?>" selected><?= @$row['state_name'] ?></option>
-                                    </select>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label>States<span class="tx-danger">*</span></label>
+                                        <select name="state" id="state" class="form-control">
+                                            <option value="<?= @$row['state'] ?>" selected><?= @$row['sname'] ?></option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label>City<span class="tx-danger">*</span></label>
-                                    <select name="city" id="city" class="form-control">
-                                        <option value="<?= @$row['city'] ?>" selected><?= @$row['city_name'] ?></option>
-                                    </select>
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label>City<span class="tx-danger">*</span></label>
+                                        <select name="city" id="city" class="form-control">
+                                            <option value="<?= @$row['city'] ?>" selected><?= @$row['cname'] ?></option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">ZIP / Postcode *</label>
-                                    <input type="text" class="form-control" name="pincode" placeholder="Zip / Postcode" />
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">ZIP / Postcode *</label>
+                                        <input type="text" class="form-control" name="pincode" placeholder="Zip / Postcode" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="form-group">
-                                    <label class="text-dark">Mobile Number *</label>
-                                    <input type="text" class="form-control" name="mobileno" placeholder="Mobile Number" />
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label class="text-dark">Mobile Number *</label>
+                                        <input type="text" class="form-control" name="mobileno" placeholder="Mobile Number" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="form-group">
                                     <label class="text-dark">Additional Information</label>
                                     <textarea class="form-control ht-50" name="fname"></textarea>
                                     </div>
                                     </div> -->
+                                <div class="form-group col-md-6">
+                                    <label for="address-names">Choose Address Type:</label>
+                                    <select name="address_type" class="form-control" id="address_type">
+                                        <option <?= (@$row['address_type'] === 'home' ? 'selected' : '') ?> value="home">Home</option>
+                                        <option <?= (@$row['address_type'] === 'work' ? 'selected' : '') ?> value="work">Work</option>
+                                        <option <?= (@$row['address_type'] === 'other' ? 'selected' : '') ?> value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="form-group col-md-6">
-                                <label for="address-names">Choose Address Type:</label>
-                                <select name="address_type" class="form-control" id="address_type">
-                                    <option <?= (@$row['address_type'] === 'home' ? 'selected' : '') ?> value="home">Home</option>
-                                    <option <?= (@$row['address_type'] === 'work' ? 'selected' : '') ?> value="work">Work</option>
-                                    <option <?= (@$row['address_type'] === 'other' ? 'selected' : '') ?> value="other">Other</option>
-                                </select>
+                                <div class="checkout-btn text-right">
+                                    <button type="submit" id="address_btn" class="btn btn-block btn-dark mb-3 address_btn">Submit
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <div class="checkout-btn text-right">
-                                <button type="submit" id="address_btn" class="btn btn-block btn-dark mb-3 address_btn">Submit
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,9 +290,9 @@
                         data) {
                         console.log($.post);
                         if (data.st == 'success') {
-                            datatable_load('');
-                            swal.fire("Deleted!", "Your Data has been deleted.", "success");
+                            // datatable_load('');
                             location.reload();
+                            swal.fire("Deleted!", "Your Data has been deleted.", "success");
                         }
 
                     });

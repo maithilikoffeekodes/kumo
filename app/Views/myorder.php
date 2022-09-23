@@ -26,7 +26,7 @@
                             <li><a href="<?= url('Home/order') ?>" class="active"><i class="lni lni-shopping-basket mr-2"></i>My Order</a></li>
                             <li><a href="<?= url('Home/wishlist') ?>"><i class="lni lni-heart mr-2"></i>Wishlist</a></li>
                             <li><a href="<?= url('Home/register') ?>"><i class="lni lni-user mr-2"></i>Profile Info</a></li>
-                            <li><a href="<?= url('Home/shipping_address')?>"><i class="lni lni-map-marker mr-2"></i>Manage Addresses</a></li>
+                            <li><a href="<?= url('Home/address')?>"><i class="lni lni-map-marker mr-2"></i>Manage Addresses</a></li>
                             <!-- <li><a href="payment-methode.html"><i class="lni lni-mastercard mr-2"></i>Payment Methode</a></li> -->
                             <li><a href="<?= url('Home/logout') ?>"><i class="lni lni-power-switch mr-2"></i>Log Out</a></li>
                         </ul>

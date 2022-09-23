@@ -173,10 +173,6 @@ class Home extends BaseController
         if (!empty(session('uid'))) {
             $id = session('uid');
             $data['address'] = $this->model->get_master_data('address', $id);
-            // echo '<pre>';
-            // print_r($data);
-            // exit;
-
             return view('shipping_address', $data);
         } else {
             return view('Home/login');

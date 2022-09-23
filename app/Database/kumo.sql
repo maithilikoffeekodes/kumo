@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2022 at 02:06 PM
+-- Generation Time: Sep 23, 2022 at 08:18 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -129,9 +129,13 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `user_id`, `product_id`, `date`, `price`, `quantity`, `coupon_discount`, `is_delete`, `created_at`, `created_by`, `update_at`, `update_by`) VALUES
-(1, '1', 17, '2022-09-22', '4050', 1, '0', 1, '2022-09-22 05:23:20.000000', 1, '2022-09-22 06:08:27', 1),
-(2, '1', 1, '2022-09-22', '1000', 1, '0', 1, '2022-09-22 05:23:33.000000', 1, '2022-09-22 06:08:27', 1),
-(3, '1', 6, '2022-09-22', '225', 1, '0', 1, '2022-09-22 06:08:17.000000', 1, '2022-09-22 06:08:27', 1);
+(1, '1', 17, '2022-09-22', '4050', 1, '0', 1, '2022-09-22 05:23:20.000000', 1, '2022-09-22 07:14:37', 1),
+(2, '1', 1, '2022-09-22', '1000', 1, '0', 1, '2022-09-22 05:23:33.000000', 1, '2022-09-22 07:14:37', 1),
+(3, '1', 6, '2022-09-22', '225', 1, '0', 1, '2022-09-22 06:08:17.000000', 1, '2022-09-22 07:14:37', 1),
+(4, 'e4b4092c23e6c750e9db', 23, '2022-09-22', '580', 1, '0', 0, '2022-09-22 07:14:09.000000', 0, '2022-09-22 07:14:14', 0),
+(5, '1', 23, '2022-09-22', '580', 1, '0', 0, '2022-09-22 07:14:31.000000', 1, '2022-09-22 07:14:37', 1),
+(6, '3c8c5d2f689af82d7ca5', 16, '2022-09-23', '405', 1, '0', 1, '2022-09-23 00:37:41.000000', 3, '2022-09-23 00:37:47', 3),
+(7, '4', 19, '2022-09-23', '4500', 1, '0', 1, '2022-09-23 01:08:57.000000', 4, '2022-09-23 01:09:05', 4);
 
 -- --------------------------------------------------------
 
@@ -48528,8 +48532,10 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `sub_total`, `tax_amt`, `coupon-discount`, `total_payment`, `payment_status`, `is_payment`, `transaction_id`, `transaction_status`, `payment_type`, `is_cancelled`, `is_delivered`, `is_return`, `default_add`, `ship_id`, `is_login`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-(1, '1', '5050', '505', '0', '5555.00', NULL, 1, 'f69e361c9b90afb1c3bb', 'success', 'Razorpay', 0, 0, 0, 0, 5, 0, '2022-09-22 05:25:14', '1', '0000-00-00 00:00:00', ''),
-(2, '1', '225', '27', '0', '252.00', NULL, 1, '47a04a82102935237cc6', 'success', 'Razorpay', 0, 0, 0, 0, 5, 0, '2022-09-22 06:08:31', '1', '0000-00-00 00:00:00', '');
+(1, '1', '5050', '505', '0', '5555.00', NULL, 1, 'f69e361c9b90afb1c3bb', 'success', 'Razorpay', 0, 0, 0, 0, 5, 0, '2022-09-20 05:25:14', '1', '0000-00-00 00:00:00', ''),
+(2, '1', '225', '27', '0', '252.00', NULL, 1, '47a04a82102935237cc6', 'success', 'Razorpay', 0, 0, 0, 0, 5, 0, '2022-09-22 06:08:31', '1', '0000-00-00 00:00:00', ''),
+(3, '3c8c5d2f689af82d7ca5', '405', '48.6', '0', '453.60', NULL, 1, '26488836e6ddc683a5ae', 'success', 'Razorpay', 0, 0, 0, 0, 9, 1, '2022-09-23 00:39:31', '3c8c5d2f689af82d7ca5', '0000-00-00 00:00:00', ''),
+(4, '4', '4500', '450', '0', '4950.00', NULL, 1, '81b28ebd8587bb8f85ea', 'success', 'Razorpay', 0, 0, 0, 0, 10, 0, '2022-09-23 01:10:04', '4', '0000-00-00 00:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -48559,7 +48565,9 @@ CREATE TABLE `order_item` (
 INSERT INTO `order_item` (`id`, `user_id`, `order_id`, `product_id`, `quantity`, `price`, `total`, `is_delete`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
 (1, '1', 1, 17, 1, '4050.00', '4050.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
 (2, '1', 1, 1, 1, '1000.00', '1000.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
-(3, '1', 2, 6, 1, '225.00', '225.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
+(3, '1', 2, 6, 1, '225.00', '225.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(4, '3c8c5d2f689af82d7ca5', 3, 16, 1, '405.00', '405.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0),
+(5, '4', 4, 19, 1, '4500.00', '4500.00', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -48606,7 +48614,9 @@ CREATE TABLE `payment_log` (
 
 INSERT INTO `payment_log` (`PaymentId`, `UserId`, `ord_id`, `TxnId`, `OrderID`, `PaymentAmount`, `TransactionAmount`, `PaymentMethodCode`, `PaymentType`, `PaymentDetail`, `Payment_Attach`, `PayIn`, `PayOut`, `PaymentSuccess`, `PaymentFailed`, `PatmentExecute`, `PaymentInProccesing`, `PaymentRefrenceId`, `PaymentDescription`, `PaymentNote`, `SMSNotify`, `EmailNotify`, `CreateTime`, `CreateBy`, `UpdateTime`, `UpdateBy`, `PaymentUpdateBy`, `PaymentUpdateTime`, `IsDelete`, `DeleteTime`) VALUES
 (1, '1', 1, 'f69e361c9b90afb1c3bb', 'order_KKucF0W135DWIm', '', '5555', '', 'Razorpay', 'Transaction has been tampered. Please try again!!', NULL, 1, 0, b'0', 1, 1, 0, '', '', '', 0, 0, '2022-09-22 05:25:14', 1, '2022-09-22 05:25:25', NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-(2, '1', 2, '47a04a82102935237cc6', 'order_KKvLwgBlrtfMcB', '', '252', '', 'Razorpay', 'Transaction has been tampered. Please try again!!', NULL, 1, 0, b'0', 1, 1, 0, '', '', '', 0, 0, '2022-09-22 06:08:31', 1, '2022-09-22 06:08:40', NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
+(2, '1', 2, '47a04a82102935237cc6', 'order_KKvLwgBlrtfMcB', '', '252', '', 'Razorpay', 'Transaction has been tampered. Please try again!!', NULL, 1, 0, b'0', 1, 1, 0, '', '', '', 0, 0, '2022-09-22 06:08:31', 1, '2022-09-22 06:08:40', NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(3, '3c8c5d2f689af82d7ca5', 3, '26488836e6ddc683a5ae', 'order_KLEHYWDLMscgHk', '', '453.6', '', 'Razorpay', 'Transaction has been tampered. Please try again!!', NULL, 1, 0, b'0', 1, 1, 0, '', '', '', 0, 0, '2022-09-23 00:39:31', 3, '2022-09-23 00:39:43', NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+(4, '4', 4, '81b28ebd8587bb8f85ea', 'order_KLEnopeDZCJzcT', '', '4950', '', 'Razorpay', 'Transaction has been tampered. Please try again!!', NULL, 1, 0, b'0', 1, 1, 0, '', '', '', 0, 0, '2022-09-23 01:10:04', 4, '2022-09-23 01:10:15', NULL, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -48678,7 +48688,10 @@ INSERT INTO `shipping_address` (`id`, `user_id`, `fname`, `lname`, `email`, `mob
 (3, 'f45b8e66dd5f8842b2fd', 'abc', 'xyz', 'maithili.Koffeekodes@gmail.com', '98453674534', 'A-104 hare krishna appartment opp ld hall bhimrad', '', '1041', '12', '395007', 'home', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
 (5, '1', 'Maithili', 'Jejni', 'maithili.Koffeekodes@gmail.com', '9898651846', 'A-102  shaleen avenue opp venus', '', '1041', '12', '395007', 'work', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
 (7, '99bb35e2408619eb7a59', 'abc123', 'xyz123', 'maithili.Koffeekodes@gmail.com', '9898651846', 'A-104 roopam appartment', '', '1041', '12', '395007', 'home', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
-(8, '99bb35e2408619eb7a59', 'thngvth', 'gnfyjuhg', 'maithili.Koffeekodes@gmail.com', '98453674555', 'dfjtfkjvytklcmjn cdtrjnfyjt', '', '300', '3', '395007', 'home', 1, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '');
+(8, '99bb35e2408619eb7a59', 'thngvth', 'gnfyjuhg', 'maithili.Koffeekodes@gmail.com', '98453674555', 'dfjtfkjvytklcmjn cdtrjnfyjt', '', '300', '3', '395007', 'home', 1, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
+(9, '3c8c5d2f689af82d7ca5', 'neha', 'naredi', 'maithili.Koffeekodes@gmail.com', '9898651846', 'A-104 roopam appartment', '', '1041', '12', '395007', 'home', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
+(10, '4', 'rachana', 'lapsiwala', 'lapsrachana26@gmail.com', '98453674534', 'A-104 shivam appartment opp ramesh mithayi , bhatar char rasta ', '', '1041', '12', '395007', 'home', 1, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
+(11, '4', 'rachana', 'lapsiwala', 'maithili.Koffeekodes@gmail.com', '9898651846', 'G-12 aurovill society , ghod road  ', '', '1041', '12', '395007', 'home', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -52874,7 +52887,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `name`, `email`, `password`, `mobileno`, `address`, `state`, `city`, `pincode`, `is_delete`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
 (1, 'Maithili', 'Jejani', 'MaithiliJejani', 'maithili.Koffeekodes@gmail.com', 'Mus123@', '98453674534', 'A - 104 hare krishna opp uma bhavan , bhatar , Surat ', '12', '1041', '395007', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
 (2, 'abc', 'xyz', 'abcxyz', 'maithilijejani@gmail.com', '123@', '98453674534', '16/c, 49-b, Kalpak Estate, S M Rd, Next To Maratha Mandir Bank, Wadala\r\n', '22', '2707', '395007', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
-(3, 'rohan', 'gupta', 'rohangupta', 'maithilijejani12@gmail.com', 'Rohan123@', '9898651846', 'A - 102 Shaleen Avenue , opp venus , Althan ', '12', '1041', '395007', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '');
+(3, 'rohan', 'gupta', 'rohangupta', 'maithilijejani12@gmail.com', 'Rohan123@', '9898651846', 'A - 102 Shaleen Avenue , opp venus , Althan ', '12', '1041', '395007', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', ''),
+(4, 'rachana', 'lapsiwala', 'rachanalapsiwala', 'lapsrachana26@gmail.com', 'Rach123@', '9898651846', 'B - 203 , ashirwad enclave , opp bhatar char rasta , bhatar ', '12', '1041', '395007', 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -53046,7 +53060,7 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -53088,19 +53102,19 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `payment_log`
 --
 ALTER TABLE `payment_log`
-  MODIFY `PaymentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `PaymentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `review`
@@ -53112,7 +53126,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `shipping_address`
 --
 ALTER TABLE `shipping_address`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `slider`
@@ -53136,7 +53150,7 @@ ALTER TABLE `subscribe`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
