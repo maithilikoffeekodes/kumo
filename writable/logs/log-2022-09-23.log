@@ -1,0 +1,12 @@
+CRITICAL - 2022-09-23 00:45:34 --> View themes, no current section.
+#0 D:\kumo\app\Views\shipping_address.php(214): CodeIgniter\View\View->endSection()
+#1 D:\kumo\system\View\View.php(210): include('D:\\kumo\\app\\Vie...')
+#2 D:\kumo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\kumo\system\Common.php(1089): CodeIgniter\View\View->render('shipping_addres...', Array, true)
+#4 D:\kumo\app\Controllers\Home.php(180): view('shipping_addres...', Array)
+#5 D:\kumo\system\CodeIgniter.php(832): App\Controllers\Home->address()
+#6 D:\kumo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\kumo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\kumo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\kumo\system\Commands\Server\rewrite.php(43): require_once('D:\\kumo\\public\\...')
+#10 {main}

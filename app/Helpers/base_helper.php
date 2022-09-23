@@ -584,7 +584,28 @@ function mail_template($ord_id)
 									</table>
 									</td>
 								</tr>
-                                
+                                <tr style="border-top:1px solid #4d4d4d;">
+									<td align="center" style=" padding: 35px; background-color: #fff;" bgcolor="#1b9ba3">
+									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+										<tr>
+											<td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                                            <h1>Your Order is Completed!</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" style="padding: 25px 0 15px 0;">
+												<table border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td align="center" style="border-radius: 5px;" bgcolor="#3D464D">
+														<a href="' . base_url() . '/Home/track_order/'.@$order->id.'" target="_blank" style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #3D464D; padding: 15px 30px; border: 1px solid #000; display: block;">Track your Order</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									</td>
+								</tr>
 								<tr style="border-top:1px solid #4d4d4d;">
 									<td align="center" style=" padding: 35px; background-color: #fff;" bgcolor="#1b9ba3">
 									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
